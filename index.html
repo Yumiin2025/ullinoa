@@ -642,8 +642,7 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
     </div>
     <div class="rec-cta reveal anim in">
       <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="cta-sage">💬 <span class="en-only">Book a free discovery call</span><span class="de-only">Kostenloses Kennenlerngespräch buchen</span></a>
-      <a href="partner.html" class="open-pfaq-btn">🌱 <span class="en-only">All partner questions answered →</span><span class="de-only">Alle Partner-Fragen beantwortet →</span></a>
-      <a href="partner.html" class="cta-light" id="recruit-biz-link"><span class="en-only">How does the business work?</span><span class="de-only">Wie funktioniert das Business?</span></a>
+      <a href="partner.html" class="open-pfaq-btn">🌱 <span class="en-only">How does the business work?</span><span class="de-only">Wie funktioniert das Business?</span></a>
     </div>
   </div>
 </section>
@@ -912,7 +911,7 @@ function setLang(l){
   // re-attach handlers after any dynamic re-render
   document.querySelectorAll('.post-card[data-id]').forEach(card=>{const id=card.dataset.id;card.onclick=()=>openDetail(id);});
   const b='https://boards.com/a/nAQGc.7VPy6C',d='https://boards.com/a/nAQGc.ZAkMai';
-  ['step2-link','recruit-biz-link'].forEach(id=>{const el=document.getElementById(id);if(el)el.href=l==='de'?d:b;});
+  ['step2-link'].forEach(id=>{const el=document.getElementById(id);if(el)el.href=l==='de'?d:b;});
   renderPosts();renderTestis();
 }
 
@@ -1595,4 +1594,5 @@ applyBlogPreview();
 </div>
 
 
+<script src="https://w.behold.so/widget.js" type="module"></script>
 </body></html>
