@@ -112,6 +112,31 @@ section{padding:5rem 1.25rem}
 /* DIVIDER */
 .divider{height:1px;background:var(--sand);margin:0 1.25rem}
 
+/* FAQ */
+details.faq-item{background:var(--cream);border-radius:14px;border:1px solid var(--sand);overflow:hidden;transition:border-color .2s}
+details.faq-item:hover{border-color:var(--sage)}
+details.faq-item[open]{border-color:var(--sage)}
+summary.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;gap:1rem;list-style:none;font-family:'DM Sans',sans-serif}
+summary.faq-q::-webkit-details-marker{display:none}
+.faq-q-txt{font-size:.95rem;font-weight:500;color:var(--moss)}
+.faq-ico{width:24px;height:24px;border-radius:50%;background:var(--moss);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s}
+details.faq-item[open] .faq-ico{transform:rotate(45deg);background:var(--terra)}
+.faq-ans{font-size:.88rem;color:var(--muted);line-height:1.75;font-weight:300;padding:0 1.5rem 1.4rem}
+.pfaq-list{display:flex;flex-direction:column;gap:.6rem}
+/* WA FORM */
+.wa-form-wrap{background:var(--cream);border-radius:16px;padding:2rem;margin-top:2rem}
+.wa-form-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--moss);margin-bottom:.3rem}
+.wa-form-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.4rem;line-height:1.6}
+.wa-form{display:flex;flex-direction:column;gap:.8rem}
+.wa-form input,.wa-form select,.wa-form textarea{width:100%;padding:.75rem 1rem;border:1.5px solid var(--sand);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);background:#fff;transition:border-color .2s;outline:none}
+.wa-form input:focus,.wa-form select:focus,.wa-form textarea:focus{border-color:var(--sage)}
+.wa-form textarea{min-height:90px;resize:vertical}
+.wa-form select{cursor:pointer}
+.wa-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.4rem}
+.wa-btn{flex:1;min-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.2rem;border-radius:100px;font-size:.84rem;font-weight:600;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;transition:transform .2s,background .2s}
+.wa-btn-noa{background:#25D366;color:#fff}.wa-btn-noa:hover{background:#1da851;transform:translateY(-2px)}
+.wa-btn-ulli{background:var(--moss);color:var(--cream)}.wa-btn-ulli:hover{background:var(--sage-dk);transform:translateY(-2px)}
+
 /* FOOTER */
 footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
 .f-names{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:var(--moss);margin-bottom:.7rem}
@@ -143,6 +168,8 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
     <a href="#how"><span class="en-only">How it works</span><span class="de-only">So funktioniert's</span></a>
     <div class="nav-dot"></div>
     <a href="#income"><span class="en-only">Real numbers</span><span class="de-only">Echte Zahlen</span></a>
+    <div class="nav-dot"></div>
+    <a href="#faq"><span class="en-only">FAQ</span><span class="de-only">FAQ</span></a>
     <div class="nav-dot"></div>
     <a href="#start" class="cta-nav">🌱 <span class="en-only">Start now</span><span class="de-only">Jetzt starten</span></a>
   </div>
@@ -413,6 +440,84 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 
 </div>
 
+<!-- PARTNER FAQ -->
+<div class="divider"></div>
+<section id="faq">
+  <div class="inner">
+    <p class="sec-lbl">🌱 <span class="en-only">Partner FAQ</span><span class="de-only">Partner FAQ</span></p>
+    <h2 class="sec-title">
+      <span class="en-only">Everything you want to <em>know</em></span>
+      <span class="de-only">Alles, was du wissen <em>möchtest</em></span>
+    </h2>
+    <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:2rem">
+      <span class="en-only">Real answers about what it means to join our team — no sugarcoating, no sales pitch.</span>
+      <span class="de-only">Ehrliche Antworten darüber, was es bedeutet, unser Team zu ergänzen — kein Schönreden, kein Verkaufsdruck.</span>
+    </p>
+
+    <div class="pfaq-list">
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">What makes your team specifically different from other RINGANA partners?</span><span class="de-only">Was macht euer Team konkret anders als andere RINGANA Partner:innen?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">We lead with honesty, not hype. Our team meetings are about real life, real challenges and real wins — not motivational speeches. We share what actually works, we celebrate every small step, and nobody gets left behind. We are two women who built this around our own lives and we show you how to do the same.</span><span class="de-only">Wir führen mit Ehrlichkeit, nicht mit Hype. Unsere Team-Meetings drehen sich um echtes Leben, echte Herausforderungen und echte Erfolge — keine Motivationsreden. Wir teilen, was wirklich funktioniert, feiern jeden kleinen Schritt und niemand wird zurückgelassen. Wir sind zwei Frauen, die das um ihr eigenes Leben herum aufgebaut haben — und wir zeigen dir, wie du das auch kannst.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">What does a week in your team actually look like?</span><span class="de-only">Wie sieht eine Woche in eurem Team konkret aus?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">A weekly team call (online, recorded if you miss it), a team chat where we share tips and wins, and access to Noa &amp; Ulli directly by WhatsApp. You'll also get content ideas, product updates and marketing materials. You're never alone — but you also never feel pressured.</span><span class="de-only">Ein wöchentlicher Team-Call (online, aufgezeichnet wenn du nicht kannst), ein Team-Chat wo wir Tipps und Erfolge teilen, und direkten Zugang zu Noa &amp; Ulli per WhatsApp. Dazu Content-Ideen, Produkt-Updates und Marketingmaterialien. Du bist nie allein — aber fühlst dich auch nie unter Druck gesetzt.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">Can I join even if I've never done sales or network marketing before?</span><span class="de-only">Kann ich einsteigen, auch wenn ich noch nie Verkauf oder Network Marketing gemacht habe?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">Especially then. Many of our best partners had zero experience — just genuine love for the products and an open mind. We guide you from day one, and the RINGANA Online Academy gives you free training for every step. The only skill that matters? Being authentically yourself.</span><span class="de-only">Besonders dann. Viele unserer stärksten Partner:innen hatten null Erfahrung — nur echte Begeisterung für die Produkte und eine offene Einstellung. Wir begleiten dich ab Tag 1, und die RINGANA Online Academy bietet kostenloses Training für jeden Schritt. Die einzige Fähigkeit, die zählt? Authentisch du selbst zu sein.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">How much does it cost to become a RINGANA partner?</span><span class="de-only">Was kostet es, RINGANA Partner:in zu werden?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">You can start completely free with the Basic Starter Set (€0). We recommend the Business Booster Starter Set for €34, which includes branded materials and vouchers. There are NO fixed monthly costs, no minimum turnover, and no obligation to buy or stock products. RINGANA also regularly surprises new partners with product gifts — just ask us what's currently on! 💚</span><span class="de-only">Du kannst komplett kostenlos mit dem Basic Starterset (€0) starten. Wir empfehlen das Business Booster Starterset für €34 mit Markenmaterialien und Gutscheinen. KEINE fixen Monatskosten, kein Mindestumsatz, keine Lagerpflicht. RINGANA überrascht neue Partner:innen außerdem immer wieder mit Produkt-Geschenken — frag uns einfach, was gerade aktuell ist! 💚</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">What personal support do Noa &amp; Ulli give me?</span><span class="de-only">Welche persönliche Unterstützung geben mir Noa &amp; Ulli?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">Direct WhatsApp access, personal onboarding call, monthly 1:1 check-ins, and ongoing support in our team group. We'll help you with your first social posts, your first customer conversations, and your first partner recruitment. You're our team — your success is our success.</span><span class="de-only">Direkter WhatsApp-Zugang, persönliches Onboarding-Gespräch, monatliche 1:1 Check-ins und laufende Begleitung in unserer Team-Gruppe. Wir helfen dir bei deinen ersten Social Posts, deinen ersten Kundengesprächen und deiner ersten Partneranwerbung. Du bist unser Team — dein Erfolg ist unser Erfolg.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">Do I need to be based in Austria or German-speaking countries?</span><span class="de-only">Muss ich in Österreich oder einem deutschsprachigen Land sein?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">Not at all — RINGANA ships to most European countries. Partners can be based anywhere in Europe. Our team is multilingual and our weekly calls can be in German or English. If you're outside Europe, get in touch and we'll find out what's possible together.</span><span class="de-only">Nein — RINGANA liefert in die meisten europäischen Länder. Partner:innen können überall in Europa ansässig sein. Unser Team ist mehrsprachig und unsere Calls finden auf Deutsch oder Englisch statt. Wenn du außerhalb Europas bist, meld dich einfach und wir schauen gemeinsam, was möglich ist.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">What if I try it and it's not for me?</span><span class="de-only">Was wenn ich es probiere und es ist nichts für mich?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">Then you stop — start today, stop tomorrow, no consequences. No long-term contracts, no exit fees, no obligation to continue.</span><span class="de-only">Dann hörst du auf — heute anfangen, morgen aufhören, es passiert nichts. Keine langfristigen Verträge, keine Ausstiegsgebühren, keine Verpflichtung.</span></p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-q-txt"><span class="en-only">I'm ready — what happens next?</span><span class="de-only">Ich bin bereit — was passiert als nächstes?</span></span><span class="faq-ico"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"></line><line x1="1" y1="6" x2="11" y2="6"></line></svg></span></summary>
+        <p class="faq-ans"><span class="en-only">Write to us below — just your name and that you're interested is enough. We'll reply within 24 hours to arrange a relaxed 20-minute call where you can ask us anything. No pressure, no commitment required.</span><span class="de-only">Schreib uns unten — nur dein Name und dass du Interesse hast reicht. Wir antworten innerhalb von 24 Stunden und vereinbaren einen entspannten 20-minütigen Call, bei dem du uns alles fragen kannst. Kein Druck, keine Verpflichtung.</span></p>
+      </details>
+
+    </div>
+
+    <div class="wa-form-wrap">
+      <h3 class="wa-form-title"><span class="en-only">Still got a question? Write to us directly.</span><span class="de-only">Noch eine Frage? Schreib uns direkt.</span></h3>
+      <p class="wa-form-sub"><span class="en-only">WhatsApp opens with your message ready to send — we reply personally.</span><span class="de-only">WhatsApp öffnet sich mit deiner Nachricht — wir antworten persönlich.</span></p>
+      <div class="wa-form">
+        <input type="text" id="pName" placeholder="Dein Name / Your name" autocomplete="given-name">
+        <select id="pInterest">
+          <option value="business">Ich interessiere mich für das Partner-Business</option>
+          <option value="both">Beides — Produkte &amp; Business</option>
+          <option value="question">Ich habe eine allgemeine Frage</option>
+        </select>
+        <textarea id="pMsg" placeholder="Deine Frage oder Nachricht (optional)"></textarea>
+        <div class="wa-btns">
+          <button class="wa-btn wa-btn-noa" onclick="sendPartnerWA('noa')">💬 <span class="en-only">Send to Noa</span><span class="de-only">An Noa senden</span></button>
+          <button class="wa-btn wa-btn-ulli" onclick="sendPartnerWA('ulli')">💬 <span class="en-only">Send to Ulli</span><span class="de-only">An Ulli senden</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p class="f-names"><em>Noa</em> &amp; Ulli</p>
   <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · Made with 🌿 · <a href="https://boards.com/a/nAQGc.Cjq6kU" target="_blank" rel="noopener">Impressum</a></p>
@@ -428,6 +533,22 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
 }
 setLang('de');
+
+function sendPartnerWA(person) {
+  const name = (document.getElementById('pName').value||'').trim();
+  const interest = document.getElementById('pInterest').value;
+  const msg = (document.getElementById('pMsg').value||'').trim();
+  const interestMap = {
+    business: lang==='de' ? 'Ich interessiere mich für das Partner-Business.' : 'I am interested in the partner business.',
+    both: lang==='de' ? 'Ich interessiere mich für Produkte & das Business.' : 'I am interested in both products and the business.',
+    question: lang==='de' ? 'Ich habe eine allgemeine Frage.' : 'I have a general question.'
+  };
+  let text = (lang==='de' ? 'Hallo' : 'Hi') + (name ? ' ' + name : '') + '! ';
+  text += interestMap[interest] || '';
+  if (msg) text += ' ' + msg;
+  const numbers = { noa: '436769261706', ulli: '436766189426' };
+  window.open('https://wa.me/' + numbers[person] + '?text=' + encodeURIComponent(text), '_blank');
+}
 </script>
 </body>
 </html>
