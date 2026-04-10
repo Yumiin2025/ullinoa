@@ -276,20 +276,83 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 
   <div class="divider"></div>
 
-  <!-- SECTION: WHAT WE OFFER AS A TEAM -->
+  <!-- SECTION: TEAM -->
   <section id="team" style="background:var(--cream)">
     <div class="inner">
       <p class="sec-lbl">🤝 <span class="en-only">Our team</span><span class="de-only">Unser Team</span></p>
       <h2 class="sec-title">
-        <span class="en-only">What we offer<br><em>as a team</em></span>
-        <span class="de-only">Was wir als Team<br><em>bieten</em></span>
+        <span class="en-only">What awaits you<br><em>with us</em></span>
+        <span class="de-only">Was dich bei uns<br><em>erwartet</em></span>
       </h2>
-      <p class="sec-body">
-        <span class="en-only">When you join us, you're not on your own. From day one you have a real team around you — people who share their learnings openly, who celebrate your wins, and who are genuinely invested in your success.</span>
-        <span class="de-only">Wenn du bei uns einsteigst, bist du nicht allein. Ab Tag 1 hast du ein echtes Team um dich — Menschen, die ihr Wissen offen teilen, deine Erfolge feiern und wirklich an deinem Wachstum interessiert sind.</span>
-      </p>
 
-      <div class="steps" style="margin-top:2rem">
+      <!-- WARM INTRO -->
+      <div style="background:var(--moss);border-radius:var(--radius);padding:2rem 2.2rem;margin-bottom:2rem">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,3vw,1.6rem);font-weight:300;color:#fff;line-height:1.55;font-style:italic">
+          <span class="en-only">"You don't need to know everything yet.<br>You don't need to be perfect.<br>And you don't have to walk this path alone."</span>
+          <span class="de-only">„Du musst hier nicht schon alles können.<br>Du musst nicht perfekt sein.<br>Und du musst deinen Weg nicht alleine gehen."</span>
+        </p>
+      </div>
+
+      <!-- FEATURE LIST -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:2.5rem">
+        <style>
+          @media(max-width:560px){#team-grid{grid-template-columns:1fr!important}}
+          .t-item{background:#fff;border-radius:14px;padding:.9rem 1.1rem;display:flex;align-items:flex-start;gap:.65rem;font-size:.85rem;color:var(--text);line-height:1.5;border:1px solid var(--sand)}
+          .t-ico{flex-shrink:0;width:22px;height:22px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:.05rem}
+          .t-ico svg{width:11px;height:11px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Genuine community on WhatsApp</span><span class="de-only">Echte Community auf WhatsApp</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Clear onboarding for your first steps</span><span class="de-only">Klares Onboarding für deine ersten Schritte</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">People who help honestly and share their knowledge</span><span class="de-only">Menschen, die ehrlich helfen und ihr Wissen teilen</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Support whenever questions come up or you feel unsure</span><span class="de-only">Unterstützung, wenn Fragen auftauchen oder du unsicher bist</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Guidance through your first experiences in the business</span><span class="de-only">Begleitung bei deinen ersten Erfahrungen im Business</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Monthly team call — space for exchange, focus &amp; growth</span><span class="de-only">Monatlicher Teamcall — Raum für Austausch, Fokus &amp; Wachstum</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Real learnings instead of empty motivation</span><span class="de-only">Ehrliche Learnings statt leere Motivation</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Uplifting each other, celebrating together, growing together</span><span class="de-only">Gegenseitiges Upliften, Mitfreuen und Miteinander</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Support at your first Fresh Date — online or in person</span><span class="de-only">Unterstützung bei deinem ersten Fresh Date — online oder live</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Space for all your questions, doubts and steps forward</span><span class="de-only">Raum für all deine Fragen, Unsicherheiten und Entwicklungsschritte</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Personal guidance — no pressure, no going it alone</span><span class="de-only">Persönliche Begleitung statt Druck oder Alleingang</span>
+        </div>
+        <div class="t-item">
+          <span class="t-ico"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+          <span class="en-only">Lots of heart, clarity and soul — from day one</span><span class="de-only">Ganz viel Herz, Klarheit und Seelenkraft — ab Tag 1</span>
+        </div>
+      </div>
+
+      <!-- 3 CARDS -->
+      <div class="steps">
         <div class="step-card">
           <div class="step-num" style="font-size:2rem">📅</div>
           <p class="step-title"><span class="en-only">Live team calls</span><span class="de-only">Live Team-Calls</span></p>
@@ -314,14 +377,6 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
             <span class="de-only">Abends oder tagsüber — wie es dir passt. Wir veranstalten Fresh Dates in Wien und am RINGANA Campus in St. Johann in der Haide. Und wir machen super gerne dein erstes Fresh Date bei dir zuhause — gemeinsam mit dir.</span>
           </p>
         </div>
-      </div>
-
-      <div class="callout" style="margin-top:2rem">
-        <p class="callout-lbl">✨ <span class="en-only">What we share with you</span><span class="de-only">Was wir mit dir teilen</span></p>
-        <p class="callout-body">
-          <span class="en-only">27 years of experience — openly shared. Tips, tricks and everything we've learned along the way. Whether you prefer working online, offline, or a mix of both — you decide what fits your life. What you need isn't perfection or expert knowledge. Just an honest recommendation from the heart, and a genuine belief in the products. We share what makes RINGANA truly unique, and we're there when you get stuck, feel uncertain, or just need someone to talk it through with. <strong>Your growth is our growth.</strong></span>
-          <span class="de-only">27 Jahre Erfahrung — offen geteilt. Tipps, Tricks und alles, was wir unterwegs gelernt haben. Ob du lieber online, offline oder beides machst — du entscheidest, was zu dir passt. Was es braucht ist keine Perfektion und kein absolutes Wissen, sondern einfach eine ehrliche Herzensempfehlung und echte Überzeugung für die Produkte. Wir teilen, was die Produkte einzigartig macht — und wir sind für dich da, wenn du nicht weiterkommst, unsicher bist oder dich mit etwas schwertust. <strong>Dein Wachstum ist unser Wachstum.</strong></span>
-        </p>
       </div>
     </div>
   </section>
