@@ -54,6 +54,10 @@ section{padding:5rem 1.25rem}
 .p-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:300;line-height:1.2;color:#fff}
 .p-hero-title em{font-style:italic;color:var(--terra)}
 .p-hero-sub{font-size:.95rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:520px}
+.p-hero-inner{flex-direction:row !important;align-items:center;gap:3rem}
+.p-hero-text{flex:1;display:flex;flex-direction:column;gap:1rem}
+.p-hero-photo{width:clamp(130px,16vw,190px);aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:100px;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,.35)}
+@media(max-width:640px){.p-hero-inner{flex-direction:column !important}.p-hero-photo{width:90px;aspect-ratio:1;border-radius:50%;align-self:flex-start}}
 .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);text-decoration:none;margin-bottom:2rem}
 .back-link:hover{color:#fff}
 
@@ -179,16 +183,19 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 
   <!-- HERO -->
   <div class="p-hero">
-    <div class="inner">
-      <p class="p-hero-lbl">🌱 <span class="en-only">The partner business</span><span class="de-only">Das Partner-Business</span></p>
-      <h1 class="p-hero-title">
-        <span class="en-only">The business model<br>of the <em>21st century.</em></span>
-        <span class="de-only">Das Business-Modell<br>des <em>21. Jahrhunderts.</em></span>
-      </h1>
-      <p class="p-hero-sub">
-        <span class="en-only">Flexible, meaningful, built around your life. No boss, no fixed hours, no inventory. Just real products people love and a community that grows with you. This is how you build something that actually matters.</span>
-        <span class="de-only">Flexibel, sinnstiftend, rund um dein Leben gebaut. Kein Chef, keine fixen Zeiten, kein Lager. Nur echte Produkte, die Menschen lieben und eine Community, die mit dir wächst. So baust du dir etwas auf, das wirklich zählt.</span>
-      </p>
+    <div class="inner p-hero-inner">
+      <div class="p-hero-text">
+        <p class="p-hero-lbl">🌱 <span class="en-only">The partner business</span><span class="de-only">Das Partner-Business</span></p>
+        <h1 class="p-hero-title">
+          <span class="en-only">The business model<br>of the <em>21st century.</em></span>
+          <span class="de-only">Das Business-Modell<br>des <em>21. Jahrhunderts.</em></span>
+        </h1>
+        <p class="p-hero-sub">
+          <span class="en-only">Flexible, meaningful, built around your life. No boss, no fixed hours, no inventory. Just real products people love and a community that grows with you. This is how you build something that actually matters.</span>
+          <span class="de-only">Flexibel, sinnstiftend, rund um dein Leben gebaut. Kein Chef, keine fixen Zeiten, kein Lager. Nur echte Produkte, die Menschen lieben und eine Community, die mit dir wächst. So baust du dir etwas auf, das wirklich zählt.</span>
+        </p>
+      </div>
+      <img src="assets/images/Photo12.JPG" alt="Noa &amp; Ulli" class="p-hero-photo">
     </div>
   </div>
 
