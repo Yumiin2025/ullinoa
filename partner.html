@@ -150,6 +150,27 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .f-copy a:hover{color:var(--moss)}
 
 @media(max-width:600px){section{padding:3.5rem 1.25rem}}
+
+/* TESTIMONIAL CARDS */
+.testi-grid{display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem}
+@media(min-width:600px){.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
+.testi-card{background:var(--cream);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--sand)}
+.testi-bubble{background:#e8e8e8;border-radius:14px 14px 14px 4px;padding:.85rem 1rem;font-size:.87rem;line-height:1.7;color:var(--text);margin-bottom:.75rem;font-style:italic}
+.testi-name{font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+
+/* EARNINGS GRID */
+.earnings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}
+@media(min-width:600px){.earnings-grid{grid-template-columns:repeat(3,1fr)}}
+.earnings-card{background:var(--moss);color:#fff;border-radius:16px;padding:1.3rem 1rem;text-align:center}
+.earnings-amt{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;line-height:1.1}
+.earnings-lbl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-top:.35rem}
+
+/* INCOME LADDER */
+.ladder-wrap{margin-top:1.2rem;background:var(--cream);border-radius:var(--radius);padding:1.4rem 1.8rem}
+.ladder-row{display:flex;justify-content:space-between;align-items:center;padding:.42rem 0;border-bottom:1px solid var(--sand);font-size:.87rem}
+.ladder-row:last-child{border-bottom:none;padding-top:.6rem;margin-top:.2rem}
+.ladder-mo{color:var(--muted)}
+.ladder-yr{color:var(--moss);font-weight:600}
 </style>
 </head>
 <body>
@@ -427,6 +448,124 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
           <li><span class="en-only">Using the products yourself — you can't authentically recommend what you don't love</span><span class="de-only">Selbst nutzen — du kannst nicht authentisch empfehlen, was du nicht liebst</span></li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION: ECHTE ABRECHNUNGEN -->
+  <section id="stories">
+    <div class="inner">
+      <p class="sec-lbl">04 · <span class="en-only">Real commissions</span><span class="de-only">Echte Abrechnungen</span></p>
+      <h2 class="sec-title">
+        <span class="en-only">Numbers from<br><em>real partners</em></span>
+        <span class="de-only">Zahlen von<br><em>echten Partnerinnen</em></span>
+      </h2>
+      <p class="sec-body">
+        <span class="en-only">These are real commission statements — first and second payouts — from people who started just like you would.</span>
+        <span class="de-only">Das sind echte Provisionsabrechnungen — erste und zweite Auszahlungen — von Menschen, die genauso gestartet sind wie du es könntest.</span>
+      </p>
+
+      <!-- EARNINGS GRID -->
+      <div class="earnings-grid">
+        <div class="earnings-card">
+          <div class="earnings-amt">699 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st payout</span><span class="de-only">1. Abrechnung</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">734 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st payout</span><span class="de-only">1. Abrechnung</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">759 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">1.085 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">1.340 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">1.800 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st statement</span><span class="de-only">1. Abrechnung</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">2.460 €</div>
+          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">2.683 €</div>
+          <div class="earnings-lbl"><span class="en-only">2nd month</span><span class="de-only">2. Monat</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">3.107 €</div>
+          <div class="earnings-lbl"><span class="en-only">monthly</span><span class="de-only">monatlich</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">3.192 €</div>
+          <div class="earnings-lbl"><span class="en-only">monthly</span><span class="de-only">monatlich</span></div>
+        </div>
+        <div class="earnings-card">
+          <div class="earnings-amt">3.418 €</div>
+          <div class="earnings-lbl"><span class="en-only">2nd month</span><span class="de-only">2. Monat</span></div>
+        </div>
+        <div class="earnings-card" style="background:var(--sage-dk)">
+          <div class="earnings-amt">5.075 €</div>
+          <div class="earnings-lbl"><span class="en-only">in 1 month</span><span class="de-only">in 1 Monat</span></div>
+        </div>
+      </div>
+      <p class="income-note">
+        <span class="en-only">⚠️ Individual results — not a guarantee. Income depends on time and consistency you invest.</span>
+        <span class="de-only">⚠️ Individuelle Ergebnisse — keine Garantie. Der Verdienst hängt von deiner Zeit und Konsequenz ab.</span>
+      </p>
+
+      <!-- QUOTE: PLANLOS GESTARTET -->
+      <div class="income-box" style="margin-top:2rem">
+        <p class="income-quote">
+          <span class="en-only">"I had no script, no master plan — and still built a full-time income, step by step. What usually means 40 hours a week in an office, I do from home. With ease."</span>
+          <span class="de-only">„Ich hatte keinen fertigen Plan, kein Skript — und hab trotzdem Schritt für Schritt ein Vollzeiteinkommen aufgebaut. Was normalerweise 40 Stunden Büro pro Woche bedeutet, mach ich heute von zu Hause aus. Mit Leichtigkeit."</span>
+        </p>
+        <p class="income-attr"><span class="en-only">— Partner, from the community</span><span class="de-only">— Partnerin, aus der Community</span></p>
+      </div>
+
+      <!-- NETCOO CREDIBILITY -->
+      <div class="callout" style="margin-top:1.5rem;background:var(--cream);border:1.5px solid var(--sand)">
+        <p class="callout-lbl" style="color:var(--sage-dk)">📰 <span class="en-only">In the press</span><span class="de-only">In der Presse</span></p>
+        <p class="callout-title" style="color:var(--moss)">
+          <span class="en-only">Fresh cosmetics in network marketing: why the segment is booming — and how RINGANA became No. 1</span>
+          <span class="de-only">Frischekosmetik im Network Marketing: Warum das Segment boomt — und wie RINGANA zur Nr. 1 wurde</span>
+        </p>
+        <p class="callout-body" style="color:var(--muted);font-size:.82rem">
+          <span class="en-only">Netcoo Next Economy Magazine · September 2025</span>
+          <span class="de-only">Netcoo Next Economy Magazine · September 2025</span>
+        </p>
+      </div>
+
+      <!-- INCOME LADDER -->
+      <p class="sec-lbl" style="margin-top:2.5rem">
+        <span class="en-only">What would extra income mean for you?</span>
+        <span class="de-only">Was würde zusätzliches Einkommen für dich bedeuten?</span>
+      </p>
+      <p class="sec-body" style="font-size:.88rem">
+        <span class="en-only">No contract · No minimum turnover · No risk — you decide how much you invest.</span>
+        <span class="de-only">Kein Vertrag · Kein Mindestumsatz · Kein Risiko — du entscheidest, wie viel du investierst.</span>
+      </p>
+      <div class="ladder-wrap">
+        <div class="ladder-row"><span class="ladder-mo">100 € / Monat</span><span class="ladder-yr">1.200 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">200 € / Monat</span><span class="ladder-yr">2.400 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">300 € / Monat</span><span class="ladder-yr">3.600 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">500 € / Monat</span><span class="ladder-yr">6.000 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">700 € / Monat</span><span class="ladder-yr">8.400 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">1.000 € / Monat</span><span class="ladder-yr">12.000 € / Jahr</span></div>
+        <div class="ladder-row"><span class="ladder-mo">1.500 € / Monat</span><span class="ladder-yr">18.000 € / Jahr</span></div>
+      </div>
+      <p style="font-size:.8rem;color:var(--muted);margin-top:.85rem;line-height:1.65">
+        <span class="en-only">Supplement parental leave. Fund a holiday. Less financial pressure. More freedom. Work from home. — what would you use it for?</span>
+        <span class="de-only">Karenz aufbessern. Urlaub finanzieren. Weniger Druck. Mehr Freiheit. Homeoffice. — was würdest du dir damit verbessern?</span>
+      </p>
     </div>
   </section>
 
