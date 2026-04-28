@@ -562,8 +562,20 @@ function getProfile(a) {
   return 1;
 }
 
-function slugify(name) {
-  return name.toLowerCase().replace(/\s+/g, '-');
+var IMAGE_MAP = {
+  'FRESH cleanser':                   'Partner-Templates-1x1-FRESH-cleanser-1.jpg',
+  'FRESH tonic pure':                 'Partner-Templates-1x1-FRESH-tonic-pure-1.jpg',
+  'FRESH tonic calm':                 'Partner-Templates-1x1-FRESH-tonic-calm-1.jpg',
+  'FRESH hydro serum':                'Partner-Templates-1x1-FRESH-hydro-serum-1.jpg',
+  'FRESH cream light':                'Partner-Templates-1x1-FRESH-cream-light-1.jpg',
+  'FRESH cream medium':               'Partner-Templates-1x1-FRESH-cream-medium-1.jpg',
+  'FRESH cream rich':                 'Partner-Templates-1x1-FRESH-cream-rich-1.jpg',
+  'FRESH anti wrinkle serum':         'Partner-Templates-1x1-FRESH-anti-wrinkle-serum-1.jpg',
+  'FRESH tinted moisturiser SPF 30':  'Partner-Templates-1x1-FRESH-tinted-moisturiser-SPF-30-N1-1.jpg',
+  'FRESH lip balm nude SPF 15':       'Partner-Templates-1x1-FRESH-lip-balm-nude-SPF15-1.jpg'
+};
+function getProductImage(name) {
+  return IMAGE_MAP[name] ? 'assets/images/' + IMAGE_MAP[name] : null;
 }
 
 function showResult() {
@@ -579,9 +591,12 @@ function showResult() {
   // Build products HTML
   var prodsHTML = profile.products.map(function(p) {
     var desc = isDE ? p.desc_de : p.desc_en;
-    var slug = slugify(p.name);
+    var imgSrc = getProductImage(p.name);
+    var imgTag = imgSrc
+      ? '<img src="' + imgSrc + '" onerror="this.style.display=\'none\'" class="prod-img" alt="' + p.name + '">'
+      : '';
     return '<div class="prod-card">' +
-      '<img src="assets/images/products/' + slug + '.jpg" onerror="this.style.display=\'none\'" class="prod-img" alt="' + p.name + '">' +
+      imgTag +
       '<span class="prod-emoji">' + p.emoji + '</span>' +
       '<p class="prod-name">' + p.name + '</p>' +
       '<p class="prod-desc">' + desc + '</p>' +
