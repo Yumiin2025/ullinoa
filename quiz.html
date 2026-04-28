@@ -68,10 +68,10 @@ body.de .en-only{display:none}
 .intro-screen{text-align:center;padding:0}
 .intro-badge{display:inline-block;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);background:rgba(114,184,174,.15);border:1px solid rgba(114,184,174,.3);border-radius:100px;padding:.3rem 1rem;margin-bottom:1.5rem;font-weight:500}
 .intro-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6vw,3.4rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:1.2rem}
-.intro-title em{font-style:italic;color:var(--sage)}
+.intro-title em{font-style:italic;color:var(--terra)}
 .intro-sub{font-size:.95rem;color:rgba(255,255,255,.75);line-height:1.75;max-width:480px;margin:0 auto 2rem}
-.btn-start{display:inline-flex;align-items:center;gap:.5rem;background:var(--sage-dk);color:#fff;border:none;border-radius:100px;padding:1rem 2.4rem;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;letter-spacing:.03em;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none}
-.btn-start:hover{background:var(--moss);transform:translateY(-2px)}
+.btn-start{display:inline-flex;align-items:center;gap:.5rem;background:var(--terra);color:#fff;border:none;border-radius:100px;padding:1rem 2.4rem;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;letter-spacing:.03em;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none}
+.btn-start:hover{background:var(--rose-dk);transform:translateY(-2px)}
 .intro-note{margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.02em}
 
 /* QUESTION SCREEN */
@@ -110,28 +110,22 @@ body.de .en-only{display:none}
 .prod-shop-hint::after{content:'→'}
 
 /* SUPPLEMENT BOX */
-.suppl-box{background:rgba(114,184,174,.10);border:1.5px solid var(--sage);border-radius:16px;padding:1.4rem;margin-top:1.6rem;overflow:hidden}
+.suppl-box{background:rgba(114,184,174,.10);border:1.5px solid var(--sage);border-radius:16px;padding:1.4rem;margin-top:1.6rem;overflow:hidden;display:block;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s}
+.suppl-box:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(30,61,58,.1)}
 .suppl-img{width:100%;height:140px;object-fit:cover;border-radius:10px;display:block;margin-bottom:1rem}
 .suppl-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dk);font-weight:600;margin-bottom:.5rem}
 .suppl-name{font-size:.95rem;font-weight:500;color:var(--moss);margin-bottom:.3rem}
 .suppl-desc{font-size:.82rem;color:var(--muted);line-height:1.6;font-weight:300}
 
 /* CTA SECTION */
-.result-cta{background:var(--cream);border-radius:var(--radius);padding:2rem;margin-top:2rem;text-align:center}
+.result-cta{background:linear-gradient(135deg,rgba(155,143,212,.12) 0%,rgba(155,143,212,.06) 100%);border:1.5px solid rgba(155,143,212,.3);border-radius:var(--radius);padding:2rem;margin-top:2rem;text-align:center}
 .result-cta-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--moss);margin-bottom:.5rem}
-.result-cta-sub{font-size:.86rem;color:var(--muted);line-height:1.65;margin-bottom:1.4rem}
-.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;border:none;border-radius:100px;padding:.9rem 2rem;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none}
-.btn-wa:hover{background:#1da851;transform:translateY(-2px)}
-
-/* PROMO BOX */
-.promo-box{background:var(--sand);border-radius:var(--radius);padding:1.4rem 1.6rem;margin-top:1.2rem;text-align:center}
-.promo-text{font-size:.86rem;color:var(--moss);margin-bottom:1rem;line-height:1.6}
-.promo-chip-row{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
-.promo-chip{background:var(--moss);color:var(--cream);border-radius:8px;padding:.4rem 1rem;font-size:.88rem;font-weight:600;letter-spacing:.08em;font-family:'DM Sans',sans-serif}
-.btn-copy{background:none;border:1.5px solid var(--moss);border-radius:100px;color:var(--moss);font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;padding:.35rem .9rem;cursor:pointer;transition:background .2s,color .2s}
-.btn-copy:hover{background:var(--moss);color:var(--cream)}
-.btn-shop{display:inline-flex;align-items:center;gap:.4rem;background:var(--moss);color:var(--cream);border-radius:100px;padding:.7rem 1.6rem;font-family:'DM Sans',sans-serif;font-size:.84rem;font-weight:500;text-decoration:none;transition:background .2s,transform .2s}
-.btn-shop:hover{background:var(--sage-dk);transform:translateY(-2px)}
+.result-cta-sub{font-size:.86rem;color:var(--muted);line-height:1.65;margin-bottom:.6rem}
+.result-cta-voucher{font-size:.84rem;font-weight:600;color:var(--terra);margin-bottom:1.4rem;display:block}
+.btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:var(--terra);color:#fff;border:none;border-radius:100px;padding:.9rem 2rem;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s;text-decoration:none}
+.btn-wa:hover{background:var(--rose-dk);transform:translateY(-2px)}
+.cta-shop-link{display:block;margin-top:1rem;font-size:.78rem;color:var(--sage-dk);text-decoration:none;font-weight:500;transition:color .2s}
+.cta-shop-link:hover{color:var(--moss)}
 
 /* RESTART BUTTON */
 .btn-restart{display:flex;align-items:center;justify-content:center;gap:.4rem;margin:1.8rem auto 0;background:none;border:1.5px solid var(--sand);border-radius:100px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:400;padding:.5rem 1.4rem;cursor:pointer;transition:border-color .2s,color .2s}
@@ -579,7 +573,7 @@ var PRODUCT_LINKS = {
   'FRESH cream medium':               'https://priller.ringana.com/produkt/fresh-cream-medium/?lang=en',
   'FRESH cream rich':                 'https://priller.ringana.com/produkt/fresh-cream-rich/?lang=en',
   'FRESH anti wrinkle serum':         'https://priller.ringana.com/produkt/fresh-anti-wrinkle-serum/',
-  'FRESH tinted moisturiser SPF 30':  'https://priller.ringana.com/produkt/fresh-tinted-moisturiser-spf-30/',
+  'FRESH tinted moisturiser SPF 30':  'https://priller.ringana.com/produkt/fresh-tinted-moisturiser-n1/',
   'FRESH lip balm nude SPF 15':       'https://priller.ringana.com/produkt/fresh-lip-balm-nude-spf-15/',
   'CAPS beauty & hair':               'https://priller.ringana.com/produkt/caps-beautyhair/',
   'CAPS beauty & hair + FRESH BTY shot': 'https://priller.ringana.com/produkt/ringanabty/'
@@ -641,33 +635,31 @@ function showResult() {
   if (showSuppl) {
     var suppl = profile.supplement;
     var supplDesc = isDE ? suppl.desc_de : suppl.desc_en;
-    var supplLabel = isDE ? '🌿 Inner Beauty Tipp' : '🌿 Inner Beauty Tip';
+    var supplLabel = isDE ? '🌿 Inner Beauty Tipp — Im Shop ansehen →' : '🌿 Inner Beauty Tip — View in shop →';
     var supplImg = SUPPL_IMAGE_MAP[suppl.name] || null;
     var supplImgTag = supplImg
       ? '<img src="' + supplImg + '" onerror="this.style.display=\'none\'" class="suppl-img" alt="' + suppl.name + '">'
       : '';
-    supplHTML = '<div class="suppl-box">' +
+    var supplLink = PRODUCT_LINKS[suppl.name] || 'https://priller.ringana.com/alle-produkte';
+    supplHTML = '<a class="suppl-box" href="' + supplLink + '" target="_blank" rel="noopener">' +
       supplImgTag +
       '<p class="suppl-label">' + supplLabel + '</p>' +
       '<p class="suppl-name">' + suppl.emoji + ' ' + suppl.name + '</p>' +
       '<p class="suppl-desc">' + supplDesc + '</p>' +
-      '</div>';
+      '</a>';
   }
 
   // Build CTA HTML
-  var ctaTitle = isDE ? 'Noa hat deine Routine zusammengestellt 🌿' : 'Noa has curated your routine 🌿';
-  var ctaSub = isDE ? 'Schreib uns direkt — wir begleiten dich persönlich.' : 'Write to us directly — we\'ll guide you personally.';
-  var waLabel = isDE ? 'WhatsApp schreiben 💬' : 'Write on WhatsApp 💬';
-  var waMsgDE = 'Hallo! Ich habe den Routine-Quiz gemacht und mein Ergebnis ist: ' + profile.name_de + '. Kannst du mir mehr darüber erzählen? 🌿';
-  var waMsgEN = 'Hello! I took the routine quiz and my result is: ' + profile.name_en + '. Can you tell me more about it? 🌿';
+  var ctaTitle = isDE ? 'Ulli & Noa haben deine Routine für dich zusammengestellt 🌿' : 'Ulli & Noa have curated your routine 🌿';
+  var ctaSub = isDE
+    ? 'Schreib uns jetzt auf WhatsApp — wir begleiten dich persönlich und du bekommst deinen'
+    : 'Write to us on WhatsApp — we\'ll guide you personally and you\'ll receive your';
+  var ctaVoucher = isDE ? '€20 Willkommens-Gutschein für deine erste Bestellung 🎁' : '€20 welcome voucher for your first order 🎁';
+  var waLabel = isDE ? 'Jetzt schreiben & Gutschein holen 💬' : 'Write now & get voucher 💬';
+  var waMsgDE = 'Hallo Ulli & Noa! 🌿 Ich habe gerade euren Routine-Quiz gemacht. Mein Ergebnis: ' + profile.name_de + '. Ich würde mich über eine persönliche Beratung freuen und gerne meinen €20 Willkommens-Gutschein für meine erste RINGANA Bestellung bekommen!';
+  var waMsgEN = 'Hi Ulli & Noa! 🌿 I just completed your skin quiz. My result: ' + profile.name_en + '. I\'d love some personal advice and to receive my €20 welcome voucher for my first RINGANA order!';
   var waMsg = encodeURIComponent(isDE ? waMsgDE : waMsgEN);
-
-  // Promo
-  var promoText = isDE
-    ? 'Mit Code PRILLER20 bekommst du €20 auf deine erste Bestellung'
-    : 'Use code PRILLER20 for €20 off your first order';
-  var copiedText = isDE ? 'Kopiert! ✓' : 'Copied! ✓';
-  var shopLabel = isDE ? 'Jetzt shoppen →' : 'Shop now →';
+  var shopHintLabel = isDE ? 'Oder direkt alle Produkte im Shop ansehen →' : 'Or browse all products in the shop →';
   var restartLabel = isDE ? 'Quiz nochmal machen' : 'Retake quiz';
 
   // Set label
@@ -696,21 +688,12 @@ function showResult() {
     '<div class="result-cta">' +
       '<h3 class="result-cta-title">' + ctaTitle + '</h3>' +
       '<p class="result-cta-sub">' + ctaSub + '</p>' +
+      '<span class="result-cta-voucher">' + ctaVoucher + '</span>' +
       '<button class="btn-wa" onclick="openWA(\'' + waMsg + '\')">' +
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
         ' ' + waLabel +
       '</button>' +
-    '</div>' +
-
-    '<div class="promo-box">' +
-      '<p class="promo-text">' + promoText + '</p>' +
-      '<div class="promo-chip-row">' +
-        '<span class="promo-chip">PRILLER20</span>' +
-        '<button class="btn-copy" id="copyBtn" onclick="copyCode()">' +
-          (isDE ? 'Kopieren' : 'Copy') +
-        '</button>' +
-      '</div>' +
-      '<a class="btn-shop" href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener">' + shopLabel + '</a>' +
+      '<a class="cta-shop-link" href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener">' + shopHintLabel + '</a>' +
     '</div>' +
 
     '<button class="btn-restart" onclick="restartQuiz()">' +
