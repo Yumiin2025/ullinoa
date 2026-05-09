@@ -131,6 +131,23 @@ body.de .en-only{display:none}
 .btn-restart{display:flex;align-items:center;justify-content:center;gap:.4rem;margin:1.8rem auto 0;background:none;border:1.5px solid var(--sand);border-radius:100px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:400;padding:.5rem 1.4rem;cursor:pointer;transition:border-color .2s,color .2s}
 .btn-restart:hover{border-color:var(--sage);color:var(--sage-dk)}
 
+/* EMAIL CAPTURE SCREEN */
+.email-screen{padding:2rem 0;text-align:center}
+@keyframes bounceIn{0%{transform:scale(.5);opacity:0}65%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+.email-check{font-size:3.5rem;display:block;margin-bottom:1.1rem;animation:bounceIn .45s ease both}
+.email-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,5vw,2.4rem);font-weight:300;color:var(--moss);margin-bottom:.6rem;line-height:1.2}
+.email-sub{font-size:.92rem;color:var(--muted);margin-bottom:2rem;line-height:1.65}
+.email-done-bar{height:3px;background:linear-gradient(90deg,var(--sage),var(--terra));border-radius:100px;width:100%;margin-bottom:2.2rem}
+.email-form{display:flex;flex-direction:column;gap:.85rem;max-width:400px;margin:0 auto}
+.email-input{width:100%;padding:1rem 1.4rem;border:1.5px solid var(--sand);border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--cream);outline:none;transition:border-color .25s,box-shadow .25s;text-align:center}
+.email-input:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(114,184,174,.15)}
+.email-input.invalid{border-color:#d07070;box-shadow:0 0 0 3px rgba(208,112,112,.12)}
+.btn-email-submit{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--terra);color:#fff;border:none;border-radius:100px;padding:1rem 1.8rem;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:500;cursor:pointer;transition:background .2s,transform .2s;width:100%}
+.btn-email-submit:hover{background:var(--rose-dk);transform:translateY(-2px)}
+.btn-email-skip{display:inline-block;margin-top:.3rem;font-size:.76rem;color:var(--muted);text-decoration:underline;cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;padding:.3rem .5rem;transition:color .2s}
+.btn-email-skip:hover{color:var(--moss)}
+.email-privacy{font-size:.66rem;color:var(--muted);line-height:1.75;opacity:.75;margin-top:.2rem}
+
 /* FOOTER */
 footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
 .f-names{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:var(--moss);margin-bottom:.6rem}
@@ -358,7 +375,36 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
         </div>
       </div>
 
-      <!-- SCREEN 6: RESULT -->
+      <!-- SCREEN 6: EMAIL CAPTURE -->
+      <div class="screen email-screen" id="screen-email">
+        <div class="email-done-bar"></div>
+        <span class="email-check">🌿</span>
+        <h2 class="email-title">
+          <span class="de-only">Deine persönliche Routine ist fertig!</span>
+          <span class="en-only">Your personal routine is ready!</span>
+        </h2>
+        <p class="email-sub">
+          <span class="de-only">Wo sollen wir dir deine Routine hinschicken?</span>
+          <span class="en-only">Where should we send your routine?</span>
+        </p>
+        <div class="email-form">
+          <input class="email-input" type="email" id="emailInput" placeholder="Deine E-Mail-Adresse" autocomplete="email" onkeydown="if(event.key==='Enter')submitEmail()">
+          <button class="btn-email-submit" onclick="submitEmail()">
+            <span class="de-only">Routine anzeigen &amp; per E-Mail erhalten</span>
+            <span class="en-only">Show routine &amp; send via email</span>
+          </button>
+          <button class="btn-email-skip" onclick="skipEmail()">
+            <span class="de-only">Überspringen und Ergebnis direkt ansehen</span>
+            <span class="en-only">Skip and view result now</span>
+          </button>
+          <p class="email-privacy">
+            <span class="de-only">Wir schicken dir nur deine Routine und gelegentlich Tipps. Kein Spam, jederzeit abmeldbar.</span>
+            <span class="en-only">We'll only send your routine and occasional tips. No spam, unsubscribe anytime.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- SCREEN 7: RESULT -->
       <div class="screen result-screen" id="screen-result">
         <!-- dynamically filled -->
       </div>
@@ -481,11 +527,12 @@ function setLang(l) {
   document.body.classList.toggle('de', l === 'de');
   document.getElementById('btnDE').classList.toggle('active', l === 'de');
   document.getElementById('btnEN').classList.toggle('active', l === 'en');
+  updateEmailPlaceholder();
 }
 
 // ── NAVIGATION ────────────────────────────────────────────────────────────────
 
-var SCREEN_ORDER = ['intro','q1','q2','q3','q4','q5','result'];
+var SCREEN_ORDER = ['intro','q1','q2','q3','q4','q5','email','result'];
 
 function getScreenEl(id) {
   return document.getElementById('screen-' + id);
@@ -518,12 +565,16 @@ function transitionTo(nextId) {
 function updateProgress() {
   var wrap = document.getElementById('progressWrap');
   var fill = document.getElementById('progressFill');
-  var qScreens = ['q1','q2','q3','q4','q5'];
-  var idx = qScreens.indexOf(currentScreen);
-  if (idx === -1) {
-    wrap.classList.remove('visible');
+  if (currentScreen === 'email' || currentScreen === 'result') {
+    wrap.classList.add('visible');
+    fill.style.width = '100%';
+    fill.style.background = 'linear-gradient(90deg,var(--sage),var(--terra))';
     return;
   }
+  fill.style.background = '';
+  var qScreens = ['q1','q2','q3','q4','q5'];
+  var idx = qScreens.indexOf(currentScreen);
+  if (idx === -1) { wrap.classList.remove('visible'); return; }
   wrap.classList.add('visible');
   fill.style.width = ((idx + 1) / 5 * 100) + '%';
 }
@@ -551,8 +602,9 @@ function selectAnswer(question, value, btn) {
     if (idx < order.length - 1) {
       transitionTo(order[idx + 1]);
     } else {
-      // Last question — compute result
-      showResult();
+      // Last question — show email capture step
+      transitionTo('email');
+      updateEmailPlaceholder();
     }
   }, 300);
 }
@@ -773,16 +825,80 @@ function restartQuiz() {
   });
   // Reset result screen
   document.getElementById('screen-result').innerHTML = '';
+  // Reset email input
+  var emailInp = document.getElementById('emailInput');
+  if (emailInp) { emailInp.value = ''; emailInp.classList.remove('invalid'); }
 
-  // Manually transition back to intro (reverse direction not needed — just show intro)
+  // Manually transition back to intro
   var currentEl = getScreenEl(currentScreen);
   currentEl.classList.remove('active');
-
   var introEl = getScreenEl('intro');
   introEl.classList.add('active');
   currentScreen = 'intro';
   updateProgress();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── EMAIL CAPTURE ─────────────────────────────────────────────────────────────
+
+function updateEmailPlaceholder() {
+  var inp = document.getElementById('emailInput');
+  if (inp) inp.placeholder = lang === 'de' ? 'Deine E-Mail-Adresse' : 'Your email address';
+}
+
+function submitEmail() {
+  var inp = document.getElementById('emailInput');
+  var email = (inp.value || '').trim();
+  var valid = email.length > 3 && email.indexOf('@') > 0 && email.lastIndexOf('.') > email.indexOf('@');
+  if (!valid) {
+    inp.classList.add('invalid');
+    inp.focus();
+    setTimeout(function() { inp.classList.remove('invalid'); }, 1400);
+    return;
+  }
+
+  // Persist to localStorage
+  try {
+    var profileId = getProfile(answers);
+    var profile = PROFILES[profileId];
+    var entry = {
+      email: email,
+      profileId: profileId,
+      resultName: lang === 'de' ? profile.name_de : profile.name_en,
+      lang: lang,
+      date: new Date().toISOString()
+    };
+    var stored = JSON.parse(localStorage.getItem('rq_leads') || '[]');
+    stored.push(entry);
+    localStorage.setItem('rq_leads', JSON.stringify(stored));
+  } catch(e) {}
+
+  // Submit to FormSubmit.co (fire-and-forget, never block UX)
+  (function(emailVal) {
+    try {
+      var profileId = getProfile(answers);
+      var routineName = lang === 'de' ? PROFILES[profileId].name_de : PROFILES[profileId].name_en;
+      fetch('https://formsubmit.co/ajax/noa@ullinoa.at', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Quiz Lead: ' + routineName,
+          _template: 'table',
+          _captcha: 'false',
+          email_adresse: emailVal,
+          quiz_ergebnis: routineName,
+          sprache: lang,
+          datum: new Date().toLocaleDateString('de-AT')
+        })
+      }).catch(function() {});
+    } catch(e) {}
+  })(email);
+
+  showResult();
+}
+
+function skipEmail() {
+  showResult();
 }
 
 // ── FLOATING WA ───────────────────────────────────────────────────────────────
