@@ -178,6 +178,32 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .ladder-mo{color:var(--muted)}
 .ladder-yr{color:var(--moss);font-weight:600}
 
+/* HERO STAT LINE */
+.p-hero-stat{font-size:.8rem;color:rgba(255,255,255,.55);letter-spacing:.06em;margin-top:.2rem;display:flex;flex-wrap:wrap;gap:.3rem .9rem}
+.p-hero-stat strong{color:var(--sage);font-weight:600;font-size:.88rem}
+
+/* COLLAPSIBLE PYRAMID SECTION */
+.honest-more{margin-top:1.5rem}
+.honest-toggle{display:inline-flex;align-items:center;gap:.5rem;background:none;border:1.5px solid rgba(114,184,174,.5);color:var(--sage-dk);border-radius:100px;padding:.6rem 1.6rem;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s,color .2s;letter-spacing:.02em}
+.honest-toggle:hover{border-color:var(--sage-dk);background:rgba(114,184,174,.08)}
+.honest-toggle.is-open{border-color:var(--moss);color:var(--moss)}
+.honest-ico{width:14px;height:14px;flex-shrink:0;transition:transform .25s}
+.honest-toggle.is-open .honest-ico{transform:rotate(45deg)}
+.honest-panel{display:none}
+.honest-panel.open{display:block;animation:slideDown .3s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+
+/* SIDE NAV DOTS */
+.side-nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:200;display:none}
+@media(min-width:920px){.side-nav{display:flex}}
+.side-nav-inner{display:flex;flex-direction:column;gap:9px;align-items:center}
+.side-dot{position:relative;width:7px;height:7px;border-radius:50%;background:var(--sand);border:1.5px solid var(--sand);display:block;text-decoration:none;transition:background .22s,border-color .22s,transform .2s;cursor:pointer}
+.side-dot:hover,.side-dot.active{background:var(--moss);border-color:var(--moss)}
+.side-dot.active{transform:scale(1.35)}
+.side-dot::after{content:attr(data-label-de);position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);background:var(--moss);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:.67rem;font-weight:500;white-space:nowrap;padding:.22rem .6rem;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .18s;letter-spacing:.03em}
+.side-dot:hover::after{opacity:1}
+body.en .side-dot::after{content:attr(data-label-en)}
+
 /* FLOATING WHATSAPP */
 #waFloat{position:fixed;bottom:20px;right:20px;z-index:9000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.45),0 2px 8px rgba(0,0,0,.18);text-decoration:none;opacity:1;transition:opacity .3s,transform .2s;animation:waPulse .6s ease-in-out 3}
 #waFloat:hover{transform:scale(1.08)}
@@ -242,6 +268,10 @@ body.edit-mode #waFloat{display:none}
         <p class="p-hero-sub">
           <span class="en-only">Flexible, meaningful, built around your life. No boss, no fixed hours, no inventory. Just real products people love and a community that grows with you. This is how you build something that actually matters.</span>
           <span class="de-only">Flexibel, sinnstiftend, rund um dein Leben gebaut. Kein Chef, keine fixen Zeiten, kein Lager. Nur echte Produkte, die Menschen lieben und eine Community, die mit dir wächst. So baust du dir etwas auf, das wirklich zählt.</span>
+        </p>
+        <p class="p-hero-stat">
+          <span class="de-only"><strong>Über 63.000</strong> Partner:innen &nbsp;·&nbsp; <strong>28 Jahre</strong> &nbsp;·&nbsp; <strong>0 €</strong> Einstieg.</span>
+          <span class="en-only"><strong>Over 63,000</strong> partners &nbsp;·&nbsp; <strong>28 years</strong> &nbsp;·&nbsp; <strong>€0</strong> to start.</span>
         </p>
       </div>
       <img src="assets/images/Photo12.JPG" alt="Noa und Ulli, RINGANA Frischepartnerinnen — das Business-Team" class="p-hero-photo">
@@ -668,50 +698,59 @@ body.edit-mode #waFloat{display:none}
       </p>
     </div>
 
-    <div class="compare-wrap">
-      <table class="compare">
-        <thead>
-          <tr>
-            <th><span class="en-only">Feature</span><span class="de-only">Merkmal</span></th>
-            <th><span class="en-only">Pyramid scheme</span><span class="de-only">Schneeballsystem</span></th>
-            <th>RINGANA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="en-only">Real products sold to real customers</span><span class="de-only">Echte Produkte an echte Kund:innen</span></td>
-            <td class="no"><span class="en-only">No / irrelevant</span><span class="de-only">Nein / irrelevant</span></td>
-            <td class="ok"><span class="en-only">Yes — always</span><span class="de-only">Ja — immer</span></td>
-          </tr>
-          <tr>
-            <td><span class="en-only">Can you earn without recruiting?</span><span class="de-only">Verdienst du ohne Partneraufbau?</span></td>
-            <td class="no"><span class="en-only">No</span><span class="de-only">Nein</span></td>
-            <td class="ok"><span class="en-only">Yes — product sales only is valid</span><span class="de-only">Ja — nur Produktverkauf ist möglich</span></td>
-          </tr>
-          <tr>
-            <td><span class="en-only">Entry fee / forced purchases</span><span class="de-only">Einstiegspflicht / Kaufzwang</span></td>
-            <td class="no"><span class="en-only">Usually yes</span><span class="de-only">Meistens ja</span></td>
-            <td class="ok"><span class="en-only">€0 to start — no forced purchases ever</span><span class="de-only">€0 Einstieg — kein Kaufzwang</span></td>
-          </tr>
-          <tr>
-            <td><span class="en-only">Legal status in EU</span><span class="de-only">Rechtsstatus in der EU</span></td>
-            <td class="no"><span class="en-only">Illegal</span><span class="de-only">Illegal</span></td>
-            <td class="ok"><span class="en-only">Fully legal, regulated direct sales</span><span class="de-only">Vollständig legal, regulierter Direktvertrieb</span></td>
-          </tr>
-          <tr>
-            <td><span class="en-only">Exit — can you stop anytime?</span><span class="de-only">Ausstieg — jederzeit möglich?</span></td>
-            <td class="no"><span class="en-only">Difficult / traps</span><span class="de-only">Schwierig / Fallen</span></td>
-            <td class="ok"><span class="en-only">Yes — start today, stop tomorrow, no consequences</span><span class="de-only">Ja — heute anfangen, morgen aufhören, es passiert nichts</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="honest-more">
+      <button class="honest-toggle" onclick="toggleHonest(this)" aria-expanded="false">
+        <svg class="honest-ico" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+        <span class="de-only">Unterschiede im Detail zeigen</span>
+        <span class="en-only">Show detailed comparison</span>
+      </button>
+      <div class="honest-panel">
+        <div class="compare-wrap">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th><span class="en-only">Feature</span><span class="de-only">Merkmal</span></th>
+                <th><span class="en-only">Pyramid scheme</span><span class="de-only">Schneeballsystem</span></th>
+                <th>RINGANA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="en-only">Real products sold to real customers</span><span class="de-only">Echte Produkte an echte Kund:innen</span></td>
+                <td class="no"><span class="en-only">No / irrelevant</span><span class="de-only">Nein / irrelevant</span></td>
+                <td class="ok"><span class="en-only">Yes — always</span><span class="de-only">Ja — immer</span></td>
+              </tr>
+              <tr>
+                <td><span class="en-only">Can you earn without recruiting?</span><span class="de-only">Verdienst du ohne Partneraufbau?</span></td>
+                <td class="no"><span class="en-only">No</span><span class="de-only">Nein</span></td>
+                <td class="ok"><span class="en-only">Yes — product sales only is valid</span><span class="de-only">Ja — nur Produktverkauf ist möglich</span></td>
+              </tr>
+              <tr>
+                <td><span class="en-only">Entry fee / forced purchases</span><span class="de-only">Einstiegspflicht / Kaufzwang</span></td>
+                <td class="no"><span class="en-only">Usually yes</span><span class="de-only">Meistens ja</span></td>
+                <td class="ok"><span class="en-only">€0 to start — no forced purchases ever</span><span class="de-only">€0 Einstieg — kein Kaufzwang</span></td>
+              </tr>
+              <tr>
+                <td><span class="en-only">Legal status in EU</span><span class="de-only">Rechtsstatus in der EU</span></td>
+                <td class="no"><span class="en-only">Illegal</span><span class="de-only">Illegal</span></td>
+                <td class="ok"><span class="en-only">Fully legal, regulated direct sales</span><span class="de-only">Vollständig legal, regulierter Direktvertrieb</span></td>
+              </tr>
+              <tr>
+                <td><span class="en-only">Exit — can you stop anytime?</span><span class="de-only">Ausstieg — jederzeit möglich?</span></td>
+                <td class="no"><span class="en-only">Difficult / traps</span><span class="de-only">Schwierig / Fallen</span></td>
+                <td class="ok"><span class="en-only">Yes — start today, stop tomorrow, no consequences</span><span class="de-only">Ja — heute anfangen, morgen aufhören, es passiert nichts</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <div class="sec-body" style="margin-top:1.8rem">
-      <p>
-        <span class="en-only">We understand why people ask. Network marketing has a bad reputation — and much of it is earned by shady companies. We chose RINGANA specifically because it is built on real product value, not recruitment pressure. If you ever feel uncertain, ask us anything directly. We will never pressure you.</span>
-        <span class="de-only">Wir verstehen, warum Menschen fragen. Network Marketing hat einen schlechten Ruf — und vieles davon ist bei zweifelhaften Unternehmen berechtigt. Wir haben uns bewusst für RINGANA entschieden, weil es auf echtem Produktwert aufgebaut ist, nicht auf Rekrutierungsdruck. Wenn du jemals unsicher bist, frag uns direkt. Wir setzen dich niemals unter Druck.</span>
-      </p>
+        <div class="sec-body" style="margin-top:1.8rem">
+          <p>
+            <span class="en-only">We understand why people ask. Network marketing has a bad reputation — and much of it is earned by shady companies. We chose RINGANA specifically because it is built on real product value, not recruitment pressure. If you ever feel uncertain, ask us anything directly. We will never pressure you.</span>
+            <span class="de-only">Wir verstehen, warum Menschen fragen. Network Marketing hat einen schlechten Ruf — und vieles davon ist bei zweifelhaften Unternehmen berechtigt. Wir haben uns bewusst für RINGANA entschieden, weil es auf echtem Produktwert aufgebaut ist, nicht auf Rekrutierungsdruck. Wenn du jemals unsicher bist, frag uns direkt. Wir setzen dich niemals unter Druck.</span>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -804,6 +843,19 @@ body.edit-mode #waFloat{display:none}
   </div>
 </section>
 
+<nav class="side-nav" aria-label="Seitennavigation">
+  <div class="side-nav-inner">
+    <a class="side-dot" href="#empfehlen" data-label-de="Fundament" data-label-en="Foundation" aria-label="Fundament"></a>
+    <a class="side-dot" href="#how" data-label-de="So funktioniert's" data-label-en="How it works" aria-label="How it works"></a>
+    <a class="side-dot" href="#team" data-label-de="Unser Team" data-label-en="Our Team" aria-label="Unser Team"></a>
+    <a class="side-dot" href="#income" data-label-de="Verdienst" data-label-en="Income" aria-label="Verdienst"></a>
+    <a class="side-dot" href="#stories" data-label-de="Abrechnungen" data-label-en="Commissions" aria-label="Abrechnungen"></a>
+    <a class="side-dot" href="#start" data-label-de="Jetzt starten" data-label-en="Start now" aria-label="Jetzt starten"></a>
+    <a class="side-dot" href="#honest" data-label-de="Faktencheck" data-label-en="Fact check" aria-label="Faktencheck"></a>
+    <a class="side-dot" href="#faq" data-label-de="FAQ" data-label-en="FAQ" aria-label="FAQ"></a>
+  </div>
+</nav>
+
 <footer>
   <p class="f-names"><em>Noa</em> &amp; Ulli</p>
   <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · Made with 🌿 · <a href="https://boards.com/a/nAQGc.Cjq6kU" target="_blank" rel="noopener">Impressum</a></p>
@@ -838,6 +890,34 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
 }
 setLang('de');
+
+function toggleHonest(btn) {
+  var panel = btn.nextElementSibling;
+  var open = panel.classList.toggle('open');
+  btn.classList.toggle('is-open', open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+// Side nav IntersectionObserver
+(function() {
+  var ids = ['empfehlen','how','team','income','stories','start','honest','faq'];
+  var dots = {};
+  ids.forEach(function(id) {
+    var dot = document.querySelector('.side-dot[href="#'+id+'"]');
+    if (dot) dots[id] = dot;
+  });
+  if (!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var id = entry.target.id;
+      if (dots[id]) dots[id].classList.toggle('active', entry.isIntersecting);
+    });
+  }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+})();
 
 function sendPartnerWA(person) {
   const name = (document.getElementById('pName').value||'').trim();
