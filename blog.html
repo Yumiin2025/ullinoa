@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog & News – Noa & Ulli | RINGANA</title>
+<meta name="description" content="Alle Beiträge, News und Produkttipps von Noa & Ulli – deinen RINGANA Partner:innen aus Österreich. Naturkosmetik, clean beauty und ehrliche Erfahrungsberichte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f5f0e8;--sage:#72b8ae;--sage-dk:#3a8a7e;
+  --moss:#1e3d3a;--terra:#9b8fd4;--sand:#e0d5c1;
+  --white:#fdfaf5;--text:#2a2a24;--muted:#7a7468;
+  --rose:#9b8fd4;--rose-dk:#7a6eb4;
+  --radius:20px;--nav-h:80px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+.de-only{display:none}
+body.de .de-only{display:block}
+body.de .en-only{display:none}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:300;height:var(--nav-h);background:rgba(253,250,245,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--sand)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;border-bottom:1px solid rgba(224,213,193,.5);height:42px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;color:var(--moss);text-decoration:none;letter-spacing:.05em}
+.nav-logo em{font-style:italic;color:var(--terra)}
+.nav-tr{display:flex;align-items:center;gap:.75rem}
+.nav-ico{display:flex;align-items:center;color:var(--moss);text-decoration:none;transition:color .2s}
+.nav-ico:hover{color:var(--rose-dk)}
+.nav-ico svg{width:15px;height:15px}
+.nav-sep{width:1px;height:14px;background:var(--sand)}
+.lang-sw{display:flex;gap:.12rem;background:var(--sand);border-radius:100px;padding:.15rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--muted);padding:.28rem .75rem;border-radius:100px;transition:background .2s,color .2s}
+.lang-btn.active{background:var(--moss);color:var(--cream)}
+.nav-menu{display:flex;align-items:center;justify-content:center;gap:.25rem;padding:.3rem 1rem;overflow-x:auto;scrollbar-width:none;height:38px}
+.nav-menu::-webkit-scrollbar{display:none}
+.nav-menu a{display:inline-flex;align-items:center;font-size:.72rem;font-weight:500;letter-spacing:.04em;color:var(--muted);text-decoration:none;white-space:nowrap;padding:.28rem .75rem;border-radius:100px;transition:color .2s,background .2s}
+.nav-menu a:hover,.nav-menu a.active{color:var(--moss);background:rgba(114,184,174,.13)}
+.nav-dot{width:3px;height:3px;border-radius:50%;background:var(--sand);flex-shrink:0}
+.nav-menu a.cta-nav{background:var(--moss);color:var(--cream) !important;margin-left:.25rem}
+.nav-menu a.cta-nav:hover{background:var(--sage-dk)}
+/* HERO */
+.blog-hero{margin-top:var(--nav-h);background:var(--cream);padding:4.5rem 1.25rem 3rem;text-align:center;border-bottom:1px solid var(--sand)}
+.blog-hero-lbl{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dk);font-weight:500;margin-bottom:.9rem}
+.blog-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:var(--moss);line-height:1.15;margin-bottom:.8rem}
+.blog-hero-title em{font-style:italic;color:var(--terra)}
+.blog-hero-sub{font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.7;max-width:520px;margin:0 auto}
+/* BLOG GRID */
+.blog-section{background:var(--white);padding:3.5rem 1.25rem 5rem}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;max-width:1140px;margin:0 auto}
+@media(max-width:680px){.blog-grid{grid-template-columns:1fr}}
+.post-card{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid transparent;cursor:pointer;transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column;border:1px solid var(--sand)}
+.post-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(30,61,58,.12);border-color:var(--sage)}
+.post-img{width:100%;height:200px;object-fit:cover;display:block}
+.post-bar{height:5px;flex-shrink:0}
+.bar-news{background:linear-gradient(90deg,var(--sage),var(--sage-dk))}
+.bar-promo{background:linear-gradient(90deg,var(--terra),#c4b0f0)}
+.bar-blog{background:linear-gradient(90deg,#72b8ae,#9b8fd4)}
+.bar-event{background:linear-gradient(90deg,#7a9cb8,var(--sage))}
+.post-body{padding:1.6rem 1.8rem 1.8rem;flex:1;display:flex;flex-direction:column}
+.post-meta{display:flex;align-items:center;gap:.65rem;margin-bottom:.9rem}
+.post-badge{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.22rem .7rem;border-radius:100px}
+.badge-news{background:#dff2f0;color:#2a6a62}.badge-promo{background:#ece8f8;color:#5a4ea0}
+.badge-blog{background:#dff2f0;color:#2a6a62}.badge-event{background:#d0dfe8;color:#3a5e78}
+.post-date{font-size:.72rem;color:var(--muted)}
+.post-title{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:400;color:var(--moss);line-height:1.25;margin-bottom:.7rem}
+.post-excerpt{font-size:.86rem;color:var(--muted);line-height:1.7;font-weight:300;flex:1}
+.post-footer{display:flex;align-items:center;margin-top:1.3rem}
+.post-more{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;color:var(--sage-dk);pointer-events:none}
+.post-more svg{width:12px;height:12px;transition:transform .2s}
+.post-card:hover .post-more svg{transform:translateX(3px)}
+/* MODAL */
+.modal-ov{display:none;position:fixed;inset:0;z-index:500;background:rgba(30,61,58,.6);backdrop-filter:blur(8px);padding:1rem;align-items:center;justify-content:center}
+.modal-ov.open{display:flex}
+.detail-modal{background:var(--white);border-radius:var(--radius);max-width:640px;width:100%;max-height:92svh;overflow-y:auto;position:relative;animation:slideUp .35s cubic-bezier(.22,1,.36,1) both}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.d-img{width:100%;max-height:320px;object-fit:cover;display:none}
+.d-hdr{height:5px}
+.d-close{position:absolute;top:1rem;right:1rem;background:rgba(30,61,58,.08);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--moss);transition:background .2s}
+.d-close:hover{background:rgba(30,61,58,.16)}
+.d-close svg{width:16px;height:16px}
+.d-body{padding:2.2rem 2rem 2.5rem}
+.d-meta{display:flex;align-items:center;gap:.65rem;margin-bottom:1.2rem}
+.d-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.4rem);font-weight:300;color:var(--moss);line-height:1.2;margin-bottom:1.2rem}
+.d-content{font-size:.95rem;color:var(--text);line-height:1.8;font-weight:300;white-space:pre-wrap}
+.d-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;background:var(--moss);color:var(--cream);text-decoration:none;padding:.75rem 1.6rem;border-radius:100px;font-size:.86rem;font-weight:500;transition:background .2s,transform .2s}
+.d-link:hover{background:var(--sage-dk);transform:translateY(-2px)}
+.d-link svg{width:13px;height:13px}
+/* FOOTER */
+footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
+.f-names{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:var(--moss);margin-bottom:.6rem}
+.f-names em{font-style:italic;color:var(--terra)}
+.f-soc{display:flex;justify-content:center;gap:1.2rem;margin:.8rem 0 .6rem;flex-wrap:wrap}
+.f-soc a{display:flex;align-items:center;gap:.38rem;font-size:.78rem;font-weight:500;color:var(--moss);text-decoration:none;transition:color .2s}
+.f-soc a:hover{color:var(--rose-dk)}
+.f-soc svg{width:15px;height:15px}
+.f-copy{font-size:.74rem;color:var(--muted);line-height:1.9}
+.f-copy a{color:var(--sage-dk);text-decoration:none}
+/* ANIM */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}
+.d4{transition-delay:.2s}.d5{transition-delay:.25s}.d6{transition-delay:.3s}
+</style>
+</head>
+<body class="de">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-top">
+    <a class="nav-logo" href="index.html"><em>Noa</em> &amp; Ulli</a>
+    <div class="nav-tr">
+      <a class="nav-ico" href="https://www.instagram.com/ulli.noa.so.we?igsh=dnVhZDJmN2lvYWpq&utm_source=qr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"></circle></svg></a>
+      <a class="nav-ico" href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></a>
+      <div class="nav-sep"></div>
+      <div class="lang-sw">
+        <button class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-menu">
+    <a href="index.html"><span class="en-only">← Home</span><span class="de-only">← Startseite</span></a>
+    <div class="nav-dot"></div>
+    <a href="blog.html" class="active"><span class="en-only">Blog</span><span class="de-only">Blog</span></a>
+    <div class="nav-dot"></div>
+    <a href="story.html"><span class="en-only">Our Story</span><span class="de-only">Unsere Geschichte</span></a>
+    <div class="nav-dot"></div>
+    <a href="quiz.html"><span class="en-only">Skin Quiz</span><span class="de-only">Routine-Quiz</span></a>
+    <a href="partner.html" class="cta-nav"><span class="en-only">Das Business</span><span class="de-only">Das Business</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <p class="blog-hero-lbl"><span class="de-only">News · Blog · Aktionen</span><span class="en-only">News · Blog · Promos</span></p>
+  <h1 class="blog-hero-title">
+    <span class="de-only">Was gerade <em>passiert</em></span>
+    <span class="en-only">What's <em>happening</em></span>
+  </h1>
+  <p class="blog-hero-sub">
+    <span class="de-only">Produkte, Erfahrungen, Business-Tipps und Aktionen — alles von Noa &amp; Ulli, direkt und ohne Hochglanz.</span>
+    <span class="en-only">Products, experiences, business tips and promos — everything from Noa &amp; Ulli, honest and unfiltered.</span>
+  </p>
+</div>
+
+<!-- BLOG GRID -->
+<section class="blog-section">
+  <div class="blog-grid" id="blogGrid"></div>
+</section>
+
+<!-- POST DETAIL MODAL -->
+<div class="modal-ov" id="detailOv" onclick="closeDetail(event)">
+  <div class="detail-modal">
+    <img class="d-img" id="dImg" src="" alt="">
+    <div class="d-hdr" id="dHdr"></div>
+    <button class="d-close" onclick="closeDetailBtn()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="d-body">
+      <div class="d-meta" id="dMeta"></div>
+      <h2 class="d-title" id="dTitle"></h2>
+      <div class="d-content" id="dContent"></div>
+      <a class="d-link" id="dLink" href="#" target="_blank" rel="noopener">
+        <span id="dLinkLbl">Mehr erfahren</span>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="f-names"><em>Noa</em> &amp; Ulli</p>
+  <div class="f-soc">
+    <a href="https://www.instagram.com/ulli.noa.so.we" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
+    <a href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>RINGANA Shop</a>
+  </div>
+  <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · Made with 🌿 · <a href="https://boards.com/a/nAQGc.Cjq6kU" target="_blank" rel="noopener">Impressum</a></p>
+</footer>
+
+<script>
+window._BAKED_POSTS = [{"id":"d8","type":"product","title_de":"Der RINGANA FRESH Toner: unterschätzt, aber unverzichtbar","title_en":"The RINGANA FRESH Toner: underrated, but essential","excerpt_de":"Toner ist der unterschätzte Held jeder Hautpflege-Routine. Der neue RINGANA FRESH Toner bringt die Haut nach dem Reinigen zurück ins Gleichgewicht.","excerpt_en":"Toner is the unsung hero of any skincare routine. The new RINGANA FRESH Toner brings your skin back into balance after cleansing.","content_de":"Ich hab eine kleine Neuigkeit: RINGANA hat jetzt einen Toner. Und ich finds wirklich einen der Schritte in der Hautpflege, über den man am meisten nachdenken sollte.\n\n🫶 Was macht ein Toner eigentlich?\n\nNach dem Reinigen ist die Haut oft kurz aus dem Gleichgewicht, manchmal trocken, manchmal spannt sie, manchmal reagiert sie empfindlicher als sonst. Genau da setzt der Toner an. Er bringt den natürlichen pH-Wert der Haut wieder in Balance und bereitet sie optimal auf alles vor, was danach kommt.\n\nWas der RINGANA FRESH Toner konkret kann:\n\n→ Feuchtigkeit aufrechterhalten & Hydration stärken\n→ Die Hautbarriere aktiv unterstützen\n→ Überschuss-Sebum ausbalancieren\n→ Die Haut auf Serum und Creme vorbereiten\n→ Ein ruhiges, leichtes, ausbalanciertes Hautgefühl hinterlassen\n\nWas ich besonders mag: er ist keine Kompromisslösung. RINGANA nennt ihn einen \"Quiet Essential\": einer von diesen Pflegeschritten, der nicht laut nach Aufmerksamkeit schreit, aber täglich einen echten, spürbaren Unterschied macht. Kein Alkohol, kein Füllstoff, kein Kompromiss. Typisch RINGANA.\n\n🌟 Toner, nicht nur fürs Gesicht\n\nDas wird gern vergessen: Toner ist kein reines Gesichtspflegeprodukt. Rücken, Schultern, Dékolleté, Stellen, die oft übersehen werden, aber ihre eigenen Bedürfnisse haben. Die praktische Spray-Formulierung macht die Anwendung super einfach, auch nach dem Sport oder nach viel Sonne.\n\nWenn du nach einer natürlichen Hautpflege-Routine suchst, die wirklich funktioniert, der FRESH Toner ist ein echter Schritt in die richtige Richtung.\n\n→ Mehr dazu: https://priller.ringana.com/blog/importance-of-toning/\n\nFragen oder Interesse? Schreib uns direkt: https://wa.me/436769261706","content_en":"Small update, big impact on your skincare routine.\n\nRINGANA now has a toner. And honestly? It's one of those skincare steps worth thinking more about.\n\n🫶 What does a toner actually do?\n\nAfter cleansing, the skin is often briefly off-balance, sometimes dry, sometimes tight, sometimes more sensitive than usual. That's exactly where a good toner comes in. It restores the skin's natural pH balance and primes it perfectly for everything that follows: serum, moisturiser, SPF.\n\nWhat the RINGANA FRESH Toner specifically does:\n\n→ Maintain and boost hydration\n→ Actively support the skin barrier\n→ Balance excess sebum\n→ Prep skin for serum and moisturiser\n→ Leave a calm, light, balanced feeling on the skin\n\nWhat I love most: it's not a compromise. RINGANA calls it a \"Quiet Essential\": one of those skincare steps that doesn't shout for attention, but makes a real, noticeable difference every single day. No alcohol, no filler, no shortcuts. Typical RINGANA.\n\n🌟 Not just for your face\n\nThis often gets forgotten: toner isn't just a facial skincare product. Back, shoulders, décolleté, areas that tend to be overlooked but have their own needs too. The spray formula makes application effortless, even after a workout or a long day in the sun.\n\nIf you're looking for a natural skincare routine that actually works, the FRESH Toner is a genuine step in the right direction.\n\n→ Read more: https://priller.ringana.com/blog/importance-of-toning/\n\nQuestions or interested? Message us directly: https://wa.me/436769261706","link":"https://priller.ringana.com/blog/importance-of-toning/","linkLabel":"Mehr lesen","imageUrl":"assets/images/Partner-Templates-1x1-FRESH-tonic-calm-1.jpg","date":"2026-05-31"},{"id":"d7","type":"promo","title_de":"Neupartnerpromo: Jetzt starten & mehr mitnehmen","title_en":"New Partner Promo: Start now & get more","excerpt_de":"Ab 04.05.2026, 12:00 Uhr MEZ, zeitlich begrenzt, nur für neue Partner:innen. Jetzt einsteigen und echten Bonus mitnehmen.","excerpt_en":"From 04 May 2026, 12:00 CET, limited time, new partners only. Join now and take home a real bonus.","content_de":"Kennst du das Gefühl, wenn das Monatsende näher rückt als das Monatsgehalt? Wenn du dir wünschst, ein eigenes Ding zu haben, das wirklich zu deinem Leben passt und nicht umgekehrt?\n\nViele Menschen in unserem Umfeld kennen genau das. Zu wenig Spielraum. Zu wenig Sinn im Alltag. Und den stillen Wunsch nach mehr Freiheit, mehr Flexibilität und einem Einkommen, das nicht aufhört, wenn man mal kurz aufhört.\n\nGenau dafür gibt es das RINGANA Business.\n\nKein Chef. Kein Lager. Kein fixer Zeitplan. Du empfiehlst Produkte, die du wirklich liebst, und wirst dafür bezahlt. Menschen in unserem Team haben damit begonnen, nur ihre eigenen Produkte zu refinanzieren und haben sich ein echtes Nebeneinkommen aufgebaut. Andere haben daraus ein Vollzeiteinkommen gemacht. Das ist kein Hochglanz-Versprechen: das ist die Realität unserer Familie seit 27 Jahren.\n\nNEUPARTNERPROMO: NUR FÜR KURZE ZEIT\n\nAb 04.05.2026 um 12:00 Uhr (MEZ) starten wir unsere Neupartnerpromo, frisch, einzigartig und voller Potenzial!\n\nAlle, die sich jetzt als RINGANA Partner:in anmelden und das Business Booster Starterset wählen, erhalten on top:\n\n✨ 1 x RINGANA beauty bag\n✨ 1 x FRESH cleanser\n✨ 1 x FRESH cream medium\n✨ 1 x FRESH hydro serum\n\nKein Kaufzwang. Kein Mindestumsatz. Keine Verpflichtung. Nur ein echter Einstieg, mit echtem Bonus.\n\nBereit? Schreib uns direkt auf WhatsApp oder schau dir das Business noch einmal in Ruhe an. Wir beantworten jede Frage persönlich, kein Druck, versprochen.\n\nWhatsApp Noa: https://wa.me/436769261706\nWhatsApp Ulli: https://wa.me/436766189426","content_en":"You know that feeling when the end of the month arrives before your paycheck does? When you wish you had something of your own, something that actually fits around your life and not the other way around?\n\nMany people in our community know exactly that. Not enough breathing room. Not enough meaning in the day-to-day. And a quiet wish for more freedom, more flexibility and an income that doesn't stop just because you take a breather.\n\nThat's exactly what the RINGANA business is for.\n\nNo boss. No inventory. No fixed schedule. You recommend products you genuinely love, and get paid for it. People in our team started just to cover the cost of their own products and built a real side income. Others turned it into a full-time living. No glossy promises: this is our family's reality for 27 years.\n\nNEW PARTNER PROMO: LIMITED TIME ONLY\n\nFrom 04 May 2026 at 12:00 CET our New Partner Promo begins, fresh, unique, and full of incredible potential!\n\nEveryone who registers as a RINGANA partner and chooses the Business Booster starter set receives on top:\n\n✨ 1 x RINGANA beauty bag\n✨ 1 x FRESH cleanser\n✨ 1 x FRESH cream medium\n✨ 1 x FRESH hydro serum\n\nNo forced purchases. No minimum turnover. No obligation. Just a real start, with a real bonus.\n\nReady? Write to us directly on WhatsApp or take your time to find out more. We answer every question personally, no pressure, promised.\n\nWhatsApp Noa: https://wa.me/436769261706\nWhatsApp Ulli: https://wa.me/436766189426","link":"https://priller.ringana.com/corporate/distribution/","linkLabel":"Mehr zum Business","imageUrl":"assets/images/photo16.png","date":"2026-05-04"},{"id":"d6","type":"blog","title_de":"RINGANA Erfahrung: Unsere ehrliche Geschichte nach 27 Jahren in der Familie","title_en":"RINGANA Experience: Our Honest Story After 27 Years in the Family","excerpt_de":"Seit 27 Jahren in unserer Familie. Kein Werbetext, sondern ein echter Erfahrungsbericht von drei Generationen.","excerpt_en":"In our family for 27 years. An honest experience report from three generations.","content_de":"","content_en":"","link":"story.html","directLink":true,"imageUrl":"assets/images/photo 16.JPG","date":"2026-05-01"},{"id":"d5","type":"news","title_de":"Neue Formel: RINGANAdea, jetzt noch wirksamer","title_en":"New Formula: RINGANAdea, now even better","excerpt_de":"Dein täglicher Moment der Leichtigkeit bekommt ein Upgrade. Die neue RINGANAdea Formel: wissenschaftlich durchdacht, natürlich zusammengesetzt.","excerpt_en":"Your daily moment of lightness just got an upgrade. The new RINGANAdea formula: scientifically studied, naturally composed.","content_de":"Mit der neuen Formel wird dein täglicher Hydrations-Moment zu einem echten Upgrade. RINGANAdea kombiniert pflanzliche Extrakte, Ballaststoffe, Vitamin C, Chrom und Zink, einfach in Wasser einrühren, genießen und mit jedem Schluck etwas Gutes für sich tun.\n\nChrom trägt zur Aufrechterhaltung eines normalen Blutzuckerspiegels bei. Vitamin C unterstützt ein stabiles Energieniveau. Und die Ballaststoffe runden die Formel auf das nächste Level ab.\n\n🌿 Was steckt drin?\n\nmetabolaid Komplex aus Zitronenverbene & Hibiskusblüten, enthält Verbascoside und Anthocyane.\nCacti-Nea Kaktusfeigen-Fruchtsaftpulver, enthält antioxidative Betalaine.\nMorosil Blutorangen-Fruchtextrakt, enthält Flavanone, Anthocyane und Hydroxyzimtsäuren.\nHagebutten-Hibiskus-Saftkonzentrat, liefert Vitamin C für normalen Energiestoffwechsel.\nMate-Blattextrakt, belebend.\nFructooligosaccharide (FOS), wasserlösliche Ballaststoffe.\nSunfiber Guarkernmehl-Faser, sorgt für hohen Ballaststoffgehalt.\nChrom aus chromangereicherter Hefe, bioverfügbar.\nZink aus Zinkbisglycinate, gut verträglich.\n\nEinfach in 250 bis 500 ml Wasser einrühren und deinen Alltag upgraden. 💚","content_en":"With the new formula, your daily hydration routine becomes a real upgrade. RINGANAdea combines scientifically studied plant extracts, dietary fibre, vitamin C, chromium and zinc, simply stir into water and do something good for yourself with every sip.\n\nChromium contributes to the maintenance of normal blood sugar levels. Vitamin C supports a stable energy level.\n\n🌿 What's inside?\n\nmetabolaid complex from lemon verbena leaf and hibiscus flower extract, contains verbascosides and anthocyanins.\nCacti-Nea prickly pear fruit juice powder, contains antioxidant betalains.\nMorosil blood orange fruit extract, contains flavanones, anthocyanins and hydroxycinnamic acids.\nRosehip-hibiscus juice concentrate, provides vitamin C for normal energy metabolism.\nMate leaf extract, invigorating.\nFructooligosaccharides (FOS), water-soluble dietary fibres.\nSunfiber guar bean fibre, ensures a high fibre content.\nChromium from chromium-enriched yeast, bioavailable.\nZinc from zinc bisglycinate, well tolerated.\n\nStir into 250 to 500 ml of water and upgrade your everyday routine. 💚","link":"https://priller.ringana.com/blog/conscious-lightness/?lang=en","linkLabel":"Mehr lesen","imageUrl":"assets/images/dea.jpg","date":"2026-04-27"},{"id":"d4","type":"news","title_de":"RINGANAbty gewinnt den PETA Vegan Beauty Award 2026","title_en":"RINGANAbty Wins the PETA Vegan Beauty Award 2026","excerpt_de":"Wir sind unglaublich stolz: RINGANAbty wurde mit dem PETA Vegan Beauty Award 2026 als Best Vegan Innovation ausgezeichnet.","excerpt_en":"We're incredibly proud: RINGANAbty has been awarded the PETA Vegan Beauty Award 2026 for Best Vegan Innovation.","content_de":"Wir sind unglaublich stolz bekannt zu geben, dass RINGANAbty mit dem PETA Vegan Beauty Award 2026 als Best Vegan Innovation ausgezeichnet wurde. 💚\n\nDieser Award ist mehr als Anerkennung, er ist ein Zeichen, dass die Zukunft der Schönheit bewusst, nachhaltig und zukunftsorientiert ist.\n\n✨ Drink Your Skincare\n\nRINGANAbty überdenkt Schönheit von innen heraus. Ein fruchtig-frischer Beauty-Drink mit Mandarine, Orange und Sanddorn, der deine Haut dort unterstützt, wo es am wichtigsten ist, von innen.\n\n🌿 Was macht RINGANAbty besonders?\n\nVeCollal, ein pflanzlicher Komplex, der Kollagen Typ I nachahmt.\nGREENIURONIC (Schneepilz-Extrakt), eine patentierte vegane Hyaluronsäure.\nOmegia (Sanddornöl), reich an Omega 3, 6, 7 und 9.\nKeranat, eine Mischung aus Hirsesamenöl und Weizenextrakt.\nFermentierte Guarkernmehl-Faser, präbiotische Faser für die Darmgesundheit.\n\nUnd wir fangen gerade erst an. ✨","content_en":"We're incredibly proud to share that RINGANAbty has been awarded the PETA Vegan Beauty Award 2026 for Best Vegan Innovation. 💚\n\nThis award is more than recognition, it's a sign that the future of beauty is conscious, sustainable, and forward-thinking.\n\n✨ Drink Your Skincare\n\nRINGANAbty rethinks beauty from the inside out. A fruity-fresh beauty drink with mandarin, orange, and sea buckthorn that supports your skin where it matters most, from within.\n\n🌿 What makes RINGANAbty special?\n\nVeCollal, a plant-based complex that mimics collagen type I.\nGREENIURONIC (Snow Fungus Extract), a patented vegan hyaluronic acid.\nOmegia (Sea Buckthorn Oil), packed with Omega 3, 6, 7, and 9.\nKeranat, a blend of millet seed oil and wheat extract.\nFermented Guar Fibre, prebiotic fibre that supports gut health.\n\nAnd we're just getting started. ✨","link":"https://priller.ringana.com/produkt/ringanabty/","linkLabel":"Jetzt entdecken","imageUrl":"assets/images/bty.jpeg","date":"2026-04-13"},{"id":"d0","type":"news","title_de":"NEU: FRESH lip balm nude SPF 15","title_en":"NEW: FRESH lip balm nude SPF 15","excerpt_de":"Sun-kissed. Not sun-stressed. Der Lippenpflege fehlt oft noch eins: echter Sonnenschutz.","excerpt_en":"Sun-kissed. Not sun-stressed. Your lip care has been missing one thing: real sun protection.","content_de":"Die Lippen, der meist vergessene Spot in jeder SPF-Routine.\n\n☀️ Schutz, der überzeugt: Mineralisches Zinkoxid als Breitband-UV-Filter. Schützt vor UVA und UVB.\n\n✨ Pflege, die du sofort spürst\n\nHyaluron & Peptide, polstern auf, glätten feine Linien.\nGlycerin, Natrium PCA & Ectoin, intensive Feuchtigkeit.\nSqualan, Ceramide & Cupuaçu Butter, Schutzbarriere.\n\nMit Code PRILLER20 gibt es 20 Euro auf deine erste Bestellung. 🌿","content_en":"The lips, the most forgotten spot in every SPF routine.\n\n☀️ Protection that delivers: Mineral zinc oxide as broad-spectrum UV filter. Shields against UVA and UVB.\n\n✨ Care you feel instantly\n\nHyaluronic acid & peptides, plump and smooth fine lines.\nGlycerin, Sodium PCA & Ectoin, intense moisture.\nSqualane, ceramides & Cupuaçu Butter, barrier protection.\n\nUse code PRILLER20 for 20 Euro off your first order. 🌿","link":"https://priller.ringana.com/produkt/fresh-lip-balm-nude-spf-15/","linkLabel":"Jetzt entdecken","imageUrl":"assets/images/lipbalmnude.jpeg","date":"2026-04-04"},{"id":"d1","type":"promo","title_de":"Starte dein Business und bekomm den Sommer gratis dazu!","title_en":"Start your business and get the summer for free!","excerpt_de":"Wer jetzt mit dem Business Booster startet, bekommt die komplette FRESH Sonnenpflege-Linie gratis. Streng limitiert.","excerpt_en":"Start now with the Business Booster and receive the complete FRESH sun care line for free. Strictly limited.","content_de":"Die komplette FRESH Sonnenpflege-Linie gratis:\n\nFRESH sunscreen medium SPF 25\nFRESH sunscreen face high SPF 30\nFRESH deodorant\nFRESH after sun tan booster\nFRESH lip balm SPF 15\n\n🌱 Alles mineralisch. Alles frisch produziert. Alles ohne Kompromisse.\n\nWas ist der Business Booster?\n\nDas Starterset für alle, die es ernst meinen, ohne Risiko. Für 34 Euro bekommst du eine gebrandete Box mit Businessunterlagen, Zugang zum Fast Track und Gutscheinen. Kein Mindestumsatz. Kein Zeitdruck. Kein Lagerbestand. Und jetzt eben: den kompletten Sommer on top.\n\nGültig ab 02. April 2026, 12:00 Uhr MEZ. Nur für neue Partner:innen. Streng limitiert, solange der Vorrat reicht.\n\nNeugierig? Schreib uns direkt: https://wa.me/436769261706","content_en":"The complete FRESH sun care line for free:\n\nFRESH sunscreen medium SPF 25\nFRESH sunscreen face high SPF 30\nFRESH deodorant\nFRESH after sun tan booster\nFRESH lip balm SPF 15\n\n🌱 All mineral. All freshly produced. No compromises.\n\nWhat is the Business Booster? The starter set for everyone who's serious, without the risk. For 34 Euro you get a branded box with business materials, Fast Track access and vouchers. No minimum turnover. No time pressure. No inventory. And now: the complete summer on top.\n\nValid from 2 April 2026, 12:00 CET. New partners only. Strictly limited while stocks last.\n\nCurious? Write to us directly: https://wa.me/436769261706","link":"https://priller.ringana.com/corporate/distribution/","linkLabel":"Zum Business","imageUrl":"assets/images/business summer.jpeg","date":"2026-04-03"},{"id":"d2","type":"promo","title_de":"20 Euro Rabatt auf deine erste Bestellung","title_en":"20 Euro off your first order","excerpt_de":"Mit Code PRILLER20 bekommst du 20 Euro auf deine allererste Bestellung.","excerpt_en":"Use code PRILLER20 for 20 Euro off your very first order.","content_de":"Mit unserem Code PRILLER20 bekommst du 20 Euro Rabatt auf deine erste Bestellung.\n\nEinfach beim Checkout eingeben. Gültig für Neukunden. 🌱","content_en":"Use our code PRILLER20 for 20 Euro off your first order.\n\nJust enter at checkout. Valid for new customers. 🌱","link":"https://priller.ringana.com/alle-produkte","linkLabel":"Jetzt shoppen","imageUrl":"","date":"2026-04-04"},{"id":"d3","type":"blog","title_de":"Warum Longevity mit RINGANA beginnt","title_en":"Why Longevity starts with RINGANA","excerpt_de":"Longevity ist kein Trend, es ist eine Haltung.","excerpt_en":"Longevity isn't a trend, it's a mindset.","content_de":"Longevity bedeutet für uns: bewusste Entscheidungen treffen, jeden Tag.\n\nFür unseren Körper. Für unser Wohlbefinden. Und für unseren Planeten.\n\nUnsere Must-haves:\nCAPS protect, innerer UV-Schutz.\nFRESH after sun & tan booster.\nFRESH tinted moisturiser SPF 30.\n\nWas sind deine? Schreib uns! 💚","content_en":"Longevity for us means making conscious decisions, every day.\n\nFor our bodies. For our wellbeing. And for our planet.\n\nOur must-haves:\nCAPS protect, internal UV protection.\nFRESH after sun & tan booster.\nFRESH tinted moisturiser SPF 30.\n\nWhat are yours? Write to us! 💚","link":"","linkLabel":"","imageUrl":"","date":"2026-04-04"}];
+
+let lang = 'de';
+const TCFG = {
+  blog:{label:'Blog',badge:'badge-blog',bar:'bar-blog'},
+  news:{label:'News',badge:'badge-news',bar:'bar-news'},
+  promo:{label:'Promo',badge:'badge-promo',bar:'bar-promo'},
+  product:{label:'Product',badge:'badge-news',bar:'bar-news'},
+  event:{label:'Event',badge:'badge-event',bar:'bar-event'}
+};
+
+function setLang(l) {
+  lang = l;
+  document.body.classList.remove('en','de');
+  document.body.classList.add(l);
+  document.documentElement.lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
+  renderPosts();
+}
+
+function getLT(p, f) { return p[f+'_'+lang] || p[f] || p[f+'_de'] || p[f+'_en'] || ''; }
+
+function fmtDate(d) {
+  if (!d) return '';
+  return new Date(d+'T12:00:00').toLocaleDateString('de-AT',{day:'numeric',month:'long',year:'numeric'});
+}
+
+function contentToHtml(text) {
+  if (!text) return '';
+  var esc = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return esc
+    .replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:#25D366;font-weight:500;text-decoration:underline">$1</a>')
+    .replace(/(https?:\/\/(?!wa\.me\/)\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:var(--terra);text-decoration:underline">$1</a>');
+}
+
+function renderPosts() {
+  const g = document.getElementById('blogGrid');
+  g.innerHTML = '';
+  window._BAKED_POSTS.forEach((p, i) => {
+    const c = TCFG[p.type] || TCFG.blog;
+    const title = getLT(p,'title'), excerpt = getLT(p,'excerpt');
+    const art = document.createElement('article');
+    art.className = 'post-card reveal d' + ((i % 6) + 1);
+    const imgH = p.imageUrl ? `<img class="post-img" src="${p.imageUrl}" alt="${title}" loading="lazy">` : '';
+    art.innerHTML = `${imgH}<div class="post-bar ${c.bar}"></div><div class="post-body"><div class="post-meta"><span class="post-badge ${c.badge}">${c.label}</span><span class="post-date">${fmtDate(p.date)}</span></div><h3 class="post-title">${title}</h3><p class="post-excerpt">${excerpt}</p><div class="post-footer"><span class="post-more">Weiterlesen <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"/></svg></span></div></div>`;
+    art.addEventListener('click', () => openDetail(p.id));
+    g.appendChild(art);
+  });
+  // trigger reveal
+  const rio = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), {threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el => rio.observe(el));
+}
+
+function openDetail(id) {
+  const p = window._BAKED_POSTS.find(x => x.id === id);
+  if (!p) return;
+  if (p.directLink && p.link) { window.location = p.link; return; }
+  const c = TCFG[p.type] || TCFG.blog;
+  const di = document.getElementById('dImg');
+  di.src = p.imageUrl || ''; di.style.display = p.imageUrl ? 'block' : 'none';
+  document.getElementById('dHdr').className = 'd-hdr ' + c.bar;
+  document.getElementById('dMeta').innerHTML = `<span class="post-badge ${c.badge}">${c.label}</span><span class="post-date">${fmtDate(p.date)}</span>`;
+  document.getElementById('dTitle').textContent = getLT(p,'title');
+  document.getElementById('dContent').innerHTML = contentToHtml(getLT(p,'content') || getLT(p,'excerpt'));
+  const lnk = document.getElementById('dLink');
+  if (p.link && !p.directLink) { lnk.href = p.link; document.getElementById('dLinkLbl').textContent = p.linkLabel || 'Mehr erfahren'; lnk.style.display = 'inline-flex'; }
+  else lnk.style.display = 'none';
+  document.getElementById('detailOv').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDetail(e) { if (e.target === document.getElementById('detailOv')) closeDetailBtn(); }
+function closeDetailBtn() { document.getElementById('detailOv').classList.remove('open'); document.body.style.overflow = ''; }
+
+// init
+setLang('de');
+</script>
+</body>
+</html>
