@@ -444,77 +444,45 @@ var EJS_SERVICE_ID  = 'service_3aqujuz';
 var EJS_TEMPLATE_ID = 'template_4hkbndl';
 (function(){ try { emailjs.init(EJS_PUBLIC_KEY); } catch(e){} })();
 
-// ── EMAIL BUILDER ─────────────────────────────────────────────────────────────
-function buildRoutineEmail(profile, isDE, showSuppl) {
+// ── EMAIL VARS BUILDER ────────────────────────────────────────────────────────
+// Returns flat object of plain-text vars — all HTML lives in the EmailJS template
+function buildEmailVars(profile, isDE, showSuppl, emailVal, subject) {
   var routineName = isDE ? profile.name_de : profile.name_en;
-  var nl = '\n';
-  var divider = '________________________________' + nl;
-
-  var lines = [];
-
-  if (isDE) {
-    lines.push('Hallo! 🌿');
-    lines.push('');
-    lines.push('Noa & Ulli haben deine persönliche RINGANA Routine zusammengestellt:');
-    lines.push('');
-    lines.push(profile.emoji + '  ' + routineName);
-    lines.push(divider);
-    lines.push('DEINE EMPFOHLENEN PRODUKTE');
-    lines.push('');
-  } else {
-    lines.push('Hello! 🌿');
-    lines.push('');
-    lines.push('Noa & Ulli have curated your personal RINGANA routine:');
-    lines.push('');
-    lines.push(profile.emoji + '  ' + routineName);
-    lines.push(divider);
-    lines.push('YOUR RECOMMENDED PRODUCTS');
-    lines.push('');
-  }
-
-  profile.products.forEach(function(p) {
-    lines.push(p.emoji + '  ' + p.name);
-    lines.push(isDE ? p.desc_de : p.desc_en);
-    lines.push('');
-  });
-
-  if (showSuppl && profile.supplement) {
-    var s = profile.supplement;
-    lines.push('');
-    lines.push(isDE ? '🌿  INNER BEAUTY TIPP' : '🌿  INNER BEAUTY TIP');
-    lines.push(s.emoji + '  ' + s.name);
-    lines.push(isDE ? s.desc_de : s.desc_en);
-    lines.push('');
-  }
-
-  lines.push(divider);
-  if (isDE) {
-    lines.push('DEIN WILLKOMMENS-GUTSCHEIN: PRILLER20');
-    lines.push('€20 auf deine erste RINGANA Bestellung');
-    lines.push('');
-    lines.push('Jetzt shoppen: https://priller.ringana.com/alle-produkte');
-    lines.push('');
-    lines.push('Fragen? Schreib uns auf WhatsApp:');
-    lines.push('https://wa.me/436769261706');
-    lines.push('');
-    lines.push(divider);
-    lines.push('Herzlich, Noa & Ulli');
-    lines.push('Independent RINGANA Partners · ullinoa.at');
-  } else {
-    lines.push('YOUR WELCOME VOUCHER: PRILLER20');
-    lines.push('€20 off your first RINGANA order');
-    lines.push('');
-    lines.push('Shop now: https://priller.ringana.com/alle-produkte');
-    lines.push('');
-    lines.push('Questions? Message us on WhatsApp:');
-    lines.push('https://wa.me/436769261706');
-    lines.push('');
-    lines.push(divider);
-    lines.push('With love, Noa & Ulli');
-    lines.push('Independent RINGANA Partners · ullinoa.at');
-  }
-
-  return lines.join(nl);
+  var prods = profile.products;
+  var vars = {
+    to_email:      emailVal,
+    subject:       subject,
+    routine_emoji: profile.emoji,
+    routine_name:  routineName,
+    greeting: isDE
+      ? 'Deine persönliche Hautpflege-Empfehlung von Noa & Ulli'
+      : 'Your personal skincare recommendation from Noa & Ulli',
+    products_label: isDE ? 'Deine empfohlenen Produkte' : 'Your recommended products',
+    voucher_label:  isDE ? 'Dein Willkommens-Gutschein' : 'Your welcome voucher',
+    voucher_sub:    isDE ? 'auf deine erste RINGANA Bestellung' : 'off your first RINGANA order',
+    shop_cta:       isDE ? 'Jetzt im RINGANA Shop bestellen' : 'Shop now on RINGANA',
+    wa_cta:         isDE ? 'Fragen? Schreib uns auf WhatsApp' : 'Questions? Message us on WhatsApp',
+    // Products 1-4
+    p1_emoji: prods[0] ? prods[0].emoji : '',
+    p1_name:  prods[0] ? prods[0].name  : '',
+    p1_desc:  prods[0] ? (isDE ? prods[0].desc_de : prods[0].desc_en) : '',
+    p2_emoji: prods[1] ? prods[1].emoji : '',
+    p2_name:  prods[1] ? prods[1].name  : '',
+    p2_desc:  prods[1] ? (isDE ? prods[1].desc_de : prods[1].desc_en) : '',
+    p3_emoji: prods[2] ? prods[2].emoji : '',
+    p3_name:  prods[2] ? prods[2].name  : '',
+    p3_desc:  prods[2] ? (isDE ? prods[2].desc_de : prods[2].desc_en) : '',
+    p4_emoji: prods[3] ? prods[3].emoji : '',
+    p4_name:  prods[3] ? prods[3].name  : '',
+    p4_desc:  prods[3] ? (isDE ? prods[3].desc_de : prods[3].desc_en) : '',
+    // Supplement (shown only if user said yes/maybe to Q4)
+    suppl_show:  showSuppl && profile.supplement ? 'block' : 'none',
+    suppl_emoji: showSuppl && profile.supplement ? profile.supplement.emoji : '',
+    suppl_name:  showSuppl && profile.supplement ? profile.supplement.name  : '',
+    suppl_desc:  showSuppl && profile.supplement
+      ? (isDE ? profile.supplement.desc_de : profile.supplement.desc_en) : ''
+  };
+  return vars;
 }
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
@@ -966,11 +934,9 @@ function submitEmail() {
       var subject   = isDE
         ? 'Deine persönliche RINGANA Routine 🌿'
         : 'Your personal RINGANA Routine 🌿';
-      emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
-        to_email:  emailVal,
-        subject:   subject,
-        html_body: buildRoutineEmail(profile, isDE, showSuppl)
-      }).then(function(r){ console.log('EmailJS OK', r); })
+      var vars = buildEmailVars(profile, isDE, showSuppl, emailVal, subject);
+      emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, vars)
+        .then(function(r){ console.log('EmailJS OK', r); })
         .catch(function(e){ console.error('EmailJS FAIL', e); });
     } catch(e) { console.error('EmailJS exception', e); }
   })(email);
