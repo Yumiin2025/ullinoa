@@ -445,11 +445,12 @@ function buildRoutineEmail(profile, isDE, showSuppl) {
 
   function row(p) {
     var desc = isDE ? p.desc_de : p.desc_en;
+    var link = PRODUCT_LINKS[p.name] || 'https://priller.ringana.com/alle-produkte';
     return '<tr><td style="padding:12px 0;border-bottom:1px solid #ede6d8;">'
       +'<table cellpadding="0" cellspacing="0"><tr>'
       +'<td style="width:30px;font-size:18px;vertical-align:top;padding-top:2px;">'+p.emoji+'</td>'
       +'<td style="padding-left:10px;vertical-align:top;">'
-      +'<strong style="display:block;color:#1e3d3a;font-size:14px;margin-bottom:3px;font-family:Arial,sans-serif;">'+p.name+'</strong>'
+      +'<a href="'+link+'" style="display:block;color:#1e3d3a;text-decoration:none;font-size:14px;font-weight:600;font-family:Arial,sans-serif;margin-bottom:3px;">'+p.name+' <span style="color:#3a8a7e;">→</span></a>'
       +'<span style="color:#7a7468;font-size:12px;line-height:1.6;font-family:Arial,sans-serif;">'+desc+'</span>'
       +'</td></tr></table></td></tr>';
   }
