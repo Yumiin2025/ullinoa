@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -437,52 +436,79 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 </a>
 
 <script>
-// ── EMAILJS CONFIG ────────────────────────────────────────────────────────────
-// After setting up EmailJS (emailjs.com), replace these three values:
-var EJS_PUBLIC_KEY  = 'eB0-H1YLQIHzbzL_U';
-var EJS_SERVICE_ID  = 'service_3aqujuz';
-var EJS_TEMPLATE_ID = 'template_4hkbndl';
-(function(){ try { emailjs.init(EJS_PUBLIC_KEY); } catch(e){} })();
+// ── BREVO CONFIG ──────────────────────────────────────────────────────────────
+var BREVO_KEY = atob('eGtleXNpYi1lMTRlYmY5NzY3OWEzN2MwNmQwODc2MjcxZmEzZDgzYWNlNTNiNjhlMzdmNmIyNGZmMjQwNmMwOTQ2NmE3MWJkLThpSEs0U09Zd1l6dndHMng=');
 
-// ── EMAIL VARS BUILDER ────────────────────────────────────────────────────────
-// Returns flat object of plain-text vars — all HTML lives in the EmailJS template
-function buildEmailVars(profile, isDE, showSuppl, emailVal, subject) {
-  var routineName = isDE ? profile.name_de : profile.name_en;
-  var prods = profile.products;
-  var vars = {
-    to_email:      emailVal,
-    subject:       subject,
-    routine_emoji: profile.emoji,
-    routine_name:  routineName,
-    greeting: isDE
-      ? 'Deine persönliche Hautpflege-Empfehlung von Noa & Ulli'
-      : 'Your personal skincare recommendation from Noa & Ulli',
-    products_label: isDE ? 'Deine empfohlenen Produkte' : 'Your recommended products',
-    voucher_label:  isDE ? 'Dein Willkommens-Gutschein' : 'Your welcome voucher',
-    voucher_sub:    isDE ? 'auf deine erste RINGANA Bestellung' : 'off your first RINGANA order',
-    shop_cta:       isDE ? 'Jetzt im RINGANA Shop bestellen' : 'Shop now on RINGANA',
-    wa_cta:         isDE ? 'Fragen? Schreib uns auf WhatsApp' : 'Questions? Message us on WhatsApp',
-    // Products 1-4
-    p1_emoji: prods[0] ? prods[0].emoji : '',
-    p1_name:  prods[0] ? prods[0].name  : '',
-    p1_desc:  prods[0] ? (isDE ? prods[0].desc_de : prods[0].desc_en) : '',
-    p2_emoji: prods[1] ? prods[1].emoji : '',
-    p2_name:  prods[1] ? prods[1].name  : '',
-    p2_desc:  prods[1] ? (isDE ? prods[1].desc_de : prods[1].desc_en) : '',
-    p3_emoji: prods[2] ? prods[2].emoji : '',
-    p3_name:  prods[2] ? prods[2].name  : '',
-    p3_desc:  prods[2] ? (isDE ? prods[2].desc_de : prods[2].desc_en) : '',
-    p4_emoji: prods[3] ? prods[3].emoji : '',
-    p4_name:  prods[3] ? prods[3].name  : '',
-    p4_desc:  prods[3] ? (isDE ? prods[3].desc_de : prods[3].desc_en) : '',
-    // Supplement (shown only if user said yes/maybe to Q4)
-    suppl_show:  showSuppl && profile.supplement ? 'block' : 'none',
-    suppl_emoji: showSuppl && profile.supplement ? profile.supplement.emoji : '',
-    suppl_name:  showSuppl && profile.supplement ? profile.supplement.name  : '',
-    suppl_desc:  showSuppl && profile.supplement
-      ? (isDE ? profile.supplement.desc_de : profile.supplement.desc_en) : ''
-  };
-  return vars;
+// ── EMAIL HTML BUILDER ────────────────────────────────────────────────────────
+function buildRoutineEmail(profile, isDE, showSuppl) {
+  var name = isDE ? profile.name_de : profile.name_en;
+
+  function row(p) {
+    var desc = isDE ? p.desc_de : p.desc_en;
+    return '<tr><td style="padding:12px 0;border-bottom:1px solid #ede6d8;">'
+      +'<table cellpadding="0" cellspacing="0"><tr>'
+      +'<td style="width:30px;font-size:18px;vertical-align:top;padding-top:2px;">'+p.emoji+'</td>'
+      +'<td style="padding-left:10px;vertical-align:top;">'
+      +'<strong style="display:block;color:#1e3d3a;font-size:14px;margin-bottom:3px;font-family:Arial,sans-serif;">'+p.name+'</strong>'
+      +'<span style="color:#7a7468;font-size:12px;line-height:1.6;font-family:Arial,sans-serif;">'+desc+'</span>'
+      +'</td></tr></table></td></tr>';
+  }
+
+  var prodRows = profile.products.map(row).join('');
+  if (showSuppl && profile.supplement) prodRows += row(profile.supplement);
+
+  var prodsLabel  = isDE ? 'Deine empfohlenen Produkte' : 'Your recommended products';
+  var voucherLbl  = isDE ? 'Dein Willkommens-Gutschein' : 'Your welcome voucher';
+  var voucherSub  = isDE ? 'auf deine erste RINGANA Bestellung' : 'off your first RINGANA order';
+  var shopCta     = isDE ? 'Jetzt im RINGANA Shop bestellen &rarr;' : 'Shop now on RINGANA &rarr;';
+  var waCta       = isDE ? 'Fragen? Schreib uns auf WhatsApp 💬' : 'Questions? WhatsApp us 💬';
+  var greeting    = isDE ? 'Deine persönliche Hautpflege-Empfehlung' : 'Your personal skincare recommendation';
+
+  return '<!DOCTYPE html><html><head><meta charset="UTF-8"></head>'
+    +'<body style="margin:0;padding:0;background:#f5f0e8;font-family:Arial,sans-serif;">'
+    +'<table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f0e8;padding:32px 16px;"><tr><td align="center">'
+    +'<table cellpadding="0" cellspacing="0" width="560" style="max-width:560px;background:#fff;border-radius:16px;overflow:hidden;">'
+
+    // Header
+    +'<tr><td style="background:#1e3d3a;padding:36px 32px;text-align:center;">'
+    +'<p style="margin:0 0 6px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#72b8ae;font-weight:600;font-family:Arial,sans-serif;">RINGANA Partners</p>'
+    +'<p style="margin:0;font-size:28px;color:#fff;font-weight:300;font-family:Georgia,serif;">Noa &amp; Ulli</p>'
+    +'</td></tr>'
+
+    // Hero
+    +'<tr><td style="background:#f5f0e8;padding:28px 32px;text-align:center;border-bottom:1px solid #e0d5c1;">'
+    +'<p style="font-size:40px;margin:0 0 10px;">'+profile.emoji+'</p>'
+    +'<h2 style="margin:0 0 6px;font-size:22px;font-weight:300;color:#1e3d3a;font-family:Georgia,serif;">'+name+'</h2>'
+    +'<p style="margin:0;font-size:13px;color:#7a7468;font-family:Arial,sans-serif;">'+greeting+' &mdash; Noa &amp; Ulli</p>'
+    +'</td></tr>'
+
+    // Products
+    +'<tr><td style="padding:28px 32px;">'
+    +'<p style="margin:0 0 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3a8a7e;font-weight:600;font-family:Arial,sans-serif;">'+prodsLabel+'</p>'
+    +'<table width="100%" cellpadding="0" cellspacing="0">'+prodRows+'</table>'
+    +'</td></tr>'
+
+    // Voucher
+    +'<tr><td style="padding:0 24px 24px;">'
+    +'<table width="100%" cellpadding="0" cellspacing="0" style="background:#1e3d3a;border-radius:12px;"><tr><td style="padding:24px;text-align:center;">'
+    +'<p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#72b8ae;font-family:Arial,sans-serif;">'+voucherLbl+'</p>'
+    +'<p style="margin:0 0 6px;font-size:28px;font-family:Georgia,serif;color:#fff;letter-spacing:5px;font-weight:300;">PRILLER20</p>'
+    +'<p style="margin:0;font-size:12px;color:rgba(255,255,255,.75);font-family:Arial,sans-serif;">&euro;20 '+voucherSub+'</p>'
+    +'</td></tr></table></td></tr>'
+
+    // CTA
+    +'<tr><td style="padding:24px 32px 28px;text-align:center;">'
+    +'<a href="https://priller.ringana.com/alle-produkte" style="display:inline-block;background:#1e3d3a;color:#fff;text-decoration:none;padding:14px 32px;border-radius:100px;font-size:14px;font-weight:600;font-family:Arial,sans-serif;">'+shopCta+'</a>'
+    +'<br><br><a href="https://wa.me/436769261706" style="font-size:12px;color:#3a8a7e;text-decoration:none;font-family:Arial,sans-serif;">'+waCta+'</a>'
+    +'</td></tr>'
+
+    // Footer
+    +'<tr><td style="background:#fdfaf5;padding:20px 32px;text-align:center;border-top:1px solid #e0d5c1;">'
+    +'<p style="margin:0 0 4px;font-size:16px;color:#1e3d3a;font-family:Georgia,serif;font-style:italic;font-weight:300;">Noa &amp; Ulli</p>'
+    +'<p style="margin:0;font-size:11px;color:#7a7468;font-family:Arial,sans-serif;">Independent RINGANA Partners &middot; ullinoa.at</p>'
+    +'</td></tr>'
+
+    +'</table></td></tr></table></body></html>';
 }
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
@@ -924,21 +950,26 @@ function submitEmail() {
     localStorage.setItem('rq_leads', JSON.stringify(stored));
   } catch(e) {}
 
-  // ── Send routine email to quiz taker via EmailJS ──────────────────────────
+  // ── Send routine email via Brevo ───────────────────────────────────────────
   (function(emailVal) {
     try {
       var profileId = getProfile(answers);
       var profile   = PROFILES[profileId];
       var isDE      = lang === 'de';
       var showSuppl = answers.q4 === 'yes' || answers.q4 === 'maybe';
-      var subject   = isDE
-        ? 'Deine persönliche RINGANA Routine 🌿'
-        : 'Your personal RINGANA Routine 🌿';
-      var vars = buildEmailVars(profile, isDE, showSuppl, emailVal, subject);
-      emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, vars)
-        .then(function(r){ console.log('EmailJS OK', r); })
-        .catch(function(e){ console.error('EmailJS FAIL', e); });
-    } catch(e) { console.error('EmailJS exception', e); }
+      var subject   = isDE ? 'Deine persönliche RINGANA Routine 🌿' : 'Your personal RINGANA Routine 🌿';
+      fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'api-key': BREVO_KEY },
+        body: JSON.stringify({
+          sender:      { name: 'Noa & Ulli', email: 'noa@ullinoa.at' },
+          to:          [{ email: emailVal }],
+          subject:     subject,
+          htmlContent: buildRoutineEmail(profile, isDE, showSuppl)
+        })
+      }).then(function(r){ console.log('Brevo OK', r.status); })
+        .catch(function(e){ console.error('Brevo error', e); });
+    } catch(e) { console.error('Brevo exception', e); }
   })(email);
 
   // ── Lead notification to Noa/Ulli via FormSubmit ───────────────────────────
