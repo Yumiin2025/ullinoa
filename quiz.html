@@ -988,8 +988,9 @@ function submitEmail() {
         to_email:  emailVal,
         subject:   subject,
         html_body: buildRoutineEmail(profile, isDE, showSuppl)
-      });
-    } catch(e) {}
+      }).then(function(r){ console.log('EmailJS OK', r); })
+        .catch(function(e){ console.error('EmailJS FAIL', e); });
+    } catch(e) { console.error('EmailJS exception', e); }
   })(email);
 
   // ── Lead notification to Noa/Ulli via FormSubmit ───────────────────────────
