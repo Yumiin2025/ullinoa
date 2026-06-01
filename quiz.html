@@ -447,92 +447,74 @@ var EJS_TEMPLATE_ID = 'template_4hkbndl';
 // ── EMAIL BUILDER ─────────────────────────────────────────────────────────────
 function buildRoutineEmail(profile, isDE, showSuppl) {
   var routineName = isDE ? profile.name_de : profile.name_en;
+  var nl = '\n';
+  var divider = '________________________________' + nl;
 
-  var prodRows = profile.products.map(function(p) {
-    var desc = isDE ? p.desc_de : p.desc_en;
-    return '<tr><td style="padding:12px 0;border-bottom:1px solid #ede6d8;font-family:Arial,sans-serif;"><table cellpadding="0" cellspacing="0"><tr>'
-      +'<td style="width:30px;font-size:20px;vertical-align:top;padding-top:2px;">'+p.emoji+'</td>'
-      +'<td style="padding-left:10px;vertical-align:top;">'
-      +'<strong style="display:block;color:#1e3d3a;font-size:14px;margin-bottom:3px;">'+p.name+'</strong>'
-      +'<span style="color:#7a7468;font-size:12px;line-height:1.6;">'+desc+'</span>'
-      +'</td></tr></table></td></tr>';
-  }).join('');
+  var lines = [];
+
+  if (isDE) {
+    lines.push('Hallo! 🌿');
+    lines.push('');
+    lines.push('Noa & Ulli haben deine persönliche RINGANA Routine zusammengestellt:');
+    lines.push('');
+    lines.push(profile.emoji + '  ' + routineName);
+    lines.push(divider);
+    lines.push('DEINE EMPFOHLENEN PRODUKTE');
+    lines.push('');
+  } else {
+    lines.push('Hello! 🌿');
+    lines.push('');
+    lines.push('Noa & Ulli have curated your personal RINGANA routine:');
+    lines.push('');
+    lines.push(profile.emoji + '  ' + routineName);
+    lines.push(divider);
+    lines.push('YOUR RECOMMENDED PRODUCTS');
+    lines.push('');
+  }
+
+  profile.products.forEach(function(p) {
+    lines.push(p.emoji + '  ' + p.name);
+    lines.push(isDE ? p.desc_de : p.desc_en);
+    lines.push('');
+  });
 
   if (showSuppl && profile.supplement) {
     var s = profile.supplement;
-    prodRows += '<tr><td style="padding:12px 0;border-bottom:1px solid #ede6d8;font-family:Arial,sans-serif;"><table cellpadding="0" cellspacing="0"><tr>'
-      +'<td style="width:30px;font-size:20px;vertical-align:top;padding-top:2px;">'+s.emoji+'</td>'
-      +'<td style="padding-left:10px;vertical-align:top;">'
-      +'<strong style="display:block;color:#1e3d3a;font-size:14px;margin-bottom:3px;">'+s.name+'</strong>'
-      +'<span style="color:#7a7468;font-size:12px;line-height:1.6;">'+(isDE?s.desc_de:s.desc_en)+'</span>'
-      +'</td></tr></table></td></tr>';
+    lines.push('');
+    lines.push(isDE ? '🌿  INNER BEAUTY TIPP' : '🌿  INNER BEAUTY TIP');
+    lines.push(s.emoji + '  ' + s.name);
+    lines.push(isDE ? s.desc_de : s.desc_en);
+    lines.push('');
   }
 
-  var t = isDE ? {
-    greeting: 'Deine persönliche Hautpflege-Empfehlung',
-    prodsLabel: 'Deine empfohlenen Produkte',
-    voucherLabel: 'Dein Willkommens-Gutschein',
-    voucherSub: 'auf deine erste RINGANA Bestellung',
-    shopCta: 'Jetzt im RINGANA Shop bestellen &rarr;',
-    waCta: 'Fragen? Schreib uns auf WhatsApp 💬',
-    footer: 'Du erhältst diese E-Mail, weil du unseren Routine-Quiz ausgefüllt hast.'
-  } : {
-    greeting: 'Your personal skincare recommendation',
-    prodsLabel: 'Your recommended products',
-    voucherLabel: 'Your welcome voucher',
-    voucherSub: 'off your first RINGANA order',
-    shopCta: 'Shop now on RINGANA &rarr;',
-    waCta: 'Questions? Message us on WhatsApp 💬',
-    footer: 'You received this email because you completed our skincare quiz.'
-  };
+  lines.push(divider);
+  if (isDE) {
+    lines.push('DEIN WILLKOMMENS-GUTSCHEIN: PRILLER20');
+    lines.push('€20 auf deine erste RINGANA Bestellung');
+    lines.push('');
+    lines.push('Jetzt shoppen: https://priller.ringana.com/alle-produkte');
+    lines.push('');
+    lines.push('Fragen? Schreib uns auf WhatsApp:');
+    lines.push('https://wa.me/436769261706');
+    lines.push('');
+    lines.push(divider);
+    lines.push('Herzlich, Noa & Ulli');
+    lines.push('Independent RINGANA Partners · ullinoa.at');
+  } else {
+    lines.push('YOUR WELCOME VOUCHER: PRILLER20');
+    lines.push('€20 off your first RINGANA order');
+    lines.push('');
+    lines.push('Shop now: https://priller.ringana.com/alle-produkte');
+    lines.push('');
+    lines.push('Questions? Message us on WhatsApp:');
+    lines.push('https://wa.me/436769261706');
+    lines.push('');
+    lines.push(divider);
+    lines.push('With love, Noa & Ulli');
+    lines.push('Independent RINGANA Partners · ullinoa.at');
+  }
 
-  return '<!DOCTYPE html><html><body style="margin:0;padding:0;background:#f5f0e8;font-family:Arial,sans-serif;">'
-    +'<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f5f0e8"><tr><td align="center" style="padding:32px 16px;">'
-    +'<table cellpadding="0" cellspacing="0" width="560" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;">'
-
-    // Header
-    +'<tr><td bgcolor="#1e3d3a" style="padding:36px 32px;text-align:center;">'
-    +'<p style="margin:0 0 6px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#72b8ae;font-weight:600;font-family:Arial,sans-serif;">RINGANA Partners</p>'
-    +'<p style="margin:0;font-size:30px;color:#ffffff;font-weight:300;font-family:Georgia,serif;">Noa &amp; Ulli</p>'
-    +'</td></tr>'
-
-    // Routine hero
-    +'<tr><td bgcolor="#f5f0e8" style="padding:28px 32px;text-align:center;border-bottom:1px solid #e0d5c1;">'
-    +'<p style="font-size:44px;margin:0 0 10px;">'+profile.emoji+'</p>'
-    +'<h2 style="margin:0 0 8px;font-size:22px;font-weight:300;color:#1e3d3a;font-family:Georgia,serif;">'+routineName+'</h2>'
-    +'<p style="margin:0;font-size:13px;color:#7a7468;font-family:Arial,sans-serif;">'+t.greeting+' &mdash; Noa &amp; Ulli</p>'
-    +'</td></tr>'
-
-    // Products
-    +'<tr><td style="padding:28px 32px;">'
-    +'<p style="margin:0 0 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3a8a7e;font-weight:600;font-family:Arial,sans-serif;">'+t.prodsLabel+'</p>'
-    +'<table width="100%" cellpadding="0" cellspacing="0">'+prodRows+'</table>'
-    +'</td></tr>'
-
-    // Voucher block
-    +'<tr><td style="padding:0 24px 24px;">'
-    +'<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#1e3d3a" style="border-radius:12px;"><tr><td style="padding:24px;text-align:center;">'
-    +'<p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#72b8ae;font-family:Arial,sans-serif;">'+t.voucherLabel+'</p>'
-    +'<p style="margin:0 0 6px;font-size:28px;font-family:Georgia,serif;color:#ffffff;letter-spacing:5px;font-weight:300;">PRILLER20</p>'
-    +'<p style="margin:0;font-size:12px;color:rgba(255,255,255,0.75);font-family:Arial,sans-serif;">&euro;20 '+t.voucherSub+'</p>'
-    +'</td></tr></table>'
-    +'</td></tr>'
-
-    // CTA buttons
-    +'<tr><td style="padding:24px 32px 28px;text-align:center;">'
-    +'<a href="https://priller.ringana.com/alle-produkte" style="display:inline-block;background:#1e3d3a;color:#ffffff;text-decoration:none;padding:14px 32px;border-radius:100px;font-size:14px;font-weight:600;font-family:Arial,sans-serif;">'+t.shopCta+'</a>'
-    +'<br><br>'
-    +'<a href="https://wa.me/436769261706" style="font-size:12px;color:#3a8a7e;text-decoration:none;font-family:Arial,sans-serif;">'+t.waCta+'</a>'
-    +'</td></tr>'
-
-    // Footer
-    +'<tr><td bgcolor="#fdfaf5" style="padding:20px 32px;text-align:center;border-top:1px solid #e0d5c1;">'
-    +'<p style="margin:0 0 4px;font-size:16px;color:#1e3d3a;font-family:Georgia,serif;font-style:italic;font-weight:300;">Noa &amp; Ulli</p>'
-    +'<p style="margin:0 0 8px;font-size:11px;color:#7a7468;font-family:Arial,sans-serif;">Independent RINGANA Partners &middot; ullinoa.at</p>'
-    +'<p style="margin:0;font-size:10px;color:#a8a090;font-family:Arial,sans-serif;">'+t.footer+'</p>'
-    +'</td></tr>'
-
-    +'</table></td></tr></table></body></html>';
+  return lines.join(nl);
 }
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
