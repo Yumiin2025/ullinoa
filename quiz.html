@@ -441,13 +441,13 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 const PROFILES = {
   1: {
     emoji: '🌿',
-    name_de: 'Deine Fresh Glow Routine',
-    name_en: 'Your Fresh Glow Routine',
+    name_de: 'Deine Klär & Glow Routine',
+    name_en: 'Your Clarify & Glow Routine',
     set_de: 'RINGANA Skin Care Set Light (BP1)',
     set_en: 'RINGANA Skin Care Set Light (BP1)',
     products: [
       { emoji: '🧴', name: 'FRESH cleanser', desc_de: 'Milde Reinigungsmilch mit Sesamöl, Grüntee & Chiasamen. COSMOS-zertifiziert bio.', desc_en: 'Gentle cleansing milk with sesame oil, green tea & chia seeds. COSMOS-certified organic.' },
-      { emoji: '💧', name: 'FRESH tonic pure', desc_de: 'Maulbeerextrakt reguliert Talgproduktion, Seekiefer liefert Antioxidantien. Verfeinert das Hautbild.', desc_en: 'Mulberry extract regulates sebum production, sea pine delivers antioxidants. Refines skin texture.' },
+      { emoji: '💧', name: 'FRESH toner pure', desc_de: 'Klärender Toner für Mischhaut & ölige Haut. Reguliert Talgproduktion, verfeinert Poren. Nonibaum-Stammzellen, Zink PCA & Katzenminzewasser. Für Gesicht & Körper.', desc_en: 'Clarifying toner for combination & oily skin. Regulates sebum, refines pores. Noni tree stem cells, Zinc PCA & catnip water. For face & body.' },
       { emoji: '✨', name: 'FRESH hydro serum', desc_de: 'Orangen- & Kiwiwasser boosten Feuchtigkeit. Akazienpeptide verbessern den Wassertransport in der Haut.', desc_en: 'Orange & kiwi water boost hydration. Acacia peptides improve water transport in the skin.' },
       { emoji: '🌸', name: 'FRESH cream light', desc_de: 'Ultraleichte Formel für Mischhaut. Mattiert, hydratisiert, mit Coenzym Q10 & Hyaluronsäure.', desc_en: 'Ultra-light formula for combination skin. Mattifies, hydrates, with coenzyme Q10 & hyaluronic acid.' }
     ],
@@ -461,7 +461,7 @@ const PROFILES = {
     set_en: 'RINGANA Skin Care Set Rich (BP3)',
     products: [
       { emoji: '🧴', name: 'FRESH cleanser', desc_de: 'Milde Reinigungsmilch mit Sesamöl, Grüntee & Chiasamen. COSMOS-zertifiziert bio.', desc_en: 'Gentle cleansing milk with sesame oil, green tea & chia seeds. COSMOS-certified organic.' },
-      { emoji: '🌊', name: 'FRESH tonic calm', desc_de: 'Beruhigender Toner für reife & empfindliche Haut. Stärkt die Hautbarriere sanft.', desc_en: 'Calming toner for mature & sensitive skin. Gently strengthens the skin barrier.' },
+      { emoji: '🌊', name: 'FRESH toner calm', desc_de: 'Beruhigender Toner für sensible & gestresste Haut. Neurokosmetik-Wirkstoffe aus Milchsäurebakterien stärken die Hautbarriere. Süßholzwurzel reduziert Rötungen. Für Gesicht & Körper.', desc_en: 'Calming toner for sensitive & stressed skin. Neurocosmetic actives from lactic acid bacteria strengthen the skin barrier. Liquorice root reduces redness. For face & body.' },
       { emoji: '⚡', name: 'FRESH anti wrinkle serum', desc_de: 'Hochkonzentrierte Anti-Aging Pflege. Stimuliert die Zellerneuerung, glättet Linien sichtbar.', desc_en: 'Highly concentrated anti-aging care. Stimulates cell renewal, visibly smooths lines.' },
       { emoji: '🌿', name: 'FRESH cream rich', desc_de: 'Reichhaltige Pflege mit Jiaogulan, Macadamia & Sheabutter. Schützt vor Feuchtigkeitsverlust.', desc_en: 'Rich care with jiaogulan, macadamia & shea butter. Protects against moisture loss.' }
     ],
@@ -475,7 +475,7 @@ const PROFILES = {
     set_en: 'RINGANA Skin Care Set Medium (BP2-BGL)',
     products: [
       { emoji: '🧴', name: 'FRESH cleanser', desc_de: 'Milde Reinigungsmilch. Mandelöl & Traubenkernöl pflegen sanft, ohne auszutrocknen.', desc_en: 'Gentle cleansing milk. Almond oil & grape seed oil nourish without drying out.' },
-      { emoji: '🌊', name: 'FRESH tonic calm', desc_de: 'Beruhigend, stärkt die natürliche Hautbarriere. Perfekt für empfindliche Haut.', desc_en: 'Calming, strengthens the natural skin barrier. Perfect for sensitive skin.' },
+      { emoji: '🌊', name: 'FRESH toner calm', desc_de: 'Beruhigender Toner für trockene & sensible Haut. Aloe Vera & Süßholzwurzel-Extrakt spenden Feuchtigkeit und reduzieren Spannungsgefühl. Für Gesicht & Körper.', desc_en: 'Calming toner for dry & sensitive skin. Aloe vera & liquorice root extract provide hydration and reduce tightness. For face & body.' },
       { emoji: '💦', name: 'FRESH hydro serum', desc_de: 'Tiefenwirksame Feuchtigkeit mit Islandmoos-Extrakt & Milchsäurebakterien für die Hautflora.', desc_en: 'Deep-acting hydration with Iceland moss extract & lactic acid bacteria for skin flora.' },
       { emoji: '🌸', name: 'FRESH cream medium', desc_de: 'Ausgewogene Pflege für normale bis trockene Haut. Hyaluronsäure & Antioxidantien.', desc_en: 'Balanced care for normal to dry skin. Hyaluronic acid & antioxidants.' }
     ],
@@ -621,8 +621,8 @@ function getProfile(a) {
 
 var PRODUCT_LINKS = {
   'FRESH cleanser':                   'https://priller.ringana.com/produkt/fresh-cleanser/?lang=en',
-  'FRESH tonic pure':                 'https://priller.ringana.com/produkt/fresh-tonic-pure/',
-  'FRESH tonic calm':                 'https://priller.ringana.com/produkt/fresh-tonic-calm/',
+  'FRESH toner pure':                 'https://priller.ringana.com/produkt/fresh-toner-pure/',
+  'FRESH toner calm':                 'https://priller.ringana.com/produkt/fresh-toner-calm/',
   'FRESH hydro serum':                'https://priller.ringana.com/produkt/fresh-hydro-serum/?lang=en',
   'FRESH cream light':                'https://priller.ringana.com/produkt/fresh-cream-light/?lang=en',
   'FRESH cream medium':               'https://priller.ringana.com/produkt/fresh-cream-medium/?lang=en',
@@ -641,8 +641,8 @@ var SUPPL_IMAGE_MAP = {
 
 var IMAGE_MAP = {
   'FRESH cleanser':                   'Partner-Templates-1x1-FRESH-cleanser-1.jpg',
-  'FRESH tonic pure':                 'Partner-Templates-1x1-FRESH-tonic-pure-1.jpg',
-  'FRESH tonic calm':                 'Partner-Templates-1x1-FRESH-tonic-calm-1.jpg',
+  'FRESH toner pure':                 'Partner-Templates-1x1-FRESH-tonic-pure-1.jpg',
+  'FRESH toner calm':                 'Partner-Templates-1x1-FRESH-tonic-calm-1.jpg',
   'FRESH hydro serum':                'Partner-Templates-1x1-FRESH-hydro-serum-1.jpg',
   'FRESH cream light':                'Partner-Templates-1x1-FRESH-cream-light-1.jpg',
   'FRESH cream medium':               'Partner-Templates-1x1-FRESH-cream-medium-1.jpg',
