@@ -918,14 +918,14 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
         <h3 class="wa-form-title"><span class="en-only">Send us a message</span><span class="de-only">Schreib uns</span></h3>
         <p class="wa-form-sub"><span class="en-only">Tap the button and WhatsApp opens with your message ready to send, we reply personally, usually within a few hours.</span><span class="de-only">Tippe auf den Button und WhatsApp öffnet sich mit deiner Nachricht, wir antworten persönlich, meist innerhalb weniger Stunden.</span></p>
         <div class="wa-form">
-          <input type="text" id="wfName2" placeholder="Dein Name / Your name" autocomplete="given-name">
+          <input type="text" id="wfName2" placeholder="Dein Name" autocomplete="given-name">
           <select id="wfInterest2">
-            <option value="products">I'm interested in RINGANA productsIch interessiere mich für RINGANA Produkte</option>
+            <option value="products">Ich interessiere mich für RINGANA Produkte</option>
             <option value="business">Ich interessiere mich für das Partner-Business</option>
-            <option value="both">Beides, Produkte &amp; Business</option>
+            <option value="both">Beides: Produkte &amp; Business</option>
             <option value="question">Ich habe eine allgemeine Frage</option>
           </select>
-          <textarea id="wfMsg2" placeholder="Deine Nachricht (optional) / Your message (optional)"></textarea>
+          <textarea id="wfMsg2" placeholder="Deine Nachricht (optional)"></textarea>
           <div class="wa-btns">
             <button class="wa-btn wa-btn-noa" onclick="sendToWhatsApp2('noa')">💬 Noa</button>
             <button class="wa-btn wa-btn-ulli" onclick="sendToWhatsApp2('ulli')">💬 Ulli</button>
@@ -1111,7 +1111,7 @@ function setLang(l){
   document.querySelectorAll('.post-card[data-id]').forEach(card=>{const id=card.dataset.id;card.onclick=()=>openDetail(id);});
   const b='https://boards.com/a/nAQGc.7VPy6C',d='https://boards.com/a/nAQGc.ZAkMai';
   ['step2-link'].forEach(id=>{const el=document.getElementById(id);if(el)el.href=l==='de'?d:b;});
-  renderPosts();renderTestis();
+  renderPosts();renderTestis();updateFormLang();
 }
 
 // REVEAL
@@ -1654,6 +1654,33 @@ function closePFaq(e){
   closePFaqBtn();
 }
 
+// ── FORM LANGUAGE UPDATE ───────────────────────────────────────────────────
+function updateFormLang() {
+  var isDE = lang === 'de';
+  var opts = {
+    products: isDE ? 'Ich interessiere mich für RINGANA Produkte' : 'I\'m interested in RINGANA products',
+    business: isDE ? 'Ich interessiere mich für das Partner-Business' : 'I\'m interested in the partner business',
+    both:     isDE ? 'Beides: Produkte & Business' : 'Both: products & business',
+    question: isDE ? 'Ich habe eine allgemeine Frage' : 'I have a general question'
+  };
+  var namePh   = isDE ? 'Dein Name' : 'Your name';
+  var msgPh    = isDE ? 'Deine Nachricht (optional)' : 'Your message (optional)';
+  var msgPh2   = isDE ? 'Deine Frage oder Nachricht (optional)' : 'Your question or message (optional)';
+
+  ['wfName','wfName2'].forEach(function(id){
+    var el = document.getElementById(id); if(el) el.placeholder = namePh;
+  });
+  var m1 = document.getElementById('wfMsg');   if(m1) m1.placeholder = msgPh2;
+  var m2 = document.getElementById('wfMsg2');  if(m2) m2.placeholder = msgPh;
+
+  ['wfInterest','wfInterest2'].forEach(function(id){
+    var sel = document.getElementById(id); if(!sel) return;
+    var val = sel.value;
+    Array.from(sel.options).forEach(function(o){ if(opts[o.value]) o.text = opts[o.value]; });
+    sel.value = val;
+  });
+}
+
 // ── WHATSAPP SMART FORM ────────────────────────────────────────────────────
 function sendToWhatsApp(person){
   const name=(document.getElementById('wfName').value||'').trim();
@@ -1808,14 +1835,14 @@ applyBlogPreview();
       <h3 class="wa-form-title"><span class="en-only">Still got a question? Write to us directly.</span><span class="de-only">Noch eine Frage? Schreib uns direkt.</span></h3>
       <p class="wa-form-sub"><span class="en-only">Fill in the form and tap the button, it opens WhatsApp with your message already written. We read every message personally.</span><span class="de-only">Füll das Formular aus und tippe auf den Button, es öffnet WhatsApp mit deiner Nachricht bereits geschrieben. Wir lesen jede Nachricht persönlich.</span></p>
       <div class="wa-form">
-        <input type="text" id="wfName" placeholder="Dein Name / Your name" autocomplete="given-name">
+        <input type="text" id="wfName" placeholder="Dein Name" autocomplete="given-name">
         <select id="wfInterest">
-          <option value="products">I'm interested in RINGANA productsIch interessiere mich für RINGANA Produkte</option>
+          <option value="products">Ich interessiere mich für RINGANA Produkte</option>
           <option value="business">Ich interessiere mich für das Partner-Business</option>
-          <option value="both">Beides, Produkte &amp; Business</option>
+          <option value="both">Beides: Produkte &amp; Business</option>
           <option value="question">Ich habe eine allgemeine Frage</option>
         </select>
-        <textarea id="wfMsg" placeholder="Deine Frage oder Nachricht (optional) / Your question or message (optional)"></textarea>
+        <textarea id="wfMsg" placeholder="Deine Frage oder Nachricht (optional)"></textarea>
         <div class="wa-btns">
           <button class="wa-btn wa-btn-noa" onclick="sendToWhatsApp('noa')">💬 <span class="en-only">Send to Noa</span><span class="de-only">An Noa senden</span></button>
           <button class="wa-btn wa-btn-ulli" onclick="sendToWhatsApp('ulli')">💬 <span class="en-only">Send to Ulli</span><span class="de-only">An Ulli senden</span></button>
