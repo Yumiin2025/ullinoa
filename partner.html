@@ -222,9 +222,6 @@ body.edit-mode #waFloat{display:none}
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was macht euer Team konkret anders als andere RINGANA Partner:innen?","acceptedAnswer":{"@type":"Answer","text":"Wir führen mit Ehrlichkeit, nicht mit Hype. Unsere Team-Meetings drehen sich um echtes Leben, echte Herausforderungen und echte Erfolge, keine Motivationsreden. Wir teilen, was wirklich funktioniert, feiern jeden kleinen Schritt und niemand wird zurückgelassen."}},{"@type":"Question","name":"Kann ich einsteigen, auch wenn ich noch nie sowas gemacht habe?","acceptedAnswer":{"@type":"Answer","text":"Besonders dann. Viele unserer stärksten Partner:innen hatten null Erfahrung, nur echte Begeisterung für die Produkte und eine offene Einstellung. Wir begleiten dich ab Tag 1, und die RINGANA Online Academy bietet kostenloses Training für jeden Schritt."}},{"@type":"Question","name":"Was kostet es, RINGANA Partner:in zu werden?","acceptedAnswer":{"@type":"Answer","text":"Du kannst komplett kostenlos mit dem Basic Starterset (€0) starten. Wir empfehlen das Business Booster Starterset für €34 mit Markenmaterialien und Gutscheinen. KEINE fixen Monatskosten, kein Mindestumsatz, keine Lagerpflicht."}},{"@type":"Question","name":"Welche persönliche Unterstützung geben mir Noa & Ulli?","acceptedAnswer":{"@type":"Answer","text":"Direkter WhatsApp-Zugang, persönliches Onboarding-Gespräch, monatliche 1:1 Check-ins und laufende Begleitung in unserer Team-Gruppe. Wir helfen dir bei deinen ersten Social Posts und deinen ersten Kundengesprächen."}},{"@type":"Question","name":"Muss ich in Österreich oder einem deutschsprachigen Land sein?","acceptedAnswer":{"@type":"Answer","text":"Nein, Kund:innen können in fast allen Ländern weltweit bei RINGANA bestellen. Als Partner:in kannst du in 8 Focus Markets (Österreich, Deutschland, Schweiz, Spanien, Frankreich, Kanarische Inseln, Italien, Mexiko) sowie in über 25 weiteren Märkten aktiv aufbauen."}},{"@type":"Question","name":"Was wenn ich es probiere und es ist nichts für mich?","acceptedAnswer":{"@type":"Answer","text":"Dann hörst du auf, heute anfangen, morgen aufhören, es passiert nichts. Keine langfristigen Verträge, keine Ausstiegsgebühren, keine Verpflichtung."}},{"@type":"Question","name":"Ich bin bereit, was passiert als nächstes?","acceptedAnswer":{"@type":"Answer","text":"Schreib uns, nur dein Name und dass du Interesse hast reicht. Wir antworten innerhalb von 24 Stunden und vereinbaren einen entspannten 20-minütigen Call, bei dem du uns alles fragen kannst. Kein Druck, keine Verpflichtung."}}]}
   </script>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGW6S30G3F"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGW6S30G3F');</script>
 </head>
 <body>
 
@@ -888,7 +885,7 @@ body.edit-mode #waFloat{display:none}
 
 <footer>
   <p class="f-names"><em>Noa</em> &amp; Ulli</p>
-  <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · Made with 🌿 · <a href="/impressum.html">Impressum</a></p>
+  <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · Made with 🌿 · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
 </footer>
 
 <a id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp" onclick="return waFloatClick(this)">
@@ -964,6 +961,46 @@ function sendPartnerWA(person) {
   const numbers = { noa: '436769261706', ulli: '436766189426' };
   window.open('https://wa.me/' + numbers[person] + '?text=' + encodeURIComponent(text), '_blank');
 }
+</script>
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1e3d3a;color:#f5f0e8;padding:1.2rem 1.5rem;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:0 -4px 20px rgba(0,0,0,.15)">
+  <p style="font-family:'DM Sans',sans-serif;font-size:.85rem;line-height:1.6;margin:0;flex:1;min-width:200px">Diese Website verwendet Cookies. Google Analytics wird nur mit deiner Zustimmung geladen. <a href="/datenschutz.html" style="color:#72b8ae;text-decoration:underline">Mehr erfahren</a></p>
+  <div style="display:flex;gap:.6rem;flex-shrink:0">
+    <button id="cookie-reject" style="background:transparent;border:1.5px solid rgba(245,240,232,.4);color:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;padding:.5rem 1.1rem;border-radius:100px;cursor:pointer">Nur notwendige</button>
+    <button id="cookie-accept" style="background:#72b8ae;border:none;color:#1e3d3a;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;padding:.5rem 1.2rem;border-radius:100px;cursor:pointer">Akzeptieren</button>
+  </div>
+</div>
+<script>
+(function(){
+  var GA_ID='G-FGW6S30G3F';
+  var consent=localStorage.getItem('cookie_consent');
+  var banner=document.getElementById('cookie-banner');
+  function loadGA(){
+    if(window._gaLoaded)return;window._gaLoaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag=gtag;gtag('js',new Date());gtag('config',GA_ID);
+  }
+  if(consent==='accepted'){loadGA();}
+  else if(consent!=='rejected'&&banner){
+    banner.style.display='flex';
+    document.getElementById('cookie-accept').onclick=function(){
+      localStorage.setItem('cookie_consent','accepted');
+      banner.style.display='none';loadGA();
+    };
+    document.getElementById('cookie-reject').onclick=function(){
+      localStorage.setItem('cookie_consent','rejected');
+      banner.style.display='none';
+    };
+  }
+  window.__resetCookieConsent=function(){
+    localStorage.removeItem('cookie_consent');
+    if(banner){banner.style.display='flex';}
+  };
+})();
 </script>
 </body>
 </html>
