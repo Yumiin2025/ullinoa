@@ -259,7 +259,6 @@ function renderPosts() {
 function openDetail(id) {
   const p = window._BAKED_POSTS.find(x => x.id === id);
   if (!p) return;
-  if (p.pageUrl) { window.location = p.pageUrl; return; }
   if (p.directLink && p.link) { window.location = p.link; return; }
   const c = TCFG[p.type] || TCFG.blog;
   const di = document.getElementById('dImg');
