@@ -165,11 +165,11 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .testi-name{font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 
 /* EARNINGS GRID */
-.earnings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}
-@media(min-width:600px){.earnings-grid{grid-template-columns:repeat(3,1fr)}}
-.earnings-card{background:var(--moss);color:#fff;border-radius:16px;padding:1.3rem 1rem;text-align:center}
-.earnings-amt{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;line-height:1.1}
-.earnings-lbl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-top:.35rem}
+.earnings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:1.5rem}
+@media(min-width:600px){.earnings-grid{grid-template-columns:repeat(4,1fr)}}
+.earnings-card{background:var(--moss);color:#fff;border-radius:12px;padding:.85rem .7rem;text-align:center}
+.earnings-amt{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;line-height:1.1}
+.earnings-lbl{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-top:.2rem}
 
 /* INCOME LADDER */
 .ladder-wrap{margin-top:1.2rem;background:var(--cream);border-radius:var(--radius);padding:1.4rem 1.8rem}
@@ -203,6 +203,28 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .side-dot::after{content:attr(data-label-de);position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);background:var(--moss);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:.67rem;font-weight:500;white-space:nowrap;padding:.22rem .6rem;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .18s;letter-spacing:.03em}
 .side-dot:hover::after{opacity:1}
 body.en .side-dot::after{content:attr(data-label-en)}
+
+/* INCOME TIMELINE TABLE */
+.income-timeline{margin:2rem 0;border-radius:var(--radius);overflow:hidden;border:1.5px solid var(--sand)}
+.income-tl-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1.5rem;border-bottom:1px solid var(--sand);background:#fff}
+.income-tl-row:last-child{border-bottom:none}
+.income-tl-row.income-tl-hl{background:var(--moss)}
+.income-tl-phase{display:flex;flex-direction:column;gap:.2rem;flex:1}
+.income-tl-lbl{font-size:.88rem;font-weight:600;color:var(--moss)}
+.income-tl-hl .income-tl-lbl{color:#fff}
+.income-tl-ctx{font-size:.75rem;color:var(--muted);line-height:1.4}
+.income-tl-hl .income-tl-ctx{color:rgba(255,255,255,.7)}
+.income-tl-right{text-align:right;flex-shrink:0}
+.income-tl-amt{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--moss);line-height:1.1}
+.income-tl-hl .income-tl-amt{color:#fff}
+.income-tl-tax{display:block;font-family:'DM Sans',sans-serif;font-size:.65rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:.15rem}
+.income-tl-hl .income-tl-tax{color:var(--sage)}
+
+/* INLINE SECTION CTA */
+.sec-inline-cta{text-align:center;margin-top:2.8rem;font-size:.85rem;color:var(--muted)}
+.sec-inline-cta .cta-hint{display:block;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--muted);margin-bottom:.6rem;letter-spacing:.01em}
+.sec-inline-cta a{display:inline-flex;align-items:center;gap:.35rem;border:1.5px solid var(--terra);color:var(--terra);border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.2rem .25rem;transition:background .18s,color .18s}
+.sec-inline-cta a:hover{background:var(--terra);color:#fff}
 
 /* FLOATING WHATSAPP */
 #waFloat{position:fixed;bottom:20px;right:20px;z-index:9000;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.45),0 2px 8px rgba(0,0,0,.18);text-decoration:none;opacity:1;transition:opacity .3s,transform .2s;animation:waPulse .6s ease-in-out 3}
@@ -325,6 +347,16 @@ body.edit-mode #waFloat{display:none}
           <span class="de-only">Wenn du jemals gesagt hast <strong>„da musst du unbedingt essen gehen"</strong>, einer Freundin ein Buch empfohlen hast, oder eine Playlist geteilt hast weil sie einfach zu gut war um sie für dich zu behalten, dann hast du bereits die einzige Fähigkeit, die dieses Business braucht. Der Unterschied bei RINGANA: wenn deine Freundin dann bestellt, verdienst du auch etwas dabei.</span>
         </p>
       </div>
+      <div class="sec-inline-cta">
+        <span class="de-only">
+          <span class="cta-hint">Klingt das nach dir?</span>
+          <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20habe%20eure%20Partnerseite%20gelesen%20und%20bin%20neugierig%20%F0%9F%8C%BF" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'empfehlen','type':'whatsapp'})">Schreib uns</a>
+        </span>
+        <span class="en-only">
+          <span class="cta-hint">Sound familiar?</span>
+          <a href="https://wa.me/436769261706?text=Hi%20Noa%2C%20I%20read%20your%20partner%20page%20and%20I%27m%20curious%20%F0%9F%8C%BF" target="_blank" rel="noopener">Drop us a message</a>
+        </span>
+      </div>
     </div>
   </section>
 
@@ -378,6 +410,16 @@ body.edit-mode #waFloat{display:none}
           <span class="en-only"><strong>You don't need to reinvent yourself.</strong> Most of our best-performing partners simply share what they genuinely use and love. They post honestly on Instagram, answer questions authentically, and let the products speak for themselves. RINGANA handles the webshop, the payments, and the delivery. Your job is to be real.</span>
           <span class="de-only"><strong>Du musst nicht jemand anderes sein.</strong> Die meisten unserer stärksten Partner:innen teilen einfach, was sie selbst wirklich nutzen und lieben. Sie posten ehrlich auf Instagram, beantworten Fragen authentisch und lassen die Produkte für sich sprechen. RINGANA kümmert sich um den Webshop, die Zahlung und den Versand. Deine Aufgabe ist es, echt zu sein.</span>
         </p>
+      </div>
+      <div class="sec-inline-cta">
+        <span class="de-only">
+          <span class="cta-hint">Noch Fragen zum Modell?</span>
+          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'how','type':'calendar'})">15 Min. Gespräch buchen</a>
+        </span>
+        <span class="en-only">
+          <span class="cta-hint">Still have questions?</span>
+          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener">Book a 15 min call</a>
+        </span>
       </div>
     </div>
   </section>
@@ -460,6 +502,16 @@ body.edit-mode #waFloat{display:none}
           <span class="de-only">Unsere Tipps, Tricks und alles, was wir über die Jahre gelernt haben, teilen wir offen und ohne Zurückhalten. Ob du online, offline oder beides machst: du entscheidest, was zu dir passt. Was es braucht ist keine Perfektion. Nur eine ehrliche Herzensempfehlung und echte Begeisterung für die Produkte. <strong>Dein Erfolg ist unser Erfolg.</strong></span>
         </p>
       </div>
+      <div class="sec-inline-cta">
+        <span class="de-only">
+          <span class="cta-hint">Klingt nach dem Team, das du dir wünschst?</span>
+          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'team','type':'calendar'})">Jetzt kennenlernen</a>
+        </span>
+        <span class="en-only">
+          <span class="cta-hint">Sound like the team you've been looking for?</span>
+          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener">Let's meet</a>
+        </span>
+      </div>
     </div>
   </section>
 
@@ -516,6 +568,44 @@ body.edit-mode #waFloat{display:none}
         </p>
       </div>
 
+      <!-- INCOME TIMELINE -->
+      <div class="income-timeline">
+        <div class="income-tl-row">
+          <div class="income-tl-phase">
+            <span class="income-tl-lbl"><span class="de-only">Erste Monate</span><span class="en-only">First months</span></span>
+            <span class="income-tl-ctx"><span class="de-only">Nebenbei, max. 2 Std/Woche</span><span class="en-only">On the side, max. 2 hrs/week</span></span>
+          </div>
+          <div class="income-tl-right">
+            <div class="income-tl-amt">€200–500</div>
+            <span class="income-tl-tax"><span class="de-only">vor Steuer</span><span class="en-only">before tax</span></span>
+          </div>
+        </div>
+        <div class="income-tl-row">
+          <div class="income-tl-phase">
+            <span class="income-tl-lbl"><span class="de-only">Nach ~1 Jahr</span><span class="en-only">After ~1 year</span></span>
+            <span class="income-tl-ctx"><span class="de-only">Mit Stammkunden + kleinem Team, ~2–4 Std/Woche</span><span class="en-only">With regulars + a small team, ~2–4 hrs/week</span></span>
+          </div>
+          <div class="income-tl-right">
+            <div class="income-tl-amt">€1.200</div>
+            <span class="income-tl-tax"><span class="de-only">vor Steuer</span><span class="en-only">before tax</span></span>
+          </div>
+        </div>
+        <div class="income-tl-row income-tl-hl">
+          <div class="income-tl-phase">
+            <span class="income-tl-lbl"><span class="de-only">Zielstufe 10</span><span class="en-only">Level 10</span></span>
+            <span class="income-tl-ctx"><span class="de-only">25+ Jahre</span><span class="en-only">25+ years</span></span>
+          </div>
+          <div class="income-tl-right">
+            <div class="income-tl-amt">€43.000</div>
+            <span class="income-tl-tax"><span class="de-only">vor Steuer</span><span class="en-only">before tax</span></span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.72rem;color:var(--muted);margin-top:.6rem;line-height:1.6">
+        <span class="de-only">* Beispielwerte — der Verdienst variiert von Person zu Person und hängt von Zeit, Konsequenz und Einsatz ab.</span>
+        <span class="en-only">* Example figures — income varies from person to person and depends on time, consistency and effort.</span>
+      </p>
+
       <div class="sec-body" style="margin-top:1.8rem">
         <p>
           <span class="en-only"><strong>What influences your income most:</strong></span>
@@ -527,6 +617,16 @@ body.edit-mode #waFloat{display:none}
           <li><span class="en-only">Time invested, even 3 hours/week produces real results over time</span><span class="de-only">Investierte Zeit, schon 3 Stunden/Woche bringt mit der Zeit echte Ergebnisse</span></li>
           <li><span class="en-only">Using the products yourself, you can't authentically recommend what you don't love</span><span class="de-only">Selbst nutzen, du kannst nicht authentisch empfehlen, was du nicht liebst</span></li>
         </ul>
+      </div>
+      <div class="sec-inline-cta">
+        <span class="de-only">
+          <span class="cta-hint">Was würde das für dich verändern?</span>
+          <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20habe%20eine%20Frage%20zum%20Verdienst%20bei%20RINGANA%20%F0%9F%8C%BF" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'income','type':'whatsapp'})">Frag uns direkt</a>
+        </span>
+        <span class="en-only">
+          <span class="cta-hint">What would this change for you?</span>
+          <a href="https://wa.me/436769261706?text=Hi%20Noa%2C%20I%20have%20a%20question%20about%20earning%20with%20RINGANA%20%F0%9F%8C%BF" target="_blank" rel="noopener">Ask us directly</a>
+        </span>
       </div>
     </div>
   </section>
@@ -558,15 +658,15 @@ body.edit-mode #waFloat{display:none}
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">759 €</div>
-          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">1st statement</span><span class="de-only">1. Abrechnung</span></div>
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">1.085 €</div>
-          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">1st statement</span><span class="de-only">1. Abrechnung</span></div>
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">1.340 €</div>
-          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">1st statement</span><span class="de-only">1. Abrechnung</span></div>
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">1.800 €</div>
@@ -574,11 +674,11 @@ body.edit-mode #waFloat{display:none}
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">2.460 €</div>
-          <div class="earnings-lbl"><span class="en-only">1st month</span><span class="de-only">1. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">1st statement</span><span class="de-only">1. Abrechnung</span></div>
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">2.683 €</div>
-          <div class="earnings-lbl"><span class="en-only">2nd month</span><span class="de-only">2. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">2nd statement</span><span class="de-only">2. Abrechnung</span></div>
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">3.107 €</div>
@@ -590,11 +690,11 @@ body.edit-mode #waFloat{display:none}
         </div>
         <div class="earnings-card">
           <div class="earnings-amt">3.418 €</div>
-          <div class="earnings-lbl"><span class="en-only">2nd month</span><span class="de-only">2. Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">2nd statement</span><span class="de-only">2. Abrechnung</span></div>
         </div>
         <div class="earnings-card" style="background:var(--sage-dk)">
           <div class="earnings-amt">5.075 €</div>
-          <div class="earnings-lbl"><span class="en-only">in 1 month</span><span class="de-only">in 1 Monat</span></div>
+          <div class="earnings-lbl"><span class="en-only">1 statement</span><span class="de-only">1 Abrechnung</span></div>
         </div>
       </div>
       <p class="income-note">
