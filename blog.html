@@ -236,6 +236,7 @@ function contentToHtml(text) {
     })
     .replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,'<a href="mailto:$1" style="color:var(--moss);font-weight:500;text-decoration:underline">$1</a>')
     .replace(/(https:\/\/www\.instagram\.com\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:#C13584;font-weight:500;text-decoration:underline">Instagram @ulli.noa.so.we</a>')
+    .replace(/(?:Im Shop|Set for Men im Shop|Direkt zu den Angeboten): (https:\/\/priller\.ringana\.com\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;border:1.5px solid var(--terra);color:var(--terra);border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.5rem 0">Im Shop ansehen →</a>')
     .replace(/(https?:\/\/(?!wa\.me\/)(?!calendar\.app\.google\/)(?!www\.instagram\.com\/)\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:var(--terra);text-decoration:underline">$1</a>');
 }
 
