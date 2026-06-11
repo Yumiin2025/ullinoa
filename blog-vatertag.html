@@ -59,6 +59,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 .article-cta{background:var(--cream);border-radius:20px;padding:2rem 2rem 2.2rem;margin:2.5rem 0;text-align:center;border:1px solid var(--sand)}
 .article-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--moss);margin-bottom:.7rem}
 .article-cta p{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.2rem}
+.btn-shop{display:inline-flex;align-items:center;gap:.35rem;border:1.5px solid var(--terra);color:var(--terra);border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin-top:.75rem;transition:background .18s,color .18s}
+.btn-shop:hover{background:var(--terra);color:#fff}
+.btn-shop-light{border-color:var(--sage);color:var(--sage)}
+.btn-shop-light:hover{background:var(--sage);color:#fff}
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--moss);color:#fff;border:none;border-radius:100px;padding:.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .btn-primary:hover{background:var(--sage-dk)}
 .btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:none;color:var(--moss);border:1.5px solid var(--moss);border-radius:100px;padding:.8rem 1.8rem;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;margin-left:.75rem;transition:background .2s,color .2s}
@@ -114,7 +118,7 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
     <div class="product-card" style="background:var(--moss);border-color:var(--moss)">
       <h3 style="color:#fff">🎁 Das RINGANA Set for Men — die perfekte Geschenkidee</h3>
       <p style="color:rgba(255,255,255,.8)">Wer ein komplettes Männerpflege Set verschenken möchte, ist hier richtig. Das <strong style="color:#fff">RINGANA Set for Men</strong> enthält Cleanser, Hydro Serum und Moisturiser for Men — also genau die drei Schritte die Männerhaut wirklich braucht, zusammen in einem Hautpflege Set für Männer verpackt. Natürliche Männerpflege, frisch produziert, kein einziger Füllstoff.</p>
-      <p><a href="https://priller.ringana.com/produkt/set-for-men/" target="_blank" rel="noopener" style="color:var(--sage)">→ Set for Men im Shop ansehen</a></p>
+      <a href="https://priller.ringana.com/produkt/set-for-men/" target="_blank" rel="noopener" class="btn-shop btn-shop-light" onclick="gtag&&gtag('event','cta_click',{'button':'vatertag_set'})">Im Shop ansehen →</a>
     </div>
 
     <div class="article-sep"><span></span></div>
@@ -154,7 +158,7 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
         <li>Chiasamenöl unterstützt die Speicherung von Feuchtigkeit in der Haut</li>
         <li>Mandelkernöl und Traubenkernöl wirken pflegend und beruhigend</li>
       </ul>
-      <p><a href="https://priller.ringana.com/produkt/fresh-cleanser/" target="_blank" rel="noopener" style="color:var(--terra)">→ FRESH cleanser im Shop ansehen</a></p>
+      <a href="https://priller.ringana.com/produkt/fresh-cleanser/" target="_blank" rel="noopener" class="btn-shop" onclick="gtag&&gtag('event','cta_click',{'button':'vatertag_cleanser'})">Im Shop ansehen →</a>
     </div>
 
     <div class="product-card">
@@ -168,7 +172,7 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
         <li>Hiobstränen Samenfermentfiltrat beruhigt die Haut und mindert Rötungen sichtbar</li>
         <li>Beta Vulgaris Root Extract aktiviert Vitamin D Rezeptoren und verbessert den Feuchtigkeitszustand</li>
       </ul>
-      <p><a href="https://priller.ringana.com/produkt/fresh-hydro-serum/" target="_blank" rel="noopener" style="color:var(--terra)">→ FRESH hydro serum im Shop ansehen</a></p>
+      <a href="https://priller.ringana.com/produkt/fresh-hydro-serum/" target="_blank" rel="noopener" class="btn-shop" onclick="gtag&&gtag('event','cta_click',{'button':'vatertag_serum'})">Im Shop ansehen →</a>
     </div>
 
     <div class="product-card">
@@ -184,7 +188,7 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
         <li>Meerkiefernextrakt wirkt antioxidativ und stimuliert die Kollagensynthese</li>
         <li>Hyaluronsäure spendet langanhaltend Feuchtigkeit und reduziert Trockenheitsfältchen</li>
       </ul>
-      <p><a href="https://priller.ringana.com/produkt/fresh-moisturiser-for-men/" target="_blank" rel="noopener" style="color:var(--terra)">→ FRESH moisturiser for men im Shop ansehen</a></p>
+      <a href="https://priller.ringana.com/produkt/fresh-moisturiser-for-men/" target="_blank" rel="noopener" class="btn-shop" onclick="gtag&&gtag('event','cta_click',{'button':'vatertag_moisturiser'})">Im Shop ansehen →</a>
     </div>
 
     <div class="product-card">
@@ -197,7 +201,8 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
         <li>Speziell auf die vielfältigen Bedürfnisse von Männern abgestimmt</li>
         <li>Für Männer die viel leisten und innerlich gut versorgt sein wollen</li>
       </ul>
-      <p><a href="https://priller.ringana.com/produkt/caps-mascu/" target="_blank" rel="noopener" style="color:var(--terra)">→ CAPS mascu im Shop ansehen</a> &nbsp;·&nbsp; <a href="https://priller.ringana.com/blog/the-right-stuff-for-men-well-being/" target="_blank" rel="noopener" style="color:var(--terra)">Mehr über Männergesundheit</a></p>
+      <a href="https://priller.ringana.com/produkt/caps-mascu/" target="_blank" rel="noopener" class="btn-shop" onclick="gtag&&gtag('event','cta_click',{'button':'vatertag_mascu'})">Im Shop ansehen →</a>
+      <a href="https://priller.ringana.com/blog/the-right-stuff-for-men-well-being/" target="_blank" rel="noopener" class="btn-shop" style="margin-left:.5rem">Mehr erfahren →</a>
     </div>
 
     <div class="article-sep"><span></span></div>
