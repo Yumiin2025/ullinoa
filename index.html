@@ -1215,7 +1215,7 @@ function contentToHtml(text){
     // Bold: **text**
     .replace(/\*\*(.+?)\*\*/g,'<strong style="color:var(--moss);font-size:1.05rem">$1</strong>')
     // Section dividers — gradient line with dot
-    .replace(/· · ·/g,'<div style="display:flex;justify-content:center;align-items:center;gap:.5rem;margin:2rem 0"><div style="width:28px;height:1px;background:var(--sand)"></div><div style="width:5px;height:5px;border-radius:50%;background:var(--terra);opacity:.55;flex-shrink:0"></div><div style="width:28px;height:1px;background:var(--sand)"></div></div>')
+    .replace(/· · ·/g,'<p style="text-align:center;color:var(--muted);opacity:.45;letter-spacing:.35em;font-size:.7rem;margin:.9rem 0">· · ·</p>')
     // WhatsApp links
     .replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:#25D366;font-weight:500;text-decoration:underline">$1</a>')
     // Calendar → button
