@@ -1216,7 +1216,11 @@ function contentToHtml(text){
     .replace(/\*\*(.+?)\*\*/g,'<strong style="color:var(--moss);font-size:1.05rem">$1</strong>')
     // Section dividers — gradient line with dot
     .replace(/· · ·/g,'<p style="text-align:center;color:var(--muted);opacity:.45;letter-spacing:.35em;font-size:.7rem;margin:.9rem 0">· · ·</p>')
-    // WhatsApp links
+    // "Jetzt fragen: wa.me" → moss pill button
+    .replace(/(?:Jetzt fragen|Schreib uns direkt|Message us directly): (https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--moss);color:#fff;border:none;border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.5rem 0">💬 Schreib uns</a>')
+    // "Mehr dazu / Read more" → terra pill button
+    .replace(/(?:Mehr dazu|Read more|Mehr lesen): (https?:\/\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;border:1.5px solid var(--terra);color:var(--terra);background:none;border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.5rem 0">Mehr lesen →</a>')
+    // WhatsApp links (remaining bare URLs)
     .replace(/(https:\/\/wa\.me\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:#25D366;font-weight:500;text-decoration:underline">$1</a>')
     // Calendar → button
     .replace(/(https:\/\/calendar\.app\.google\/\S+)/g,function(url){

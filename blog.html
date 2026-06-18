@@ -237,8 +237,17 @@ function contentToHtml(text) {
     shopBtns.push({url:url, label:'💬 Jetzt fragen', style:'background:var(--moss);color:#fff;border:none'});
     return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
   });
-  esc = esc.replace(/(?:Im Shop|Set for Men im Shop|Direkt zu den Angeboten): (https:\/\/priller\.ringana\.com\/\S+)/g, function(m, url) {
+  esc = esc.replace(/(?:Im Shop|Set for Men im Shop|Direkt zu den Angeboten|In the shop): (https:\/\/priller\.ringana\.com\/\S+)/g, function(m, url) {
     shopBtns.push({url:url, label:'Im Shop ansehen →', style:'border:1.5px solid var(--terra);color:var(--terra);background:none'});
+    return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
+  });
+  esc = esc.replace(/(?:Mehr dazu|Read more|Mehr lesen): (https?:\/\/\S+)/g, function(m, url) {
+    var lbl = (typeof lang !== 'undefined' && lang === 'de') ? 'Mehr lesen →' : 'Read more →';
+    shopBtns.push({url:url, label:lbl, style:'border:1.5px solid var(--terra);color:var(--terra);background:none'});
+    return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
+  });
+  esc = esc.replace(/(?:Schreib uns direkt|Message us directly): (https:\/\/wa\.me\/\S+)/g, function(m, url) {
+    shopBtns.push({url:url, label:'💬 Schreib uns', style:'background:var(--moss);color:#fff;border:none'});
     return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
   });
   var result = esc
