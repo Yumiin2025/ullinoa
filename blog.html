@@ -241,9 +241,14 @@ function contentToHtml(text) {
     shopBtns.push({url:url, label:'Im Shop ansehen →', style:'border:1.5px solid var(--terra);color:var(--terra);background:none'});
     return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
   });
+  esc = esc.replace(/→\s*(?:Mehr dazu|Read more|Mehr lesen): (https?:\/\/\S+)/g, function(m, url) {
+    var lbl = (typeof lang !== 'undefined' && lang === 'de') ? 'Mehr lesen →' : 'Read more →';
+    shopBtns.push({url:url, label:lbl, style:'border:1.5px solid var(--terra);color:var(--terra);background:none', hover:true});
+    return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
+  });
   esc = esc.replace(/(?:Mehr dazu|Read more|Mehr lesen): (https?:\/\/\S+)/g, function(m, url) {
     var lbl = (typeof lang !== 'undefined' && lang === 'de') ? 'Mehr lesen →' : 'Read more →';
-    shopBtns.push({url:url, label:lbl, style:'border:1.5px solid var(--terra);color:var(--terra);background:none'});
+    shopBtns.push({url:url, label:lbl, style:'border:1.5px solid var(--terra);color:var(--terra);background:none', hover:true});
     return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
   });
   esc = esc.replace(/(?:Schreib uns direkt|Message us directly): (https:\/\/wa\.me\/\S+)/g, function(m, url) {
@@ -265,7 +270,8 @@ function contentToHtml(text) {
     .replace(/(https?:\/\/(?!wa\.me\/)(?!calendar\.app\.google\/)(?!www\.instagram\.com\/)\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:var(--terra);text-decoration:underline">$1</a>');
   // restore shop buttons
   shopBtns.forEach(function(btn, i) {
-    result = result.replace('\x00SHOPBTN'+i+'\x00','<a href="'+btn.url+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;'+btn.style+';border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.5rem 0">'+btn.label+'</a>');
+    var hover = btn.hover ? ' onmouseover="this.style.background=\'var(--terra)\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'none\';this.style.color=\'var(--terra)\'"' : '';
+    result = result.replace('\x00SHOPBTN'+i+'\x00','<a href="'+btn.url+'" target="_blank" rel="noopener"'+hover+' style="display:inline-flex;align-items:center;gap:.35rem;'+btn.style+';border-radius:100px;padding:.38rem 1.05rem;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;margin:.5rem 0">'+btn.label+'</a>');
   });
   // restore green boxes — process their inner content recursively then wrap
   greenBlocks.forEach(function(inner, i) {
