@@ -265,7 +265,10 @@ function contentToHtml(text) {
     return '\x00SHOPBTN'+(shopBtns.length-1)+'\x00';
   });
   // convert newlines to HTML breaks (now that pre-wrap is gone)
-  esc = esc.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
+  esc = esc.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>')
+    // strip BR tags that would otherwise stack next to block-level elements
+    .replace(/(<br>)+(\x00(?:STATBOX|GREENBOX)\d+\x00)/g,'$2')
+    .replace(/(\x00(?:STATBOX|GREENBOX)\d+\x00)(<br>)+/g,'$1');
   var result = esc
     .replace(/###(.+?)###/g,'<strong style="display:block;font-family:\'Cormorant Garamond\',Georgia,serif;font-size:clamp(1.35rem,3.5vw,1.85rem);font-weight:400;color:var(--moss);line-height:1.45;margin:.6rem 0">$1</strong>')
     .replace(/\*\*(.+?)\*\*/g,'<strong style="color:var(--moss);font-size:1.05rem">$1</strong>')
@@ -278,7 +281,14 @@ function contentToHtml(text) {
     })
     .replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,'<a href="mailto:$1" style="color:var(--moss);font-weight:500;text-decoration:underline">$1</a>')
     .replace(/(https:\/\/www\.instagram\.com\/\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:#C13584;font-weight:500;text-decoration:underline">Instagram @ulli.noa.so.we</a>')
-    .replace(/(https?:\/\/(?!wa\.me\/)(?!calendar\.app\.google\/)(?!www\.instagram\.com\/)\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:var(--terra);text-decoration:underline">$1</a>');
+    .replace(/(https?:\/\/(?!wa\.me\/)(?!calendar\.app\.google\/)(?!www\.instagram\.com\/)\S+)/g,'<a href="$1" target="_blank" rel="noopener" style="color:var(--terra);text-decoration:underline">$1</a>')
+    // strip BR tags that stack before/after block elements (separator, headings, divs)
+    .replace(/(<br>)+(<p )/g,'$2')
+    .replace(/(<\/p>)(<br>)+/g,'$1')
+    .replace(/(<br>)+(<strong style="display:block)/g,'$2')
+    .replace(/(<\/strong>)(<br>)+/g,'$1')
+    .replace(/(<br>)+(<div style=")/g,'$2')
+    .replace(/(<\/div>)(<br>)+/g,'$1');
   // restore shop buttons
   shopBtns.forEach(function(btn, i) {
     var hover = btn.hover ? ' onmouseover="this.style.background=\'var(--terra)\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'none\';this.style.color=\'var(--terra)\'"' : '';
