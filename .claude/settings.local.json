@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(cat)",
+      "Bash(chmod +x /Users/noa/Downloads/Website/.git/hooks/post-commit)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit -m 'partner.html: fix video duration text — 30 min not 3 min *)",
+      "Bash(git pull *)",
+      "Bash(git -C /Users/noa/Downloads/Website status --short)",
+      "Bash(git -C /Users/noa/Downloads/Website log --oneline -3)",
+      "Bash(git -C /Users/noa/Downloads/Website add quiz.html)",
+      "Bash(git -C /Users/noa/Downloads/Website commit -m ' *)",
+      "Bash(git -C /Users/noa/Downloads/Website pull --rebase origin main)",
+      "Bash(git -C /Users/noa/Downloads/Website push origin main)"
+    ]
+  }
+}
