@@ -21,6 +21,19 @@
 :root{--cream:#f5f0e8;--sage:#72b8ae;--sage-dk:#3a8a7e;--moss:#1e3d3a;--terra:#9b8fd4;--sand:#e0d5c1;--white:#fdfaf5;--text:#2a2a24;--muted:#7a7468;--nav-h:80px}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+.de-only{display:none}
+body.de .de-only{display:block}
+body.de .en-only{display:none}
+.nav-tr{display:flex;align-items:center;gap:.75rem}
+.lang-sw{display:flex;gap:.12rem;background:var(--sand);border-radius:100px;padding:.15rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--muted);padding:.28rem .75rem;border-radius:100px;transition:background .2s,color .2s}
+.lang-btn.active{background:var(--moss);color:var(--cream)}
+.btn-pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--moss);color:var(--cream);text-decoration:none;padding:.7rem 1.5rem;border-radius:100px;font-size:.84rem;font-weight:500;margin:.3rem .3rem .3rem 0;transition:background .2s}
+.btn-pill:hover{background:var(--sage-dk)}
+.btn-outline-pill{background:none;color:var(--moss);border:1.5px solid var(--moss)}
+.btn-outline-pill:hover{background:var(--moss);color:var(--cream)}
+.article-list{margin:.4rem 0 1.2rem 1.2rem;line-height:1.9;font-size:.97rem;color:var(--text)}
+.article-list li{margin-bottom:.3rem}
 .nav{position:fixed;top:0;left:0;right:0;z-index:300;height:var(--nav-h);background:rgba(253,250,245,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--sand)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;border-bottom:1px solid rgba(224,213,193,.5);height:42px}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;color:var(--moss);text-decoration:none;letter-spacing:.05em}
@@ -74,14 +87,20 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 <body>
 <nav class="nav">
   <div class="nav-top">
-    <a class="nav-logo" href="/"><em>Noa</em> &amp; Ulli</a>
+    <a class="nav-logo" href="index.html"><em>Noa</em> &amp; Ulli</a>
+    <div class="nav-tr">
+      <div class="lang-sw">
+        <button class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
   </div>
   <div class="nav-menu">
-    <a href="blog.html">← Blog</a>
+    <a href="blog.html"><span class="de-only">&#8592; Blog</span><span class="en-only">&#8592; Blog</span></a>
     <div class="nav-dot"></div>
-    <a href="partner.html">Das Business</a>
+    <a href="partner.html"><span class="de-only">Das Business</span><span class="en-only">The Business</span></a>
     <div class="nav-dot"></div>
-    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="cta-nav">Kennenlernen</a>
+    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="cta-nav"><span class="de-only">Kennenlernen</span><span class="en-only">Let's talk</span></a>
   </div>
 </nav>
 
@@ -89,51 +108,68 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 
   <div class="article-hero">
     <div class="article-hero-inner">
-      <a href="blog.html" class="back-link">← Zurück zum Blog</a>
-      <p class="article-lbl">News · 4. April 2026</p>
-      <h1 class="article-title">NEU: FRESH lip balm nude SPF 15, Lippenpflege mit echtem Sonnenschutz</h1>
-      <p class="article-meta">Von Noa &amp; Ulli · RINGANA Partnerinnen aus Österreich</p>
+      <a href="blog.html" class="back-link"><span class="de-only">&#8592; Zur&uuml;ck zum Blog</span><span class="en-only">&#8592; Back to Blog</span></a>
+      <p class="article-lbl"><span class="de-only">News &middot; 4. April 2026</span><span class="en-only">News &middot; 4 April 2026</span></p>
+      <h1 class="article-title"><span class="de-only">NEU: FRESH lip balm nude SPF 15, Lippenpflege mit echtem Sonnenschutz</span><span class="en-only">NEW: FRESH lip balm nude SPF 15, Lip care with real sun protection</span></h1>
+      <p class="article-meta"><span class="de-only">Von Noa &amp; Ulli &middot; RINGANA Partnerinnen aus &Ouml;sterreich</span><span class="en-only">By Noa &amp; Ulli &middot; RINGANA Partners from Austria</span></p>
     </div>
   </div>
 
   <img src="assets/images/lipbalmnude.jpeg" alt="FRESH lip balm nude SPF 15 RINGANA" class="article-img" loading="eager">
 
-  <div class="article-body">
+    <div class="article-body">
 
-    <p><em>Sun-kissed. Not sun-stressed.</em></p>
+    <div class="de-only">
+    <p>RINGANA hat einen neuen Lippenbalsam und er ist wirklich besonders: der <strong>FRESH lip balm nude SPF 15</strong>. Lippenpflege mit echtem Sonnenschutz, in einem dezenten Nude-Ton der zu jedem Hautton passt.</p>
 
-    <p>Die Lippen — der meist vergessene Spot in jeder SPF-Routine. Dabei sind sie täglich Sonne, Wind und Kälte ausgesetzt. Der neue <strong>FRESH lip balm nude SPF 15</strong> schließt diese Lücke: echter mineralischer Sonnenschutz, kombiniert mit intensiver Pflege.</p>
+    <span class="article-sep"></span>
 
-    <div class="article-sep"><span></span></div>
+    <h2>Warum SPF beim Lippenbalsam so wichtig ist.</h2>
 
-    <h2>Schutz, der überzeugt</h2>
+    <p>Die Lippen haben keine Melanin-produzierende Zellen und sind deshalb besonders anfällig für UV-Schäden. Ein Lippenbalsam mit SPF schützt und pflegt gleichzeitig. Endlich einer, der beides wirklich kann.</p>
 
-    <p>Mineralisches <strong>Zinkoxid</strong> als Breitband-UV-Filter schützt zuverlässig vor UVA und UVB — ohne chemische Filter, ohne Kompromisse.</p>
+    <span class="article-sep"></span>
 
-    <div class="article-sep"><span></span></div>
+    <h2>Was ihn besonders macht.</h2>
 
-    <h2>Pflege, die du sofort spürst</h2>
+    <p>Kein Alkohol, keine Mineralöle, kein Mikroplastik. Frisch produziert, mit natürlichen Wirkstoffen, die die Lippen langfristig pflegen. Der Nude-Ton ist so dezent, dass er sich wie eine zweite Haut anfühlt.</p>
 
-    <ul class="arrow-list">
-      <li><strong>Hyaluron &amp; Peptide</strong> — polstern auf, glätten feine Linien</li>
-      <li><strong>Glycerin, Natrium PCA &amp; Ectoin</strong> — intensive Feuchtigkeit</li>
-      <li><strong>Squalan, Ceramide &amp; Cupuaçu Butter</strong> — stärken die Schutzbarriere</li>
-    </ul>
+    <p><a href="https://priller.ringana.com" target="_blank" rel="noopener" class="btn-pill">Jetzt entdecken</a></p>
+    </div>
+    <div class="en-only">
+    <p>RINGANA has a new lip balm and it's genuinely special: the <strong>FRESH lip balm nude SPF 15</strong>. Lip care with real sun protection, in a subtle nude shade that works for every skin tone.</p>
 
-    <div class="article-sep"><span></span></div>
+    <span class="article-sep"></span>
 
-    <div class="product-card">
-      <h3>20 Euro Rabatt auf deine erste Bestellung</h3>
-      <p>Mit Code <strong>PRILLER20</strong> bekommst du 20 Euro Rabatt auf deine allererste RINGANA Bestellung. Einfach beim Checkout eingeben — gültig für Neukunden.</p>
+    <h2>Why SPF in lip balm matters.</h2>
+
+    <p>Lips have no melanin-producing cells and are therefore particularly vulnerable to UV damage. A lip balm with SPF protects and cares at the same time. Finally one that truly does both.</p>
+
+    <span class="article-sep"></span>
+
+    <h2>What makes it special.</h2>
+
+    <p>No alcohol, no mineral oils, no microplastics. Made fresh, with natural active ingredients that care for lips long-term. The nude shade is so subtle it feels like a second skin.</p>
+
+    <p><a href="https://priller.ringana.com" target="_blank" rel="noopener" class="btn-pill">Discover now</a></p>
     </div>
 
     <div class="article-cta">
-      <h3>FRESH lip balm nude SPF 15 entdecken</h3>
-      <p>Lippenpflege mit echtem Sonnenschutz — jetzt im RINGANA Shop.</p>
-      <a href="https://priller.ringana.com/produkt/fresh-lip-balm-nude-spf-15/" target="_blank" rel="noopener" class="btn-primary">Jetzt entdecken →</a>
+      <h3 class="de-only">Fragen oder neugierig?</h3>
+      <h3 class="en-only">Questions or curious?</h3>
+      <p class="de-only">Schreib uns direkt &ndash; wir antworten pers&ouml;nlich.</p>
+      <p class="en-only">Write to us directly &ndash; we reply personally.</p>
+      <a href="https://wa.me/436769261706" target="_blank" rel="noopener" class="btn-primary">
+        <span class="de-only">&#128172; Schreib uns</span>
+        <span class="en-only">&#128172; Message us</span>
+      </a>
+      <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-outline">
+        <span class="de-only">Kennenlernen</span>
+        <span class="en-only">Let's talk</span>
+      </a>
     </div>
 
-    <p class="adv-note">Werbung | Noa &amp; Ulli sind unabhängige RINGANA Partnerinnen.</p>
+    <p class="adv-note"><span class="de-only">Werbung | Noa &amp; Ulli sind unabh&auml;ngige RINGANA Partnerinnen.</span><span class="en-only">Ad | Noa &amp; Ulli are independent RINGANA Partners.</span></p>
 
   </div>
 </div>
@@ -142,5 +178,14 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
   <p class="f-names"><em>Noa</em> &amp; Ulli</p>
   <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
 </footer>
+<script>
+function setLang(l) {
+  document.body.className = l;
+  document.documentElement.lang = l;
+  localStorage.setItem('lang', l);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
+}
+(function(){ var l = localStorage.getItem('lang') || 'de'; setLang(l); })();
+</script>
 </body>
 </html>
