@@ -1133,7 +1133,15 @@ function copyCode(box){
   });
 }
 
-// BLOG ENGINE
+// BLOG ENGINE — newest posts (keep in sync when adding new blog pages)
+window._BAKED_POSTS = [
+  {id:'d13',directLink:true,link:'blog-drinks-summer.html',type:'promo',title_de:'🌞 Sip into Summer: 4 RINGANA Drinks jetzt 20% günstiger',title_en:'🌞 Sip into Summer: 4 RINGANA Drinks now 20% off',excerpt_de:'RINGANAchi, RINGANAdea, RINGANAisi und RINGANAbty — Energie, Stoffwechsel, Schlaf und Beauty von innen. Solange der Vorrat reicht.',excerpt_en:'RINGANAchi, RINGANAdea, RINGANAisi and RINGANAbty — energy, metabolism, sleep and beauty from within. While stocks last.',content_de:'',content_en:'',imageUrl:'assets/images/business summer.jpeg',date:'2026-06-23'},
+  {id:'d12',directLink:true,link:'blog-podcast-folge4.html',type:'blog',title_de:'Folge 4: Was deine Pension wirklich über dein Leben sagt.',title_en:'Episode 4: What your pension really says about your life.',excerpt_de:'Noa rechnet nach. Ihr erster Job, 30 Stunden, Armutsgrenze, und warum sie die Entscheidung getroffen hat, die alles verändert hat.',excerpt_en:'Noa runs the numbers. Her first job, 30 hours, poverty line, and the decision that changed everything.',content_de:'',content_en:'',imageUrl:'assets/images/Podcast.jpg',date:'2026-06-19'},
+  {id:'d11',directLink:true,link:'blog-our-generation.html',type:'blog',title_de:'Das Business unserer Generation. Nicht weil es leicht ist. Weil es endlich passt.',title_en:'The Business of Our Generation. Not Because It\'s Easy. Because It Finally Fits.',excerpt_de:'Über Frauen, Geld und ein Einkommen das wirklich ins Leben passt. Was ich mein ganzes Leben beobachtet habe.',excerpt_en:'On women, money, and income that finally fits around life. What I watched my whole life.',content_de:'',content_en:'',imageUrl:'assets/images/photo17.jpeg',date:'2026-06-16'},
+  {id:'d10',directLink:true,link:'blog-vatertag.html',type:'news',title_de:'Vatertag Geschenk 2026: High-tech Naturkosmetik die wirklich wirkt',title_en:'Father\'s Day Gift 2026: High-tech Natural Skincare That Really Works',excerpt_de:'RINGANA Naturkosmetik für Männer: Cleanser, Hydro Serum, Moisturiser for Men und CAPS mascu.',excerpt_en:'Natural skincare for men who give a lot and often forget themselves.',content_de:'',content_en:'',imageUrl:'assets/images/mascuandman.JPG',date:'2026-06-11'},
+  {id:'d9',directLink:true,link:'blog-nebenverdienst.html',type:'blog',title_de:'Sie macht alles. Und fragt sich trotzdem, ob es genug ist.',title_en:'She Does Everything. And Still Wonders If She\'s Doing Enough.',excerpt_de:'4 Stunden unbezahlte Arbeit täglich. Kein Gehalt, keine Pension, kein Lebenslauf.',excerpt_en:'4 hours of unpaid work every day. No salary, no pension, no CV.',content_de:'',content_en:'',imageUrl:'assets/images/Ulli%26Noa.0029.jpg',date:'2026-06-02'},
+  {id:'d8',directLink:true,link:'blog-toner.html',type:'news',title_de:'Der RINGANA FRESH Toner: unterschätzt, aber unverzichtbar',title_en:'The RINGANA FRESH Toner: underrated, but essential',excerpt_de:'Toner ist der unterschätzte Held jeder Hautpflege-Routine.',excerpt_en:'Toner is the unsung hero of any skincare routine.',content_de:'',content_en:'',imageUrl:'assets/images/toner cover.jpg',date:'2026-05-31'}
+];
 const SK='noaulli_v3';
 let posts=[],editId=null;
 const TCFG={
