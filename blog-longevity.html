@@ -20,9 +20,11 @@
 :root{--cream:#f5f0e8;--sage:#72b8ae;--sage-dk:#3a8a7e;--moss:#1e3d3a;--terra:#9b8fd4;--sand:#e0d5c1;--white:#fdfaf5;--text:#2a2a24;--muted:#7a7468;--nav-h:80px}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
-.de-only{display:none}
+.en-only{display:none}
 body.de .de-only{display:block}
 body.de .en-only{display:none}
+body.en .de-only{display:none}
+body.en .en-only{display:block}
 .nav-tr{display:flex;align-items:center;gap:.75rem}
 .lang-sw{display:flex;gap:.12rem;background:var(--sand);border-radius:100px;padding:.15rem}
 .lang-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--muted);padding:.28rem .75rem;border-radius:100px;transition:background .2s,color .2s}
