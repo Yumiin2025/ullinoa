@@ -398,11 +398,19 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 
 <script>
 // LANG
-function setLang(l) { if(l==='de'){window.location.href='story.html';return;} if(l==='en'){return;}
-  document.body.classList.toggle('de', l === 'de');
-  document.getElementById('btnDE').classList.toggle('active', l === 'de');
-  document.getElementById('btnEN').classList.toggle('active', l === 'en');
+function setLang(l) {
+  if(l==='de'){window.location.href='story.html';return;}
+  if(l==='en'){return;}
+  document.body.className=l;
+  document.documentElement.lang=l;
+  localStorage.setItem('lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()===l));
 }
+(function(){
+  document.body.className='en';
+  document.documentElement.lang='en';
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()==='en'));
+})();
 
 // FLOATING WA
 (function() {
