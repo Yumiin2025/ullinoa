@@ -913,7 +913,7 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
     <div class="reveal anim in" style="max-width:560px;margin:2.2rem auto 2.5rem">
       <div class="wa-form-wrap" style="background:var(--white);border:1.5px solid var(--sand)">
         <h3 class="wa-form-title"><span class="en-only">Send us a message</span><span class="de-only">Schreib uns</span></h3>
-        <p class="wa-form-sub"><span class="en-only">Tap the button and WhatsApp opens with your message ready to send, we reply personally, usually within a few hours.</span><span class="de-only">Tippe auf den Button und WhatsApp öffnet sich mit deiner Nachricht, wir antworten persönlich, meist innerhalb weniger Stunden.</span></p>
+        <p class="wa-form-sub"><span class="en-only">Fill in your name and topic, then tap a button. WhatsApp will open with your message already written — <strong>you just need to press Send there.</strong></span><span class="de-only">Füll Name und Thema aus, dann tippe auf einen Button. WhatsApp öffnet sich mit deiner Nachricht — <strong>dort noch auf Senden drücken.</strong></span></p>
         <div class="wa-form">
           <input type="text" id="wfName2" placeholder="Dein Name" autocomplete="given-name">
           <select id="wfInterest2">
@@ -927,6 +927,19 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
             <button class="wa-btn wa-btn-noa" onclick="sendToWhatsApp2('noa')">💬 Noa</button>
             <button class="wa-btn wa-btn-ulli" onclick="sendToWhatsApp2('ulli')">💬 Ulli</button>
           </div>
+          <p style="font-size:.78rem;color:var(--muted);margin-top:.3rem;text-align:center"><span class="en-only">👆 WhatsApp will open — tap <strong>Send</strong> there to complete your message</span><span class="de-only">👆 WhatsApp öffnet sich — dort noch auf <strong>Senden</strong> tippen</span></p>
+        </div>
+        <div style="margin-top:1.2rem;border-top:1px solid var(--sand);padding-top:1.2rem">
+          <p style="font-size:.82rem;color:var(--muted);margin-bottom:.8rem"><span class="en-only">Prefer email? We'll reply within 24 hours:</span><span class="de-only">Lieber per E-Mail? Wir antworten innerhalb von 24 Stunden:</span></p>
+          <form action="https://formsubmit.co/noa@ullinoa.at" method="POST" style="display:flex;flex-direction:column;gap:.6rem">
+            <input type="hidden" name="_subject" value="Neue Nachricht über ullinoa.at">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="name" placeholder="Dein Name / Your name" required style="width:100%;padding:.65rem 1rem;border:1.5px solid var(--sand);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);background:#fff;outline:none">
+            <input type="email" name="email" placeholder="Deine E-Mail / Your email" required style="width:100%;padding:.65rem 1rem;border:1.5px solid var(--sand);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);background:#fff;outline:none">
+            <textarea name="message" placeholder="Deine Nachricht / Your message" rows="3" required style="width:100%;padding:.65rem 1rem;border:1.5px solid var(--sand);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);background:#fff;outline:none;resize:vertical"></textarea>
+            <button type="submit" style="background:var(--moss);color:var(--cream);border:none;border-radius:100px;padding:.7rem 1.4rem;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer">✉️ <span class="en-only">Send email</span><span class="de-only">E-Mail senden</span></button>
+          </form>
         </div>
       </div>
     </div>
@@ -1865,7 +1878,7 @@ applyBlogPreview();
     <!-- WhatsApp smart form -->
     <div class="wa-form-wrap">
       <h3 class="wa-form-title"><span class="en-only">Still got a question? Write to us directly.</span><span class="de-only">Noch eine Frage? Schreib uns direkt.</span></h3>
-      <p class="wa-form-sub"><span class="en-only">Fill in the form and tap the button, it opens WhatsApp with your message already written. We read every message personally.</span><span class="de-only">Füll das Formular aus und tippe auf den Button, es öffnet WhatsApp mit deiner Nachricht bereits geschrieben. Wir lesen jede Nachricht persönlich.</span></p>
+      <p class="wa-form-sub"><span class="en-only">Fill in your name and topic, then tap a button. WhatsApp will open with your message — <strong>tap Send there to complete it.</strong></span><span class="de-only">Füll Name und Thema aus, dann tippe auf einen Button. WhatsApp öffnet sich — <strong>dort noch auf Senden drücken.</strong></span></p>
       <div class="wa-form">
         <input type="text" id="wfName" placeholder="Dein Name" autocomplete="given-name">
         <select id="wfInterest">
@@ -1879,6 +1892,7 @@ applyBlogPreview();
           <button class="wa-btn wa-btn-noa" onclick="sendToWhatsApp('noa')">💬 <span class="en-only">Send to Noa</span><span class="de-only">An Noa senden</span></button>
           <button class="wa-btn wa-btn-ulli" onclick="sendToWhatsApp('ulli')">💬 <span class="en-only">Send to Ulli</span><span class="de-only">An Ulli senden</span></button>
         </div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:.3rem;text-align:center"><span class="en-only">👆 WhatsApp will open — tap <strong>Send</strong> there to complete your message</span><span class="de-only">👆 WhatsApp öffnet sich — dort noch auf <strong>Senden</strong> tippen</span></p>
       </div>
     </div>
 
