@@ -63,11 +63,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 .highlight-box{background:var(--cream);border-left:3px solid var(--terra);border-radius:0 14px 14px 0;padding:1.3rem 1.6rem;margin:1.8rem 0}
 .highlight-box p{font-size:.93rem;line-height:1.85;color:var(--text);margin-bottom:.6rem}
 .highlight-box p:last-child{margin-bottom:0}
-.product-card{background:var(--cream);border-radius:18px;padding:1.6rem 1.8rem;margin:1.8rem 0;border:1px solid var(--sand)}
-.product-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--moss);margin-bottom:.6rem}
+.product-card{background:var(--white);border-radius:20px;margin:2rem 0;border:1px solid var(--sand);overflow:hidden;transition:box-shadow .25s,transform .25s}
+.product-card:hover{box-shadow:0 8px 32px rgba(30,61,58,.1);transform:translateY(-2px)}
+.product-card-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;display:block;max-height:260px}
+.product-card-body{padding:1.5rem 1.8rem 1.8rem}
+.product-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--moss);margin-bottom:.5rem}
 .product-card p{font-size:.93rem;line-height:1.8;color:var(--text);margin-bottom:.7rem}
 .product-card p:last-child{margin-bottom:0}
-.tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 1rem}
+.product-card .btn-pill{display:block;text-align:center;margin-top:1.1rem}
+.tag-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 1rem}
 .tag{background:var(--sand);color:var(--moss);border-radius:100px;padding:.25rem .85rem;font-size:.74rem;font-weight:500}
 .tag-new{background:var(--moss);color:var(--cream)}
 .article-cta{background:var(--cream);border-radius:20px;padding:2rem 2rem 2.2rem;margin:2.5rem 0;text-align:center;border:1px solid var(--sand)}
@@ -166,35 +170,47 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
     <p>RINGANA formulates its entire sun care range exclusively with mineral zinc oxide. No synthetic UV filters, no oxybenzone, no octinoxate.</p>
 
     <div class="product-card">
-      <h3>FRESH sunscreen SPF 25</h3>
-      <div class="tag-row"><span class="tag tag-new">New Formula</span><span class="tag">Body</span><span class="tag">Water-resistant</span></div>
-      <p>The new body formula. Mineral, nanoparticle-free zinc oxide as the only UV filter. Astaxanthin counteracts UV-induced oxidative stress. Turmeric root extract brings antioxidant protection, licorice root extract works against UV-related pigmentation and early signs of skin ageing. 3% glycerin keeps the skin moisturised during sun exposure.</p>
-      <p>The texture spreads effortlessly, is water-resistant, and leaves a velvety-light finish. For outdoors, at the beach, during sport.</p>
-      <p><a href="https://priller.ringana.com/produkt/fresh-sunscreen-spf-25/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a></p>
+      <img src="assets/images/Partner-Templates-1x1-FRESH-sunscreen-SPF25-2.jpg" alt="FRESH sunscreen SPF 25" class="product-card-img" loading="lazy">
+      <div class="product-card-body">
+        <h3>FRESH sunscreen SPF 25</h3>
+        <div class="tag-row"><span class="tag tag-new">New Formula</span><span class="tag">Body</span><span class="tag">Water-resistant</span></div>
+        <p>The new body formula. Mineral, nanoparticle-free zinc oxide as the only UV filter. Astaxanthin counteracts UV-induced oxidative stress. Turmeric root extract brings antioxidant protection, licorice root extract works against UV-related pigmentation and early signs of skin ageing. 3% glycerin keeps the skin moisturised during sun exposure.</p>
+        <p>The texture spreads effortlessly, is water-resistant, and leaves a velvety-light finish. For outdoors, at the beach, during sport.</p>
+        <a href="https://priller.ringana.com/produkt/fresh-sunscreen-spf-25/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a>
+      </div>
     </div>
 
     <div class="product-card">
-      <h3>FRESH sunscreen face SPF 30</h3>
-      <div class="tag-row"><span class="tag">Face</span><span class="tag">COSMOS-certified</span><span class="tag">Daily use</span></div>
-      <p>The face version, COSMOS-certified, formulated for daily use. Matte finish, no greasy feel. Mung bean extract provides additional protection against UV rays, blue light, and infrared light. Bisabolol and licorice root extract calm skin redness. Elder kernel oil and squalane nourish, hyaluronic acid provides moisture.</p>
-      <p>This is the one I use every morning, not just on holiday days.</p>
-      <p><a href="https://priller.ringana.com/produkt/fresh-sunscreen-face/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a></p>
+      <img src="assets/images/Partner-Templates-1x1-FRESH-sunscreen-face-SPF-30-1.jpg" alt="FRESH sunscreen face SPF 30" class="product-card-img" loading="lazy">
+      <div class="product-card-body">
+        <h3>FRESH sunscreen face SPF 30</h3>
+        <div class="tag-row"><span class="tag">Face</span><span class="tag">COSMOS-certified</span><span class="tag">Daily use</span></div>
+        <p>The face version, COSMOS-certified, formulated for daily use. Matte finish, no greasy feel. Mung bean extract provides additional protection against UV rays, blue light, and infrared light. Bisabolol and licorice root extract calm skin redness. Elder kernel oil and squalane nourish, hyaluronic acid provides moisture.</p>
+        <p>This is the one I use every morning, not just on holiday days.</p>
+        <a href="https://priller.ringana.com/produkt/fresh-sunscreen-face/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a>
+      </div>
     </div>
 
     <div class="product-card">
-      <h3>FRESH after sun &amp; tan booster</h3>
-      <div class="tag-row"><span class="tag">After Sun</span><span class="tag">Tan Care</span></div>
-      <p>Not a sunscreen, but a meaningful part of any summer routine. Works in two directions: before and after sun exposure. Buriti oil protects against UV-related stress, resurrection plant calms sun-stressed skin, ectoin nourishes. A marine actives complex from Codium tomentosum algae supports natural skin regeneration and activates vitamin B5 production directly in the skin.</p>
-      <p>Erythrulose and red algae extract create a light natural tan, even without direct sun exposure.</p>
-      <p><a href="https://priller.ringana.com/produkt/fresh-after-sun/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a></p>
+      <img src="assets/images/Partner-Templates-1x1-FRESH-after-sun-and-tan-booster-1.jpg" alt="FRESH after sun &amp; tan booster" class="product-card-img" loading="lazy">
+      <div class="product-card-body">
+        <h3>FRESH after sun &amp; tan booster</h3>
+        <div class="tag-row"><span class="tag">After Sun</span><span class="tag">Tan Care</span></div>
+        <p>Not a sunscreen, but a meaningful part of any summer routine. Works in two directions: before and after sun exposure. Buriti oil protects against UV-related stress, resurrection plant calms sun-stressed skin, ectoin nourishes. A marine actives complex from Codium tomentosum algae supports natural skin regeneration and activates vitamin B5 production directly in the skin.</p>
+        <p>Erythrulose and red algae extract create a light natural tan, even without direct sun exposure.</p>
+        <a href="https://priller.ringana.com/produkt/fresh-after-sun/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a>
+      </div>
     </div>
 
     <div class="product-card">
-      <h3>FRESH lip balm nude SPF 15</h3>
-      <div class="tag-row"><span class="tag">Lips</span><span class="tag">SPF 15</span><span class="tag">Nude tone</span></div>
-      <p>Lips get forgotten in every SPF routine. Mineral zinc oxide protects the delicate lip skin against UVA and UVB. Hyaluronic acid and peptides plump and smooth fine lines. 6% glycerin, ectoin, and sodium PCA deliver long-lasting moisture. Squalane, a ceramide complex, and Cupuaçu butter protect against moisture loss.</p>
-      <p>A subtle nude tone that works across a wide range of skin tones.</p>
-      <p><a href="https://priller.ringana.com/produkt/fresh-lip-balm-nude-spf-15/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a></p>
+      <img src="assets/images/Partner-Templates-1x1-FRESH-lip-balm-nude-SPF15-1.jpg" alt="FRESH lip balm nude SPF 15" class="product-card-img" loading="lazy">
+      <div class="product-card-body">
+        <h3>FRESH lip balm nude SPF 15</h3>
+        <div class="tag-row"><span class="tag">Lips</span><span class="tag">SPF 15</span><span class="tag">Nude tone</span></div>
+        <p>Lips get forgotten in every SPF routine. Mineral zinc oxide protects the delicate lip skin against UVA and UVB. Hyaluronic acid and peptides plump and smooth fine lines. 6% glycerin, ectoin, and sodium PCA deliver long-lasting moisture. Squalane, a ceramide complex, and Cupuaçu butter protect against moisture loss.</p>
+        <p>A subtle nude tone that works across a wide range of skin tones.</p>
+        <a href="https://priller.ringana.com/produkt/fresh-lip-balm-nude-spf-15/?lang=en" target="_blank" rel="noopener" class="btn-pill">See product &#8594;</a>
+      </div>
     </div>
 
     <span class="article-sep"></span>
