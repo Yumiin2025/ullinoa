@@ -42,7 +42,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 
 /* HERO */
 .hero{position:relative;height:92vh;min-height:520px;overflow:hidden;display:flex;align-items:flex-end}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,61,58,.72) 0%,rgba(30,61,58,.15) 60%,transparent 100%)}
 .hero-content{position:relative;z-index:2;padding:3.5rem 1.5rem 4rem;max-width:760px}
 .hero-label{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:.75rem}
@@ -107,6 +107,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 .btn-light:hover{background:var(--cream)}
 .btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);text-decoration:none;padding:.8rem 1.8rem;border-radius:100px;font-size:.84rem;font-weight:500;margin:.3rem;transition:border-color .2s,background .2s}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-terra{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:2px solid var(--terra);text-decoration:none;padding:.8rem 1.8rem;border-radius:100px;font-size:.84rem;font-weight:500;margin:.3rem;transition:background .25s,color .25s}
+.btn-terra:hover{background:var(--terra);color:#fff}
 
 /* FOOTER */
 footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
@@ -182,7 +184,7 @@ body.en .de-only{display:none}
         <p class="person-eyebrow en-only">About me</p>
         <h2 class="person-name">Noa.<br><em>I am a unicorn.</em></h2>
         <p class="person-role de-only">RINGANA Partnerin seit 2017 · Master in Entrepreneurship &amp; Sustainability</p>
-        <p class="person-role en-only">RINGANA partner since 2017 · Master's in Entrepreneurship &amp; Sustainability</p>
+        <p class="person-role en-only">RINGANA partner since 2017 · MSc Entrepreneurship, Technology &amp; Sustainability · BA Management, Minor Marketing &amp; Digital Media</p>
         <div class="person-text">
           <div class="de-only">
             <p>Nicht weil ich etwas Besonderes bin. Sondern weil ich mit zu vielen Dingen in dieser Welt einfach nicht klarkomme.</p>
@@ -226,7 +228,7 @@ body.en .de-only{display:none}
         <p class="person-eyebrow en-only">About me</p>
         <h2 class="person-name">Ulli.<br><em>Seit 1999.</em></h2>
         <p class="person-role de-only">RINGANA Partnerin seit 1999 · Teamaufbau · Mutter &amp; Unternehmerin</p>
-        <p class="person-role en-only">RINGANA partner since 1999 · Team building · Mother &amp; entrepreneur</p>
+        <p class="person-role en-only">RINGANA partner since 1999 · 27 years · 3 philosophy degrees, completed at 30</p>
         <div class="person-text">
           <div class="de-only">
             <p>Ich mache das seit 1999. Das klingt lang. Und es ist lang. Aber wenn ich ehrlich bin, hat es sich nie wie Arbeit angefühlt, die ich für jemand anderen mache.</p>
@@ -238,7 +240,7 @@ body.en .de-only{display:none}
             <p>I've been doing this since 1999. That sounds like a long time. And it is. But honestly, it has never felt like work I do for someone else.</p>
             <p>I raised children. I lived my life. And alongside all of that I built something that is genuinely mine. Not because I had to. But because it worked, in my way, at my pace, around my life.</p>
             <p>Today I watch Noa do the same. And I see her make it her own. That might be the most beautiful thing about it: that this business can grow from generation to generation without anyone having to give anything up.</p>
-            <p>Over 25 years. I'd do it again.</p>
+            <p>27 years. I'd do it again.</p>
           </div>
         </div>
       </div>
@@ -293,11 +295,12 @@ body.en .de-only{display:none}
   <div class="about-cta">
     <h2 class="de-only">Klingt nach einem Gespräch<br>das du <em>haben willst?</em></h2>
     <h2 class="en-only">Sounds like a conversation<br>you <em>want to have?</em></h2>
-    <p class="de-only">Kein Pitch, kein Druck. Erzähl uns wo du stehst und wir erzählen dir ehrlich, was dazu gehört.</p>
-    <p class="en-only">No pitch, no pressure. Tell us where you are and we'll tell you honestly what this involves.</p>
-    <a href="https://wa.me/436769261706" target="_blank" rel="noopener" class="btn-light">&#128172; WhatsApp Noa</a>
-    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-outline de-only">Termin vereinbaren &#8594;</a>
-    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-outline en-only">Book a call &#8594;</a>
+    <p class="en-only">Just a casual chat, no strings attached.</p>
+    <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem">
+      <a href="https://wa.me/436769261706" target="_blank" rel="noopener" class="btn-light">&#128172; WhatsApp Noa</a>
+      <a href="https://wa.me/436766189426" target="_blank" rel="noopener" class="btn-light">&#128172; WhatsApp Ulli</a>
+      <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-terra en-only">Book a call &#8594;</a>
+    </div>
   </div>
 
 </div>
