@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Über uns: Noa &amp; Ulli Priller | RINGANA Partnerinnen aus Österreich</title>
+<meta name="description" content="Wir sind Noa und Ulli. Mutter und Tochter, RINGANA Partnerinnen, und davon überzeugt dass es einen besseren Weg gibt. Unsere Geschichte, ehrlich erzählt.">
+<link rel="canonical" href="https://ullinoa.at/about.html">
+<link rel="alternate" hreflang="de" href="https://ullinoa.at/about.html">
+<link rel="alternate" hreflang="en" href="https://ullinoa.at/about-en.html">
+<link rel="alternate" hreflang="x-default" href="https://ullinoa.at/about.html">
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ullinoa.at/about.html"/>
+<meta property="og:title" content="Über uns: Noa &amp; Ulli"/>
+<meta property="og:description" content="Mutter und Tochter, RINGANA Partnerinnen. Warum wir das machen, ehrlich."/>
+<meta property="og:image" content="https://ullinoa.at/assets/images/Family-Auswahl0360.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#f5f0e8;--sage:#72b8ae;--sage-dk:#3a8a7e;--moss:#1e3d3a;--terra:#9b8fd4;--sand:#e0d5c1;--white:#fdfaf5;--text:#2a2a24;--muted:#7a7468;--nav-h:80px}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+.lang-sw{display:flex;gap:.12rem;background:var(--sand);border-radius:100px;padding:.15rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--muted);padding:.28rem .75rem;border-radius:100px;transition:background .2s,color .2s}
+.lang-btn.active{background:var(--moss);color:var(--cream)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:300;height:var(--nav-h);background:rgba(253,250,245,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--sand)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;border-bottom:1px solid rgba(224,213,193,.5);height:42px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;color:var(--moss);text-decoration:none;letter-spacing:.05em}
+.nav-logo em{font-style:italic;color:var(--terra)}
+.nav-tr{display:flex;align-items:center;gap:.75rem}
+.nav-menu{display:flex;align-items:center;justify-content:center;gap:.25rem;padding:.3rem 1rem;overflow-x:auto;scrollbar-width:none;height:38px}
+.nav-menu::-webkit-scrollbar{display:none}
+.nav-menu a{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:100px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-menu a:hover{color:var(--moss)}
+.nav-menu a.active{color:var(--moss);background:rgba(114,184,174,.13)}
+.nav-dot{width:3px;height:3px;background:var(--sand);border-radius:50%;flex-shrink:0}
+.nav-menu a.cta-nav{background:var(--moss);color:#fff !important;margin-left:.25rem}
+.nav-menu a.cta-nav:hover{background:var(--sage-dk)}
+.page-wrap{padding-top:var(--nav-h)}
+
+/* HERO */
+.hero{position:relative;height:92vh;min-height:520px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,61,58,.72) 0%,rgba(30,61,58,.15) 60%,transparent 100%)}
+.hero-content{position:relative;z-index:2;padding:3.5rem 1.5rem 4rem;max-width:760px}
+.hero-label{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:.75rem}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:1rem}
+.hero-title em{font-style:italic;color:rgba(255,255,255,.75)}
+.hero-sub{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.75;max-width:480px}
+
+/* INTRO STRIP */
+.intro-strip{background:var(--moss);padding:2.5rem 1.5rem;text-align:center}
+.intro-strip p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.5rem);font-weight:300;color:rgba(255,255,255,.85);line-height:1.7;max-width:680px;margin:0 auto;font-style:italic}
+
+/* PERSON SECTIONS */
+.person-section{padding:5rem 1.25rem;max-width:1100px;margin:0 auto}
+.person-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.person-grid.reverse{direction:rtl}
+.person-grid.reverse>*{direction:ltr}
+@media(max-width:720px){
+  .person-grid,.person-grid.reverse{grid-template-columns:1fr;direction:ltr}
+  .person-section{padding:3.5rem 1.25rem}
+}
+.person-photo-col{display:flex;flex-direction:column;gap:1.25rem}
+.person-photo{width:100%;border-radius:20px;object-fit:cover;display:block}
+.person-photo.tall{aspect-ratio:3/4}
+.person-photo.square{aspect-ratio:1/1}
+.person-photo.wide{aspect-ratio:4/3}
+.person-text-col{padding-top:1rem}
+.person-eyebrow{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage-dk);font-weight:500;margin-bottom:.75rem}
+.person-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3rem);font-weight:300;color:var(--moss);line-height:1.1;margin-bottom:.4rem}
+.person-name em{font-style:italic}
+.person-role{font-size:.8rem;color:var(--muted);letter-spacing:.08em;margin-bottom:2rem}
+.person-text p{font-size:.97rem;line-height:1.9;color:var(--text);margin-bottom:1.1rem}
+.person-text p:last-child{margin-bottom:0}
+
+/* UNICORN QUOTE */
+.unicorn-block{background:var(--cream);border-radius:24px;padding:2.2rem 2rem;margin:2rem 0;border-left:4px solid var(--terra)}
+.unicorn-block .u-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:.75rem}
+.unicorn-block p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.4rem);font-weight:300;color:var(--moss);line-height:1.7;font-style:italic}
+
+/* SEPARATOR */
+.divider{height:1px;background:var(--sand);max-width:1100px;margin:0 auto}
+
+/* TOGETHER SECTION */
+.together{padding:5rem 1.25rem;max-width:1100px;margin:0 auto}
+.together-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+@media(max-width:720px){.together-grid{grid-template-columns:1fr}}
+.together-photo{width:100%;border-radius:20px;object-fit:cover;aspect-ratio:3/4;display:block}
+.together-text .t-eyebrow{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage-dk);font-weight:500;margin-bottom:.75rem}
+.together-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.7rem);font-weight:300;color:var(--moss);line-height:1.2;margin-bottom:1.5rem}
+.together-text h2 em{font-style:italic}
+.together-text p{font-size:.97rem;line-height:1.9;color:var(--text);margin-bottom:1rem}
+.together-stats{display:flex;gap:2rem;margin:2rem 0;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;gap:.2rem}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--moss)}
+.stat-lbl{font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+
+/* CTA SECTION */
+.about-cta{background:var(--moss);padding:4.5rem 1.5rem;text-align:center}
+.about-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:300;color:#fff;line-height:1.3;margin-bottom:1rem}
+.about-cta h2 em{font-style:italic;color:var(--sage)}
+.about-cta p{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-light{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--moss);text-decoration:none;padding:.8rem 1.8rem;border-radius:100px;font-size:.84rem;font-weight:500;margin:.3rem;transition:background .2s}
+.btn-light:hover{background:var(--cream)}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);text-decoration:none;padding:.8rem 1.8rem;border-radius:100px;font-size:.84rem;font-weight:500;margin:.3rem;transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* FOOTER */
+footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
+.f-names{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:var(--moss);margin-bottom:.7rem}
+.f-names em{font-style:italic;color:var(--terra)}
+.f-copy{font-size:.75rem;color:var(--muted);line-height:1.7}
+.f-copy a{color:var(--muted);text-decoration:none}
+.f-copy a:hover{color:var(--moss)}
+
+.en-only{display:none}
+.de-only{display:block}
+body.en .en-only{display:block}
+body.en .de-only{display:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-top">
+    <a class="nav-logo" href="index.html"><em>Noa</em> &amp; Ulli</a>
+    <div class="nav-tr">
+      <div class="lang-sw">
+        <button class="lang-btn active" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-menu">
+    <a href="index.html"><span class="de-only">Startseite</span><span class="en-only">Home</span></a>
+    <div class="nav-dot"></div>
+    <a href="blog.html">Blog</a>
+    <div class="nav-dot"></div>
+    <a href="about.html" class="active"><span class="de-only">Ulli &amp; Noa</span><span class="en-only">About us</span></a>
+    <div class="nav-dot"></div>
+    <a href="story.html"><span class="de-only">Unsere Geschichte</span><span class="en-only">Our Story</span></a>
+    <div class="nav-dot"></div>
+    <a href="quiz.html"><span class="de-only">Routine-Quiz</span><span class="en-only">Skin Quiz</span></a>
+    <a href="partner.html" class="cta-nav">Das Business</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img class="hero-img" src="assets/images/Family-Auswahl0360.jpg" alt="Noa und Ulli Priller Familie RINGANA Partnerinnen">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label de-only">Wir sind</p>
+      <p class="hero-label en-only">We are</p>
+      <h1 class="hero-title de-only">Noa &amp; Ulli.<br><em>Mutter, Tochter,<br>und alles dazwischen.</em></h1>
+      <h1 class="hero-title en-only">Noa &amp; Ulli.<br><em>Mother, daughter,<br>and everything in between.</em></h1>
+      <p class="hero-sub de-only">RINGANA Partnerinnen. Und davon überzeugt, dass es einen besseren Weg gibt.</p>
+      <p class="hero-sub en-only">RINGANA partners. And convinced there is a better way.</p>
+    </div>
+  </div>
+
+  <!-- INTRO STRIP -->
+  <div class="intro-strip">
+    <p class="de-only">Drei Generationen. Eine Entscheidung. Das Business, das um das Leben herum funktioniert, nicht dagegen.</p>
+    <p class="en-only">Three generations. One decision. A business that works around life, not against it.</p>
+  </div>
+
+  <!-- NOA SECTION -->
+  <div class="person-section">
+    <div class="person-grid">
+      <div class="person-photo-col">
+        <img class="person-photo tall" src="assets/images/Family-Auswahl0860.jpg" alt="Noa Priller RINGANA Partnerin Österreich">
+        <img class="person-photo wide" src="assets/images/Family-Auswahl0410.jpg" alt="Noa Priller">
+      </div>
+      <div class="person-text-col">
+        <p class="person-eyebrow de-only">Über mich</p>
+        <p class="person-eyebrow en-only">About me</p>
+        <h2 class="person-name">Noa.<br><em>I am a unicorn.</em></h2>
+        <p class="person-role de-only">RINGANA Partnerin seit 2017 · Master in Entrepreneurship &amp; Sustainability</p>
+        <p class="person-role en-only">RINGANA partner since 2017 · Master's in Entrepreneurship &amp; Sustainability</p>
+        <div class="person-text">
+          <div class="de-only">
+            <p>Nicht weil ich etwas Besonderes bin. Sondern weil ich mit zu vielen Dingen in dieser Welt einfach nicht klarkomme.</p>
+            <div class="unicorn-block">
+              <p class="u-label">Was mich nicht loslässt</p>
+              <p>Dass Frauen und Mütter alles geben, für die Familie, für die Gesellschaft, für alle um sie herum. Und am Ende trotzdem die größte Altersarmutsgruppe sind. Dass Zeit gegen Geld tauschen per Definition begrenzt ist. Dass man von früh bis abends für den Erfolg anderer arbeitet und dabei bewusst klein gehalten wird. Dass Unternehmen massenhaft verdienen auf Kosten von Umwelt und Gesundheit. Dass es immer jemanden geben muss, der über einem steht.</p>
+            </div>
+            <p>Das hat in meinem Kopf nie Sinn ergeben.</p>
+            <p>Und dann ist Hope gestorben. Meine Hündin. Mein Baby. Mein ein und alles. Ich war dabei, bis zum Ende. Und in diesen Stunden habe ich mich gefragt: Was mache ich hier eigentlich? Für was? Für wen?</p>
+            <p>Die Antwort kam klar: <em>It's me. It's always been me.</em></p>
+            <p>Ich muss glücklich sein. Ich muss mein Leben gerne leben, denn es kann schnell vorbei sein, das weißt du dann. Ich möchte da sein, wenn es wichtig ist, wirklich da sein. Ich möchte gesund sein. Ich möchte Pausen haben, ohne dabei in finanzielle Abhängigkeit zu geraten. Ein gutes Leben, auf meine Bedingungen.</p>
+            <p>Und genau deshalb liebe ich dieses Business.</p>
+          </div>
+          <div class="en-only">
+            <p>Not because I'm special. But because there are too many things about this world I just can't make peace with.</p>
+            <div class="unicorn-block">
+              <p class="u-label">What stays with me</p>
+              <p>That women and mothers give everything. For family, for society, for everyone around them. And still end up as the largest group living in poverty in old age. That trading time for money is limited by definition. That you work from morning to evening for someone else's success, and are deliberately kept exactly where you are. That companies make fortunes at the cost of our environment and our health. That there always has to be someone standing above you.</p>
+            </div>
+            <p>None of that has ever made sense to me.</p>
+            <p>And then Hope died. My dog. My baby. My everything. I was there with her until the end. And in those hours I asked myself: what am I actually doing here? For what? For whom?</p>
+            <p>The answer came clearly: <em>It's me. It's always been me.</em></p>
+            <p>I need to be happy. I need to genuinely love my life, because it can be over quickly, you know that then. I want to be there when it matters, really there. I want to be healthy. I want rest without falling into financial dependency. A good life, on my terms.</p>
+            <p>And that's exactly why I love this business.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ULLI SECTION -->
+  <div class="person-section">
+    <div class="person-grid reverse">
+      <div class="person-photo-col">
+        <img class="person-photo tall" src="assets/images/Ulli%26Noa.0023.jpg" alt="Ulli Priller RINGANA Partnerin seit 1999">
+      </div>
+      <div class="person-text-col">
+        <p class="person-eyebrow de-only">Über mich</p>
+        <p class="person-eyebrow en-only">About me</p>
+        <h2 class="person-name">Ulli.<br><em>Seit 1999.</em></h2>
+        <p class="person-role de-only">RINGANA Partnerin seit 1999 · Teamaufbau · Mutter &amp; Unternehmerin</p>
+        <p class="person-role en-only">RINGANA partner since 1999 · Team building · Mother &amp; entrepreneur</p>
+        <div class="person-text">
+          <div class="de-only">
+            <p>Ich mache das seit 1999. Das klingt lang. Und es ist lang. Aber wenn ich ehrlich bin, hat es sich nie wie Arbeit angefühlt, die ich für jemand anderen mache.</p>
+            <p>Ich habe Kinder großgezogen. Ich habe gelebt. Und ich habe nebenbei etwas aufgebaut, das wirklich mir gehört. Nicht weil ich musste. Sondern weil es funktioniert hat, auf meine Weise, in meinem Tempo, um mein Leben herum.</p>
+            <p>Heute sehe ich Noa das machen. Und ich sehe, wie sie es zu ihrem macht. Das ist vielleicht das Schönste daran: dass dieses Business von Generation zu Generation wachsen kann, ohne dass jemand dabei etwas aufgeben muss.</p>
+            <p>Über 25 Jahre. Ich würde es wieder tun.</p>
+          </div>
+          <div class="en-only">
+            <p>I've been doing this since 1999. That sounds like a long time. And it is. But honestly, it has never felt like work I do for someone else.</p>
+            <p>I raised children. I lived my life. And alongside all of that I built something that is genuinely mine. Not because I had to. But because it worked, in my way, at my pace, around my life.</p>
+            <p>Today I watch Noa do the same. And I see her make it her own. That might be the most beautiful thing about it: that this business can grow from generation to generation without anyone having to give anything up.</p>
+            <p>Over 25 years. I'd do it again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TOGETHER SECTION -->
+  <div class="together">
+    <div class="together-grid">
+      <div>
+        <img class="together-photo" src="assets/images/Ulli%26Noa.0002.jpg" alt="Noa und Ulli Priller zusammen RINGANA Business">
+      </div>
+      <div class="together-text">
+        <p class="t-eyebrow de-only">Gemeinsam</p>
+        <p class="t-eyebrow en-only">Together</p>
+        <h2 class="de-only">Ein Business,<br><em>das in der Familie<br>beginnt.</em></h2>
+        <h2 class="en-only">A business<br><em>that starts<br>in the family.</em></h2>
+        <div class="de-only">
+          <p>Unsere Oma Uschi ist seit 1999 dabei. Mama Ulli hat das dann für sich entdeckt. Und ich bin mit 18 eingestiegen, weil ich es mein ganzes Leben lang beobachtet habe und wusste: das ist real.</p>
+          <p>Drei Generationen. Kein einziger von uns hat etwas dafür aufgegeben, was uns wirklich wichtig war.</p>
+          <p>Heute haben wir ein Team von über 60.000 Partnerinnen weltweit. Und wir coachen rund 200 davon aktiv. Was uns dabei antreibt: nicht die Zahlen. Sondern die Geschichten dahinter.</p>
+        </div>
+        <div class="en-only">
+          <p>Our grandmother Uschi has been with RINGANA since 1999. Then Ulli discovered it for herself. And I joined at 18, because I'd been watching it my whole life and knew: this is real.</p>
+          <p>Three generations. Not one of us has given up anything that actually mattered to us.</p>
+          <p>Today we have a team of over 60,000 partners worldwide. We actively coach around 200 of them. What drives us isn't the numbers. It's the stories behind them.</p>
+        </div>
+        <div class="together-stats">
+          <div class="stat">
+            <span class="stat-num">27+</span>
+            <span class="stat-lbl de-only">Jahre in der Familie</span>
+            <span class="stat-lbl en-only">Years in the family</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl de-only">Generationen</span>
+            <span class="stat-lbl en-only">Generations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">60k+</span>
+            <span class="stat-lbl de-only">Partnerinnen weltweit</span>
+            <span class="stat-lbl en-only">Partners worldwide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="about-cta">
+    <h2 class="de-only">Klingt nach einem Gespräch<br>das du <em>haben willst?</em></h2>
+    <h2 class="en-only">Sounds like a conversation<br>you <em>want to have?</em></h2>
+    <p class="de-only">Kein Pitch, kein Druck. Erzähl uns wo du stehst und wir erzählen dir ehrlich, was dazu gehört.</p>
+    <p class="en-only">No pitch, no pressure. Tell us where you are and we'll tell you honestly what this involves.</p>
+    <a href="https://wa.me/436769261706" target="_blank" rel="noopener" class="btn-light">&#128172; WhatsApp Noa</a>
+    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-outline de-only">Termin vereinbaren &#8594;</a>
+    <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-outline en-only">Book a call &#8594;</a>
+  </div>
+
+</div>
+
+<footer>
+  <p class="f-names"><em>Noa</em> &amp; Ulli</p>
+  <p class="f-copy">Independent RINGANA Partners · <a href="https://ullinoa.at">ullinoa.at</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+</footer>
+
+<script>
+function setLang(l){
+  document.body.className=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()===l));
+  if(l==='en'&&window.location.pathname.includes('about.html')){
+    window.location.href='about-en.html';
+  }
+}
+document.body.className='de';
+</script>
+</body>
+</html>
