@@ -36,12 +36,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.25rem;border-bottom:1px solid rgba(224,213,193,.5);height:42px}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;color:var(--moss);text-decoration:none;letter-spacing:.05em}
 .nav-logo em{font-style:italic;color:var(--terra)}
-.nav-menu{display:flex;align-items:center;justify-content:center;gap:.25rem;padding:.3rem 1rem;overflow-x:auto;scrollbar-width:none;height:38px}
+.nav-menu{display:flex;align-items:center;justify-content:center;gap:0;padding:.25rem 1.25rem;overflow-x:auto;scrollbar-width:none;height:38px}
 .nav-menu::-webkit-scrollbar{display:none}
-.nav-menu a{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.3rem .6rem;border-radius:100px;transition:color .2s,background .2s;white-space:nowrap}
-.nav-menu a:hover{color:var(--moss)}
-.nav-dot{width:3px;height:3px;background:var(--sand);border-radius:50%;flex-shrink:0}
-.nav-menu a.cta-nav{background:var(--moss);color:#fff !important;margin-left:.25rem}
+.nav-menu a{display:inline-flex;align-items:center;position:relative;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap;padding:.3rem .9rem;transition:color .25s}
+.nav-menu a:hover{color:var(--moss)}.nav-menu a::after{content:'';position:absolute;bottom:3px;left:.9rem;right:.9rem;height:1.5px;background:var(--moss);transform:scaleX(0);transform-origin:center;transition:transform .25s}.nav-menu a:hover::after,.nav-menu a.active::after{transform:scaleX(1)}.nav-menu a.active{color:var(--moss)}
+.nav-dot{display:none}
+.nav-menu a.cta-nav{background:var(--moss);color:var(--cream) !important;margin-left:.75rem;padding:.4rem 1.3rem;border-radius:100px}.nav-menu a.cta-nav::after{display:none}
 .page-wrap{padding-top:var(--nav-h)}
 .article-hero{background:var(--moss);padding:4rem 1.25rem 4.5rem}
 .article-hero-inner{max-width:760px;margin:0 auto}
