@@ -511,47 +511,7 @@ function buildRoutineEmail(profile, isDE, showSuppl) {
     +'<p style="margin:0;font-size:11px;color:#7a7468;font-family:Arial,sans-serif;">Independent RINGANA Partners &middot; ullinoa.at</p>'
     +'</td></tr>'
 
-    +'</table></td></tr></table><!-- COOKIE BANNER -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1e3d3a;color:#f5f0e8;padding:1.2rem 1.5rem;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:0 -4px 20px rgba(0,0,0,.15)">
-  <p style="font-family:'DM Sans',sans-serif;font-size:.85rem;line-height:1.6;margin:0;flex:1;min-width:200px">Diese Website verwendet Cookies. Google Analytics wird nur mit deiner Zustimmung geladen. <a href="/datenschutz.html" style="color:#72b8ae;text-decoration:underline">Mehr erfahren</a></p>
-  <div style="display:flex;gap:.6rem;flex-shrink:0">
-    <button id="cookie-reject" style="background:transparent;border:1.5px solid rgba(245,240,232,.4);color:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;padding:.5rem 1.1rem;border-radius:100px;cursor:pointer">Nur notwendige</button>
-    <button id="cookie-accept" style="background:#72b8ae;border:none;color:#1e3d3a;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;padding:.5rem 1.2rem;border-radius:100px;cursor:pointer">Akzeptieren</button>
-  </div>
-</div>
-<script>
-(function(){
-  var GA_ID='G-FGW6S30G3F';
-  var consent=localStorage.getItem('cookie_consent');
-  var banner=document.getElementById('cookie-banner');
-  function loadGA(){
-    if(window._gaLoaded)return;window._gaLoaded=true;
-    var s=document.createElement('script');s.async=true;
-    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag=gtag;gtag('js',new Date());gtag('config',GA_ID);
-  }
-  if(consent==='accepted'){loadGA();}
-  else if(consent!=='rejected'&&banner){
-    banner.style.display='flex';
-    document.getElementById('cookie-accept').onclick=function(){
-      localStorage.setItem('cookie_consent','accepted');
-      banner.style.display='none';loadGA();
-    };
-    document.getElementById('cookie-reject').onclick=function(){
-      localStorage.setItem('cookie_consent','rejected');
-      banner.style.display='none';
-    };
-  }
-  window.__resetCookieConsent=function(){
-    localStorage.removeItem('cookie_consent');
-    if(banner){banner.style.display='flex';}
-  };
-})();
-</script>
-</body></html>';
+        +'</table></td></tr></table></body></html>';
 }
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
