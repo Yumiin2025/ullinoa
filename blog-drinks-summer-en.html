@@ -100,12 +100,19 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .f-copy a:hover{color:var(--moss)}
 
 /* PRILLER20 voucher block */
-.voucher-block{background:var(--moss);border-radius:20px;padding:2rem 2rem 2.2rem;margin:2.5rem 0;text-align:center}
-.voucher-block .v-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.5rem}
-.voucher-block .v-code{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;letter-spacing:.18em;margin:.3rem 0 .4rem}
-.voucher-block .v-desc{font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:1.4rem}
-.voucher-block .v-btn{display:inline-block;background:var(--sage);color:var(--moss);text-decoration:none;padding:.75rem 2rem;border-radius:100px;font-size:.85rem;font-weight:600;transition:background .2s}
-.voucher-block .v-btn:hover{background:var(--sage-dk);color:#fff}
+.voucher-block{position:relative;background:var(--moss);border-radius:20px;margin:2.5rem 0;overflow:hidden}
+.voucher-top{padding:2rem 2rem 1.6rem;text-align:center}
+.voucher-block .v-label{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:.7rem}
+.voucher-block .v-code{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:#fff;letter-spacing:.22em;margin:.2rem 0 .6rem;line-height:1}
+.voucher-block .v-desc{font-size:.82rem;color:rgba(255,255,255,.6);margin:0}
+.voucher-tear{position:relative;height:28px;margin:0;display:flex;align-items:center}
+.voucher-tear::before{content:'';position:absolute;left:14px;right:14px;border-top:2px dashed rgba(255,255,255,.18)}
+.voucher-punch{width:28px;height:28px;border-radius:50%;background:var(--white);position:absolute;top:50%;transform:translateY(-50%);flex-shrink:0}
+.voucher-punch-l{left:-14px}
+.voucher-punch-r{right:-14px}
+.voucher-bottom{padding:1.2rem 2rem 1.8rem;text-align:center}
+.voucher-block .v-btn{display:inline-block;background:var(--sage);color:var(--moss);text-decoration:none;padding:.75rem 2.2rem;border-radius:100px;font-size:.85rem;font-weight:600;transition:background .2s,transform .15s}
+.voucher-block .v-btn:hover{background:var(--sage-dk);color:#fff;transform:translateY(-2px)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","headline":"Sip into Summer: 4 RINGANA Drinks jetzt 20% günstiger","description":"RINGANAchi, RINGANAdea, RINGANAisi und RINGANAbty jetzt 20% günstiger. Natürliche Drinks für Energie, Stoffwechsel, Schlaf und Beauty von innen.","datePublished":"2026-06-23","author":[{"@type":"Person","name":"Noa"},{"@type":"Person","name":"Ulli"}],"publisher":{"@type":"Organization","name":"Noa & Ulli"},"image":"https://ullinoa.at/assets/images/chis.jpeg","url":"https://ullinoa.at/blog-drinks-summer.html"}
