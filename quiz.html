@@ -976,6 +976,33 @@ function submitEmail() {
     } catch(e) { console.error('Brevo exception', e); }
   })(email);
 
+  // ── Add contact to Brevo list → triggers follow-up automation ────────────────
+  // SETUP: Replace 0 below with your "Quiz Leads" list ID from Brevo → Contacts → Lists
+  var BREVO_QUIZ_LIST_ID = 0; // ← replace with your list ID after creating it in Brevo
+  if (BREVO_QUIZ_LIST_ID) {
+    (function(emailVal) {
+      try {
+        var profileId = getProfile(answers);
+        var profile   = PROFILES[profileId];
+        fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'api-key': BREVO_KEY },
+          body: JSON.stringify({
+            email: emailVal,
+            attributes: {
+              ROUTINE_NAME: lang === 'de' ? profile.name_de : profile.name_en,
+              ROUTINE_EMOJI: profile.emoji,
+              QUIZ_LANG: lang,
+              QUIZ_DATE: new Date().toISOString().split('T')[0]
+            },
+            listIds: [BREVO_QUIZ_LIST_ID],
+            updateEnabled: true
+          })
+        }).catch(function(){});
+      } catch(e) {}
+    })(email);
+  }
+
   // ── Lead notification to Noa/Ulli via FormSubmit ───────────────────────────
   (function(emailVal) {
     try {
