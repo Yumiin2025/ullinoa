@@ -79,11 +79,20 @@ body.en .en-only{display:block}
 /* PRODUCT HIGHLIGHTS */
 .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
 @media(max-width:520px){.products-grid{grid-template-columns:1fr}}
-.product-pill{background:var(--cream);border:1px solid var(--sand);border-radius:14px;padding:1.1rem 1.3rem}
-.product-pill .p-name{font-size:.78rem;font-weight:600;color:var(--moss);margin-bottom:.3rem;letter-spacing:.02em}
-.product-pill .p-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
-.product-pill a{font-size:.75rem;color:var(--sage-dk);text-decoration:none;margin-top:.5rem;display:inline-block}
-.product-pill a:hover{text-decoration:underline}
+.product-pill{background:#f0edf8;border:1px solid #d5cef0;border-radius:14px;padding:1.1rem 1.3rem}
+.product-pill .p-name{font-size:.78rem;font-weight:600;color:#4a3b8a;margin-bottom:.3rem;letter-spacing:.02em}
+.product-pill .p-desc{font-size:.8rem;color:#5a527a;line-height:1.6}
+.product-pill a{font-size:.75rem;color:#7060b8;text-decoration:none;margin-top:.5rem;display:inline-block}
+.product-pill a:hover{color:#4a3b8a;text-decoration:underline}
+.p-tag{display:inline-block;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#7060b8;background:#e4dff5;border-radius:100px;padding:.2rem .65rem;margin-bottom:.45rem}
+/* RINGANA VALUES */
+.ringana-values{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.8rem 0}
+@media(max-width:500px){.ringana-values{grid-template-columns:1fr 1fr}}
+.rv-item{background:#f0edf8;border-radius:12px;padding:.9rem 1rem;border-top:3px solid #9b8fd4}
+.rv-item .rv-head{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#7060b8;margin-bottom:.3rem}
+.rv-item .rv-body{font-size:.77rem;color:#5a527a;line-height:1.55}
+.ringana-values-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--sage-dk);text-decoration:none;margin-top:.5rem}
+.ringana-values-link:hover{color:var(--moss);text-decoration:underline}
 
 /* KUNDIN vs PARTNERIN */
 .compare-wrap{margin:2rem 0}
@@ -241,16 +250,34 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
           <a href="https://priller.ringana.com/produkt/ringanabty/" target="_blank" rel="noopener">Zum Produkt &rarr;</a>
         </div>
         <div class="product-pill">
+          <div class="p-tag">Anti-Aging Intensivkur</div>
           <div class="p-name">FRESH skin perfection</div>
-          <div class="p-desc">Anti-Aging Intensivpflege: 3 % Bakuchiol, 3 % Phytoplankton, 7 Ceramide, Ectoin. Sichtbarer Effekt in 30 Minuten. Für wenn die Haut wirklich etwas braucht.</div>
+          <div class="p-desc">3 % Bakuchiol, 3 % Phytoplankton, 7 Ceramide, Ectoin. Sichtbarer Effekt in 30 Minuten. Für wenn die Haut wirklich etwas braucht.</div>
           <a href="https://priller.ringana.com/produkt/fresh-skin-perfection/" target="_blank" rel="noopener">Zum Produkt &rarr;</a>
         </div>
         <div class="product-pill">
+          <div class="p-tag">Healthy Ageing</div>
           <div class="p-name">BEYOND spermidine</div>
-          <div class="p-desc">Healthy Ageing von innen. Spermidin, PQQ, Fucoidan und Antioxidantien unterstützen die natürliche Zellreinigung und Zellregeneration.</div>
+          <div class="p-desc">Spermidin, PQQ, Fucoidan und Antioxidantien unterstützen die natürliche Zellreinigung und Zellregeneration.</div>
           <a href="https://priller.ringana.com/produkt/beyond-spermidine/" target="_blank" rel="noopener">Zum Produkt &rarr;</a>
         </div>
       </div>
+
+      <div class="ringana-values">
+        <div class="rv-item">
+          <div class="rv-head">Frisch produziert</div>
+          <div class="rv-body">Kein Lager, kein Konservierungsstoff. Jede Bestellung wird frisch hergestellt, mit echtem Ablaufdatum.</div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-head">Kein Greenwashing</div>
+          <div class="rv-body">Vegan seit Tag 1, keine Petrochemikalien, keine Füllstoffe. Nicht weil es trendy ist, sondern weil es Überzeugung ist.</div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-head">Studienbasiert</div>
+          <div class="rv-body">Eigenes Forschungsteam in Österreich. Wirkstoffe in klinisch relevanten Konzentrationen, keine kosmetischen Mengen.</div>
+        </div>
+      </div>
+      <a href="https://priller.ringana.com/corporate/products/" target="_blank" rel="noopener" class="ringana-values-link">Mehr über die RINGANA Philosophie &rarr;</a>
 
       <span class="article-sep"><span></span></span>
 
@@ -388,16 +415,34 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
           <a href="https://priller.ringana.com/produkt/ringanabty/" target="_blank" rel="noopener">View product &rarr;</a>
         </div>
         <div class="product-pill">
+          <div class="p-tag">Anti-Ageing Intensive</div>
           <div class="p-name">FRESH skin perfection</div>
-          <div class="p-desc">Advanced anti-ageing care: 3% bakuchiol, 3% phytoplankton, 7 ceramides, ectoin. Visible effect in 30 minutes. For when your skin really needs something serious.</div>
+          <div class="p-desc">3% bakuchiol, 3% phytoplankton, 7 ceramides, ectoin. Visible effect in 30 minutes. For when your skin really needs something serious.</div>
           <a href="https://priller.ringana.com/produkt/fresh-skin-perfection/?lang=en" target="_blank" rel="noopener">View product &rarr;</a>
         </div>
         <div class="product-pill">
+          <div class="p-tag">Healthy Ageing</div>
           <div class="p-name">BEYOND spermidine</div>
-          <div class="p-desc">Healthy ageing from within. Spermidine, PQQ, fucoidan and super antioxidants support the body's natural cell cleansing and regeneration process.</div>
+          <div class="p-desc">Spermidine, PQQ, fucoidan and super antioxidants support the body's natural cell cleansing and regeneration process.</div>
           <a href="https://priller.ringana.com/produkt/beyond-spermidine/?lang=en" target="_blank" rel="noopener">View product &rarr;</a>
         </div>
       </div>
+
+      <div class="ringana-values">
+        <div class="rv-item">
+          <div class="rv-head">Made fresh</div>
+          <div class="rv-body">No warehouse, no preservatives. Every order is freshly produced with a real expiry date.</div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-head">No greenwashing</div>
+          <div class="rv-body">Vegan from day one, no petrochemicals, no fillers. Not because it's trendy, but because it's a conviction.</div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-head">Study-based</div>
+          <div class="rv-body">In-house research team in Austria. Active ingredients in clinically relevant concentrations, not cosmetic amounts.</div>
+        </div>
+      </div>
+      <a href="https://priller.ringana.com/corporate/products/?lang=en" target="_blank" rel="noopener" class="ringana-values-link">Learn more about the RINGANA philosophy &rarr;</a>
 
       <span class="article-sep"><span></span></span>
 
