@@ -529,6 +529,28 @@ body.page-edit .edit-save-bar{display:flex}
 body.edit-mode #waFloat{display:none}
 @keyframes waPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
 #waFloat.wa-hidden{opacity:0;pointer-events:none}
+
+/* SUMMER SALE STRIP */
+:root{--strip-h:48px}
+@media(max-width:599px){:root{--strip-h:72px}}
+#sale-strip{position:fixed;top:0;left:0;right:0;z-index:350;height:var(--strip-h);background:linear-gradient(100deg,#b86a48 0%,#c8886e 55%,#d4a070 100%);display:flex;align-items:center}
+.ss-inner{width:100%;max-width:1160px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+@media(max-width:599px){.ss-inner{padding:.5rem 1rem;flex-wrap:wrap;gap:.3rem}}
+.ss-left{display:flex;align-items:center;gap:.5rem;min-width:0;flex-wrap:wrap}
+.ss-badge{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.9);background:rgba(0,0,0,.15);border-radius:100px;padding:.2rem .6rem;white-space:nowrap;flex-shrink:0}
+.ss-today{font-size:.72rem;color:rgba(255,255,255,.82);white-space:nowrap;flex-shrink:0}
+.ss-product{font-size:.82rem;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px}
+@media(max-width:599px){.ss-product{max-width:190px;font-size:.78rem}}
+.ss-right{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.ss-btn{background:rgba(255,255,255,.2);color:#fff;border:1.5px solid rgba(255,255,255,.52);border-radius:100px;padding:.28rem .85rem;font-size:.7rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .18s}
+.ss-btn:hover{background:rgba(255,255,255,.36)}
+.ss-wa{font-size:.68rem;color:rgba(255,255,255,.78);text-decoration:none;white-space:nowrap;transition:color .15s}
+.ss-wa:hover{color:#fff}
+@media(max-width:599px){.ss-wa{display:none}}
+/* push nav + hero down to make room for strip */
+.nav{top:var(--strip-h)!important}
+.hero{margin-top:calc(var(--nav-h) + var(--strip-h))!important}
+.hero-img{height:calc(100svh - var(--nav-h) - var(--strip-h))!important}
 </style>
 
   <!-- SEO & Social Sharing -->
@@ -543,8 +565,40 @@ body.edit-mode #waFloat{display:none}
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Noa & Ulli, RINGANA Frischepartnerinnen","url":"https://ullinoa.at","logo":"https://ullinoa.at/og-preview.jpg","description":"Natürliche Frischekosmetik ohne Konservierungsstoffe von RINGANA. Ehrliche Erfahrungen, echte Community aus Österreich.","address":{"@type":"PostalAddress","addressCountry":"AT"},"sameAs":["https://www.instagram.com/ulli.noa.so.we"]}
   </script>
+<script src="sale-today.js"></script>
 </head>
 <body class="de">
+
+<!-- ============================================================
+  🌞 SUMMER SALE STRIP — täglich updaten: sale-today.js bearbeiten
+  ============================================================ -->
+<div id="sale-strip" role="region" aria-label="RINGANA Summer Sale Angebot des Tages">
+  <div class="ss-inner">
+    <div class="ss-left">
+      <span class="ss-badge">☀️ Summer Sale</span>
+      <span class="ss-today de-only">Heute 20 % auf:</span>
+      <span class="ss-today en-only">Today 20% off:</span>
+      <strong class="ss-product" id="ss-name">FRESH sunscreen face SPF 30</strong>
+    </div>
+    <div class="ss-right">
+      <a id="ss-btn-de" href="https://priller.ringana.com/produkt/fresh-sunscreen-face/" target="_blank" rel="noopener" class="ss-btn de-only">Zum Shop →</a>
+      <a id="ss-btn-en" href="https://priller.ringana.com/produkt/fresh-sunscreen-face/" target="_blank" rel="noopener" class="ss-btn en-only">Shop now →</a>
+      <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20Summer%20Sale%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="ss-wa de-only">Fragen? WhatsApp</a>
+      <a href="https://wa.me/436769261706?text=Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20Summer%20Sale%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="ss-wa en-only">Questions? WhatsApp</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var s=window.SALE_TODAY; if(!s)return;
+  var isEN=document.body.classList.contains('en');
+  var name=isEN?(s.product_en||s.product_de):s.product_de;
+  var el=document.getElementById('ss-name'); if(el)el.textContent=name;
+  ['ss-btn-de','ss-btn-en'].forEach(function(id){
+    var a=document.getElementById(id); if(a&&s.shop_url)a.href=s.shop_url;
+  });
+})();
+</script>
 
 <!-- NAV -->
 <nav class="nav">
