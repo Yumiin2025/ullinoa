@@ -22,8 +22,7 @@ window.SALE_TODAY = {
   // ── BILD ──────────────────────────────────────────────────
   // Datei in assets/images/ ablegen, dann hier eintragen:
   image_de: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAdea.jpg",
-  image_en: "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_DRINKS_RINGANAdea.jpg",
-  // Fallback falls Datei noch nicht vorhanden:
+  image_en: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAdea.jpg", // kein EN-Bild vorhanden, DE wird verwendet
   image_fallback: "assets/images/dea.jpg",
 
   // ── KURZBESCHREIBUNG (Strip-Untertitel, 1 Zeile) ──────────
