@@ -158,6 +158,44 @@ body.en .en-only{display:block}
 .voucher-block .v-btn{display:inline-block;background:var(--sage);color:var(--moss);text-decoration:none;padding:.75rem 2.2rem;border-radius:100px;font-size:.85rem;font-weight:600;transition:background .2s,transform .15s}
 .voucher-block .v-btn:hover{background:var(--sage-dk);color:#fff;transform:translateY(-2px)}
 
+/* SUMMER SALE STRIP */
+:root{--strip-h:48px}
+@media(max-width:599px){:root{--strip-h:72px}}
+#sale-strip{position:fixed;top:0;left:0;right:0;z-index:350;height:var(--strip-h);background:linear-gradient(100deg,#b86a48 0%,#c8886e 55%,#d4a070 100%);display:flex;align-items:center}
+.ss-inner{width:100%;max-width:1160px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+@media(max-width:599px){.ss-inner{padding:.5rem 1rem;flex-wrap:wrap;gap:.3rem}}
+.ss-left{display:flex;align-items:center;gap:.5rem;min-width:0;flex-wrap:wrap}
+.ss-badge{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.9);background:rgba(0,0,0,.15);border-radius:100px;padding:.2rem .6rem;white-space:nowrap;flex-shrink:0}
+.ss-today{font-size:.72rem;color:rgba(255,255,255,.82);white-space:nowrap;flex-shrink:0}
+.ss-product{font-size:.82rem;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px}
+@media(max-width:599px){.ss-product{max-width:190px;font-size:.78rem}}
+.ss-right{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.ss-btn{background:rgba(255,255,255,.2);color:#fff;border:1.5px solid rgba(255,255,255,.52);border-radius:100px;padding:.28rem .85rem;font-size:.7rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .18s}
+.ss-btn:hover{background:rgba(255,255,255,.36)}
+.ss-wa{font-size:.68rem;color:rgba(255,255,255,.78);text-decoration:none;white-space:nowrap;transition:color .15s}
+.ss-wa:hover{color:#fff}
+@media(max-width:599px){.ss-wa{display:none}}
+.nav{margin-top:var(--strip-h)}
+/* HEUTE IM SALE CARD */
+.deal-card{background:var(--white);border:1.5px solid var(--sand);border-radius:20px;overflow:hidden;margin:2rem 0 2.5rem;box-shadow:0 4px 24px rgba(30,61,58,.06)}
+.deal-card-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--cream)}
+.deal-card-body{padding:1.6rem 1.6rem 1.8rem}
+.deal-badge-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.deal-sale-pill{background:var(--peach);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-radius:100px;padding:.25rem .7rem;white-space:nowrap}
+.deal-date-pill{font-size:.65rem;color:var(--muted);letter-spacing:.06em}
+.deal-tagline{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--moss);line-height:1.4;font-style:italic;margin-bottom:.5rem}
+.deal-name{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:1rem}
+.deal-howto{font-size:.82rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem;padding:.8rem 1rem;background:var(--cream);border-radius:10px}
+.deal-benefits{list-style:none;margin-bottom:1.3rem}
+.deal-benefits li{font-size:.8rem;color:var(--text);line-height:1.6;padding:.2rem 0 .2rem 1.2rem;position:relative}
+.deal-benefits li::before{content:'→';position:absolute;left:0;color:var(--sage-dk);font-size:.75rem}
+.deal-actions{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.deal-shop-btn{display:inline-block;background:var(--moss);color:#fff;text-decoration:none;padding:.75rem 1.8rem;border-radius:100px;font-size:.85rem;font-weight:600;transition:background .2s}
+.deal-shop-btn:hover{background:var(--sage-dk)}
+.deal-wa-link{font-size:.78rem;color:var(--sage-dk);text-decoration:none}
+.deal-wa-link:hover{color:var(--moss);text-decoration:underline}
+.deal-more-link{font-size:.72rem;color:var(--muted);text-decoration:none;display:block;margin-top:.8rem}
+.deal-more-link:hover{color:var(--moss);text-decoration:underline}
 /* FOOTER */
 .adv-note{font-size:.72rem;color:var(--muted);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--sand)}
 footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
@@ -167,11 +205,30 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
 .f-copy a{color:var(--muted);text-decoration:none}
 .f-copy a:hover{color:var(--moss)}
 </style>
+<script src="sale-today.js"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","headline":"RINGANA Summer Sale August 2026: Was du wissen musst","description":"Den ganzen August jeden Tag 20 % auf ein anderes RINGANA Produkt. Wie du den Sale wirklich nutzt, welche Produkte ich empfehle, und ob sich die Partnerschaft lohnt.","datePublished":"2026-07-22","author":[{"@type":"Person","name":"Noa"}],"publisher":{"@type":"Organization","name":"Noa & Ulli"},"image":"https://ullinoa.at/assets/images/summersale.svg","url":"https://ullinoa.at/blog-summersale.html"}
 </script>
 </head>
 <body>
+
+<div id="sale-strip" role="region" aria-label="RINGANA Summer Sale Angebot des Tages">
+  <div class="ss-inner">
+    <div class="ss-left">
+      <span class="ss-badge">☀️ Summer Sale</span>
+      <span class="ss-today de-only">Heute 20 % auf:</span>
+      <span class="ss-today en-only">Today 20% off:</span>
+      <strong class="ss-product" id="ss-name">RINGANAdea</strong>
+    </div>
+    <div class="ss-right">
+      <a id="ss-btn-de" href="https://priller.ringana.com/produkt/ringanadea/" target="_blank" rel="noopener" class="ss-btn de-only">Zum Shop →</a>
+      <a id="ss-btn-en" href="https://priller.ringana.com/produkt/ringanadea/" target="_blank" rel="noopener" class="ss-btn en-only">Shop now →</a>
+      <a id="ss-wa-de" href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20Summer%20Sale%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="ss-wa de-only">Fragen? WhatsApp</a>
+      <a id="ss-wa-en" href="https://wa.me/436769261706?text=Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20Summer%20Sale%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="ss-wa en-only">Questions? WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 <nav class="nav">
   <div class="nav-top">
     <a class="nav-logo" href="index.html"><em>Noa</em> &amp; Ulli</a>
@@ -214,6 +271,9 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
   <div class="article-body">
     <a href="blog.html" class="back-link de-only">&#8592; Zurück zum Blog</a>
     <a href="blog.html" class="back-link en-only">&#8592; Back to Blog</a>
+
+    <!-- ═══ HEUTE IM SALE ═══ (wird täglich per sale-today.js befüllt) -->
+    <div id="deal-today"></div>
 
     <!-- DE CONTENT -->
     <div class="de-only">
@@ -585,6 +645,81 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
     f.style.display = 'none';
   });
 }
+</script>
+<script>
+(function(){
+  var s = window.SALE_TODAY;
+  var isEN = document.documentElement.lang === 'en' ||
+             document.cookie.includes('lang=en') ||
+             localStorage.getItem('lang') === 'en';
+
+  // ── Strip ──────────────────────────────────────────────────
+  if(s){
+    var nameEl = document.getElementById('ss-name');
+    if(nameEl) nameEl.textContent = isEN ? (s.product_en||s.product_de) : s.product_de;
+    ['ss-btn-de','ss-btn-en'].forEach(function(id){
+      var a=document.getElementById(id); if(a&&s.shop_url) a.href=s.shop_url;
+    });
+    var waDe=document.getElementById('ss-wa-de');
+    if(waDe&&s.wa_text_de) waDe.href='https://wa.me/436769261706?text='+s.wa_text_de;
+    var waEn=document.getElementById('ss-wa-en');
+    if(waEn&&s.wa_text_en) waEn.href='https://wa.me/436769261706?text='+s.wa_text_en;
+  }
+
+  // ── Deal Card ──────────────────────────────────────────────
+  var container = document.getElementById('deal-today');
+  if(!container || !s) return;
+
+  var lang = isEN ? 'en' : 'de';
+  var name    = isEN ? (s.product_en||s.product_de) : s.product_de;
+  var tagline = isEN ? (s.tagline_en||s.tagline_de) : s.tagline_de;
+  var howto   = isEN ? (s.howto_en||s.howto_de) : s.howto_de;
+  var benefits= isEN ? (s.benefits_en||s.benefits_de) : s.benefits_de;
+  var moreUrl = s.more_url || '';
+  var moreLabel = isEN ? (s.more_label_en||s.more_label_de) : s.more_label_de;
+  var shopUrl = s.shop_url || '#';
+  var waText  = isEN ? (s.wa_text_en||s.wa_text_de) : s.wa_text_de;
+  var waHref  = 'https://wa.me/436769261706?text=' + (waText||'');
+
+  // Image: try language-specific, fall back to fallback
+  var imgSrc = (isEN ? s.image_en : s.image_de) || s.image_fallback || '';
+
+  var shopLabel = isEN ? 'Shop now →' : 'Jetzt kaufen →';
+  var waLabel   = isEN ? 'Questions? WhatsApp' : 'Fragen? WhatsApp';
+  var dateLabel = s.date ? (function(){
+    var d=s.date.split('-');
+    return (isEN ? 'Today, ' : 'Heute, ') + d[2]+'.'+d[1]+'.'+d[0];
+  })() : '';
+
+  var benefitsHtml = (benefits||[]).map(function(b){
+    return '<li>'+b+'</li>';
+  }).join('');
+
+  var moreHtml = moreUrl
+    ? '<a href="'+moreUrl+'" target="_blank" rel="noopener" class="deal-more-link">'+moreLabel+' →</a>'
+    : '';
+
+  container.innerHTML =
+    '<div class="deal-card" id="heute" itemscope itemtype="https://schema.org/Product">'+
+      '<img class="deal-card-img" src="'+imgSrc+'" alt="'+name+' RINGANA Summer Sale" '+
+           'onerror="this.src=\''+(s.image_fallback||'assets/images/dea.jpg')+'\'" itemprop="image">'+
+      '<div class="deal-card-body">'+
+        '<div class="deal-badge-row">'+
+          '<span class="deal-sale-pill">☀️ '+(isEN?'Today':'Heute')+' &minus;20%</span>'+
+          '<span class="deal-date-pill">'+dateLabel+'</span>'+
+        '</div>'+
+        '<p class="deal-tagline" itemprop="description">'+tagline+'</p>'+
+        '<p class="deal-name" itemprop="name">'+name+'</p>'+
+        '<p class="deal-howto">'+howto+'</p>'+
+        '<ul class="deal-benefits">'+benefitsHtml+'</ul>'+
+        '<div class="deal-actions">'+
+          '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn">'+shopLabel+'</a>'+
+          '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link">'+waLabel+'</a>'+
+        '</div>'+
+        moreHtml+
+      '</div>'+
+    '</div>';
+})();
 </script>
 </body>
 </html>

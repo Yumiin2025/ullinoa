@@ -1,18 +1,64 @@
 // ============================================================
 //  🌞 SUMMER SALE — TÄGLICH UPDATEN
-//  Jeden Morgen wenn RINGANA das Angebot bekannt gibt:
-//  1. product_de und product_en ändern
-//  2. shop_url auf das richtige Produkt setzen
-//  3. date auf das heutige Datum setzen (YYYY-MM-DD)
-//  4. git commit -am "Sale: [Produktname]" → automatisch live
+//
+//  Morgens wenn das Angebot bekannt ist:
+//  1. Felder unten anpassen
+//  2. git commit -am "Sale: [Produktname]" → in ~30 Sek. live
+//
+//  Bild: in assets/images/ ablegen, Pfad in image_de / image_en eintragen
 // ============================================================
 
 window.SALE_TODAY = {
-  date:       "2026-08-01",           // heutiges Datum
-  product_de: "FRESH sunscreen face SPF 30",   // Produktname DE
-  product_en: "FRESH sunscreen face SPF 30",   // Produktname EN
-  desc_de:    "Mineralischer Sonnenschutz · ohne weißes Finish · jeden Tag",
-  desc_en:    "Mineral sunscreen · no white cast · for every day",
-  shop_url:   "https://priller.ringana.com/produkt/fresh-sunscreen-face/"
-  // ^^^ shop URL auf das richtige Produkt setzen
+
+  // ── DATUM & PRODUKT ────────────────────────────────────────
+  date:       "2026-08-01",
+
+  product_de: "RINGANAdea",
+  product_en: "RINGANAdea",
+
+  // Produktseite im Shop (für Strip-Button + "Zum Produkt" im Card)
+  shop_url:   "https://priller.ringana.com/produkt/ringanadea/",
+
+  // ── BILD ──────────────────────────────────────────────────
+  // Datei in assets/images/ ablegen, dann hier eintragen:
+  image_de: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAdea.jpg",
+  image_en: "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_DRINKS_RINGANAdea.jpg",
+  // Fallback falls Datei noch nicht vorhanden:
+  image_fallback: "assets/images/dea.jpg",
+
+  // ── KURZBESCHREIBUNG (Strip-Untertitel, 1 Zeile) ──────────
+  desc_de: "Bewusste Leichtigkeit · Zitronenverbene, Hibiskus, Kaktusfeige · 12-Tages-Kur",
+  desc_en: "Conscious lightness · Lemon verbena, hibiscus, cactus fig · 12-day cure",
+
+  // ── TAGLINE (große Headline im Deal-Card) ─────────────────
+  tagline_de: "Nimm's leicht, wenn's dir das Leben schwer macht",
+  tagline_en: "Take it easy, even when life doesn't",
+
+  // ── ANWENDUNG ─────────────────────────────────────────────
+  howto_de: "30 ml in 250–500 ml Wasser gießen, kurz schütteln, frisch trinken. Kein Abmessen, kein Aufwand.",
+  howto_en: "Pour one bottle (30 ml) into 250–500 ml of water, shake briefly, and drink fresh. That's it.",
+
+  // ── VORTEILE (max. 4) ─────────────────────────────────────
+  benefits_de: [
+    "Chrom trägt zur Aufrechterhaltung eines normalen Blutzuckerspiegels bei",
+    "Vitamin C unterstützt einen normalen Energiestoffwechsel",
+    "Zink hilft bei einem normalen Kohlenhydrat- und Fettsäurestoffwechsel",
+    "Ballaststoffe aus Guarkernfaser und FOS sorgen für ein angenehmeres Sättigungsgefühl"
+  ],
+  benefits_en: [
+    "Chromium contributes to maintaining normal blood sugar levels",
+    "Vitamin C supports normal energy metabolism",
+    "Zinc supports normal carbohydrate and fatty acid metabolism",
+    "Fibre from guar bean and FOS supports a comfortable feeling of satiety"
+  ],
+
+  // ── MEHR INFOS LINK ───────────────────────────────────────
+  more_url: "https://priller.ringana.com/blog/conscious-lightness/",
+  more_label_de: "Mehr zum Konzept der bewussten Leichtigkeit",
+  more_label_en: "Learn more about conscious lightness",
+
+  // ── WHATSAPP PRE-FILL TEXT ────────────────────────────────
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20RINGANAdea%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAdea%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF"
+
 };
