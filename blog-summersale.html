@@ -196,6 +196,13 @@ body.en .en-only{display:block}
 .deal-wa-link:hover{color:var(--moss);text-decoration:underline}
 .deal-more-link{font-size:.72rem;color:var(--muted);text-decoration:none;display:block;margin-top:.8rem}
 .deal-more-link:hover{color:var(--moss);text-decoration:underline}
+.deal-ingredients{margin:.2rem 0 1.3rem}
+.deal-ingredients-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sage-dk);margin-bottom:.6rem}
+.deal-ing-list{display:flex;flex-direction:column;gap:.45rem}
+.deal-ing-item{display:flex;align-items:baseline;gap:.5rem}
+.deal-ing-name{font-size:.73rem;font-weight:600;color:var(--moss);white-space:nowrap;flex-shrink:0}
+.deal-ing-source{font-size:.72rem;color:var(--text)}
+.deal-ing-note{font-size:.68rem;color:var(--muted);line-height:1.4}
 /* FOOTER */
 .adv-note{font-size:.72rem;color:var(--muted);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--sand)}
 footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-top:1px solid var(--sand)}
@@ -649,14 +656,9 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
 <script>
 (function(){
   var s = window.SALE_TODAY;
-  var isEN = document.documentElement.lang === 'en' ||
-             document.cookie.includes('lang=en') ||
-             localStorage.getItem('lang') === 'en';
 
   // ── Strip ──────────────────────────────────────────────────
   if(s){
-    var nameEl = document.getElementById('ss-name');
-    if(nameEl) nameEl.textContent = isEN ? (s.product_en||s.product_de) : s.product_de;
     ['ss-btn-de','ss-btn-en'].forEach(function(id){
       var a=document.getElementById(id); if(a&&s.shop_url) a.href=s.shop_url;
     });
@@ -667,58 +669,84 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
   }
 
   // ── Deal Card ──────────────────────────────────────────────
-  var container = document.getElementById('deal-today');
-  if(!container || !s) return;
+  function renderDeal() {
+    var container = document.getElementById('deal-today');
+    if(!container || !s) return;
+    var isEN = document.body.classList.contains('en');
 
-  var lang = isEN ? 'en' : 'de';
-  var name    = isEN ? (s.product_en||s.product_de) : s.product_de;
-  var tagline = isEN ? (s.tagline_en||s.tagline_de) : s.tagline_de;
-  var howto   = isEN ? (s.howto_en||s.howto_de) : s.howto_de;
-  var benefits= isEN ? (s.benefits_en||s.benefits_de) : s.benefits_de;
-  var moreUrl = s.more_url || '';
-  var moreLabel = isEN ? (s.more_label_en||s.more_label_de) : s.more_label_de;
-  var shopUrl = s.shop_url || '#';
-  var waText  = isEN ? (s.wa_text_en||s.wa_text_de) : s.wa_text_de;
-  var waHref  = 'https://wa.me/436769261706?text=' + (waText||'');
+    var name    = isEN ? (s.product_en||s.product_de) : s.product_de;
+    var tagline = isEN ? (s.tagline_en||s.tagline_de) : s.tagline_de;
+    var howto   = isEN ? (s.howto_en||s.howto_de) : s.howto_de;
+    var benefits= isEN ? (s.benefits_en||s.benefits_de) : s.benefits_de;
+    var moreUrl = s.more_url || '';
+    var moreLabel = isEN ? (s.more_label_en||s.more_label_de) : s.more_label_de;
+    var shopUrl = s.shop_url || '#';
+    var waText  = isEN ? (s.wa_text_en||s.wa_text_de) : s.wa_text_de;
+    var waHref  = 'https://wa.me/436769261706?text=' + (waText||'');
+    var imgSrc  = (isEN ? s.image_en : s.image_de) || s.image_fallback || '';
 
-  // Image: try language-specific, fall back to fallback
-  var imgSrc = (isEN ? s.image_en : s.image_de) || s.image_fallback || '';
+    var shopLabel = isEN ? 'Shop now →' : 'Jetzt kaufen →';
+    var waLabel   = isEN ? 'Questions? WhatsApp' : 'Fragen? WhatsApp';
+    var dateLabel = s.date ? (function(){
+      var d=s.date.split('-');
+      return (isEN ? 'Today, ' : 'Heute, ') + d[2]+'.'+d[1]+'.'+d[0];
+    })() : '';
 
-  var shopLabel = isEN ? 'Shop now →' : 'Jetzt kaufen →';
-  var waLabel   = isEN ? 'Questions? WhatsApp' : 'Fragen? WhatsApp';
-  var dateLabel = s.date ? (function(){
-    var d=s.date.split('-');
-    return (isEN ? 'Today, ' : 'Heute, ') + d[2]+'.'+d[1]+'.'+d[0];
-  })() : '';
+    var benefitsHtml = (benefits||[]).map(function(b){
+      return '<li>'+b+'</li>';
+    }).join('');
 
-  var benefitsHtml = (benefits||[]).map(function(b){
-    return '<li>'+b+'</li>';
-  }).join('');
+    var ings = isEN ? (s.ingredients_en||s.ingredients_de) : s.ingredients_de;
+    var ingsHtml = ings && ings.length
+      ? '<div class="deal-ingredients">'+
+          '<div class="deal-ingredients-label">'+(isEN?'Plant actives':'Pflanzliche Wirkstoffe')+'</div>'+
+          '<div class="deal-ing-list">'+
+            ings.map(function(i){
+              return '<div class="deal-ing-item">'+
+                '<span class="deal-ing-name">'+i.name+'</span>'+
+                '<span class="deal-ing-source">'+i.source+'</span>'+
+                '<span class="deal-ing-note">· '+i.note+'</span>'+
+              '</div>';
+            }).join('')+
+          '</div>'+
+        '</div>'
+      : '';
 
-  var moreHtml = moreUrl
-    ? '<a href="'+moreUrl+'" target="_blank" rel="noopener" class="deal-more-link">'+moreLabel+' →</a>'
-    : '';
+    var moreHtml = moreUrl
+      ? '<a href="'+moreUrl+'" target="_blank" rel="noopener" class="deal-more-link">'+moreLabel+' →</a>'
+      : '';
 
-  container.innerHTML =
-    '<div class="deal-card" id="heute" itemscope itemtype="https://schema.org/Product">'+
-      '<img class="deal-card-img" src="'+imgSrc+'" alt="'+name+' RINGANA Summer Sale" '+
-           'onerror="this.src=\''+(s.image_fallback||'assets/images/dea.jpg')+'\'" itemprop="image">'+
-      '<div class="deal-card-body">'+
-        '<div class="deal-badge-row">'+
-          '<span class="deal-sale-pill">☀️ '+(isEN?'Today':'Heute')+' &minus;20%</span>'+
-          '<span class="deal-date-pill">'+dateLabel+'</span>'+
+    container.innerHTML =
+      '<div class="deal-card" id="heute" itemscope itemtype="https://schema.org/Product">'+
+        '<img class="deal-card-img" src="'+imgSrc+'" alt="'+name+' RINGANA Summer Sale" '+
+             'onerror="this.src=\''+(s.image_fallback||'assets/images/dea.jpg')+'\'" itemprop="image">'+
+        '<div class="deal-card-body">'+
+          '<div class="deal-badge-row">'+
+            '<span class="deal-sale-pill">☀️ '+(isEN?'Today':'Heute')+' &minus;20%</span>'+
+            '<span class="deal-date-pill">'+dateLabel+'</span>'+
+          '</div>'+
+          '<p class="deal-tagline" itemprop="description">'+tagline+'</p>'+
+          '<p class="deal-name" itemprop="name">'+name+'</p>'+
+          '<p class="deal-howto">'+howto+'</p>'+
+          '<ul class="deal-benefits">'+benefitsHtml+'</ul>'+
+          ingsHtml+
+          '<div class="deal-actions">'+
+            '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn">'+shopLabel+'</a>'+
+            '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link">'+waLabel+'</a>'+
+          '</div>'+
+          moreHtml+
         '</div>'+
-        '<p class="deal-tagline" itemprop="description">'+tagline+'</p>'+
-        '<p class="deal-name" itemprop="name">'+name+'</p>'+
-        '<p class="deal-howto">'+howto+'</p>'+
-        '<ul class="deal-benefits">'+benefitsHtml+'</ul>'+
-        '<div class="deal-actions">'+
-          '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn">'+shopLabel+'</a>'+
-          '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link">'+waLabel+'</a>'+
-        '</div>'+
-        moreHtml+
-      '</div>'+
-    '</div>';
+      '</div>';
+  }
+
+  renderDeal();
+
+  // Re-render when language toggles
+  var _setLang = window.setLang;
+  window.setLang = function(l) {
+    _setLang(l);
+    renderDeal();
+  };
 })();
 </script>
 </body>

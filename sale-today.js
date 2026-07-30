@@ -11,7 +11,7 @@
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-01",
+  date:       "2026-07-30",
 
   product_de: "RINGANAdea",
   product_en: "RINGANAdea",
@@ -49,6 +49,24 @@ window.SALE_TODAY = {
     "Vitamin C supports normal energy metabolism",
     "Zinc supports normal carbohydrate and fatty acid metabolism",
     "Fibre from guar bean and FOS supports a comfortable feeling of satiety"
+  ],
+
+  // ── PFLANZLICHE WIRKSTOFFE ────────────────────────────────
+  ingredients_de: [
+    { name: "metabolaid®", source: "Zitronenverbene & Hibiskus", note: "Verbascoside & Anthocyane — breite Studienbasis" },
+    { name: "Cacti-Nea™", source: "Kaktusfeige", note: "Betalaine — die intensive Farbe steckt im Wirkstoff" },
+    { name: "Morosil™", source: "Blutorange", note: "Flavanone & Hydroxyzimtsäuren" },
+    { name: "Mateblätterextrakt", source: "Mate", note: "belebend, unterstützt den Stoffwechsel" },
+    { name: "Sunfiber®", source: "Guarkernmehl", note: "präbiotische Faser, lösliche Ballaststoffe" },
+    { name: "Chrom & Zink", source: "chromangereichte Hefe & Zinkbisglycinate", note: "gut bioverfügbar, gut verträglich" }
+  ],
+  ingredients_en: [
+    { name: "metabolaid®", source: "Lemon verbena & hibiscus", note: "verbascosides & anthocyanins — broad study base" },
+    { name: "Cacti-Nea™", source: "Prickly pear", note: "betalains — the intense colour comes from the active" },
+    { name: "Morosil™", source: "Blood orange", note: "flavanones & hydroxycinnamic acids" },
+    { name: "Mate leaf extract", source: "Mate", note: "invigorating, supports metabolism" },
+    { name: "Sunfiber®", source: "Guar bean", note: "prebiotic fibre, soluble dietary fibre" },
+    { name: "Chromium & Zinc", source: "Chromium-enriched yeast & zinc bisglycinate", note: "highly bioavailable, well tolerated" }
   ],
 
   // ── MEHR INFOS LINK ───────────────────────────────────────
