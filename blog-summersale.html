@@ -196,16 +196,15 @@ body.en .en-only{display:block}
 .deal-wa-link:hover{color:var(--moss);text-decoration:underline}
 .deal-more-link{font-size:.72rem;color:var(--muted);text-decoration:none;display:block;margin-top:.8rem}
 .deal-more-link:hover{color:var(--moss);text-decoration:underline}
-.deal-product-block{display:flex;gap:1.1rem;margin:1.4rem 0;padding-bottom:1.4rem;border-bottom:1px solid var(--sand)}
+.deal-product-block{margin:1.6rem 0;padding-bottom:1.6rem;border-bottom:1px solid var(--sand)}
 .deal-product-block:last-of-type{border-bottom:none;padding-bottom:0}
-.deal-product-img{width:90px;min-width:90px;aspect-ratio:4/5;object-fit:cover;border-radius:12px;background:var(--cream)}
-.deal-product-body{flex:1;min-width:0}
-.deal-product-name{font-size:.95rem;font-weight:700;color:var(--moss);margin-bottom:.5rem}
-.deal-product-text{font-size:.78rem;color:var(--text);line-height:1.65;margin-bottom:.7rem}
-.deal-product-text em{color:var(--sage-dk);font-style:italic}
+.deal-product-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;background:var(--cream);display:block;margin-bottom:1rem}
+.deal-product-name{font-size:1rem;font-weight:700;color:var(--moss);margin-bottom:.5rem}
+.deal-product-text{font-size:.8rem;color:var(--text);line-height:1.7;margin-bottom:.8rem}
+.deal-product-text em{color:var(--sage-dk);font-style:italic;display:block;margin-top:.4rem}
 .deal-product-btn{display:inline-block;font-size:.75rem;font-weight:600;color:var(--moss);text-decoration:none;border:1.5px solid var(--moss);border-radius:100px;padding:.35rem .9rem;transition:all .2s}
 .deal-product-btn:hover{background:var(--moss);color:#fff}
-.deal-tip{font-size:.8rem;color:var(--sage-dk);background:var(--cream);border-radius:10px;padding:.7rem 1rem;margin:0 0 1.2rem;line-height:1.55}
+.deal-tip{font-size:.8rem;color:var(--sage-dk);background:var(--cream);border-radius:10px;padding:.7rem 1rem;margin:1.2rem 0;line-height:1.55}
 .deal-ingredients{margin:.2rem 0 1.3rem}
 .deal-ingredients-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sage-dk);margin-bottom:.6rem}
 .deal-ing-list{display:flex;flex-direction:column;gap:.45rem}
@@ -714,18 +713,18 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
     // Multi-product layout
     if(s.products && s.products.length) {
       s.products.forEach(function(p) {
-        var img  = (isEN ? p.image_en : p.image_de) || '';
-        var text = (isEN ? p.text_en : p.text_de) || '';
+        var img     = (isEN ? p.image_en : p.image_de) || '';
+        var text    = (isEN ? p.text_en : p.text_de) || '';
+        var pShop   = (isEN ? (p.shop_url_en||p.shop_url_de) : (p.shop_url_de||p.shop_url_en)) || p.shop_url || shopUrl;
+        var pName   = p.name.replace(/'/g,"&#39;");
         html +=
           '<div class="deal-product-block">'+
-            (img ? '<img class="deal-product-img" src="'+img+'" alt="'+p.name+' RINGANA Summer Sale" onerror="this.style.display=\'none\'">':'') +
-            '<div class="deal-product-body">'+
-              '<p class="deal-product-name">'+p.emoji+' '+p.name+'</p>'+
-              '<p class="deal-product-text">'+text+'</p>'+
-              '<a href="'+p.shop_url+'" target="_blank" rel="noopener" class="deal-product-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop_product\',\'product\':\''+p.name+'\'})">'+
-                (isEN?'Shop now →':'Jetzt kaufen →')+
-              '</a>'+
-            '</div>'+
+            (img ? '<img class="deal-product-img" src="'+img+'" alt="'+p.name+' RINGANA Summer Sale 2026 -20%" onerror="this.style.display=\'none\'">':'') +
+            '<p class="deal-product-name">'+p.emoji+' '+p.name+'</p>'+
+            '<p class="deal-product-text">'+text+'</p>'+
+            '<a href="'+pShop+'" target="_blank" rel="noopener" class="deal-product-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop_product\',\'product\':\''+pName+'\'})">'+
+              (isEN?'Shop now →':'Jetzt kaufen →')+
+            '</a>'+
           '</div>';
       });
       if(tip) html += '<p class="deal-tip">✨ '+tip+'</p>';
