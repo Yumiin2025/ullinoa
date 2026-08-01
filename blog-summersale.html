@@ -175,6 +175,8 @@ body.en .en-only{display:block}
 .ss-wa{font-size:.68rem;color:rgba(255,255,255,.78);text-decoration:none;white-space:nowrap;transition:color .15s}
 .ss-wa:hover{color:#fff}
 @media(max-width:599px){.ss-wa{display:none}}
+.ss-coupon{font-size:.62rem;font-weight:700;letter-spacing:.06em;color:#fff;background:rgba(155,143,212,.55);border:1px solid rgba(255,255,255,.35);border-radius:100px;padding:.18rem .6rem;white-space:nowrap;flex-shrink:0}
+@media(max-width:599px){.ss-coupon{display:none}}
 .nav{margin-top:var(--strip-h)}
 /* HEUTE IM SALE CARD */
 .deal-card{background:var(--white);border:1.5px solid var(--sand);border-radius:20px;overflow:hidden;margin:2rem 0 2.5rem;box-shadow:0 4px 24px rgba(30,61,58,.06)}
@@ -205,6 +207,10 @@ body.en .en-only{display:block}
 .deal-product-btn{display:inline-block;font-size:.75rem;font-weight:600;color:var(--moss);text-decoration:none;border:1.5px solid var(--moss);border-radius:100px;padding:.35rem .9rem;transition:all .2s}
 .deal-product-btn:hover{background:var(--moss);color:#fff}
 .deal-tip{font-size:.8rem;color:var(--sage-dk);background:var(--cream);border-radius:10px;padding:.7rem 1rem;margin:1.2rem 0;line-height:1.55}
+.deal-coupon-box{display:flex;align-items:center;gap:.8rem;background:rgba(155,143,212,.12);border:1.5px solid rgba(155,143,212,.35);border-radius:14px;padding:.85rem 1.1rem;margin:1.2rem 0}
+.deal-coupon-icon{font-size:1.3rem;flex-shrink:0}
+.deal-coupon-text{font-size:.78rem;color:var(--text);line-height:1.5}
+.deal-coupon-code{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.12em;color:#6b5db3;background:rgba(155,143,212,.18);border-radius:6px;padding:.1rem .5rem;margin-top:.2rem}
 .deal-ingredients{margin:.2rem 0 1.3rem}
 .deal-ingredients-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--sage-dk);margin-bottom:.6rem}
 .deal-ing-list{display:flex;flex-direction:column;gap:.45rem}
@@ -235,6 +241,8 @@ footer{padding:2.5rem 1.5rem;text-align:center;background:var(--white);border-to
       <span class="ss-today de-only">Heute 20 % auf:</span>
       <span class="ss-today en-only">Today 20% off:</span>
       <strong class="ss-product" id="ss-name">RINGANAdea</strong>
+      <span class="ss-coupon de-only">🎁 Code PRILLER20 = 20€</span>
+      <span class="ss-coupon en-only">🎁 Code PRILLER20 = €20 off</span>
     </div>
     <div class="ss-right">
       <a id="ss-btn-de" href="https://priller.ringana.com/produkt/ringanadea/" target="_blank" rel="noopener" class="ss-btn de-only" onclick="gtag('event','sale_strip_click',{'label':'shop_de','product':document.getElementById('ss-name')?.textContent})">Zum Shop →</a>
@@ -729,6 +737,15 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
       });
       if(tip) html += '<p class="deal-tip">✨ '+tip+'</p>';
       html +=
+        '<div class="deal-coupon-box">'+
+          '<span class="deal-coupon-icon">🎁</span>'+
+          '<div class="deal-coupon-text">'+
+            (isEN
+              ? 'First order? Get <strong>€20 off</strong> with code:<br><span class="deal-coupon-code">PRILLER20</span>'
+              : 'Erste Bestellung? <strong>20 € Rabatt</strong> mit Code:<br><span class="deal-coupon-code">PRILLER20</span>'
+            )+
+          '</div>'+
+        '</div>'+
         '<div class="deal-actions">'+
           '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop_all\'})">'+shopLabel+'</a>'+
           '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'whatsapp\'})">'+waLabel+'</a>'+
@@ -764,6 +781,15 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
           }).join('')+'</div>'+
         '</div>';
       html +=
+        '<div class="deal-coupon-box">'+
+          '<span class="deal-coupon-icon">🎁</span>'+
+          '<div class="deal-coupon-text">'+
+            (isEN
+              ? 'First order? Get <strong>€20 off</strong> with code:<br><span class="deal-coupon-code">PRILLER20</span>'
+              : 'Erste Bestellung? <strong>20 € Rabatt</strong> mit Code:<br><span class="deal-coupon-code">PRILLER20</span>'
+            )+
+          '</div>'+
+        '</div>'+
         '<div class="deal-actions">'+
           '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop_de\'})">'+shopLabel+'</a>'+
           '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'whatsapp_de\'})">'+waLabel+'</a>'+
