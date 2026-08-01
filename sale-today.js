@@ -12,7 +12,7 @@
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-01",
+  date:       "2026-08-01", // bis 02.08.2026 24 Uhr
   date_end:   "2026-08-02",
 
   product_de: "3 Skincare-Highlights",
