@@ -207,6 +207,11 @@ body.en .en-only{display:block}
 .deal-product-btn{display:inline-block;font-size:.75rem;font-weight:600;color:var(--moss);text-decoration:none;border:1.5px solid var(--moss);border-radius:100px;padding:.35rem .9rem;transition:all .2s}
 .deal-product-btn:hover{background:var(--moss);color:#fff}
 .deal-tip{font-size:.8rem;color:var(--sage-dk);background:var(--cream);border-radius:10px;padding:.7rem 1rem;margin:1.2rem 0;line-height:1.55}
+.deal-shades{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:.4rem 0 1rem}
+.deal-shade-item{display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.deal-shade-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:var(--cream)}
+.deal-shade-label{font-size:.62rem;font-weight:600;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.deal-body{margin:.2rem 0 .5rem}
 .deal-coupon-box{display:flex;align-items:center;gap:.8rem;background:rgba(155,143,212,.12);border:1.5px solid rgba(155,143,212,.35);border-radius:14px;padding:.85rem 1.1rem;margin:1.2rem 0}
 .deal-coupon-icon{font-size:1.3rem;flex-shrink:0}
 .deal-coupon-text{font-size:.78rem;color:var(--text);line-height:1.5}
@@ -751,35 +756,48 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
           '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'whatsapp\'})">'+waLabel+'</a>'+
         '</div>';
 
-    // Single-product layout (legacy)
+    // Single-product layout
     } else {
       var name    = isEN ? (s.product_en||s.product_de) : s.product_de;
-      var howto   = isEN ? (s.howto_en||s.howto_de) : s.howto_de;
-      var benefits= isEN ? (s.benefits_en||s.benefits_de) : s.benefits_de;
+      var body    = isEN ? (s.body_en||s.body_de) : s.body_de;
       var imgSrc  = (isEN ? s.image_en : s.image_de) || s.image_fallback || '';
       var moreUrl = s.more_url || '';
       var moreLabel = isEN ? (s.more_label_en||s.more_label_de) : s.more_label_de;
-      var ings = isEN ? (s.ingredients_en||s.ingredients_de) : s.ingredients_de;
 
-      if(imgSrc) html = '<div class="deal-card" id="heute">'+
-        '<img class="deal-card-img" src="'+imgSrc+'" alt="'+name+' RINGANA Summer Sale" onerror="this.src=\''+(s.image_fallback||'')+'\'" >'+
-        '<div class="deal-card-body">'+
-          '<div class="deal-badge-row">'+
-            '<span class="deal-sale-pill">☀️ '+(isEN?'Today':'Heute')+' &minus;20%</span>'+
-            '<span class="deal-date-pill">'+dateLabel+'</span>'+
-          '</div>'+
-          '<p class="deal-tagline">'+tagline+'</p>';
+      // 4-shade image grid
+      if(s.shades && s.shades.length) {
+        html += '<div class="deal-shades">'+
+          s.shades.map(function(sh){
+            return '<div class="deal-shade-item">'+
+              '<img src="'+sh.img+'" alt="FRESH tinted moisturiser '+sh.label+' RINGANA Summer Sale" class="deal-shade-img" onerror="this.style.display=\'none\'">'+
+              '<span class="deal-shade-label">'+sh.label+'</span>'+
+            '</div>';
+          }).join('')+
+        '</div>';
+      } else if(imgSrc) {
+        html += '<img class="deal-card-img" src="'+imgSrc+'" alt="'+name+' RINGANA Summer Sale" onerror="this.style.display=\'none\'">';
+      }
 
       html += '<p class="deal-name">'+name+'</p>';
-      if(howto) html += '<p class="deal-howto">'+howto+'</p>';
-      if(benefits&&benefits.length) html += '<ul class="deal-benefits">'+benefits.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ul>';
-      if(ings&&ings.length) html +=
-        '<div class="deal-ingredients">'+
-          '<div class="deal-ingredients-label">'+(isEN?'Plant actives':'Pflanzliche Wirkstoffe')+'</div>'+
-          '<div class="deal-ing-list">'+ings.map(function(i){
-            return '<div class="deal-ing-item"><span class="deal-ing-name">'+i.name+'</span><span class="deal-ing-source">'+i.source+'</span><span class="deal-ing-note">· '+i.note+'</span></div>';
-          }).join('')+'</div>'+
-        '</div>';
+
+      // Rich body text
+      if(body) {
+        html += '<div class="deal-body">'+body+'</div>';
+      } else {
+        var howto    = isEN ? (s.howto_en||s.howto_de) : s.howto_de;
+        var benefits = isEN ? (s.benefits_en||s.benefits_de) : s.benefits_de;
+        var ings     = isEN ? (s.ingredients_en||s.ingredients_de) : s.ingredients_de;
+        if(howto) html += '<p class="deal-howto">'+howto+'</p>';
+        if(benefits&&benefits.length) html += '<ul class="deal-benefits">'+benefits.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ul>';
+        if(ings&&ings.length) html +=
+          '<div class="deal-ingredients">'+
+            '<div class="deal-ingredients-label">'+(isEN?'Plant actives':'Pflanzliche Wirkstoffe')+'</div>'+
+            '<div class="deal-ing-list">'+ings.map(function(i){
+              return '<div class="deal-ing-item"><span class="deal-ing-name">'+i.name+'</span><span class="deal-ing-source">'+i.source+'</span><span class="deal-ing-note">· '+i.note+'</span></div>';
+            }).join('')+'</div>'+
+          '</div>';
+      }
+
       html +=
         '<div class="deal-coupon-box">'+
           '<span class="deal-coupon-icon">🎁</span>'+
@@ -791,8 +809,10 @@ if (new URLSearchParams(window.location.search).get('danke') === '1') {
           '</div>'+
         '</div>'+
         '<div class="deal-actions">'+
-          '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop_de\'})">'+shopLabel+'</a>'+
-          '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'whatsapp_de\'})">'+waLabel+'</a>'+
+          '<a href="'+shopUrl+'" target="_blank" rel="noopener" class="deal-shop-btn" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'shop\'})">'+
+            (isEN?'Find your shade →':'Deinen Shade finden →')+
+          '</a>'+
+          '<a href="'+waHref+'" target="_blank" rel="noopener" class="deal-wa-link" onclick="gtag(\'event\',\'sale_strip_click\',{\'label\':\'whatsapp\'})">'+waLabel+'</a>'+
         '</div>';
       if(moreUrl) html += '<a href="'+moreUrl+'" target="_blank" rel="noopener" class="deal-more-link">'+moreLabel+' →</a>';
     }

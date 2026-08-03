@@ -7,76 +7,63 @@
 //
 //  Mehrere Produkte: products[] Array füllen
 //  Ein Produkt: products[] leer lassen, alle anderen Felder füllen
+//  Mehrere Bilder (Nuancen): shades[] Array füllen
 // ============================================================
 
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-01", // bis 02.08.2026 24 Uhr
-  date_end:   "2026-08-02",
+  date:       "2026-08-03",
+  date_end:   null,
 
-  product_de: "3 Skincare-Highlights",
-  product_en: "3 Skincare Highlights",
+  product_de: "FRESH tinted moisturiser SPF 30",
+  product_en: "FRESH tinted moisturiser SPF 30",
 
-  shop_url:   "https://priller.ringana.com/angebote/",
+  shop_url:   "https://priller.ringana.com/produkt/fresh-tinted-moisturiser-n3/",
 
-  // ── BILD (nur bei Einzel-Produkt nötig) ───────────────────
-  image_de:       null,
-  image_en:       null,
-  image_fallback: null,
+  // ── TAGLINE ───────────────────────────────────────────────
+  tagline_de: "Filter oder Photoshop? Nein, einfach nur tinted moisturiser.",
+  tagline_en: "Filter or Photoshop? No, just tinted moisturiser.",
 
-  // ── KURZBESCHREIBUNG (Strip-Untertitel, 1 Zeile) ──────────
-  desc_de: "FRESH hydro serum · ADDS repair · ADDS glow · je -20%",
-  desc_en: "FRESH hydro serum · ADDS repair · ADDS glow · each -20%",
+  // ── KURZBESCHREIBUNG (Strip) ──────────────────────────────
+  desc_de: "FRESH tinted moisturiser SPF 30 · mineralischer UV-Schutz · 4 Nuancen · -20%",
+  desc_en: "FRESH tinted moisturiser SPF 30 · mineral UV protection · 4 shades · -20%",
 
-  // ── TAGLINE (Headline im Deal-Card) ───────────────────────
-  tagline_de: "Deine Haut liebt Feuchtigkeit, Klarheit und Strahlkraft.",
-  tagline_en: "Your skin loves moisture, clarity, and radiance.",
-
-  // ── WHATSAPP PRE-FILL TEXT ────────────────────────────────
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20den%20Skincare-Highlights%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20skincare%20highlights%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  // ── WHATSAPP ──────────────────────────────────────────────
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20tinted%20moisturiser%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20tinted%20moisturiser%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
   more_label_en: "",
 
-  // ── KOMBI-TIPP ─────────────────────────────────────────────
-  tip_de: "Kombi-Tipp: hydro serum + ADDS glow für extra Feuchtigkeit und Strahlkraft im Sommer.",
-  tip_en: "Combination tip: hydro serum + ADDS glow for extra moisture and summer radiance.",
+  // ── EINZEL-PRODUKT FELDER ─────────────────────────────────
+  image_de:       null,
+  image_en:       null,
+  image_fallback: null,
 
-  // ── MEHRERE PRODUKTE ──────────────────────────────────────
-  products: [
-    {
-      name:        "FRESH hydro serum",
-      emoji:       "💧",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-hydro-serum/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-hydro-serum/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-hydro-serum.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-hydro-serum.jpg",
-      text_de: "Das FRESH hydro serum von RINGANA ist ein konservierungsmittelfreies Hyaluron-Serum mit gleich 6 verschiedenen Hyaluronsäure-Typen, die in verschiedenen Hautschichten wirken: tief, mitteltief und oberflächlich. Hyaluronsäure kann bis zum 1000-fachen ihres Eigengewichts an Wasser binden und polstert die Haut von innen auf. Dazu kommen ein Triple Peptide Komplex für die Kollagenbildung und Job's tears Ferment zur Beruhigung von Rötungen. Ideal für trockene, strapazierte oder sonnengestresste Haut.<br><em>RINGANA Studie: bis zu +97% mehr Feuchtigkeit nach nur 15 Minuten.</em> Direkt nach dem Tonic auftragen, morgens und abends.",
-      text_en: "The FRESH hydro serum by RINGANA is a preservative-free hyaluronic acid serum featuring 6 different molecular weights of hyaluronic acid — working at deep, mid and surface skin levels. Hyaluronic acid can bind up to 1,000 times its own weight in water, visibly plumping and hydrating the skin. A triple peptide complex supports collagen production, while Job's tears ferment calms redness. Perfect for dry, stressed or sun-damaged skin.<br><em>RINGANA study: up to +97% more moisture after just 15 minutes.</em> Apply after toner, morning and evening.",
-    },
-    {
-      name:        "FRESH ADDS repair",
-      emoji:       "💚",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-adds-repair/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-adds-repair/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_ADDS-repair.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_ADDS-repair.jpg",
-      text_de: "FRESH ADDS repair ist das RINGANA Serum für unreine, porige oder zu Ausbrüchen neigende Haut. Unreinheiten entstehen oft nicht nur durch Talg, sondern auch durch ein gestörtes Hautmikrobiom, was im Sommer durch Hitze, Schweiß und Sonnencreme noch verstärkt wird. Süßholzwurzel-Extrakt beruhigt gereizte Haut, Niacinamid reguliert die Talgproduktion und verfeinert Poren, Weidenrinden-Extrakt wirkt sanft exfolierend ohne die Hautbarriere zu schwächen. Konservierungsmittelfrei, frisch hergestellt.<br><em>Studie: bis zu 91% weniger sichtbare Unreinheiten.</em> Unter das Serum mischen oder pur als Spot Treatment auftragen.",
-      text_en: "FRESH ADDS repair is the RINGANA serum for blemish-prone, congested or breakout-prone skin. Breakouts often come not just from excess sebum, but from an imbalanced skin microbiome — heat, sweating and sunscreen can compound this in summer. Liquorice root extract soothes irritation, niacinamide regulates sebum production and refines pores, willow bark extract gently exfoliates without compromising the skin barrier. Preservative-free, freshly made.<br><em>Study: up to 91% fewer visible blemishes.</em> Mix into your serum or apply directly as a spot treatment.",
-    },
-    {
-      name:        "FRESH ADDS glow",
-      emoji:       "🌟",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-adds-glow/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-adds-glow/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_ADDS-glow.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_ADDS-glow.jpg",
-      text_de: "FRESH ADDS glow ist das RINGANA Vitamin-C-Serum gegen Pigmentflecken, unruhigen Teint und sonnenbedingten Hautschäden. UV-Strahlung im Sommer ist einer der Hauptgründe für Hyperpigmentierung und Hautalterung. 15% Vitamin C (stabil, hochkonzentriert) wirken aufhellend und antioxidativ, 5% Niacinamid bringen den Teint in Balance und verfeinern das Hautbild. Dazu grüner Tee-Extrakt als Antioxidans und dreifache Hyaluronsäure für Feuchtigkeit. Strahlende Haut, ohne Irritation. Konservierungsmittelfrei.<br><em>Studie: über 81% zeigten nach 4 Wochen ein sichtbar strahlenderes Hautbild.</em> Pur auf dunkle Flecken oder mit Serum mischen (2 Pumpstöße + 1 Pumpstoß ADDS).",
-      text_en: "FRESH ADDS glow is the RINGANA vitamin C serum targeting pigmentation spots, uneven skin tone and sun-induced skin damage. UV exposure in summer is one of the leading causes of hyperpigmentation and premature skin aging. 15% stable, high-concentration vitamin C brightens and protects against free radicals. 5% niacinamide evens skin tone and refines texture. Green tea extract adds antioxidant power, triple hyaluronic acid keeps skin hydrated. Radiant skin, no irritation. Preservative-free.<br><em>Study: over 81% showed a visibly more radiant complexion after 4 weeks.</em> Apply on dark spots or mix with your serum (2 pumps serum + 1 pump ADDS).",
-    },
+  // ── 4 NUANCEN NEBENEINANDER ───────────────────────────────
+  shades: [
+    { label: "N1", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N1.jpg" },
+    { label: "N2", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N2.jpg" },
+    { label: "N3", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N3.jpg" },
+    { label: "N4", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N4.jpg" },
   ],
+
+  // ── FLIESSTEXT (kein products[] — Einzel-Produkt mit body) ─
+  body_de: `<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><em>Wusstest du, dass bis zu 80% der sichtbaren Hautalterung durch UV-Strahlung entsteht, nicht durchs Alter?</em> Falten, Pigmentflecken, Elastizitätsverlust: das ist oft weniger eine Frage der Jahre als von UVA-Strahlung. Genau deshalb ist tägliches SPF eine der besten Better-Aging-Maßnahmen, die es gibt, gerade jetzt im Sommer besonders wichtig.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Was er kann:</strong> Die leichte Textur zieht sofort ein und hinterlässt einen frischen, natürlichen Teint, ganz ohne Make-up-Gefühl. Unebenheiten, Poren und Rötungen werden optisch reduziert, dazu kommt mineralischer SPF 30 Schutz vor UVA und UVB, sanft und ohne Nanopartikel.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Was drinsteckt:</strong> 7% Glycerin für intensive Feuchtigkeit · Zinkoxid als mineralischer UV-Filter · CICA (Centella asiatica) beruhigt und glättet · Exosome aus Wassermelone und Grapefruit für Leuchtkraft · Grüntee-Extrakt gegen Umweltstress. Erhältlich in 4 Nuancen, die sich sanft an deinen Hautton anpassen.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Anwendung:</strong> Nach der Pflege punktuell auftragen und von der Mitte nach außen verstreichen. Für ein besonders ebenmäßiges Ergebnis: Make-up-Schwamm oder -Pinsel.</p>
+<p style="font-size:.8rem;background:var(--cream);border-radius:10px;padding:.7rem 1rem;line-height:1.6;color:var(--sage-dk);margin:.9rem 0">💡 Mein Tipp: Perfekt für den Sommer, ein Schritt statt Creme + Sonnenschutz + Make-up. Schneller geht Routine nicht.</p>`,
+
+  body_en: `<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><em>Did you know that up to 80% of visible skin aging is caused by UV radiation, not by age?</em> Wrinkles, pigmentation, loss of elasticity: these are often less a question of years than of UVA exposure. That's exactly why daily SPF is one of the best better-aging steps you can take, especially important right now in summer.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>What it does:</strong> The lightweight texture absorbs instantly, leaving a fresh, natural complexion with no heavy make-up feel. Uneven texture, pores and redness are visually reduced, plus mineral SPF 30 protection against UVA and UVB, gentle and nanoparticle-free.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>What's inside:</strong> 7% glycerin for intensive moisture · Zinc oxide as mineral UV filter · CICA (Centella asiatica) soothes and smooths · Exosomes from watermelon and grapefruit for luminosity · Green tea extract against environmental stress. Available in 4 shades that gently adapt to your skin tone.</p>
+<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>How to use:</strong> Apply after your skincare routine, dot onto the face and blend outward. For an especially even finish, use a make-up sponge or brush.</p>
+<p style="font-size:.8rem;background:var(--cream);border-radius:10px;padding:.7rem 1rem;line-height:1.6;color:var(--sage-dk);margin:.9rem 0">💡 My tip: Perfect for summer, one step instead of moisturiser + SPF + make-up. No faster routine exists.</p>`,
+
+  // ── KEIN MULTI-PRODUKT ────────────────────────────────────
+  products: [],
 
 };
