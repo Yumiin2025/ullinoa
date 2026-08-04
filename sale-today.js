@@ -12,7 +12,7 @@
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-05",
+  date:       "2026-08-04",
   date_end:   null,
 
   product_de: "COMPLETE d-eat + FRESH body milk light",
