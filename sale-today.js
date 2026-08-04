@@ -6,64 +6,65 @@
 //  2. git commit -am "Sale: [Produktname]" → in ~30 Sek. live
 //
 //  Mehrere Produkte: products[] Array füllen
-//  Ein Produkt: products[] leer lassen, alle anderen Felder füllen
-//  Mehrere Bilder (Nuancen): shades[] Array füllen
+//  Ein Produkt: products[] leer lassen, shades[] / body nutzen
 // ============================================================
 
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-03",
+  date:       "2026-08-04",
   date_end:   null,
 
-  product_de: "FRESH tinted moisturiser SPF 30",
-  product_en: "FRESH tinted moisturiser SPF 30",
+  product_de: "CAPS move + SPORT endurance",
+  product_en: "CAPS move + SPORT endurance",
 
-  shop_url:   "https://priller.ringana.com/produkt/fresh-tinted-moisturiser-n3/",
+  shop_url:   "https://priller.ringana.com/angebote/",
 
-  // ── TAGLINE ───────────────────────────────────────────────
-  tagline_de: "Filter oder Photoshop? Nein, einfach nur tinted moisturiser.",
-  tagline_en: "Filter or Photoshop? No, just tinted moisturiser.",
+  // ── STRIP ─────────────────────────────────────────────────
+  desc_de: "CAPS move · SPORT endurance · Gelenke, Muskeln, Energie · je -20%",
+  desc_en: "CAPS move · SPORT endurance · joints, muscles, energy · each -20%",
 
-  // ── KURZBESCHREIBUNG (Strip) ──────────────────────────────
-  desc_de: "FRESH tinted moisturiser SPF 30 · mineralischer UV-Schutz · 4 Nuancen · -20%",
-  desc_en: "FRESH tinted moisturiser SPF 30 · mineral UV protection · 4 shades · -20%",
+  tagline_de: "Bewegung, die deinen Körper wirklich unterstützt.",
+  tagline_en: "Movement that really supports your body.",
 
   // ── WHATSAPP ──────────────────────────────────────────────
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20tinted%20moisturiser%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20tinted%20moisturiser%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20CAPS%20move%20und%20SPORT%20endurance%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20CAPS%20move%20and%20SPORT%20endurance%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
   more_label_en: "",
 
-  // ── EINZEL-PRODUKT FELDER ─────────────────────────────────
   image_de:       null,
   image_en:       null,
   image_fallback: null,
+  shades:         [],
 
-  // ── 4 NUANCEN NEBENEINANDER ───────────────────────────────
-  shades: [
-    { label: "N1", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N1.jpg" },
-    { label: "N2", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N2.jpg" },
-    { label: "N3", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N3.jpg" },
-    { label: "N4", img: "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-tinted-moisturizer-SPF30-N4.jpg" },
+  tip_de: null,
+  tip_en: null,
+
+  // ── MEHRERE PRODUKTE ──────────────────────────────────────
+  products: [
+    {
+      name:        "CAPS move",
+      emoji:       "🦴",
+      shop_url_de: "https://priller.ringana.com/produkt/caps-move/",
+      shop_url_en: "https://priller.ringana.com/produkt/caps-move/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-move.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-move.jpg",
+      text_de: "Wusstest du, dass langes Sitzen deinen Gelenken fast genauso zusetzt wie intensiver Sport, nur andersrum? Zu wenig Bewegung bedeutet: Knorpel wird schlechter versorgt. Zu viel Belastung bedeutet: zu wenig Zeit für Regeneration. Beides fordert deinen Bewegungsapparat auf seine Weise.<br><br>CAPS move von RINGANA gibt deinen Gelenken genau das zurück, was sie brauchen: MSM liefert Schwefel für Knorpel und Gelenkflüssigkeit, AprèsFlex® (Weihrauch) und CurcuRouge® (Kurkuma) unterstützen dein Gelenkwohlbefinden, Vitamin C trägt zu einer normalen Kollagenbildung bei, Vitamin D und K tragen zur Erhaltung normaler Knochen bei.<br><br>Ob du viel sitzt, intensiv trainierst oder langfristig beweglich bleiben willst: CAPS move setzt an mehreren Stellen gleichzeitig an.",
+      text_en: "Did you know that sitting for long periods puts almost as much stress on your joints as intense sport, just in the opposite way? Too little movement means cartilage is less nourished. Too much stress means too little time for regeneration. Both challenge your musculoskeletal system in their own way.<br><br>CAPS move by RINGANA gives your joints exactly what they need: MSM provides sulphur for cartilage and synovial fluid, AprèsFlex® (frankincense) and CurcuRouge® (turmeric) support joint wellbeing, Vitamin C contributes to normal collagen formation, Vitamins D and K contribute to the maintenance of normal bones.<br><br>Whether you sit a lot, train intensively, or simply want to stay mobile long-term: CAPS move works on multiple levels at once.",
+    },
+    {
+      name:        "SPORT endurance",
+      emoji:       "💧",
+      shop_url_de: "https://priller.ringana.com/produkt/sport-endurance/",
+      shop_url_en: "https://priller.ringana.com/produkt/sport-endurance/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_SPORT-endurance.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_SPORT-endurance.jpg",
+      text_de: "Bei Hitze oder intensiver Belastung verlierst du bis zu 1,5 Liter Schweiß pro Stunde, und mit ihm wichtige Elektrolyte wie Magnesium, Kalium und Natrium. Genau das führt zu Krämpfen, Müdigkeit und Leistungsabfall.<br><br>SPORT endurance ist die natürliche Isotoniker-Formel von RINGANA: Kohlenhydrate für konstante und schnelle Energie, Elektrolyte für deinen Flüssigkeitshaushalt, Magnesium und Kalium für die Muskelfunktion, Eisen, Selen und Vitamin C für Zellschutz und Regeneration. Kein Zucker-Overkill, keine künstlichen Aromen, alles konservierungsmittelfrei und frisch.<br><br>1 Sachet in 500 ml Wasser (isotonisch, für längere Einheiten) oder bis zu 700 ml (für kürzere, intensive Trainings).",
+      text_en: "In heat or during intense exercise, you can lose up to 1.5 litres of sweat per hour, along with key electrolytes like magnesium, potassium and sodium. This is exactly what leads to cramps, fatigue and performance drops.<br><br>SPORT endurance is RINGANA's natural isotonic formula: carbohydrates for consistent and rapid energy, electrolytes for hydration balance, magnesium and potassium for muscle function, iron, selenium and vitamin C for cell protection and recovery. No sugar overload, no artificial flavours, preservative-free and freshly made.<br><br>Mix 1 sachet in 500 ml water (isotonic, for longer sessions) or up to 700 ml (for shorter, intense workouts).",
+    },
   ],
-
-  // ── FLIESSTEXT (kein products[] — Einzel-Produkt mit body) ─
-  body_de: `<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><em>Wusstest du, dass bis zu 80% der sichtbaren Hautalterung durch UV-Strahlung entsteht, nicht durchs Alter?</em> Falten, Pigmentflecken, Elastizitätsverlust: das ist oft weniger eine Frage der Jahre als von UVA-Strahlung. Genau deshalb ist tägliches SPF eine der besten Better-Aging-Maßnahmen, die es gibt, gerade jetzt im Sommer besonders wichtig.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Was er kann:</strong> Die leichte Textur zieht sofort ein und hinterlässt einen frischen, natürlichen Teint, ganz ohne Make-up-Gefühl. Unebenheiten, Poren und Rötungen werden optisch reduziert, dazu kommt mineralischer SPF 30 Schutz vor UVA und UVB, sanft und ohne Nanopartikel.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Was drinsteckt:</strong> 7% Glycerin für intensive Feuchtigkeit · Zinkoxid als mineralischer UV-Filter · CICA (Centella asiatica) beruhigt und glättet · Exosome aus Wassermelone und Grapefruit für Leuchtkraft · Grüntee-Extrakt gegen Umweltstress. Erhältlich in 4 Nuancen, die sich sanft an deinen Hautton anpassen.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>Anwendung:</strong> Nach der Pflege punktuell auftragen und von der Mitte nach außen verstreichen. Für ein besonders ebenmäßiges Ergebnis: Make-up-Schwamm oder -Pinsel.</p>
-<p style="font-size:.8rem;background:var(--cream);border-radius:10px;padding:.7rem 1rem;line-height:1.6;color:var(--sage-dk);margin:.9rem 0">💡 Mein Tipp: Perfekt für den Sommer, ein Schritt statt Creme + Sonnenschutz + Make-up. Schneller geht Routine nicht.</p>`,
-
-  body_en: `<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><em>Did you know that up to 80% of visible skin aging is caused by UV radiation, not by age?</em> Wrinkles, pigmentation, loss of elasticity: these are often less a question of years than of UVA exposure. That's exactly why daily SPF is one of the best better-aging steps you can take, especially important right now in summer.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>What it does:</strong> The lightweight texture absorbs instantly, leaving a fresh, natural complexion with no heavy make-up feel. Uneven texture, pores and redness are visually reduced, plus mineral SPF 30 protection against UVA and UVB, gentle and nanoparticle-free.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>What's inside:</strong> 7% glycerin for intensive moisture · Zinc oxide as mineral UV filter · CICA (Centella asiatica) soothes and smooths · Exosomes from watermelon and grapefruit for luminosity · Green tea extract against environmental stress. Available in 4 shades that gently adapt to your skin tone.</p>
-<p style="font-size:.83rem;line-height:1.7;color:var(--text);margin:.3rem 0 .9rem"><strong>How to use:</strong> Apply after your skincare routine, dot onto the face and blend outward. For an especially even finish, use a make-up sponge or brush.</p>
-<p style="font-size:.8rem;background:var(--cream);border-radius:10px;padding:.7rem 1rem;line-height:1.6;color:var(--sage-dk);margin:.9rem 0">💡 My tip: Perfect for summer, one step instead of moisturiser + SPF + make-up. No faster routine exists.</p>`,
-
-  // ── KEIN MULTI-PRODUKT ────────────────────────────────────
-  products: [],
 
 };
