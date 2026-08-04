@@ -12,24 +12,24 @@
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-04",
+  date:       "2026-08-05",
   date_end:   null,
 
-  product_de: "CAPS move + SPORT endurance",
-  product_en: "CAPS move + SPORT endurance",
+  product_de: "COMPLETE d-eat + FRESH body milk light",
+  product_en: "COMPLETE d-eat + FRESH body milk light",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
   // ── STRIP ─────────────────────────────────────────────────
-  desc_de: "CAPS move · SPORT endurance · Gelenke, Muskeln, Energie · je -20%",
-  desc_en: "CAPS move · SPORT endurance · joints, muscles, energy · each -20%",
+  desc_de: "COMPLETE d-eat · FRESH body milk light · von innen & außen · je -20%",
+  desc_en: "COMPLETE d-eat · FRESH body milk light · inside & out · each -20%",
 
-  tagline_de: "Bewegung, die deinen Körper wirklich unterstützt.",
-  tagline_en: "Movement that really supports your body.",
+  tagline_de: "Von innen satt, von außen geschmeidig. Zwei Produkte, eine Sommerroutine.",
+  tagline_en: "Nourished inside, smooth outside. Two products, one summer routine.",
 
   // ── WHATSAPP ──────────────────────────────────────────────
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20CAPS%20move%20und%20SPORT%20endurance%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20CAPS%20move%20and%20SPORT%20endurance%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20d-eat%20und%20body%20milk%20light%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20d-eat%20and%20body%20milk%20light%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -39,31 +39,30 @@ window.SALE_TODAY = {
   image_en:       null,
   image_fallback: null,
   shades:         [],
+  tip_de:         null,
+  tip_en:         null,
 
-  tip_de: null,
-  tip_en: null,
-
-  // ── MEHRERE PRODUKTE ──────────────────────────────────────
+  // ── PRODUKTE ──────────────────────────────────────────────
   products: [
     {
-      name:        "CAPS move",
-      emoji:       "🦴",
-      shop_url_de: "https://priller.ringana.com/produkt/caps-move/",
-      shop_url_en: "https://priller.ringana.com/produkt/caps-move/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-move.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-move.jpg",
-      text_de: "Wusstest du, dass langes Sitzen deinen Gelenken fast genauso zusetzt wie intensiver Sport, nur andersrum? Zu wenig Bewegung bedeutet: Knorpel wird schlechter versorgt. Zu viel Belastung bedeutet: zu wenig Zeit für Regeneration. Beides fordert deinen Bewegungsapparat auf seine Weise.<br><br>CAPS move von RINGANA gibt deinen Gelenken genau das zurück, was sie brauchen: MSM liefert Schwefel für Knorpel und Gelenkflüssigkeit, AprèsFlex® (Weihrauch) und CurcuRouge® (Kurkuma) unterstützen dein Gelenkwohlbefinden, Vitamin C trägt zu einer normalen Kollagenbildung bei, Vitamin D und K tragen zur Erhaltung normaler Knochen bei.<br><br>Ob du viel sitzt, intensiv trainierst oder langfristig beweglich bleiben willst: CAPS move setzt an mehreren Stellen gleichzeitig an.",
-      text_en: "Did you know that sitting for long periods puts almost as much stress on your joints as intense sport, just in the opposite way? Too little movement means cartilage is less nourished. Too much stress means too little time for regeneration. Both challenge your musculoskeletal system in their own way.<br><br>CAPS move by RINGANA gives your joints exactly what they need: MSM provides sulphur for cartilage and synovial fluid, AprèsFlex® (frankincense) and CurcuRouge® (turmeric) support joint wellbeing, Vitamin C contributes to normal collagen formation, Vitamins D and K contribute to the maintenance of normal bones.<br><br>Whether you sit a lot, train intensively, or simply want to stay mobile long-term: CAPS move works on multiple levels at once.",
+      name:        "COMPLETE d-eat",
+      emoji:       "🌱",
+      shop_url_de: "https://priller.ringana.com/produkt/complete-d-eat/",
+      shop_url_en: "https://priller.ringana.com/produkt/complete-d-eat/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_COMPLETE-d-eat.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_COMPLETE-d-eat.jpg",
+      text_de: "Kennst du das? Der Tag ist voll, du greifst schnell zu Semmel oder Riegel, bist kurz satt und eine Stunde später wieder müde. Schnelle Snacks liefern oft wenig Ballaststoffe, Proteine oder Mikronährstoffe. Der Blutzucker schießt hoch, fällt genauso schnell wieder ab, und schon bist du im Hungerloch.<br><br>COMPLETE d-eat von RINGANA ist eine vollwertige vegane Trinkmahlzeit, fertig in 2 Minuten. Kein Zuckerzusatz, keine künstlichen Aromen, konservierungsmittelfrei: Erbsen- und Reisprotein liefern alle essentiellen Aminosäuren in guter Bioverfügbarkeit, Guarkern- und Citrusfasern für einen hohen Ballaststoffgehalt und eine gesunde Verdauung, DHA aus Mikroalgen trägt zur Erhaltung einer normalen Gehirnfunktion bei, Vitamine und Mineralstoffe aus natürlichen Quellen.<br><br>Ob Mahlzeitersatz, Meal Prep, vegane Ernährung oder einfach ein stressiger Tag: d-eat ist eine echte Mahlzeit, keine Notlösung. Als Matcha Latte, mit Kokosmilch und frischen Früchten oder klassisch mit Zimt und Kakao.',
+      text_en: "Know the feeling? Your day is packed, you grab a quick snack, feel full for an hour and then crash again. Fast snacks often deliver little fibre, protein or micronutrients. Blood sugar spikes, drops just as fast, and you're in an energy dip.<br><br>COMPLETE d-eat by RINGANA is a complete vegan meal replacement drink, ready in 2 minutes. No added sugar, no artificial flavours, preservative-free: pea and rice protein deliver all essential amino acids with good bioavailability, guar bean and citrus fibres for high fibre content and healthy digestion, DHA from microalgae contributes to normal brain function, vitamins and minerals from natural sources.<br><br>Whether you're replacing meals, meal prepping, eating vegan or just having a busy day: d-eat is a real meal, not a compromise. Try it as a matcha latte, with coconut milk and fresh fruit, or classic with cinnamon and cacao.",
     },
     {
-      name:        "SPORT endurance",
+      name:        "FRESH body milk light",
       emoji:       "💧",
-      shop_url_de: "https://priller.ringana.com/produkt/sport-endurance/",
-      shop_url_en: "https://priller.ringana.com/produkt/sport-endurance/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_SPORT-endurance.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_SPORT-endurance.jpg",
-      text_de: "Bei Hitze oder intensiver Belastung verlierst du bis zu 1,5 Liter Schweiß pro Stunde, und mit ihm wichtige Elektrolyte wie Magnesium, Kalium und Natrium. Genau das führt zu Krämpfen, Müdigkeit und Leistungsabfall.<br><br>SPORT endurance ist die natürliche Isotoniker-Formel von RINGANA: Kohlenhydrate für konstante und schnelle Energie, Elektrolyte für deinen Flüssigkeitshaushalt, Magnesium und Kalium für die Muskelfunktion, Eisen, Selen und Vitamin C für Zellschutz und Regeneration. Kein Zucker-Overkill, keine künstlichen Aromen, alles konservierungsmittelfrei und frisch.<br><br>1 Sachet in 500 ml Wasser (isotonisch, für längere Einheiten) oder bis zu 700 ml (für kürzere, intensive Trainings).",
-      text_en: "In heat or during intense exercise, you can lose up to 1.5 litres of sweat per hour, along with key electrolytes like magnesium, potassium and sodium. This is exactly what leads to cramps, fatigue and performance drops.<br><br>SPORT endurance is RINGANA's natural isotonic formula: carbohydrates for consistent and rapid energy, electrolytes for hydration balance, magnesium and potassium for muscle function, iron, selenium and vitamin C for cell protection and recovery. No sugar overload, no artificial flavours, preservative-free and freshly made.<br><br>Mix 1 sachet in 500 ml water (isotonic, for longer sessions) or up to 700 ml (for shorter, intense workouts).",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-body-milk-light/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-body-milk-light/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-body-milk-light.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-body-milk-light.jpg",
+      text_de: "Unser Gesicht bekommt die volle Pflege-Aufmerksamkeit, die Körperhaut geht oft leer aus. Dabei ist sie durch Duschen, Kleidung, Sonne und Salzwasser genauso belastet. Wird die Hautbarriere schwächer, verliert die Haut Feuchtigkeit und wirkt schnell trocken und fahl.<br><br>Die FRESH body milk light von RINGANA ist ultraleicht und zieht sofort ein: 5-fach Hyaluron und Silberohrpilz für intensive Tiefenfeuchtigkeit, Moringasamen-Extrakt und Exosome stärken die Hautbarriere, Macadamiaöl, Haferöl und Sheabutter pflegen nachhaltig ohne zu fetten. Konservierungsmittelfrei, frisch hergestellt.<br><br>Geschmeidige Körperhaut ohne klebriges Gefühl, perfekt an heißen Tagen, nach dem Duschen oder nach dem Rasieren, auch bei sensibler und trockener Haut.",
+      text_en: "Our face gets all the skincare attention, while our body skin is often neglected. Yet it faces just as much stress from showering, clothing, sun and salt water. When the skin barrier weakens, moisture is lost and skin quickly feels dry and dull.<br><br>The FRESH body milk light by RINGANA is ultra-lightweight and absorbs instantly: 5-fold hyaluronic acid and snow mushroom for deep, intensive hydration, moringa seed extract and exosomes strengthen the skin barrier, macadamia oil, oat oil and shea butter nourish without greasiness. Preservative-free, freshly made.<br><br>Smooth body skin with no sticky feeling, perfect on hot days, after showering or shaving, and gentle enough for sensitive and dry skin.",
     },
   ],
 
