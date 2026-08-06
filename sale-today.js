@@ -12,24 +12,24 @@
 window.SALE_TODAY = {
 
   // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-04",
+  date:       "2026-08-06",
   date_end:   null,
 
-  product_de: "COMPLETE d-eat + FRESH body milk light",
-  product_en: "COMPLETE d-eat + FRESH body milk light",
+  product_de: "FRESH toner calm + FRESH cream rich",
+  product_en: "FRESH toner calm + FRESH cream rich",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
   // ── STRIP ─────────────────────────────────────────────────
-  desc_de: "COMPLETE d-eat · FRESH body milk light · von innen & außen · je -20%",
-  desc_en: "COMPLETE d-eat · FRESH body milk light · inside & out · each -20%",
+  desc_de: "FRESH toner calm · FRESH cream rich · Pflege die einzieht · je -20%",
+  desc_en: "FRESH toner calm · FRESH cream rich · skincare that absorbs · each -20%",
 
-  tagline_de: "Von innen satt, von außen geschmeidig. Zwei Produkte, eine Sommerroutine.",
-  tagline_en: "Nourished inside, smooth outside. Two products, one summer routine.",
+  tagline_de: "Erst der Toner, dann die Creme. Die klassische Abend-Routine, wenn die Haut Ruhe braucht.",
+  tagline_en: "Toner first, then cream. The classic evening routine when your skin needs to recover.",
 
   // ── WHATSAPP ──────────────────────────────────────────────
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20d-eat%20und%20body%20milk%20light%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20d-eat%20and%20body%20milk%20light%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20toner%20calm%20und%20cream%20rich%20im%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20toner%20calm%20and%20cream%20rich%20in%20the%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
 
   more_url:      "",
   more_label_de: "",
@@ -45,24 +45,24 @@ window.SALE_TODAY = {
   // ── PRODUKTE ──────────────────────────────────────────────
   products: [
     {
-      name:        "COMPLETE d-eat",
+      name:        "FRESH toner calm",
       emoji:       "🌱",
-      shop_url_de: "https://priller.ringana.com/produkt/complete-d-eat/",
-      shop_url_en: "https://priller.ringana.com/produkt/complete-d-eat/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_COMPLETE-d-eat.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_COMPLETE-d-eat.jpg",
-      text_de: "Kennst du das? Der Tag ist voll, du greifst schnell zu Semmel oder Riegel, bist kurz satt und eine Stunde später wieder müde. Schnelle Snacks liefern oft wenig Ballaststoffe, Proteine oder Mikronährstoffe. Der Blutzucker schießt hoch, fällt genauso schnell wieder ab, und schon bist du im Hungerloch.<br><br>COMPLETE d-eat von RINGANA ist eine vollwertige vegane Trinkmahlzeit, fertig in 2 Minuten. Kein Zuckerzusatz, keine künstlichen Aromen, konservierungsmittelfrei: Erbsen- und Reisprotein liefern alle essentiellen Aminosäuren in guter Bioverfügbarkeit, Guarkern- und Citrusfasern für einen hohen Ballaststoffgehalt und eine gesunde Verdauung, DHA aus Mikroalgen trägt zur Erhaltung einer normalen Gehirnfunktion bei, Vitamine und Mineralstoffe aus natürlichen Quellen.<br><br>Ob Mahlzeitersatz, Meal Prep, vegane Ernährung oder einfach ein stressiger Tag: d-eat ist eine echte Mahlzeit, keine Notlösung. Als Matcha Latte, mit Kokosmilch und frischen Früchten oder klassisch mit Zimt und Kakao.",
-      text_en: "Know the feeling? Your day is packed, you grab a quick snack, feel full for an hour and then crash again. Fast snacks often deliver little fibre, protein or micronutrients. Blood sugar spikes, drops just as fast, and you're in an energy dip.<br><br>COMPLETE d-eat by RINGANA is a complete vegan meal replacement drink, ready in 2 minutes. No added sugar, no artificial flavours, preservative-free: pea and rice protein deliver all essential amino acids with good bioavailability, guar bean and citrus fibres for high fibre content and healthy digestion, DHA from microalgae contributes to normal brain function, vitamins and minerals from natural sources.<br><br>Whether you're replacing meals, meal prepping, eating vegan or just having a busy day: d-eat is a real meal, not a compromise. Try it as a matcha latte, with coconut milk and fresh fruit, or classic with cinnamon and cacao.",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-toner-calm/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-toner-calm/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Ein Sommertag macht mit der Haut mehr, als man denkt. Morgens Sonnencreme, tagsüber Hitze, dazwischen Klimaanlage im Büro, Zug oder Auto, abends vielleicht noch Chlor oder Salzwasser. Und irgendwann steht man vorm Spiegel und die Haut fühlt sich gleichzeitig fettig und gespannt an.<br><br>Klingt widersprüchlich, ist es aber nicht. Man nennt das dehydrierte Haut: Ihr fehlt nicht Fett, sondern Wasser. Und weil sie diesen Verlust ausgleichen will, produziert sie mehr Talg. Ergebnis: glänzende T-Zone und trotzdem ein Spannungsgefühl.<br><br>Toner haben den Ruf, verzichtbar zu sein. Sind sie aber nicht: Sie bringen die Haut nach der Reinigung ins Gleichgewicht, damit Serum und Creme danach überhaupt richtig aufgenommen werden. Ohne diesen Schritt liegt die Pflege eher auf der Haut, als dass sie einzieht.<br><br>Der FRESH toner calm kann aber noch etwas Besonderes: 3 % eines neurokosmetischen Wirkstoffs aus Milchsäurebakterien, in wissenschaftlich untersuchter Konzentration, wirkt den Auswirkungen von Stress auf die Haut entgegen und unterstützt gleichzeitig das emotionale Wohlbefinden. Dazu 2 % Maulbeerblätter-Extrakt für die Anpassung an Umweltveränderungen und 1 % Süßholzwurzel-Extrakt gegen Rötungen und Irritationen. Plus Aloe Vera Frischpflanzensaft.<br><br>Aufsprühen oder mit einem Wattepad auftragen, vorher schütteln. Funktioniert auch am ganzen Körper, zum Beispiel nach einem Tag in der Sonne.",
+      text_en: "A summer day does more to your skin than you might think. Sunscreen in the morning, heat throughout the day, air conditioning in the office, train or car, then maybe chlorine or salt water in the evening. At some point you look in the mirror and your skin feels simultaneously oily and tight.<br><br>That sounds contradictory, but it is not. It is called dehydrated skin: it is not lacking oil, it is lacking water. And because it wants to compensate for this loss, it produces more sebum. Result: a shiny T-zone and still a feeling of tightness.<br><br>Toners have a reputation for being optional. But they are not: they rebalance the skin after cleansing so that serum and cream can actually be absorbed afterwards. Without this step, skincare tends to sit on top of the skin rather than sinking in.<br><br>The FRESH toner calm does something else too: 3% of a neurocosmetic active from lactic acid bacteria, in a scientifically researched concentration, counteracts the effects of stress on the skin while also supporting emotional wellbeing. Plus 2% mulberry leaf extract to help the skin adapt to environmental changes and 1% liquorice root extract to calm redness and irritation. With fresh aloe vera plant juice.<br><br>Spray on or apply with a cotton pad, shake first. Works on the whole body too, for example after a day in the sun.",
     },
     {
-      name:        "FRESH body milk light",
-      emoji:       "💧",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-body-milk-light/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-body-milk-light/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-body-milk-light.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-body-milk-light.jpg",
-      text_de: "Unser Gesicht bekommt die volle Pflege-Aufmerksamkeit, die Körperhaut geht oft leer aus. Dabei ist sie durch Duschen, Kleidung, Sonne und Salzwasser genauso belastet. Wird die Hautbarriere schwächer, verliert die Haut Feuchtigkeit und wirkt schnell trocken und fahl.<br><br>Die FRESH body milk light von RINGANA ist ultraleicht und zieht sofort ein: 5-fach Hyaluron und Silberohrpilz für intensive Tiefenfeuchtigkeit, Moringasamen-Extrakt und Exosome stärken die Hautbarriere, Macadamiaöl, Haferöl und Sheabutter pflegen nachhaltig ohne zu fetten. Konservierungsmittelfrei, frisch hergestellt.<br><br>Geschmeidige Körperhaut ohne klebriges Gefühl, perfekt an heißen Tagen, nach dem Duschen oder nach dem Rasieren, auch bei sensibler und trockener Haut.",
-      text_en: "Our face gets all the skincare attention, while our body skin is often neglected. Yet it faces just as much stress from showering, clothing, sun and salt water. When the skin barrier weakens, moisture is lost and skin quickly feels dry and dull.<br><br>The FRESH body milk light by RINGANA is ultra-lightweight and absorbs instantly: 5-fold hyaluronic acid and snow mushroom for deep, intensive hydration, moringa seed extract and exosomes strengthen the skin barrier, macadamia oil, oat oil and shea butter nourish without greasiness. Preservative-free, freshly made.<br><br>Smooth body skin with no sticky feeling, perfect on hot days, after showering or shaving, and gentle enough for sensitive and dry skin.",
+      name:        "FRESH cream rich",
+      emoji:       "✨",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-rich/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-rich/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Klingt erstmal falsch, ist aber der ehrlichste Tipp, den ich für den Sommer habe: tagsüber etwas Leichtes, abends aber ist die FRESH cream rich genau richtig, um der Haut zurückzugeben, was der Tag ihr genommen hat.<br><br>2,5 % verkapselter Ceramid-Komplex stärkt die Hautbarriere, 12 % NMF (der hauteigene Feuchthaltefaktor) bindet Feuchtigkeit in den tieferen Hautschichten. Dazu 9 Pflanzenöle wie Nachtkerze, Borretsch und Wiesenschaumkraut sowie Cupuacu- und Sheabutter für intensive Pflege ohne schweres Gefühl. Konservierungsmittelfrei, frisch hergestellt.<br><br>Besonders sinnvoll, wenn deine Haut zu Trockenheit oder Spannungsgefühlen neigt oder gerade sensibler reagiert als sonst. Erst der Toner, dann die Creme: das ist die klassische Abend-Routine, wenn die Haut Ruhe braucht und einen extra Wohlfühl-Moment verdient.",
+      text_en: "It sounds counterintuitive, but it is honestly one of my best summer tips: something light during the day, but in the evening the FRESH cream rich is exactly what your skin needs to recover from everything the day threw at it.<br><br>2.5% encapsulated ceramide complex strengthens the skin barrier, 12% NMF (the skin's own natural moisturising factor) binds moisture in the deeper skin layers. Plus 9 plant oils including evening primrose, borage and meadowfoam, as well as cupuacu and shea butter for intensive care without a heavy feeling. Preservative-free, freshly made.<br><br>Especially helpful if your skin tends towards dryness or tightness, or is reacting more sensitively than usual. Toner first, then cream: that is the classic evening routine when your skin needs to rest and deserves a moment of care.",
     },
   ],
 
