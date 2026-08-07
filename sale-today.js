@@ -1,35 +1,25 @@
 // ============================================================
 //  🌞 SUMMER SALE — TÄGLICH UPDATEN
-//
-//  Morgens wenn das Angebot bekannt ist:
-//  1. Felder unten anpassen
-//  2. git commit -am "Sale: [Produktname]" → in ~30 Sek. live
-//
-//  Mehrere Produkte: products[] Array füllen
-//  Ein Produkt: products[] leer lassen, shades[] / body nutzen
 // ============================================================
 
 window.SALE_TODAY = {
 
-  // ── DATUM & PRODUKT ────────────────────────────────────────
-  date:       "2026-08-06",
+  date:       "2026-08-07",
   date_end:   null,
 
-  product_de: "FRESH toner calm + FRESH cream rich",
-  product_en: "FRESH toner calm + FRESH cream rich",
+  product_de: "FRESH Sonnenpflege & light legs",
+  product_en: "FRESH Suncare & light legs",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  // ── STRIP ─────────────────────────────────────────────────
-  desc_de: "FRESH toner calm · FRESH cream rich · Pflege die einzieht · je -20%",
-  desc_en: "FRESH toner calm · FRESH cream rich · skincare that absorbs · each -20%",
+  desc_de: "after sun · sunscreen SPF 30 · sunscreen SPF 25 · light legs · je -20%",
+  desc_en: "after sun · sunscreen SPF 30 · sunscreen SPF 25 · light legs · each -20%",
 
-  tagline_de: "Erst der Toner, dann die Creme. Die klassische Abend-Routine, wenn die Haut Ruhe braucht.",
-  tagline_en: "Toner first, then cream. The classic evening routine when your skin needs to recover.",
+  tagline_de: "Vier Sommer-Favoriten heute mit -20%. Mineralischer Sonnenschutz, natürliche Bräune, leichte Beine.",
+  tagline_en: "Four summer favourites at -20% today. Mineral sun protection, natural tan, light legs.",
 
-  // ── WHATSAPP ──────────────────────────────────────────────
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20toner%20calm%20und%20cream%20rich%20im%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20toner%20calm%20and%20cream%20rich%20in%20the%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zur%20Sonnenpflege%20im%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20suncare%20Summer%20Sale%20%E2%98%80%EF%B8%8F",
 
   more_url:      "",
   more_label_de: "",
@@ -42,27 +32,46 @@ window.SALE_TODAY = {
   tip_de:         null,
   tip_en:         null,
 
-  // ── PRODUKTE ──────────────────────────────────────────────
   products: [
     {
-      name:        "FRESH toner calm",
-      emoji:       "🌱",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-toner-calm/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-toner-calm/?lang=en",
+      name:        "FRESH after sun & tan booster",
+      emoji:       "💧",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-after-sun/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-after-sun/?lang=en",
       image_de:    null,
       image_en:    null,
-      text_de: "Ein Sommertag macht mit der Haut mehr, als man denkt. Morgens Sonnencreme, tagsüber Hitze, dazwischen Klimaanlage im Büro, Zug oder Auto, abends vielleicht noch Chlor oder Salzwasser. Und irgendwann steht man vorm Spiegel und die Haut fühlt sich gleichzeitig fettig und gespannt an.<br><br>Klingt widersprüchlich, ist es aber nicht. Man nennt das dehydrierte Haut: Ihr fehlt nicht Fett, sondern Wasser. Und weil sie diesen Verlust ausgleichen will, produziert sie mehr Talg. Ergebnis: glänzende T-Zone und trotzdem ein Spannungsgefühl.<br><br>Toner haben den Ruf, verzichtbar zu sein. Sind sie aber nicht: Sie bringen die Haut nach der Reinigung ins Gleichgewicht, damit Serum und Creme danach überhaupt richtig aufgenommen werden. Ohne diesen Schritt liegt die Pflege eher auf der Haut, als dass sie einzieht.<br><br>Der FRESH toner calm kann aber noch etwas Besonderes: 3 % eines neurokosmetischen Wirkstoffs aus Milchsäurebakterien, in wissenschaftlich untersuchter Konzentration, wirkt den Auswirkungen von Stress auf die Haut entgegen und unterstützt gleichzeitig das emotionale Wohlbefinden. Dazu 2 % Maulbeerblätter-Extrakt für die Anpassung an Umweltveränderungen und 1 % Süßholzwurzel-Extrakt gegen Rötungen und Irritationen. Plus Aloe Vera Frischpflanzensaft.<br><br>Aufsprühen oder mit einem Wattepad auftragen, vorher schütteln. Funktioniert auch am ganzen Körper, zum Beispiel nach einem Tag in der Sonne.",
-      text_en: "A summer day does more to your skin than you might think. Sunscreen in the morning, heat throughout the day, air conditioning in the office, train or car, then maybe chlorine or salt water in the evening. At some point you look in the mirror and your skin feels simultaneously oily and tight.<br><br>That sounds contradictory, but it is not. It is called dehydrated skin: it is not lacking oil, it is lacking water. And because it wants to compensate for this loss, it produces more sebum. Result: a shiny T-zone and still a feeling of tightness.<br><br>Toners have a reputation for being optional. But they are not: they rebalance the skin after cleansing so that serum and cream can actually be absorbed afterwards. Without this step, skincare tends to sit on top of the skin rather than sinking in.<br><br>The FRESH toner calm does something else too: 3% of a neurocosmetic active from lactic acid bacteria, in a scientifically researched concentration, counteracts the effects of stress on the skin while also supporting emotional wellbeing. Plus 2% mulberry leaf extract to help the skin adapt to environmental changes and 1% liquorice root extract to calm redness and irritation. With fresh aloe vera plant juice.<br><br>Spray on or apply with a cotton pad, shake first. Works on the whole body too, for example after a day in the sun.",
+      text_de: "Bis zu 80 % der sichtbaren Hautalterung entsteht durch UV-Strahlung, nicht durchs Alter. Falten, Pigmentflecken, Elastizitätsverlust: das ist meist Photoaging. After-Sun-Pflege ist deshalb keine Luxus-Routine, sondern sinnvoller Better-Aging-Schutz.<br><br>Der FRESH after sun & tan booster kann zwei Dinge gleichzeitig: Rotalgen-Extrakt aktiviert die Hautbräunung auf natürliche Weise, Erythrulose (ein natürlicher Zucker) sorgt für eine sanfte Tönung ganz ohne UV. Gleichzeitig geben Buriti-Öl, Hyaluronsäure und Ectoin der Haut zurück, was die Sonne ihr genommen hat.<br><br>Nach drei bis vier Tagen regelmäßiger Anwendung baut sich eine leichte, natürliche Bräune auf, die sich mit der Zeit vertieft. Tipp: vorher mit dem FRESH scrub peelen, dann wird es gleichmäßiger und hält länger.",
+      text_en: "Up to 80% of visible skin ageing comes from UV radiation, not from age. Wrinkles, pigmentation, loss of elasticity: that is mostly photoageing. After-sun care is not a luxury routine, it is effective better-ageing protection.<br><br>The FRESH after sun & tan booster does two things at once: red algae extract activates skin tanning naturally, erythrulose (a natural sugar) adds a gentle colour without any UV. At the same time, buriti oil, hyaluronic acid and ectoin replenish what the sun has taken from the skin.<br><br>After three to four days of regular use, a light, natural tan builds up and deepens over time. Tip: exfoliate with the FRESH scrub beforehand for a more even, longer-lasting result.",
     },
     {
-      name:        "FRESH cream rich",
-      emoji:       "✨",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-rich/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-rich/?lang=en",
+      name:        "FRESH sunscreen face SPF 30",
+      emoji:       "☀️",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-sunscreen-face/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-sunscreen-face/?lang=en",
       image_de:    null,
       image_en:    null,
-      text_de: "Klingt erstmal falsch, ist aber der ehrlichste Tipp, den ich für den Sommer habe: tagsüber etwas Leichtes, abends aber ist die FRESH cream rich genau richtig, um der Haut zurückzugeben, was der Tag ihr genommen hat.<br><br>2,5 % verkapselter Ceramid-Komplex stärkt die Hautbarriere, 12 % NMF (der hauteigene Feuchthaltefaktor) bindet Feuchtigkeit in den tieferen Hautschichten. Dazu 9 Pflanzenöle wie Nachtkerze, Borretsch und Wiesenschaumkraut sowie Cupuacu- und Sheabutter für intensive Pflege ohne schweres Gefühl. Konservierungsmittelfrei, frisch hergestellt.<br><br>Besonders sinnvoll, wenn deine Haut zu Trockenheit oder Spannungsgefühlen neigt oder gerade sensibler reagiert als sonst. Erst der Toner, dann die Creme: das ist die klassische Abend-Routine, wenn die Haut Ruhe braucht und einen extra Wohlfühl-Moment verdient.",
-      text_en: "It sounds counterintuitive, but it is honestly one of my best summer tips: something light during the day, but in the evening the FRESH cream rich is exactly what your skin needs to recover from everything the day threw at it.<br><br>2.5% encapsulated ceramide complex strengthens the skin barrier, 12% NMF (the skin's own natural moisturising factor) binds moisture in the deeper skin layers. Plus 9 plant oils including evening primrose, borage and meadowfoam, as well as cupuacu and shea butter for intensive care without a heavy feeling. Preservative-free, freshly made.<br><br>Especially helpful if your skin tends towards dryness or tightness, or is reacting more sensitively than usual. Toner first, then cream: that is the classic evening routine when your skin needs to rest and deserves a moment of care.",
+      text_de: "Wusstest du, dass Oxybenzon, einer der weltweit meistverwendeten chemischen UV-Filter, in Hawaii, Palau, Aruba und Teilen von Thailand und Mexiko verboten ist? Er baut sich nicht ab, löst Korallenbleiche aus und kann als photoreaktiver Stoff freie Radikale bilden.<br><br>Die Alternative: mineralischer Zinkoxid-Sonnenschutz. Er wird nicht in die Haut aufgenommen, sondern legt sich wie winzige Spiegel darauf und reflektiert die Strahlung. Hormonfrei, riff-freundlich, gut verträglich, auch in der Schwangerschaft und bei sensibler Haut.<br><br>Der FRESH sunscreen face SPF 30 vereint täglichen Sonnenschutz mit Gesichtspflege: mattes Finish ohne Fettfilm, funktioniert auch als Make-up-Base. Mungobohnenextrakt schützt vor Infrarot und Blue Light, Astaxanthin wirkt gegen oxidativen Stress, Hyaluronsäure pflegt. COSMOS-zertifiziert.",
+      text_en: "Did you know that oxybenzone, one of the world's most widely used chemical UV filters, is banned in Hawaii, Palau, Aruba and parts of Thailand and Mexico? It does not break down, triggers coral bleaching, and as a photoreactive substance can form free radicals.<br><br>The alternative: mineral zinc oxide sun protection. It is not absorbed into the skin but sits on the surface like tiny mirrors, reflecting radiation. Hormone-free, reef-friendly, well-tolerated, including during pregnancy and on sensitive skin.<br><br>The FRESH sunscreen face SPF 30 combines daily sun protection with skincare: matte finish without a greasy feel, works as a make-up base too. Mung bean extract protects against infrared and blue light, astaxanthin fights oxidative stress, hyaluronic acid hydrates. COSMOS certified.",
+    },
+    {
+      name:        "FRESH sunscreen SPF 25",
+      emoji:       "🌞",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-sunscreen/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-sunscreen/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Der Rundumschutz für Gesicht und Körper, wasserfest, mit mineralischem Zinkoxid, Astaxanthin, Karanja-Extrakt als natürlichem UV-Zusatzschutz und Curcuma-Extrakt, der reizlindernd wirkt.<br><br>Wichtig zu wissen: Ein mineralischer Filter liegt auf der Haut, nicht in ihr. Das macht ihn so verträglich, heißt aber auch, dass er durch Wasser, Schwitzen oder Abrieb mechanisch entfernt wird. Der Schutz lässt nicht nach, er ist buchstäblich nicht mehr da. Deshalb nach dem Schwimmen, Abtrocknen oder längerer Zeit in der Sonne einfach nachcremen.",
+      text_en: "All-over sun protection for face and body, water-resistant, with mineral zinc oxide, astaxanthin, karanja extract as natural UV support and turmeric extract for its soothing properties.<br><br>Worth knowing: a mineral filter sits on the skin, not in it. That is what makes it so well-tolerated, but it is also mechanically removed by water, sweat or towel friction. Protection does not fade because it stops working, it fades because some of it is literally no longer there. Reapply after swimming, drying off or extended time in the sun.",
+    },
+    {
+      name:        "FRESH light legs",
+      emoji:       "🌰",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-light-legs/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-light-legs/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Hitze setzt nicht nur der Haut zu. Bei 30 Grad, langem Stehen oder Reisen werden die Beine schwer, müde, geschwollen. Wärme erweitert die Blutgefäße, das Blut fließt langsamer zurück.<br><br>Rosskastanie wird seit Jahrhunderten bei müden, schweren Beinen eingesetzt. Im FRESH light legs stecken außerdem Zypresse für die Mikrozirkulation, Magnesiumsalz (entspannend und angenehm kühlend), Witch Hazel und Mäusedorn zur Beruhigung der Haut sowie Minze und Ingwer für den sofortigen Frischekick.<br><br>Einfach aufsprühen, kein Einmassieren nötig. Perfekt nach einem langen Tag im Stehen, auf Reisen oder wenn die Beine bei 30 Grad einfach schwer werden.",
+      text_en: "Heat does not only affect your skin. After a day of standing, travelling or simply 30-degree weather, legs often feel heavy, tired and swollen. Heat dilates blood vessels and slows the return of blood.<br><br>Horse chestnut has been used for centuries to support tired, heavy legs. The FRESH light legs spray also contains cypress for microcirculation, magnesium salt (relaxing and pleasantly cooling), witch hazel and butcher's broom to soothe the skin, plus mint and ginger for an instant freshness boost.<br><br>Simply spray on, no rubbing in required. Perfect after a long day on your feet, while travelling, or whenever your legs feel heavy in the heat.",
     },
   ],
 
