@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-08",
+  date:       "2026-08-09",
   date_end:   null,
 
-  product_de: "CAPS d-gest + FRESH pack balancing",
-  product_en: "CAPS d-gest + FRESH pack balancing",
+  product_de: "FRESH illuminating enzyme mask + FRESH cream deodorant",
+  product_en: "FRESH illuminating enzyme mask + FRESH cream deodorant",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "CAPS d-gest · FRESH pack balancing · für Verdauung & Balance · je -20%",
-  desc_en: "CAPS d-gest · FRESH pack balancing · digestion & balance · each -20%",
+  desc_de: "illuminating enzyme mask · cream deodorant · sanft & wirksam · je -20%",
+  desc_en: "illuminating enzyme mask · cream deodorant · gentle & effective · each -20%",
 
-  tagline_de: "Genießen ohne schlechtes Gewissen. Zwei Produkte, die deinen Körper von innen unterstützen.",
-  tagline_en: "Enjoy without regret. Two products that support your body from within.",
+  tagline_de: "Sanft und wirksam ist kein Widerspruch. Zwei Produkte, die zeigen, wie gut Naturkosmetik wirklich funktioniert.",
+  tagline_en: "Gentle and effective are not opposites. Two products that show how well natural cosmetics really work.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20d-gest%20und%20pack%20balancing%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20d-gest%20and%20pack%20balancing%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zur%20enzyme%20mask%20und%20dem%20cream%20deodorant%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20enzyme%20mask%20and%20cream%20deodorant%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "CAPS d-gest",
-      emoji:       "🧑‍🩰",
-      shop_url_de: "https://priller.ringana.com/produkt/caps-d-gest/",
-      shop_url_en: "https://priller.ringana.com/produkt/caps-d-gest/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-d-gest.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-d-gest.jpg",
-      text_de: "Der Sommer bringt Grillabende, Spritzer im Gastgarten, Eis am Nachmittag, spontane Restaurantbesuche. Schön. Aber der Bauch meldet sich manchmal deutlicher zurück, als einem lieb ist.<br><br>Wusstest du, dass Bitterstoffe wie in der Artischocke traditionell schon vor dem Essen eingesetzt wurden, nicht danach? Der Gedanke dahinter: Den Körper vorbereiten, statt hinterher zu reparieren.<br><br>Genau diese Artischocke steckt in CAPS d-gest, zusammen mit fermentiertem Ingwer, der bei Blähungen und Völlegefühl wohltuend wirkt. Dazu ein Enzymkomplex aus Amylase, Laktase, Protease, Cellulase und Lipase, der beim Aufspalten von Kohlenhydraten, Laktose, Proteinen und Fetten mithilft. Und Cholin, das zur Erhaltung einer normalen Leberfunktion beiträgt.<br><br>Besonders sinnvoll bei Völlegefühl, öfterem Alkohol oder einfach wenn du deinem Körper Entlastung gönnen willst, ohne auf Genuss zu verzichten.",
-      text_en: "Summer brings barbecues, spritzers on the terrace, ice cream in the afternoon, spontaneous restaurant visits. Lovely. But your stomach can make itself heard more clearly than you'd like.<br><br>Did you know that bitter substances like artichoke were traditionally used before meals, not after? The idea: prepare the body instead of repairing it afterwards.<br><br>This artichoke is exactly what's in CAPS d-gest, along with fermented ginger, which soothes bloating and a feeling of fullness. Plus an enzyme complex of amylase, lactase, protease, cellulase and lipase to help break down carbohydrates, lactose, proteins and fats. And choline, which contributes to normal liver function.<br><br>Especially useful if you tend towards bloating, drink alcohol regularly, or simply want to give your body some support without giving up enjoyment.",
+      name:        "FRESH illuminating enzyme mask",
+      emoji:       "🍍",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-illuminating-enzyme-mask/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-illuminating-enzyme-mask/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Wusstest du, dass Fruchtenzyme aus Papaya, Ananas und Kiwi die Haut ganz ohne Reibung peelen? Sie lösen gezielt die Verbindungen zwischen abgestorbenen Hautzellen, statt sie mechanisch abzurubbeln. Deshalb gibt es keine Mikroverletzungen, und selbst empfindliche Haut kommt gut damit klar.<br><br>Genau diese Fruchtenzyme stecken in der FRESH illuminating enzyme mask, kombiniert mit PHA (Gluconolacton), einer besonders milden Säure, die die Zellerneuerung unterstützt und gleichzeitig Feuchtigkeit spendet. Dazu Kaolin für ein verfeinertes Hautbild und Rosmarin- und Koriander-Extrakt, die beruhigen.<br><br>Das Clevere: Die Textur ist rein ölig und wird erst bei Kontakt mit Wasser aktiviert. Deshalb kein Spannungsgefühl danach, sondern gepflegte, glatte Haut.<br><br>Anwendung: 1-2x pro Woche abends auf befeuchtete Haut auftragen, 10 Sekunden einmassieren, 2-5 Minuten einwirken lassen, bei empfindlicher Haut nur 1 Minute. Das leichte Prickeln ist normal, das ist der Fruchtcocktail bei der Arbeit. Danach Serum und ADDS auftragen, die Haut nimmt Wirkstoffe jetzt besonders gut auf.",
+      text_en: "Did you know that fruit enzymes from papaya, pineapple and kiwi exfoliate the skin without any friction? They dissolve the bonds between dead skin cells instead of scrubbing them away mechanically. No micro-injuries, and even sensitive skin handles it well.<br><br>These exact fruit enzymes are in the FRESH illuminating enzyme mask, combined with PHA (gluconolactone), a particularly mild acid that supports cell renewal while also providing moisture. Plus kaolin for a refined complexion and rosemary and coriander extracts for a soothing effect.<br><br>The clever bit: the texture is purely oil-based and only activates on contact with water. So no tight feeling afterwards, just smooth, cared-for skin.<br><br>How to use: 1-2 times a week in the evening on damp skin, massage for 10 seconds, leave for 2-5 minutes (1 minute for sensitive skin). The slight tingling is normal, that's the fruit cocktail doing its job. Apply serum and ADDS afterwards, skin absorbs actives especially well at this point.",
     },
     {
-      name:        "FRESH pack balancing",
-      emoji:       "🥬",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-pack-balancing/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-pack-balancing/?lang=en",
-      image_de:    "assets/images/Partner-Templates-1x1-FRESH-pack-balancing-1.jpg",
-      image_en:    "assets/images/Partner-Templates-1x1-FRESH-pack-balancing-1.jpg",
-      text_de: "Dein Körper gleicht ständig Säuren aus: durch Stress, Sport, Kaffee, Zucker oder Alkohol. Wenn dieser Säure-Basen-Haushalt kippt, kostet das Energie, und das merkt man an Müdigkeit oder einem trägen Körpergefühl.<br><br>Zink aus Buchweizenkeimen trägt zu einem normalen Säure-Basen-Stoffwechsel bei. Dazu basenbildende Pflanzen wie Spinat, Brokkoli und Luzernengras, die Algen Spirulina und Chlorella, Magnesium für die Elektrolyt-Balance, B-Vitamine und Niacin für den Energiestoffwechsel sowie Vitamin C aus Acerola für normale Kollagenbildung.<br><br>Der Geschmack ist mild-grün, einfach mit Wasser mixen oder in Joghurt, Smoothie oder aufs Butterbrot rühren.<br><br>d-gest hilft akut, wenn eine Mahlzeit schwerer war als geplant. Das balancing ist die tägliche Grundversorgung, die im Hintergrund läuft. Zusammen ein solides Setup für einen Sommer, in dem man auch mal richtig genießt.",
-      text_en: "Your body is constantly neutralising acids: from stress, exercise, coffee, sugar or alcohol. When the acid-base balance tips, it costs energy, and you notice it as tiredness or a sluggish feeling.<br><br>Zinc from buckwheat sprouts contributes to normal acid-base metabolism. Plus alkaline-forming plants like spinach, broccoli and alfalfa grass, the algae spirulina and chlorella, magnesium for electrolyte balance, B vitamins and niacin for energy metabolism, and vitamin C from acerola for normal collagen formation.<br><br>The taste is mild and green, simply mix with water or stir into yoghurt, a smoothie or spread on bread.<br><br>d-gest helps acutely when a meal was heavier than planned. The balancing is the daily baseline support running in the background. Together a solid setup for a summer where you actually enjoy yourself.",
+      name:        "FRESH cream deodorant",
+      emoji:       "🌿",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-deodorant/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-deodorant/?lang=en",
+      image_de:    null,
+      image_en:    null,
+      text_de: "Ein Deo ohne Aluminiumsalze, das trotzdem zuverlässig funktioniert. Reiskleiewasser, Orangenfruchtwasser und Natron neutralisieren Gerüche auf natürliche Weise, Zinkoxid und Walnussextrakt wirken zusätzlich antibakteriell.<br><br>Was es von anderen unterscheidet: Es pflegt die Achselhaut, statt sie auszutrocknen. Sheabutter, Haferöl, Sesamöl und Granatapfelsamenöl beruhigen und stärken die Hautbarriere. Deshalb brennt es auch direkt nach der Rasur nicht, was bei vielen Deos mit Alkohol anders ist.<br><br>Der Duft ist dezent und unisex, funktioniert also für alle im Haushalt.<br><br>Produkte, die man täglich benutzt, sind genau die, bei denen es sich am meisten lohnt, gut hinzuschauen, was drinsteckt.",
+      text_en: "A deodorant without aluminium salts that still works reliably. Rice bran water, orange fruit water and baking soda neutralise odours naturally, zinc oxide and walnut extract add antibacterial support.<br><br>What sets it apart: it nourishes the skin under the arms rather than drying it out. Shea butter, oat oil, sesame oil and pomegranate seed oil soothe and strengthen the skin barrier. So it does not sting immediately after shaving, which is often the case with alcohol-based deodorants.<br><br>The scent is subtle and unisex, so it works for everyone in the household.<br><br>Daily-use products are exactly where it pays most to look carefully at what's inside.",
     },
   ],
 
