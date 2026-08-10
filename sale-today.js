@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-09",
+  date:       "2026-08-10",
   date_end:   null,
 
-  product_de: "FRESH illuminating enzyme mask + FRESH cream deodorant",
-  product_en: "FRESH illuminating enzyme mask + FRESH cream deodorant",
+  product_de: "RINGANAbty + CAPS beauty & hair",
+  product_en: "RINGANAbty + CAPS beauty & hair",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "illuminating enzyme mask · cream deodorant · sanft & wirksam · je -20%",
-  desc_en: "illuminating enzyme mask · cream deodorant · gentle & effective · each -20%",
+  desc_de: "RINGANAbty · CAPS beauty & hair · veganer Kollagen-Boost · je -20%",
+  desc_en: "RINGANAbty · CAPS beauty & hair · vegan collagen boost · each -20%",
 
-  tagline_de: "Sanft und wirksam ist kein Widerspruch. Zwei Produkte, die zeigen, wie gut Naturkosmetik wirklich funktioniert.",
-  tagline_en: "Gentle and effective are not opposites. Two products that show how well natural cosmetics really work.",
+  tagline_de: "Das Fundament und der Extra-Schub. Zwei Produkte, die zusammen stärker wirken als einzeln.",
+  tagline_en: "The foundation and the extra boost. Two products that work better together than alone.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zur%20enzyme%20mask%20und%20dem%20cream%20deodorant%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20enzyme%20mask%20and%20cream%20deodorant%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20RINGANAbty%20und%20CAPS%20beauty%20%26%20hair%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAbty%20and%20CAPS%20beauty%20%26%20hair%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "FRESH illuminating enzyme mask",
-      emoji:       "🍍",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-illuminating-enzyme-mask/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-illuminating-enzyme-mask/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-enzyme-mask.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-enzyme-mask.jpg",
-      text_de: "Wusstest du, dass Fruchtenzyme aus Papaya, Ananas und Kiwi die Haut ganz ohne Reibung peelen? Sie lösen gezielt die Verbindungen zwischen abgestorbenen Hautzellen, statt sie mechanisch abzurubbeln. Deshalb gibt es keine Mikroverletzungen, und selbst empfindliche Haut kommt gut damit klar.<br><br>Genau diese Fruchtenzyme stecken in der FRESH illuminating enzyme mask, kombiniert mit PHA (Gluconolacton), einer besonders milden Säure, die die Zellerneuerung unterstützt und gleichzeitig Feuchtigkeit spendet. Dazu Kaolin für ein verfeinertes Hautbild und Rosmarin- und Koriander-Extrakt, die beruhigen.<br><br>Das Clevere: Die Textur ist rein ölig und wird erst bei Kontakt mit Wasser aktiviert. Deshalb kein Spannungsgefühl danach, sondern gepflegte, glatte Haut.<br><br>Anwendung: 1-2x pro Woche abends auf befeuchtete Haut auftragen, 10 Sekunden einmassieren, 2-5 Minuten einwirken lassen, bei empfindlicher Haut nur 1 Minute. Das leichte Prickeln ist normal, das ist der Fruchtcocktail bei der Arbeit. Danach Serum und ADDS auftragen, die Haut nimmt Wirkstoffe jetzt besonders gut auf.",
-      text_en: "Did you know that fruit enzymes from papaya, pineapple and kiwi exfoliate the skin without any friction? They dissolve the bonds between dead skin cells instead of scrubbing them away mechanically. No micro-injuries, and even sensitive skin handles it well.<br><br>These exact fruit enzymes are in the FRESH illuminating enzyme mask, combined with PHA (gluconolactone), a particularly mild acid that supports cell renewal while also providing moisture. Plus kaolin for a refined complexion and rosemary and coriander extracts for a soothing effect.<br><br>The clever bit: the texture is purely oil-based and only activates on contact with water. So no tight feeling afterwards, just smooth, cared-for skin.<br><br>How to use: 1-2 times a week in the evening on damp skin, massage for 10 seconds, leave for 2-5 minutes (1 minute for sensitive skin). The slight tingling is normal, that's the fruit cocktail doing its job. Apply serum and ADDS afterwards, skin absorbs actives especially well at this point.",
+      name:        "RINGANAbty",
+      emoji:       "🍊",
+      shop_url_de: "https://priller.ringana.com/produkt/ringana-bty/",
+      shop_url_en: "https://priller.ringana.com/produkt/ringana-bty/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS-RINGANAbty.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS-RINGANAbty.jpg",
+      text_de: "Wusstest du, dass klassisches Kollagen fast immer aus Tierteilen gewonnen wird? Aus Knochen, Fischhaut oder Fischschuppen. Und wenn du fertiges Kollagen trinkst, bekommt dein Körper bereits zerlegte Bruchstücke, die er erst wieder zusammensetzen muss. Es gibt aber einen anderen Weg: Man gibt dem Körper genau die Bausteine, die er braucht, damit er selbst produziert.<br><br>Genau das macht VeCollal®, ein rein pflanzlicher Komplex aus bioaktiven Aminosäuren, der die Struktur von Kollagen Typ 1 nachbildet, dem Hauptbestandteil unserer Haut. Zusammen mit Vitamin C, das zu einer normalen Kollagenbildung beiträgt.<br><br>Der RINGANAbty Beauty-Drink schmeckt nach Mandarine, Orange und Sanddorn. Was sonst noch drinsteckt: GreenIuronic®, vegane Hyaluronsäure aus dem Schneepilz, die Feuchtigkeit in der Haut speichert. Omegia®, pures Sanddornöl, reich an Omega 7, das die Hautbarriere stärkt. Keranat®, ein Hirse- und Weizenextrakt, der in Studien auf Haarwachstum untersucht wurde. Und präbiotische Ballaststoffe aus der Guarbohne, weil schöne Haut tatsächlich im Darm anfängt.<br><br>Ohne tierisches Kollagen, ohne Süßstoffe. Einfach mit Wasser mischen.",
+      text_en: "Did you know that classic collagen is almost always derived from animal parts? From bones, fish skin or fish scales. And when you drink ready-made collagen, your body receives pre-broken fragments it then has to reassemble. But there is another approach: give the body exactly the building blocks it needs to produce collagen itself.<br><br>That is what VeCollal® does, a purely plant-based complex of bioactive amino acids that mirrors the structure of collagen type 1, the main component of our skin. Combined with vitamin C, which contributes to normal collagen formation.<br><br>The RINGANAbty beauty drink tastes of mandarin, orange and sea buckthorn. What else is inside: GreenIuronic®, vegan hyaluronic acid from snow mushroom that stores moisture in the skin. Omegia®, pure sea buckthorn oil rich in omega 7 to strengthen the skin barrier. Keranat®, a millet and wheat extract studied for its effects on hair growth. And prebiotic fibres from guar bean, because beautiful skin really does start in the gut.<br><br>No animal collagen, no sweeteners. Simply mix with water.",
     },
     {
-      name:        "FRESH cream deodorant",
-      emoji:       "🌿",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-deodorant/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-deodorant/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FERSH-deodorant.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-deodorant.jpg",
-      text_de: "Ein Deo ohne Aluminiumsalze, das trotzdem zuverlässig funktioniert. Reiskleiewasser, Orangenfruchtwasser und Natron neutralisieren Gerüche auf natürliche Weise, Zinkoxid und Walnussextrakt wirken zusätzlich antibakteriell.<br><br>Was es von anderen unterscheidet: Es pflegt die Achselhaut, statt sie auszutrocknen. Sheabutter, Haferöl, Sesamöl und Granatapfelsamenöl beruhigen und stärken die Hautbarriere. Deshalb brennt es auch direkt nach der Rasur nicht, was bei vielen Deos mit Alkohol anders ist.<br><br>Der Duft ist dezent und unisex, funktioniert also für alle im Haushalt.<br><br>Produkte, die man täglich benutzt, sind genau die, bei denen es sich am meisten lohnt, gut hinzuschauen, was drinsteckt.",
-      text_en: "A deodorant without aluminium salts that still works reliably. Rice bran water, orange fruit water and baking soda neutralise odours naturally, zinc oxide and walnut extract add antibacterial support.<br><br>What sets it apart: it nourishes the skin under the arms rather than drying it out. Shea butter, oat oil, sesame oil and pomegranate seed oil soothe and strengthen the skin barrier. So it does not sting immediately after shaving, which is often the case with alcohol-based deodorants.<br><br>The scent is subtle and unisex, so it works for everyone in the household.<br><br>Daily-use products are exactly where it pays most to look carefully at what's inside.",
+      name:        "CAPS beauty & hair",
+      emoji:       "😎",
+      shop_url_de: "https://priller.ringana.com/produkt/caps-beauty-hair/",
+      shop_url_en: "https://priller.ringana.com/produkt/caps-beauty-hair/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-beauty.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-beauty.jpg",
+      text_de: "Die tägliche Basisversorgung für Haut, Haare, Nägel und Bindegewebe. Hyaluronsäure polstert von innen auf, Weizenlipid-Extrakt verbessert die Hautelastizität, Ajuga reptans und Apfelfruchtextrakt sind auf Haarfülle ausgerichtet, SOD aus Melone schützt die Zellen.<br><br>Dazu Mineralstoffe aus Buchweizenkeimen mit klar definierten, zugelassenen Wirkungen: Zink trägt zur Erhaltung normaler Haut, Haare und Nägel bei. Mangan zur normalen Bindegewebsbildung. Kupfer zur Erhaltung von normalem Bindegewebe. Und Vitamin C aus Acerola trägt zu einer normalen Kollagenbildung bei.<br><br>Warum die Kombi mit RINGANAbty so stark ist: Die CAPS sind das Fundament, die tägliche Grundversorgung. Der bty Drink legt mit VeCollal®, veganer Hyaluronsäure und Omega 7 gezielt oben drauf. Das eine sorgt dafür, dass die Basis stimmt, das andere für den Extra-Schub.<br><br>Beides wirkt nicht über Nacht, das ist ehrlich gesagt auch der Punkt. Kollagenbildung und Haarwachstum brauchen Zeit, dafür sieht man nach ein paar Monaten echte Veränderung statt kurzfristigem Effekt.",
+      text_en: "The daily foundation for skin, hair, nails and connective tissue. Hyaluronic acid plumps from within, wheat lipid extract improves skin elasticity, Ajuga reptans and apple fruit extract target hair fullness, SOD from melon protects the cells.<br><br>Plus minerals from buckwheat sprouts with clearly defined, approved effects: zinc contributes to the maintenance of normal skin, hair and nails. Manganese to normal connective tissue formation. Copper to the maintenance of normal connective tissue. And vitamin C from acerola contributes to normal collagen formation.<br><br>Why the combination with RINGANAbty is so powerful: the CAPS are the foundation, the daily baseline. The bty drink adds VeCollal®, vegan hyaluronic acid and omega 7 on top. One makes sure the base is right, the other delivers the extra boost.<br><br>Neither works overnight, and that is honestly the point. Collagen formation and hair growth take time, but after a few months you see real change rather than a short-lived effect.",
     },
   ],
 
