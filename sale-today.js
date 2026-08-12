@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-10",
+  date:       "2026-08-11",
   date_end:   null,
 
-  product_de: "RINGANAbty + CAPS beauty & hair",
-  product_en: "RINGANAbty + CAPS beauty & hair",
+  product_de: "FRESH toner pure + FRESH cream medium",
+  product_en: "FRESH toner pure + FRESH cream medium",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "RINGANAbty · CAPS beauty & hair · veganer Kollagen-Boost · je -20%",
-  desc_en: "RINGANAbty · CAPS beauty & hair · vegan collagen boost · each -20%",
+  desc_de: "toner pure · cream medium · für klare, ausgewogene Haut · je -20%",
+  desc_en: "toner pure · cream medium · for clear, balanced skin · each -20%",
 
-  tagline_de: "Das Fundament und der Extra-Schub. Zwei Produkte, die zusammen stärker wirken als einzeln.",
-  tagline_en: "The foundation and the extra boost. Two products that work better together than alone.",
+  tagline_de: "Erst klären, dann versorgen. Zwei Produkte, die den Kreislauf aus Trockenheit und Talg durchbrechen.",
+  tagline_en: "First clarify, then nourish. Two products that break the cycle of dryness and excess oil.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20RINGANAbty%20und%20CAPS%20beauty%20%26%20hair%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAbty%20and%20CAPS%20beauty%20%26%20hair%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20toner%20pure%20und%20cream%20medium%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20toner%20pure%20and%20cream%20medium%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "RINGANAbty",
-      emoji:       "🍊",
-      shop_url_de: "https://priller.ringana.com/produkt/ringana-bty/",
-      shop_url_en: "https://priller.ringana.com/produkt/ringana-bty/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS-RINGANAbty.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS-RINGANAbty.jpg",
-      text_de: "Wusstest du, dass klassisches Kollagen fast immer aus Tierteilen gewonnen wird? Aus Knochen, Fischhaut oder Fischschuppen. Und wenn du fertiges Kollagen trinkst, bekommt dein Körper bereits zerlegte Bruchstücke, die er erst wieder zusammensetzen muss. Es gibt aber einen anderen Weg: Man gibt dem Körper genau die Bausteine, die er braucht, damit er selbst produziert.<br><br>Genau das macht VeCollal®, ein rein pflanzlicher Komplex aus bioaktiven Aminosäuren, der die Struktur von Kollagen Typ 1 nachbildet, dem Hauptbestandteil unserer Haut. Zusammen mit Vitamin C, das zu einer normalen Kollagenbildung beiträgt.<br><br>Der RINGANAbty Beauty-Drink schmeckt nach Mandarine, Orange und Sanddorn. Was sonst noch drinsteckt: GreenIuronic®, vegane Hyaluronsäure aus dem Schneepilz, die Feuchtigkeit in der Haut speichert. Omegia®, pures Sanddornöl, reich an Omega 7, das die Hautbarriere stärkt. Keranat®, ein Hirse- und Weizenextrakt, der in Studien auf Haarwachstum untersucht wurde. Und präbiotische Ballaststoffe aus der Guarbohne, weil schöne Haut tatsächlich im Darm anfängt.<br><br>Ohne tierisches Kollagen, ohne Süßstoffe. Einfach mit Wasser mischen.",
-      text_en: "Did you know that classic collagen is almost always derived from animal parts? From bones, fish skin or fish scales. And when you drink ready-made collagen, your body receives pre-broken fragments it then has to reassemble. But there is another approach: give the body exactly the building blocks it needs to produce collagen itself.<br><br>That is what VeCollal® does, a purely plant-based complex of bioactive amino acids that mirrors the structure of collagen type 1, the main component of our skin. Combined with vitamin C, which contributes to normal collagen formation.<br><br>The RINGANAbty beauty drink tastes of mandarin, orange and sea buckthorn. What else is inside: GreenIuronic®, vegan hyaluronic acid from snow mushroom that stores moisture in the skin. Omegia®, pure sea buckthorn oil rich in omega 7 to strengthen the skin barrier. Keranat®, a millet and wheat extract studied for its effects on hair growth. And prebiotic fibres from guar bean, because beautiful skin really does start in the gut.<br><br>No animal collagen, no sweeteners. Simply mix with water.",
+      name:        "FRESH toner pure",
+      emoji:       "🫧",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-toner-pure/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-toner-pure/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-toner-pure.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-toner-pure.jpg",
+      text_de: "Ein Missverständnis, das ich oft höre: Wer unreine Haut hat, meidet Feuchtigkeit. Bloß nichts Reichhaltiges, sonst kommen die Pickel. Dabei ist oft das Gegenteil richtig. Wird der Haut Feuchtigkeit entzogen, etwa durch austrocknende Produkte, produziert sie umso mehr Talg, um das auszugleichen. Ein Kreislauf, aus dem man schwer wieder rauskommt.<br><br>Der FRESH toner pure ist der Schritt direkt nach der Reinigung, für Mischhaut, ölige oder zu Unreinheiten neigende Haut. Alkoholfrei, was hier entscheidend ist, denn Alkohol trocknet aus und verstärkt genau das Problem.<br><br>Drin stecken 1% Extrakt aus Nonibaum-Stammzellen, der die Talgproduktion reduziert und die Poren verkleinert, sowie 1% Zink PCA, das den Talg reguliert und gleichzeitig Feuchtigkeit in der Haut hält. Dazu Hamamelis, Zypresse, Schachtelhalm und Thymian, Katzenminzewasser und Aloe Vera Frischpflanzensaft.<br><br>Und ein Detail, das RINGANA so selten woanders macht: 2% Neurocosmetics-Komplex aus Pilz- und Tee-Extrakten sowie Hefe-Ferment, in wissenschaftlich untersuchter Konzentration. Er stärkt die Widerstandskraft der Haut und wirkt zusätzlich stimmungsverbessernd.<br><br>Vor Gebrauch schütteln, aufsprühen oder mit einem Wattepad auftragen. Nicht abspülen.",
+      text_en: "A misconception I hear often: if you have blemish-prone skin, avoid moisture. Nothing rich, or the spots will get worse. But often the opposite is true. When the skin is stripped of moisture, for example by drying products, it produces even more sebum to compensate. A cycle that is hard to break out of.<br><br>The FRESH toner pure is the step right after cleansing, for combination, oily or blemish-prone skin. Alcohol-free, which matters here, because alcohol dries the skin and makes exactly this problem worse.<br><br>Inside: 1% extract from noni tree stem cells, which reduces sebum production and minimises pores, plus 1% zinc PCA, which regulates sebum while retaining moisture in the skin. Plus witch hazel, cypress, horsetail and thyme, catnip water and fresh plant aloe vera juice.<br><br>And a detail that is rare outside RINGANA: a 2% neurocosmetics complex from mushroom and tea extracts and yeast ferment, at scientifically studied concentrations. It strengthens skin resilience and has an additional mood-improving effect.<br><br>Shake before use, spray on or apply with a cotton pad. Do not rinse off.",
     },
     {
-      name:        "CAPS beauty & hair",
-      emoji:       "😎",
-      shop_url_de: "https://priller.ringana.com/produkt/caps-beauty-hair/",
-      shop_url_en: "https://priller.ringana.com/produkt/caps-beauty-hair/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-beauty.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-beauty.jpg",
-      text_de: "Die tägliche Basisversorgung für Haut, Haare, Nägel und Bindegewebe. Hyaluronsäure polstert von innen auf, Weizenlipid-Extrakt verbessert die Hautelastizität, Ajuga reptans und Apfelfruchtextrakt sind auf Haarfülle ausgerichtet, SOD aus Melone schützt die Zellen.<br><br>Dazu Mineralstoffe aus Buchweizenkeimen mit klar definierten, zugelassenen Wirkungen: Zink trägt zur Erhaltung normaler Haut, Haare und Nägel bei. Mangan zur normalen Bindegewebsbildung. Kupfer zur Erhaltung von normalem Bindegewebe. Und Vitamin C aus Acerola trägt zu einer normalen Kollagenbildung bei.<br><br>Warum die Kombi mit RINGANAbty so stark ist: Die CAPS sind das Fundament, die tägliche Grundversorgung. Der bty Drink legt mit VeCollal®, veganer Hyaluronsäure und Omega 7 gezielt oben drauf. Das eine sorgt dafür, dass die Basis stimmt, das andere für den Extra-Schub.<br><br>Beides wirkt nicht über Nacht, das ist ehrlich gesagt auch der Punkt. Kollagenbildung und Haarwachstum brauchen Zeit, dafür sieht man nach ein paar Monaten echte Veränderung statt kurzfristigem Effekt.",
-      text_en: "The daily foundation for skin, hair, nails and connective tissue. Hyaluronic acid plumps from within, wheat lipid extract improves skin elasticity, Ajuga reptans and apple fruit extract target hair fullness, SOD from melon protects the cells.<br><br>Plus minerals from buckwheat sprouts with clearly defined, approved effects: zinc contributes to the maintenance of normal skin, hair and nails. Manganese to normal connective tissue formation. Copper to the maintenance of normal connective tissue. And vitamin C from acerola contributes to normal collagen formation.<br><br>Why the combination with RINGANAbty is so powerful: the CAPS are the foundation, the daily baseline. The bty drink adds VeCollal®, vegan hyaluronic acid and omega 7 on top. One makes sure the base is right, the other delivers the extra boost.<br><br>Neither works overnight, and that is honestly the point. Collagen formation and hair growth take time, but after a few months you see real change rather than a short-lived effect.",
+      name:        "FRESH cream medium",
+      emoji:       "🤍",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-medium/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-medium/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-cream-medium.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-cream-medium.jpg",
+      text_de: "Die Creme nach dem Toner, die versorgt, ohne zu beschweren. Für normale bis leicht trockene und für gestresste Haut.<br><br>Spannend sind hier die Phytoceramide. Das sind pflanzliche Zwillinge unserer hauteigenen Ceramide: Sie ahmen die Struktur der Hautlipide nach und bauen sich deshalb gut in die Hautbarriere ein, wo Lipide fehlen oder geschwächt sind. Weniger Feuchtigkeitsverlust, mehr Spannkraft, eine Haut, die sich schneller beruhigt.<br><br>Dazu 2% verkapselter Ceramid-Komplex, 10% NMF für die natürliche Feuchtigkeitsspeicherung, acht Pflanzenöle wie Baobab, Squalan und Inka-Nuss sowie Cupuacu- und Sheabutter.<br><br>Erst der Toner, der klärt und reguliert. Dann die Creme, die versorgt und stabilisiert. So bekommt die Haut Feuchtigkeit, ohne sich beschwert zu fühlen, und muss nicht gegensteuern.",
+      text_en: "The cream after the toner, nourishing without weighing the skin down. For normal to slightly dry and stressed skin.<br><br>What stands out here are the phytoceramides. These are plant-based twins of our skin's own ceramides: they mirror the structure of skin lipids and therefore integrate well into the skin barrier where lipids are missing or weakened. Less moisture loss, more firmness, skin that calms down faster.<br><br>Plus a 2% encapsulated ceramide complex, 10% NMF for natural moisture retention, eight plant oils including baobab, squalane and sacha inchi, plus cupuaçu and shea butter.<br><br>First the toner, which clarifies and regulates. Then the cream, which nourishes and stabilises. The skin receives moisture without feeling weighed down, so it has no reason to overcompensate.",
     },
   ],
 
