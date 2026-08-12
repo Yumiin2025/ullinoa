@@ -546,6 +546,9 @@ body.edit-mode #waFloat{display:none}
 .ss-btn:hover{background:rgba(255,255,255,.36)}
 .ss-wa{font-size:.68rem;color:rgba(255,255,255,.78);text-decoration:none;white-space:nowrap;transition:color .15s}
 .ss-wa:hover{color:#fff}
+.ss-code{font-size:.68rem;color:rgba(255,255,255,.9);white-space:nowrap;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:100px;padding:.2rem .7rem;letter-spacing:.02em}
+.ss-code strong{font-weight:700;color:#fff}
+@media(max-width:499px){.ss-code{display:none}}
 @media(max-width:599px){.ss-wa{display:none}}
 /* push nav + hero down to make room for strip */
 .nav{top:var(--strip-h)!important}
@@ -581,6 +584,8 @@ body.edit-mode #waFloat{display:none}
       <strong class="ss-product" id="ss-name">FRESH toner pure + FRESH cream medium</strong>
     </div>
     <div class="ss-right">
+      <span class="ss-code de-only">Code: <strong>PRILLER20</strong></span>
+      <span class="ss-code en-only">Code: <strong>PRILLER20</strong></span>
       <a id="ss-btn-de" href="https://priller.ringana.com/angebote/" target="_blank" rel="noopener" class="ss-btn de-only" onclick="gtag('event','sale_strip_click',{'label':'shop_de','product':document.getElementById('ss-name')?.textContent})">Zum Shop →</a>
       <a id="ss-btn-en" href="https://priller.ringana.com/angebote/" target="_blank" rel="noopener" class="ss-btn en-only" onclick="gtag('event','sale_strip_click',{'label':'shop_en','product':document.getElementById('ss-name')?.textContent})">Shop now →</a>
       <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20toner%20pure%20und%20cream%20medium%20im%20Summer%20Sale%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="ss-wa de-only" onclick="gtag('event','sale_strip_click',{'label':'whatsapp_de','product':document.getElementById('ss-name')?.textContent})">Fragen? WhatsApp</a>
