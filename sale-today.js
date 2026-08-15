@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-13",
-  date_end:   null,
+  date:       "2026-08-14",
+  date_end:   "2026-08-22",
 
-  product_de: "FRESH repair shampoo + hair treatment + CAPS hydro",
-  product_en: "FRESH repair shampoo + hair treatment + CAPS hydro",
+  product_de: "FRESH moisturiser for men + FRESH stay fresh",
+  product_en: "FRESH moisturiser for men + FRESH stay fresh",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "repair shampoo · hair treatment · CAPS hydro · je -20% bis Mitternacht",
-  desc_en: "repair shampoo · hair treatment · CAPS hydro · each -20% until midnight",
+  desc_de: "moisturiser for men · stay fresh · Naturkosmetik für jeden · je -20%",
+  desc_en: "moisturiser for men · stay fresh · natural skincare for everyone · each -20%",
 
-  tagline_de: "Starkes Haar fängt an der Kopfhaut an. Drei Produkte, die dort ansetzen.",
-  tagline_en: "Strong hair starts at the scalp. Three products that work right there.",
+  tagline_de: "Haut ist Haut. Sie unterscheidet nicht danach, wer sie trägt.",
+  tagline_en: "Skin is skin. It doesn't distinguish by who wears it.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20Haar-Sale%20%E2%80%94%20shampoo%2C%20treatment%20und%20CAPS%20hydro%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20hair%20sale%20%E2%80%94%20shampoo%2C%20treatment%20and%20CAPS%20hydro%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20moisturiser%20for%20men%20und%20stay%20fresh%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20moisturiser%20for%20men%20and%20stay%20fresh%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,34 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "FRESH repair shampoo",
-      emoji:       "🧴",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-repair-shampoo/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-repair-shampoo/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-shampoo-repair.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-shampoo-repair.jpg",
-      text_de: "Haare sind ein Thema, bei dem viele richtig viel Geld ausgeben und trotzdem nicht wissen, warum es nicht besser wird. Der Grund liegt oft nicht in den Längen, sondern an der Wurzel: Ist die Kopfhaut aus dem Gleichgewicht, durch Sulfate, zu häufiges Waschen, Stylingrückstände oder Hitze, kann das Haar gar nicht kräftig nachwachsen.<br><br>Das FRESH repair shampoo ist für gefärbtes, trockenes oder strapaziertes Haar. Drin steckt ein Komplex aus fünf Pilzextrakten (Reishi, Shiitake, Chaga, Eichhase und Schmetterlings-Tramete), der die Kopfhaut beruhigt und die Haarstruktur stärkt. Dazu fermentiertes Reiswasser, reich an Aminosäuren und Vitaminen, für Glanz und weniger Haarbruch. Vegane Proteine und Arginin erhalten bei coloriertem Haar die Farbintensität. Und der NBC7-Komplex unterstützt gezielt das Mikrobiom der Kopfhaut, also genau den Punkt, den die meisten Shampoos gar nicht berücksichtigen.<br><br>Tipp: sparsam verwenden, die Formel ist sehr konzentriert.",
-      text_en: "Hair is a topic where many people spend a lot of money and still don't know why it isn't getting better. The reason is often not in the lengths but at the root: if the scalp is out of balance, through sulphates, washing too often, styling residue or heat, the hair simply cannot grow back strong.<br><br>The FRESH repair shampoo is for coloured, dry or stressed hair. Inside: a complex of five mushroom extracts (reishi, shiitake, chaga, lion's mane and turkey tail) that soothe the scalp and strengthen hair structure. Plus fermented rice water, rich in amino acids and vitamins, for shine and less breakage. Vegan proteins and arginine maintain colour intensity in coloured hair. And the NBC7 complex specifically supports the scalp microbiome, exactly the thing most shampoos don't address at all.<br><br>Tip: use sparingly, the formula is very concentrated.",
+      name:        "FRESH moisturiser for men",
+      emoji:       "🙌",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-moisturiser-for-men/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-moisturiser-for-men/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-moisturizer-men.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-moisturiser-men.jpg",
+      text_de: "\"Ich brauch sowas nicht.\" Diesen Satz höre ich zuverlässig von jedem Mann, dem ich das Produkt in die Hand drücke. Und ungefähr genauso zuverlässig kommt zwei Wochen später die Frage, wo man das nachbestellt.<br><br>Denn Haut ist Haut. Sie unterscheidet nicht danach, wer sie trägt, und sie freut sich über Pflege genauso. Der Unterschied ist nur, dass Männern jahrzehntelang erzählt wurde, das sei nichts für sie.<br><br>Warum eine eigene Creme hier tatsächlich Sinn macht: Männerhaut ist im Schnitt bis zu 20% dicker als die von Frauen und produziert deutlich mehr Talg, weil die Talgdrüsen größer und aktiver sind. Klingt nach robust, heißt in der Praxis aber: schneller unrein, gleichzeitig oft gereizt durch die Rasur. Beim Rasieren wird nicht nur Haar entfernt, sondern immer auch die oberste Hautschicht mit abgetragen. Eine zu reichhaltige Creme ist deshalb meist die falsche Wahl.<br><br>Was drinsteckt: Kaktusfeigenöl, Johannisbeersamenöl und Ballonrebenextrakt beruhigen nach der Rasur. Zink-PCA reguliert die Talgproduktion und hilft bei Unreinheiten. Koffein und Ingwer sorgen für einen wachen Look. Maritime Kiefernrinde als starkes Antioxidans, weißer Andorn als Schutz vor Umweltbelastungen sowie Hyaluronsäure und Tigergras für Feuchtigkeit und widerstandsfähige Haut.<br><br>Und der praktische Punkt: Es ist ein Schritt. Kein Serum, kein Toner, keine Routine mit fünf Produkten. Genau deshalb funktioniert es auch bei Leuten, die sich für Pflege eigentlich nicht interessieren.",
+      text_en: "\"I don't need that kind of thing.\" I hear this reliably from every man I hand the product to. And just as reliably, the question comes two weeks later: where do you order it again?<br><br>Because skin is skin. It does not distinguish by who wears it, and it responds to care just the same. The only difference is that men have been told for decades that this was not for them.<br><br>Why a dedicated cream actually makes sense here: men's skin is on average up to 20% thicker than women's and produces significantly more sebum, because the sebaceous glands are larger and more active. Sounds robust, but in practice it means: blemish-prone more quickly, and often irritated by shaving. Shaving doesn't just remove hair, it also takes off the top layer of skin every time. A too-rich cream is usually the wrong choice for this reason.<br><br>What's inside: prickly pear oil, blackcurrant seed oil and balloon vine extract soothe after shaving. Zinc PCA regulates sebum production and helps with blemishes. Caffeine and ginger bring an alert look, especially noticeable after short nights or exercise. Maritime pine bark as a strong antioxidant, white horehound as protection against environmental stress, plus hyaluronic acid and centella for moisture and resilient skin.<br><br>And the practical point: it is one step. No serum, no toner, no five-product routine. Which is exactly why it works for people who are not really interested in skincare.",
     },
     {
-      name:        "FRESH hair treatment",
-      emoji:       "🤩",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-hair-treatment/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-hair-treatment/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-hair-treatment.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-hair-treatment.jpg",
-      text_de: "Das flexibelste Produkt in meinem Bad, weil es drei Dinge kann: Conditioner unter der Dusche, Leave-in ins handtuchtrockene Haar oder einfach in die trockenen Spitzen zwischendurch.<br><br>Sechs Pilzextrakte, fermentiertes Reiswasser und Erbsenprotein, das ähnlich wie pflanzliches Keratin wirkt. Bambus und Schmetterlings-Tramete schützen vor Stylinghitze, Radieschenwurzelextrakt bringt die Kopfhaut ins Gleichgewicht.",
-      text_en: "The most versatile product in my bathroom, because it does three things: conditioner in the shower, leave-in on towel-dry hair, or simply worked into dry ends in between washes.<br><br>Six mushroom extracts, fermented rice water and pea protein, which works similarly to plant-based keratin. Bamboo and turkey tail protect against styling heat, radish root extract rebalances the scalp.",
-    },
-    {
-      name:        "CAPS hydro",
-      emoji:       "💧",
-      shop_url_de: "https://priller.ringana.com/produkt/caps-hydro/",
-      shop_url_en: "https://priller.ringana.com/produkt/caps-hydro/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-hydro.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-hydro.jpg",
-      text_de: "Weil bei Haaren alles zusammenhängt: Sommer heißt oft zu wenig trinken. Das merkt der Körper an mehreren Stellen, unter anderem im Harntrakt, ein Thema, das etwa jede dritte Frau kennt.<br><br>Niacin aus Buchweizenkeim-Pulver trägt zur Erhaltung normaler Schleimhäute bei, Vitamin D3 aus Algen zu einer normalen Funktion des Immunsystems. Dazu Hibiskusblütenextrakt und Cranberryextrakt mit Proanthocyanidinen. Viele nehmen es als Kur über drei Monate.",
-      text_en: "Because with hair, everything is connected: summer often means not drinking enough. The body notices this in several places, including the urinary tract, something around one in three women knows well.<br><br>Niacin from buckwheat germ powder contributes to the maintenance of normal mucous membranes, vitamin D3 from algae to normal immune system function. Plus hibiscus flower extract and cranberry extract with proanthocyanidins. Many people take it as a three-month course.",
+      name:        "FRESH stay fresh",
+      emoji:       "🫧",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-stay-fresh/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-stay-fresh/?lang=en",
+      image_de:    "assets/images/Partner-Templates-1x1-FRESH-stay-fresh-1.jpg",
+      image_en:    "assets/images/Partner-Templates-1x1-FRESH-stay-fresh-1.jpg",
+      text_de: "Ein mikrobiom-freundlicher Reinigungsschaum für sensible Zonen: pflegend, sanft und ideal für die Hautflora im Intimbereich. Und praktischer als man denkt: Mit einem Pumpstoß verwandelst du jedes Toilettenpapier in feuchtes Toilettenpapier, ganz ohne Feuchttücher.<br><br>Warum das besser ist: Feuchttücher verursachen unnötigen Abfall. Mit stay fresh nutzt du einfach dein vorhandenes Toilettenpapier und reduzierst damit Einwegprodukte im Badezimmer. Nachhaltiger und sanfter zur Haut zugleich.<br><br>Was drinsteckt: Ectoin baut eine feuchte Schutzschicht auf und macht sensible Zonen weniger empfindlich. Kirschknospen-Extrakt pflegt und spendet Feuchtigkeit. Kugelblumen-Extrakt beruhigt gereizte Haut. Und der NBC7-Komplex schützt die Haut mit sieben prä- und postbiotischen Inhaltsstoffen für eine ausgeglichene Hautflora.<br><br>Das stay fresh ist bis 22.08. mit -20% dabei.",
+      text_en: "A microbiome-friendly cleansing foam for sensitive areas: caring, gentle and ideal for the skin flora in the intimate zone. And more practical than it sounds: one pump turns any toilet paper into wet wipes, without any wet wipes.<br><br>Why this is better: wet wipes create unnecessary waste. With stay fresh you simply use your existing toilet paper and reduce single-use products in the bathroom. More sustainable and gentler on the skin at the same time.<br><br>What's inside: ectoin builds a moist protective layer and makes sensitive areas less reactive. Cherry blossom bud extract nourishes and provides moisture. Globe amaranth extract soothes irritated skin. And the NBC7 complex protects the skin with seven pre- and postbiotic ingredients for a balanced skin flora.<br><br>Stay fresh is in the sale at -20% until 22 August.",
     },
   ],
 
