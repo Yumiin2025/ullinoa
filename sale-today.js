@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-14",
-  date_end:   "2026-08-22",
+  date:       "2026-08-15",
+  date_end:   null,
 
-  product_de: "FRESH moisturiser for men + FRESH stay fresh",
-  product_en: "FRESH moisturiser for men + FRESH stay fresh",
+  product_de: "FRESH body wash + CAPS fem",
+  product_en: "FRESH body wash + CAPS fem",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "moisturiser for men · stay fresh · Naturkosmetik für jeden · je -20%",
-  desc_en: "moisturiser for men · stay fresh · natural skincare for everyone · each -20%",
+  desc_de: "FRESH body wash · CAPS fem · Mikrobiom & Frauengesundheit · je -20%",
+  desc_en: "FRESH body wash · CAPS fem · microbiome & women's health · each -20%",
 
-  tagline_de: "Haut ist Haut. Sie unterscheidet nicht danach, wer sie trägt.",
-  tagline_en: "Skin is skin. It doesn't distinguish by who wears it.",
+  tagline_de: "Nicht überschreiben, was der Körper macht. Ihm geben, was er dafür braucht.",
+  tagline_en: "Not override what the body does. Give it what it needs to do it.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20moisturiser%20for%20men%20und%20stay%20fresh%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20moisturiser%20for%20men%20and%20stay%20fresh%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20body%20wash%20und%20CAPS%20fem%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20body%20wash%20and%20CAPS%20fem%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "FRESH moisturiser for men",
-      emoji:       "🙌",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-moisturiser-for-men/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-moisturiser-for-men/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-moisturizer-men.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-moisturiser-men.jpg",
-      text_de: "\"Ich brauch sowas nicht.\" Diesen Satz höre ich zuverlässig von jedem Mann, dem ich das Produkt in die Hand drücke. Und ungefähr genauso zuverlässig kommt zwei Wochen später die Frage, wo man das nachbestellt.<br><br>Denn Haut ist Haut. Sie unterscheidet nicht danach, wer sie trägt, und sie freut sich über Pflege genauso. Der Unterschied ist nur, dass Männern jahrzehntelang erzählt wurde, das sei nichts für sie.<br><br>Warum eine eigene Creme hier tatsächlich Sinn macht: Männerhaut ist im Schnitt bis zu 20% dicker als die von Frauen und produziert deutlich mehr Talg, weil die Talgdrüsen größer und aktiver sind. Klingt nach robust, heißt in der Praxis aber: schneller unrein, gleichzeitig oft gereizt durch die Rasur. Beim Rasieren wird nicht nur Haar entfernt, sondern immer auch die oberste Hautschicht mit abgetragen. Eine zu reichhaltige Creme ist deshalb meist die falsche Wahl.<br><br>Was drinsteckt: Kaktusfeigenöl, Johannisbeersamenöl und Ballonrebenextrakt beruhigen nach der Rasur. Zink-PCA reguliert die Talgproduktion und hilft bei Unreinheiten. Koffein und Ingwer sorgen für einen wachen Look. Maritime Kiefernrinde als starkes Antioxidans, weißer Andorn als Schutz vor Umweltbelastungen sowie Hyaluronsäure und Tigergras für Feuchtigkeit und widerstandsfähige Haut.<br><br>Und der praktische Punkt: Es ist ein Schritt. Kein Serum, kein Toner, keine Routine mit fünf Produkten. Genau deshalb funktioniert es auch bei Leuten, die sich für Pflege eigentlich nicht interessieren.",
-      text_en: "\"I don't need that kind of thing.\" I hear this reliably from every man I hand the product to. And just as reliably, the question comes two weeks later: where do you order it again?<br><br>Because skin is skin. It does not distinguish by who wears it, and it responds to care just the same. The only difference is that men have been told for decades that this was not for them.<br><br>Why a dedicated cream actually makes sense here: men's skin is on average up to 20% thicker than women's and produces significantly more sebum, because the sebaceous glands are larger and more active. Sounds robust, but in practice it means: blemish-prone more quickly, and often irritated by shaving. Shaving doesn't just remove hair, it also takes off the top layer of skin every time. A too-rich cream is usually the wrong choice for this reason.<br><br>What's inside: prickly pear oil, blackcurrant seed oil and balloon vine extract soothe after shaving. Zinc PCA regulates sebum production and helps with blemishes. Caffeine and ginger bring an alert look, especially noticeable after short nights or exercise. Maritime pine bark as a strong antioxidant, white horehound as protection against environmental stress, plus hyaluronic acid and centella for moisture and resilient skin.<br><br>And the practical point: it is one step. No serum, no toner, no five-product routine. Which is exactly why it works for people who are not really interested in skincare.",
+      name:        "FRESH body wash",
+      emoji:       "🫧",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-body-wash/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-body-wash/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-body-wash.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-body-wash.jpg",
+      text_de: "Auf deiner Haut leben mehr Mikroorganismen als Menschen auf diesem Planeten. Und das ist eine gute Nachricht. Denn diese Bakterien arbeiten für dich: Sie halten den pH-Wert stabil, wehren Krankheitserreger ab und stärken die Hautbarriere. Kippt dieses Gleichgewicht, etwa durch scharfe Duschgels, zu heißes Duschen oder Stress, reagiert die Haut mit Trockenheit, Juckreiz oder Unreinheiten.<br><br>Wenn du nach dem Duschen dieses leicht spannende Gefühl kennst, das erst weggeht, sobald du eincremst: Das ist ein Zeichen dafür, dass das Duschgel zu viel abgetragen hat. Genau da liegt der Unterschied beim FRESH body wash.<br><br>Der NBC7-Komplex stärkt die Hautbarriere und unterstützt die guten Bakterien, Zuckertenside reinigen mild statt auszutrocknen. Moos- und Tüpfelfarnextrakte spenden Feuchtigkeit, die auch nach dem Abtrocknen bleibt, Hamamelis und Auferstehungspflanze beruhigen gestresste Haut.<br><br>Praktisch gerade im Sommer, wenn man ohnehin öfter duscht. Eine kleine Menge reicht, die Formel schäumt gut auf.",
+      text_en: "More microorganisms live on your skin than there are people on this planet. And that is good news. Because these bacteria work for you: they keep the pH stable, fend off pathogens and strengthen the skin barrier. When this balance tips, through harsh shower gels, water that's too hot, or stress, the skin responds with dryness, itching or blemishes.<br><br>If you know that slightly tight feeling after showering that only goes away once you moisturise: that is a sign the shower gel has taken too much away. That is exactly where the FRESH body wash is different.<br><br>The NBC7 complex strengthens the skin barrier and supports the beneficial bacteria, sugar surfactants cleanse gently instead of stripping. Moss and fern extracts provide moisture that stays even after drying off, witch hazel and resurrection plant soothe stressed skin.<br><br>Practical especially in summer when you're showering more often anyway. A small amount is enough, the formula lathers well.",
     },
     {
-      name:        "FRESH stay fresh",
-      emoji:       "🫧",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-stay-fresh/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-stay-fresh/?lang=en",
-      image_de:    "assets/images/Partner-Templates-1x1-FRESH-stay-fresh-1.jpg",
-      image_en:    "assets/images/Partner-Templates-1x1-FRESH-stay-fresh-1.jpg",
-      text_de: "Ein mikrobiom-freundlicher Reinigungsschaum für sensible Zonen: pflegend, sanft und ideal für die Hautflora im Intimbereich. Und praktischer als man denkt: Mit einem Pumpstoß verwandelst du jedes Toilettenpapier in feuchtes Toilettenpapier, ganz ohne Feuchttücher.<br><br>Warum das besser ist: Feuchttücher verursachen unnötigen Abfall. Mit stay fresh nutzt du einfach dein vorhandenes Toilettenpapier und reduzierst damit Einwegprodukte im Badezimmer. Nachhaltiger und sanfter zur Haut zugleich.<br><br>Was drinsteckt: Ectoin baut eine feuchte Schutzschicht auf und macht sensible Zonen weniger empfindlich. Kirschknospen-Extrakt pflegt und spendet Feuchtigkeit. Kugelblumen-Extrakt beruhigt gereizte Haut. Und der NBC7-Komplex schützt die Haut mit sieben prä- und postbiotischen Inhaltsstoffen für eine ausgeglichene Hautflora.<br><br>Das stay fresh ist bis 22.08. mit -20% dabei.",
-      text_en: "A microbiome-friendly cleansing foam for sensitive areas: caring, gentle and ideal for the skin flora in the intimate zone. And more practical than it sounds: one pump turns any toilet paper into wet wipes, without any wet wipes.<br><br>Why this is better: wet wipes create unnecessary waste. With stay fresh you simply use your existing toilet paper and reduce single-use products in the bathroom. More sustainable and gentler on the skin at the same time.<br><br>What's inside: ectoin builds a moist protective layer and makes sensitive areas less reactive. Cherry blossom bud extract nourishes and provides moisture. Globe amaranth extract soothes irritated skin. And the NBC7 complex protects the skin with seven pre- and postbiotic ingredients for a balanced skin flora.<br><br>Stay fresh is in the sale at -20% until 22 August.",
+      name:        "CAPS fem",
+      emoji:       "💗",
+      shop_url_de: "https://priller.ringana.com/produkt/caps-fem/",
+      shop_url_en: "https://priller.ringana.com/produkt/caps-fem/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-fem.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS-fem.jpg",
+      text_de: "Unser Körper verändert sich als Frau ständig. Zyklus, Kinderwunsch, Schwangerschaft, Wechseljahre, das sind keine Ausnahmezustände, sondern der Normalfall. Trotzdem wird der veränderte Nährstoffbedarf, der damit einhergeht, selten mitgedacht. Genau dafür sind die CAPS fem gemacht, als Begleiter durch alle diese Phasen.<br><br>Pflanzliches Eisen trägt zur Verringerung von Müdigkeit und Ermüdung bei und zu einem normalen Sauerstofftransport im Blut. Durch die Menstruation ist der Eisenbedarf bei Frauen oft erhöht. Vitamin C aus Acerola verbessert die Eisenaufnahme deutlich, deshalb ist diese Kombination so durchdacht. Folat in bioaktiver Form trägt zur normalen Zellteilung und zur normalen Funktion des Immunsystems bei, besonders wichtig bei Kinderwunsch und in der Schwangerschaft.<br><br>Dazu zwei Pflanzenextrakte mit langer Tradition: Shatavari gilt im Ayurveda als die Frauenpflanze schlechthin, eingesetzt in allen hormonellen Phasen vom Zyklus bis zu den Wechseljahren. Damiana wurde in Mittelamerika traditionell zur Stärkung von Vitalität und Lebensfreude verwendet.<br><br>Nicht überschreiben, was der Körper macht, sondern ihm geben, was er dafür braucht.",
+      text_en: "As a woman, our body is constantly changing. Cycle, fertility, pregnancy, menopause, these are not exceptional states but the normal ones. Yet the changed nutritional needs that come with them are rarely factored in. That is exactly what CAPS fem is designed for, as a companion through all these phases.<br><br>Plant-based iron contributes to the reduction of tiredness and fatigue and to normal oxygen transport in the blood. Due to menstruation, iron requirements in women are often elevated. Vitamin C from acerola significantly improves iron absorption, which is why this combination is so well thought through. Folate in bioactive form contributes to normal cell division and normal immune system function, especially important when trying to conceive and during pregnancy.<br><br>Plus two plant extracts with long tradition: shatavari is considered in Ayurveda as the women's plant par excellence, used across all hormonal phases from the cycle to the menopause. Damiana was traditionally used in Central America to strengthen vitality and joie de vivre.<br><br>Not override what the body does, but give it what it needs to do it.",
     },
   ],
 
