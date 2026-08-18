@@ -4,54 +4,44 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-16",
+  date:       "2026-08-17",
   date_end:   null,
 
-  product_de: "FRESH overnight face treatment + FRESH intensive hand cream",
-  product_en: "FRESH overnight face treatment + FRESH intensive hand cream",
+  product_de: "RINGANAchi",
+  product_en: "RINGANAchi",
 
-  shop_url:   "https://priller.ringana.com/angebote/",
+  shop_url:   "https://priller.ringana.com/produkt/ringana-chi/",
 
-  desc_de: "overnight face treatment · intensive hand cream · Nachtpflege & Handpflege · je -20%",
-  desc_en: "overnight face treatment · intensive hand cream · night care & hand care · each -20%",
+  desc_de: "RINGANAchi · natürlicher Energy-Drink · 30% weniger Zucker · -20%",
+  desc_en: "RINGANAchi · natural energy drink · 30% less sugar · -20%",
 
-  tagline_de: "Nachts schaltet die Haut um. Diese zwei Produkte nützen genau dieses Zeitfenster.",
-  tagline_en: "At night the skin shifts gear. These two products make use of exactly that window.",
+  tagline_de: "Gleichmäßige Energie statt steilem Hoch und hartem Absturz.",
+  tagline_en: "Steady energy instead of a steep high and a hard crash.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20overnight%20face%20und%20der%20intensive%20hand%20cream%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20overnight%20face%20and%20intensive%20hand%20cream%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20RINGANAchi%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAchi%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
   more_label_en: "",
 
-  image_de:       null,
-  image_en:       null,
+  image_de:    "assets/images/chis.jpeg",
+  image_en:    "assets/images/chis.jpeg",
   image_fallback: null,
   shades:         [],
-  tip_de:         null,
-  tip_en:         null,
+  tip_de:  "Ein Fläschchen (30 ml) pro Tag, gut schütteln. Pur ist er richtig scharf — mit Wasser verdünnt wird ein erfrischendes Getränk daraus.",
+  tip_en:  "One bottle (30 ml) per day, shake well. Neat it is quite sharp — diluted with water it becomes a refreshing drink.",
 
   products: [
     {
-      name:        "FRESH overnight face treatment",
-      emoji:       "🌙",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-overnight-face-treatment/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-overnight-face-treatment/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-overnight-face-treatment.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-overnight-face-treatment.jpg",
-      text_de: "Abendpflege ist nicht einfach die Tagesroutine nochmal. Sie hat eine ganz andere Aufgabe. Tagsüber geht es um Schutz, vor UV, vor Umwelteinflüssen, vor allem, was von außen kommt. Nachts schaltet die Haut um: Die Zellreparatur läuft auf Hochtouren, die Durchblutung ist erhöht, und ohne UV-Belastung können auch empfindliche Wirkstoffe ungestört arbeiten.<br><br>Hauptwirkstoff im FRESH overnight face treatment ist Retinal. Der Unterschied zu klassischem Retinol ist technisch, aber relevant: Damit die Haut Vitamin A verwerten kann, muss es zu Retinsäure umgewandelt werden. Retinol braucht dafür zwei Schritte, Retinal nur einen. Es wirkt dadurch schneller, in geringerer Konzentration und mit weniger Reizpotenzial.<br><br>Was sonst noch drinsteckt: Peptide arbeiten gezielt an Mimikfältchen. Niacinamid gleicht Pigmentflecken aus und verfeinert das Hautbild. Rote Meeresalge und L-Carnosin schützen vor Zellalterung. Dreifache Hyaluronsäure und Q10 für Feuchtigkeit und antioxidativen Schutz. Mandelöl und Mangobutter halten die Formel pflegend statt austrocknend.<br><br>Nach der Reinigung auftragen, sanft einmassieren. Und ganz wichtig: Am nächsten Tag unbedingt Sonnenschutz verwenden. Retinal macht die Haut lichtempfindlicher, deshalb gehören die beiden Schritte zusammen.",
-      text_en: "Evening skincare is not just the daytime routine repeated. It has a completely different job. During the day it is about protection: from UV, from environmental influences, from everything that comes from outside. At night, the skin switches mode: cell repair runs at full speed, circulation is increased, and without UV exposure even sensitive actives can work undisturbed.<br><br>The main active in the FRESH overnight face treatment is retinal. The difference to classic retinol is technical but relevant: for the skin to use vitamin A, it has to be converted into retinoic acid. Retinol needs two steps for this, retinal only one. It therefore works faster, at a lower concentration, and with less irritation potential.<br><br>What else is inside: peptides work specifically on expression lines. Niacinamide evens out pigmentation and refines the complexion. Red sea algae and L-carnosine protect against cell ageing. Triple hyaluronic acid and Q10 for moisture and antioxidant protection. Almond oil and mango butter keep the formula nourishing rather than drying.<br><br>Apply after cleansing, massage in gently. And importantly: use sun protection the next day. Retinal increases skin photosensitivity, which is why the two steps belong together.",
-    },
-    {
-      name:        "FRESH intensive hand cream",
-      emoji:       "🤲",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-intensive-hand-cream/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-intensive-hand-cream/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-intensive-hand-cream.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-intensive-hand-cream.jpg",
-      text_de: "Hände haben kaum Talgdrüsen und können sich deshalb schlechter selbst schützen als das Gesicht. Gleichzeitig bekommen sie täglich Wasser, Seife und Sonne ab. Deshalb altern sie oft sichtbarer als das Gesicht, weil kaum jemand sie gezielt pflegt.<br><br>Die Formel ist auf genau dieses Problem gebaut: 5% Urea bindet Feuchtigkeit in den oberen Hautschichten und glättet raue Stellen. 2,5% verkapselter Ceramid-Komplex stärkt die Hautbarriere. 3% Phytosqualan und Squalen ersetzen fehlende Lipide. 2% Ectoin schützt vor äußeren Stressfaktoren. 2,5% Auferstehungspflanzen-Extrakt beruhigt, sein leichter Zitrusduft wirkt entspannend.<br><br>Getestet im RINGANA Forschungszentrum, 30 Personen, tägliche Anwendung: Nach einer Woche empfanden 93,3% ihre Haut als glatter, 83,3% als besser durchfeuchtet. Schon nach der ersten Anwendung sahen 80% weniger trockene Stellen.<br><br>Tipp: abends dick auftragen und über Nacht einwirken lassen. Dann hat die Creme endlich Zeit tief zu arbeiten, statt beim nächsten Händewaschen wieder wegzugehen.",
-      text_en: "Hands have almost no sebaceous glands and therefore cannot protect themselves as well as the face. At the same time they get water, soap and sun every single day. Which is why they often age more visibly than the face, because almost nobody specifically cares for them.<br><br>The formula is built for exactly this problem: 5% urea binds moisture in the upper skin layers and smooths rough patches. 2.5% encapsulated ceramide complex strengthens the skin barrier. 3% phytosqualane and squalene replace missing lipids. 2% ectoin protects against external stressors. 2.5% resurrection plant extract soothes, its light citrus scent has a relaxing effect.<br><br>Tested at the RINGANA research centre, 30 people, daily use: after one week 93.3% found their skin smoother, 83.3% better moisturised. Already after the first application, 80% saw fewer dry patches.<br><br>Tip: apply generously in the evening and leave on overnight. That finally gives the cream time to work deeply, instead of washing off with the next hand wash.",
+      name:        "RINGANAchi",
+      emoji:       "⚡",
+      shop_url_de: "https://priller.ringana.com/produkt/ringana-chi/",
+      shop_url_en: "https://priller.ringana.com/produkt/ringana-chi/?lang=en",
+      image_de:    "assets/images/chis.jpeg",
+      image_en:    "assets/images/chis.jpeg",
+      text_de: "Der Moment, den fast jeder kennt: 15 Uhr, der Tag ist noch lang, aber die Energie ist weg. Und dann greift man zum vierten Kaffee, wird kurz wach, ist eine Stunde später wieder unten und schläft abends trotzdem schlechter.<br><br>Die neue RINGANAchi-Formel hat nochmal richtig was draufgelegt: 30% weniger Zucker pro Fläschchen. Und der Zucker, der noch drin ist, kommt ausschließlich aus den Kohlenhydraten und Fruchtsaftkonzentraten. Kein zugesetzter Zucker, keine Süßstoffe. Die Süße übernimmt Mönchsfrucht-Extrakt. Wer schon mal auf die Zutatenliste eines handelsüblichen Energydrinks geschaut hat, weiß, warum das ein Unterschied ist.<br><br>Was ihn vom Kaffee unterscheidet: nicht das Koffein selbst, sondern L-Theanin. Diese Aminosäure aus grünem Tee ist der Grund, warum Matcha anders wirkt als Espresso. Sie verlangsamt die Koffeinaufnahme, du bekommst also eine gleichmäßigere Kurve statt steilem Hoch und hartem Absturz. Weniger zittrig, kein Loch danach.<br><br>Was drinsteckt: Guarana-Samenextrakt mit 10% natürlichem Koffein. Ginsengwurzel-Extrakt mit 5% Ginsenosiden. Ingwerextrakt mit seinen Scharfstoffen. Robuvit® Eichenextrakt, klinisch untersucht, mit 40% Polyphenolen. Vitamin C aus Acerola trägt zu einem normalen Energiestoffwechsel bei und hilft, Müdigkeit und Ermüdung zu verringern. Dazu eine clevere Kohlenhydrat-Kombi aus verzweigtem Maltodextrin, löslicher Maiswachsstärke, Dextrose und D-Ribose, für sofortige und länger anhaltende Energie. Ananas-, Passionsfrucht- und Zitronensaftkonzentrat sorgen für die exotisch-fruchtige Note, dazu die Schärfe vom Ingwer.<br><br>Anwendung: Ein Fläschchen (30 ml) pro Tag, gut schütteln. Pur ist er richtig scharf. Mit stillem oder prickelndem Wasser verdünnt wird ein erfrischendes Getränk daraus, warm oder kalt.",
+      text_en: "The moment almost everyone knows: 3 pm, the day is still long but the energy is gone. And then you reach for the fourth coffee, wake up briefly, are back down an hour later and still sleep worse in the evening.<br><br>The new RINGANAchi formula has taken things up another level: 30% less sugar per bottle. And the sugar that remains comes exclusively from the carbohydrates and fruit juice concentrates. No added sugar, no sweeteners. The sweetness comes from monk fruit extract. Anyone who has ever looked at the ingredients list of a conventional energy drink knows why that is a difference.<br><br>What sets it apart from coffee: not the caffeine itself, but L-theanine. This amino acid from green tea is why matcha feels different from espresso. It slows caffeine absorption, so you get a more even curve instead of a steep high and a hard crash. Less jittery, no slump afterwards.<br><br>What's inside: guarana seed extract with 10% natural caffeine. Ginseng root extract with 5% ginsenosides. Ginger extract with its pungent compounds. Robuvit® oak extract, clinically studied, with 40% polyphenols. Vitamin C from acerola contributes to normal energy metabolism and helps reduce tiredness and fatigue. Plus a clever carbohydrate combination of branched maltodextrin, soluble waxy maize starch, dextrose and D-ribose, for immediate and longer-lasting energy. Pineapple, passion fruit and lemon juice concentrates provide the exotic fruity note, with ginger heat alongside.<br><br>How to use: one bottle (30 ml) per day, shake well. Neat it is quite intense. Diluted with still or sparkling water it becomes a refreshing drink, warm or cold.",
     },
   ],
 
