@@ -4,44 +4,54 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-18",
+  date:       "2026-08-19",
   date_end:   null,
 
-  product_de: "BEYOND biotic",
-  product_en: "BEYOND biotic",
+  product_de: "FRESH eye serum + FRESH eye cream",
+  product_en: "FRESH eye serum + FRESH eye cream",
 
-  shop_url:   "https://priller.ringana.com/produkt/beyond-biotic/",
+  shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "BEYOND biotic · Probiotikum · 21 Mrd. Kulturen · magensaftresistent · -20%",
-  desc_en: "BEYOND biotic · probiotic · 21 billion cultures · gastro-resistant · -20%",
+  desc_de: "FRESH eye serum · FRESH eye cream · Augenpflege · veganes PDRN · Koffein · je -20%",
+  desc_en: "FRESH eye serum · FRESH eye cream · eye care · vegan PDRN · caffeine · each -20%",
 
-  tagline_de: "21 Milliarden Kulturen, magensaftresistent verpackt. Weil eine große Zahl wenig sagt, wenn nichts davon ankommt.",
-  tagline_en: "21 billion cultures, gastro-resistant. Because a big number means little if nothing survives the journey.",
+  tagline_de: "Morgens das Serum für den wachen Blick, abends die Creme für die Regeneration.",
+  tagline_en: "The serum in the morning for an alert look, the cream in the evening for regeneration.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20BEYOND%20biotic%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20BEYOND%20biotic%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20eye%20serum%20und%20der%20eye%20cream%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20eye%20serum%20and%20eye%20cream%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
-  more_url:      "",
-  more_label_de: "",
-  more_label_en: "",
+  more_url:      "https://priller.ringana.com/blog/vegan-pdrn/",
+  more_label_de: "Was steckt hinter veganem PDRN? →",
+  more_label_en: "What is vegan PDRN? →",
 
-  image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_BEYOND-biotic.jpg",
-  image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_BEYOND-biotic.jpg",
+  image_de:       null,
+  image_en:       null,
   image_fallback: null,
   shades:         [],
-  tip_de:  "Täglich 3 Kapseln mit Wasser, am besten zu einer Mahlzeit. Neu angesiedelte Bakterien brauchen Ballaststoffe als Futter — das FRESH pack cleansing liefert genau die.",
-  tip_en:  "3 capsules daily with water, ideally with a meal. Newly settled bacteria need fibre as food — the FRESH pack cleansing provides exactly that.",
+  tip_de:  "Vom inneren zum äußeren Augenwinkel sanft einklopfen, auch auf den Lidern anwendbar.",
+  tip_en:  "Gently tap from the inner to the outer corner of the eye, also suitable for the lids.",
 
   products: [
     {
-      name:        "BEYOND biotic",
-      emoji:       "🦠",
-      shop_url_de: "https://priller.ringana.com/produkt/beyond-biotic/",
-      shop_url_en: "https://priller.ringana.com/produkt/beyond-biotic/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_BEYOND-biotic.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_BEYOND-biotic.jpg",
-      text_de: "Dein Darm hat ein eigenes Nervensystem, das weitgehend unabhängig vom Gehirn arbeitet. Über 100 Millionen Nervenzellen, mehr als im Rückenmark. Und er ist nicht still: Über den Vagusnerv läuft eine Standleitung nach oben, und rund 80% des Verkehrs geht in diese Richtung, vom Bauch zum Kopf.<br><br>Der Punkt, an dem die meisten Probiotika scheitern: Damit ein Bakterium etwas bewirken kann, muss es lebend im Darm ankommen. Der Weg führt durch den Magen, wo ein pH-Wert um 1,5 bis 2 herrscht, also Salzsäure-Bereich. Ein Großteil der Kulturen aus der Nahrung wird dort zerstört. Deshalb steckt BEYOND biotic in einer pflanzlichen, magensaftresistenten Kapselhülle. Sie übersteht den Magen und öffnet sich erst da, wo die Kulturen gebraucht werden. Eine große Zahl auf der Packung sagt wenig, wenn unterwegs nichts davon ankommt.<br><br>Was drinsteckt: Über 21 Milliarden lebende Mikroorganismen pro Tagesdosis. Der RINGANA Natural Biotic Complex 10 mit neun Bakterienstämmen und einem Hefestamm, weil verschiedene Stämme verschiedene Aufgaben übernehmen. Enzymatisch fermentierte Guarkernfaser als Futter für die Bakterien. Riboflavin, Vitamin D3 aus Flechtenextrakt und Vitamin B12, die zu normalen Schleimhäuten, einem normal funktionierenden Immunsystem und weniger Müdigkeit beitragen.<br><br>Wann es besonders Sinn macht: nach einer Antibiotikatherapie, weil die nicht zwischen guten und schlechten Bakterien unterscheidet. Nach einer Krankheit. In Phasen, in denen viel los ist und die Ernährung als Erstes leidet. Das ist nichts für eine Woche. Ein Mikrobiom verändert sich langsam. Wer zwei bis drei Monate dranbleibt, merkt den Unterschied deutlich.<br><br>Tipp: täglich 3 Kapseln mit Wasser, am besten zu einer Mahlzeit. Neu angesiedelte Bakterien brauchen Ballaststoffe als Futter. Das FRESH pack cleansing liefert genau die.",
-      text_en: "Your gut has its own nervous system that works largely independently of the brain. Over 100 million nerve cells, more than in the spinal cord. And it is not quiet: via the vagus nerve there is a permanent connection upwards, and around 80% of the traffic goes in that direction, from the gut to the brain.<br><br>The point where most probiotics fail: for a bacterium to have any effect, it has to arrive in the gut alive. The journey goes through the stomach, where the pH is around 1.5 to 2, which is hydrochloric acid territory. A large proportion of cultures from food are destroyed there. That is why BEYOND biotic sits inside a plant-based, gastro-resistant capsule shell. It survives the stomach and only opens where the cultures are needed. A large number on the packaging means little if nothing of it arrives.<br><br>What's inside: over 21 billion living microorganisms per daily dose. The RINGANA Natural Biotic Complex 10 with nine bacterial strains and one yeast strain, because different strains take on different tasks. Enzymatically fermented guar kernel fibre as food for the bacteria. Riboflavin, vitamin D3 from lichen extract and vitamin B12, which contribute to normal mucous membranes, normally functioning immunity and reduced tiredness.<br><br>When it makes particular sense: after antibiotic therapy, because that does not distinguish between good and bad bacteria. After illness. In phases where a lot is going on and diet is the first thing to suffer. This is not a one-week thing. A microbiome changes slowly. Those who stay with it for two to three months notice a clear difference.<br><br>Tip: 3 capsules daily with water, ideally with a meal. Newly settled bacteria need fibre as food. The FRESH pack cleansing delivers exactly that.",
+      name:        "FRESH eye serum",
+      emoji:       "☕",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-eye-serum/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-eye-serum/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-eye-serum.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-eye-serum.jpg",
+      text_de: "Die Haut rund um die Augen ist bis zu fünfmal dünner als im Rest des Gesichts. Sie hat kaum Talgdrüsen, wenig Fettgewebe und wird durch Blinzeln bis zu 10.000 Mal am Tag bewegt. Kein Wunder, dass sich dort zuerst zeigt, wie die Woche war.<br><br>Das FRESH eye serum ist für den Morgen gemacht: der Sofort-Effekt. Koffein und mexikanische Arnika regen die Mikrozirkulation an und wirken abschwellend, Hyaluronsäure und Parakresse glätten und straffen. Paradiesnussöl und Kaktusfeigenkernöl pflegen die empfindliche Partie.<br><br>Aus der Studie: Bei 59% messbar weniger Faltentiefe schon nach 30 Minuten. Bis zu 82% weniger Faltentiefe nach 4 Wochen. 64% weniger Faltenvolumen an den Krähenfüßen.<br><br>Sanft einklopfen vom inneren zum äußeren Augenwinkel. Funktioniert auch gut als Primer unter Concealer.",
+      text_en: "The skin around the eyes is up to five times thinner than the rest of the face. It has almost no sebaceous glands, little fatty tissue, and is moved up to 10,000 times a day through blinking. No wonder it is the first place to show how the week has been.<br><br>The FRESH eye serum is made for the morning: the immediate effect. Caffeine and Mexican arnica stimulate microcirculation and reduce puffiness, hyaluronic acid and paracress smooth and firm. Paradise nut oil and prickly pear seed oil nourish the delicate area.<br><br>From the study: 59% showed measurably less wrinkle depth after just 30 minutes. Up to 82% less wrinkle depth after 4 weeks. 64% less wrinkle volume at crow's feet.<br><br>Gently tap in from the inner to the outer corner of the eye. Also works well as a primer under concealer.",
+    },
+    {
+      name:        "FRESH eye cream",
+      emoji:       "🌙",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-eye-cream/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-eye-cream/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-eye-cream.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-eye-cream.jpg",
+      text_de: "Und hier wird es richtig spannend. Der Hauptwirkstoff der FRESH eye cream ist veganes PDRN auf Basis von Centella asiatica. PDRN steht für Polydesoxyribonukleotide, also kurze DNA-Fragmente. Klingt nach Science-Fiction, kommt aber aus der regenerativen Medizin, wo sie seit Jahren erforscht werden. Ursprünglich wurden sie aus tierischen Quellen gewonnen, meist aus Lachs-DNA. Die biotechnologische Alternative auf Pflanzenbasis kommt komplett ohne tierische Rohstoffe aus.<br><br>Was sonst drinsteckt: 1% Bakuchiol-Derivat, das die Hauterneuerung anregt, eine sanfte Alternative zu Retinol. 3% Phytoplankton-Essenz mit Plankton-Extrakt, der dunkle Augenringe aufhellt, in Studienkonzentration. Ceramide NP stärkt die Hautbarriere und reduziert Feuchtigkeitsverlust. 3% Wiederauferstehungspflanzen-Extrakt für glatte Haut. Magnolienrinden-Extrakt schützt vor freien Radikalen.<br><br>Abends vom inneren zum äußeren Augenwinkel einklopfen, auch auf den Lidern anwendbar.<br><br>Der Pro-Tipp: morgens das Serum für den wachen Blick, abends die Creme für die Regeneration. So arbeiten beide genau dann, wenn die Haut es am besten verwerten kann.",
+      text_en: "And this is where it gets genuinely interesting. The main active in the FRESH eye cream is vegan PDRN based on Centella asiatica. PDRN stands for polydeoxyribonucleotides, meaning short DNA fragments. Sounds like science fiction, but it comes from regenerative medicine where it has been researched for years. Originally derived from animal sources, mostly salmon DNA, the biotechnological plant-based alternative works entirely without animal raw materials.<br><br>What else is inside: a 1% bakuchiol derivative that stimulates skin renewal, a gentle alternative to retinol. 3% phytoplankton essence with plankton extract that brightens dark circles, at studied concentration. Ceramide NP strengthens the skin barrier and reduces moisture loss. 3% resurrection plant extract for smooth skin. Magnolia bark extract protects against free radicals.<br><br>Apply in the evening by gently tapping from the inner to the outer corner of the eye, also suitable for the lids.<br><br>The pro tip: serum in the morning for an alert look, cream in the evening for regeneration. That way both work exactly when the skin can make best use of them.",
     },
   ],
 
