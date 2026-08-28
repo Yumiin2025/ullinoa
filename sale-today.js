@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-22",
+  date:       "2026-08-23",
   date_end:   null,
 
-  product_de: "FRESH cleanser + FRESH cleansing water",
-  product_en: "FRESH cleanser + FRESH cleansing water",
+  product_de: "RINGANAisi + CAPS moodoo",
+  product_en: "RINGANAisi + CAPS moodoo",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "FRESH cleanser · FRESH cleansing water · pH-hautneutrale Gesichtsreinigung · COSMOS · je -20%",
-  desc_en: "FRESH cleanser · FRESH cleansing water · pH-balanced facial cleansing · COSMOS · each -20%",
+  desc_de: "RINGANAisi · CAPS moodoo · Schlaf · Stressresistenz · Adaptogene · je -20%",
+  desc_en: "RINGANAisi · CAPS moodoo · sleep · stress resilience · adaptogens · each -20%",
 
-  tagline_de: "Alles, was danach kommt, kann nur so gut wirken wie die Basis darunter.",
-  tagline_en: "Everything that follows can only work as well as the base beneath it.",
+  tagline_de: "Für den Tag, der zu laut war, und die Phasen, in denen alles zäher läuft.",
+  tagline_en: "For days that were too loud, and phases when everything feels heavier than it should.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20FRESH%20cleanser%20und%20cleansing%20water%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20FRESH%20cleanser%20and%20cleansing%20water%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20RINGANAisi%20und%20CAPS%20moodoo%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAisi%20and%20CAPS%20moodoo%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "FRESH cleanser",
-      emoji:       "🌿",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-cleanser/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-cleanser/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-cleanser.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-cleanser.jpg",
-      text_de: "Der Schritt, an dem die meisten sparen, ist ausgerechnet der, auf dem alles andere aufbaut: die Reinigung. Was viele nicht wissen: Unsere Haut hat einen leicht sauren Schutzmantel mit einem pH-Wert um 4,7 bis 5,75. Klassische Seife liegt deutlich darüber. Wird der Mantel regelmäßig gestört, verliert die Haut Feuchtigkeit und wird empfindlicher. Und alles, was danach kommt, Toner, Serum, Creme, kann nur so gut wirken wie die Basis darunter.<br><br>Der FRESH cleanser ist Reinigung und Pflege in einem Schritt, COSMOS-zertifiziert. Für normale, trockene, empfindliche oder reife Haut. Grüntee-Extrakt bringt sanfte, waschaktive Pflanzenstoffe mit. Ein Komplex aus Steinklee, Jojoba und Ginkgo beruhigt und schützt. Birkenzucker und Orangenfruchtwasser spenden langanhaltende Feuchtigkeit, Chiasamenöl unterstützt die Feuchtigkeitsspeicherung, Mandelkern- und Traubenkernöl wirken rückfettend.<br><br>Morgens und abends auf die angefeuchtete Haut auftragen, sanft einmassieren, abspülen. Funktioniert auch gut zum Abschminken.",
-      text_en: "The step most people cut back on is exactly the one everything else builds on: cleansing. What many don't know: our skin has a slightly acidic protective mantle with a pH of around 4.7 to 5.75. Classic soap sits well above that. When the mantle is regularly disrupted, the skin loses moisture and becomes more sensitive. And everything that follows, toner, serum, cream, can only work as well as the base beneath it.<br><br>The FRESH cleanser is cleansing and care in one step, COSMOS certified. For normal, dry, sensitive or mature skin. Green tea extract provides gentle, plant-based cleansing actives. A complex of sweet clover, jojoba and ginkgo soothes and protects. Birch sugar and orange fruit water provide long-lasting moisture, chia seed oil supports moisture retention, and almond kernel and grape seed oil replenish lipids.<br><br>Apply morning and evening to damp skin, massage gently, rinse off. Also works well for removing make-up.",
+      name:        "RINGANAisi",
+      emoji:       "😴",
+      shop_url_de: "https://priller.ringana.com/produkt/ringana-isi/",
+      shop_url_en: "https://priller.ringana.com/produkt/ringana-isi/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAisi.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAisi.jpg",
+      text_de: "Der Körper ist längst müde. Nur der Kopf hat das noch nicht mitbekommen. Kennt vermutlich jede:r von uns: Du liegst im Bett, und plötzlich fällt dir ein, was du morgen alles erledigen musst, was du heute vielleicht falsch gesagt hast und dass du vergessen hast, zurückzurufen.<br><br>Der Gedanke hinter RINGANAisi ist ein anderer als bei klassischen Schlafhelfern: Es geht nicht darum, dich müde zu machen, sondern dir den Übergang zu erleichtern. Dein Körper kann das ohnehin, er braucht nur manchmal ein Signal, dass jetzt Feierabend ist.<br><br>Ein Fläschchen mit mindestens 150 ml Wasser aufgießen und trinken, warm oder kalt. Drin stecken: Ashwagandha, im Ayurveda seit Jahrhunderten als Adaptogen verwendet. Sauerkirschsaftkonzentrat, eine der wenigen natürlichen Melatoninquellen. Zitronenmelisse, Passionsblume und grüner Hafer aus der europäischen Naturheilkunde. L-Tryptophan, die Aminosäure, aus der dein Körper Serotonin und daraus Melatonin bildet.<br><br>Eine begleitende Studie zeigt bei den meisten Anwender:innen einen positiven Effekt auf die Schlafqualität. Was das im Alltag bringt: einen festen Punkt, an dem der Tag endet. Nicht erst dann, wenn du irgendwann einschläfst.",
+      text_en: "The body has been tired for a while. The head just hasn't got the message yet. Most people know this: you lie in bed and suddenly remember everything you need to do tomorrow, something you might have said wrong today, and that you forgot to call back.<br><br>The thinking behind RINGANAisi is different from classic sleep aids: it is not about making you tired, but about making the transition easier. Your body can do that on its own anyway, it just sometimes needs a signal that the day is over.<br><br>Pour one bottle over at least 150 ml of water and drink, warm or cold. Inside: ashwagandha, used as an adaptogen in Ayurveda for centuries. Sour cherry juice concentrate, one of the few natural melatonin sources. Lemon balm, passionflower and green oat from European herbal medicine. L-tryptophan, the amino acid from which your body produces serotonin and from that melatonin.<br><br>An accompanying study shows a positive effect on sleep quality in most users. What it provides in everyday life: a fixed point at which the day ends. Not just whenever you eventually fall asleep.",
     },
     {
-      name:        "FRESH cleansing water",
-      emoji:       "💧",
-      shop_url_de: "https://priller.ringana.com/produkt/fresh-cleansing-water/",
-      shop_url_en: "https://priller.ringana.com/produkt/fresh-cleansing-water/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-cleansing-water.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-cleansing-water.jpg",
-      text_de: "Das ölfreie Mizellen-Fluid für Mischhaut, ölige oder unreine Haut und alle, die es unkompliziert mögen. Das Prinzip dahinter ist eigentlich coole Chemie: Die enthaltenen Zuckertenside bilden winzige Kugeln, sogenannte Mizellen. Nach außen sind sie wasserfreundlich, nach innen fettfreundlich. Schmutz und Make-up werden dadurch regelrecht eingeschlossen und mitgenommen, ganz ohne Reiben.<br><br>Dazu Hyaluronsäure für Feuchtigkeit, Aloe-vera-Frischpflanzensaft und Kirschwasser zum Kühlen, Bio-Flavonoide, die Poren verfeinern und den Talg regulieren, sowie Peptide aus Milchsäurebakterien für die Hautbarriere. Mit Wattepad oder direkt mit den Händen auftragen, kein Abspülen nötig. Auch für die Augenpartie geeignet.<br><br>Welches für dich? Den cleanser, wenn deine Haut eher trocken oder empfindlich ist und du das Gefühl von echtem Waschen magst. Das cleansing water, wenn du zu Unreinheiten neigst oder es schnell und ohne Wasser gehen soll, etwa unterwegs oder an Tagen, an denen abends nicht mehr viel geht.",
-      text_en: "The oil-free micellar fluid for combination, oily or blemish-prone skin, and anyone who likes to keep things simple. The principle behind it is actually fascinating chemistry: the sugar surfactants it contains form tiny spheres called micelles. On the outside they are water-friendly, on the inside oil-friendly. Dirt and make-up are literally enclosed and carried away, with no rubbing required.<br><br>Plus hyaluronic acid for moisture, fresh aloe vera plant juice and cherry water for a cooling effect, bioflavonoids that refine pores and regulate sebum, and peptides from lactic acid bacteria for the skin barrier. Apply with a cotton pad or directly with your hands, no rinsing needed. Also suitable for the eye area.<br><br>Which one for you? The cleanser if your skin is on the drier or more sensitive side and you like the feeling of a proper wash. The cleansing water if you tend towards blemishes or want something fast and waterless, when travelling or on evenings when there's not much energy left.",
+      name:        "CAPS moodoo",
+      emoji:       "🧘‍♀️",
+      shop_url_de: "https://priller.ringana.com/produkt/caps-moodoo/",
+      shop_url_en: "https://priller.ringana.com/produkt/caps-moodoo/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS_moodoo.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS_moodoo.jpg",
+      text_de: "Manchmal zieht sich dieses Gefühl durch den ganzen Tag: nicht als Drama, sondern als das leise Empfinden, dass alles zäher läuft als sonst und Kleinigkeiten härter treffen. Genau dort setzen die CAPS moodoo an.<br><br>Iranischer Safranextrakt mit hohem Anteil an Safranal und Crocinen. Für ein Kilo Safran braucht es rund 150.000 Blüten, alle von Hand gepflückt. Ashwagandha, Schisandra aus der TCM und Orangenschalenextrakt. Niacin, das zur normalen psychischen Funktion und zur Verringerung von Müdigkeit beiträgt. Magnesium für Nervensystem und psychische Funktion. Riboflavin, B1, B6 und B12 aus Buchweizenkeimpulver für den Energiestoffwechsel.<br><br>Was das im Alltag bringt: nicht dass alles leicht wird, sondern dass du in fordernden Phasen mehr Reserve hast, bevor es kippt.<br><br>Ein ehrlicher Hinweis: Adaptogene brauchen Wochen, keine Tage. Moodoo also täglich nehmen und nicht erst dann, wenn schon alles zu viel ist.",
+      text_en: "Sometimes that feeling runs through the whole day: not as a crisis, but as the quiet sense that everything is moving more slowly than usual and small things are hitting harder. That is exactly where CAPS moodoo comes in.<br><br>Iranian saffron extract with a high content of safranal and crocins. To produce one kilo of saffron, around 150,000 flowers are needed, all picked by hand. Ashwagandha, schisandra from TCM and orange peel extract. Niacin, which contributes to normal psychological function and the reduction of tiredness. Magnesium for the nervous system and psychological function. Riboflavin, B1, B6 and B12 from buckwheat germ powder for energy metabolism.<br><br>What it provides in everyday life: not that everything becomes easy, but that in demanding phases you have more reserves before things tip.<br><br>An honest note: adaptogens need weeks, not days. Take moodoo daily and do not wait until everything is already too much.",
     },
   ],
 
