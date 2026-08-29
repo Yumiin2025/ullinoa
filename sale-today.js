@@ -4,22 +4,22 @@
 
 window.SALE_TODAY = {
 
-  date:       "2026-08-23",
+  date:       "2026-08-24",
   date_end:   null,
 
-  product_de: "RINGANAisi + CAPS moodoo",
-  product_en: "RINGANAisi + CAPS moodoo",
+  product_de: "FRESH scrub face & body + FRESH cream light",
+  product_en: "FRESH scrub face & body + FRESH cream light",
 
   shop_url:   "https://priller.ringana.com/angebote/",
 
-  desc_de: "RINGANAisi · CAPS moodoo · Schlaf · Stressresistenz · Adaptogene · je -20%",
-  desc_en: "RINGANAisi · CAPS moodoo · sleep · stress resilience · adaptogens · each -20%",
+  desc_de: "FRESH scrub · FRESH cream light · Peeling Gesicht & Körper · Mattierung · je -20%",
+  desc_en: "FRESH scrub · FRESH cream light · face & body exfoliant · mattifying · each -20%",
 
-  tagline_de: "Für den Tag, der zu laut war, und die Phasen, in denen alles zäher läuft.",
-  tagline_en: "For days that were too loud, and phases when everything feels heavier than it should.",
+  tagline_de: "Erst runter mit dem, was die Haut blockiert. Dann Pflege drauf, die tatsächlich ankommt.",
+  tagline_en: "First remove what is blocking the skin. Then apply care that actually gets through.",
 
-  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zu%20RINGANAisi%20und%20CAPS%20moodoo%20im%20Summer%20Sale%20%F0%9F%8C%BF",
-  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20RINGANAisi%20and%20CAPS%20moodoo%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_de: "Hallo%20Noa%2C%20ich%20hab%20eine%20Frage%20zum%20scrub%20und%20der%20cream%20light%20im%20Summer%20Sale%20%F0%9F%8C%BF",
+  wa_text_en: "Hi%20Noa%2C%20I%20have%20a%20question%20about%20the%20scrub%20and%20cream%20light%20in%20the%20Summer%20Sale%20%F0%9F%8C%BF",
 
   more_url:      "",
   more_label_de: "",
@@ -34,24 +34,24 @@ window.SALE_TODAY = {
 
   products: [
     {
-      name:        "RINGANAisi",
-      emoji:       "😴",
-      shop_url_de: "https://priller.ringana.com/produkt/ringana-isi/",
-      shop_url_en: "https://priller.ringana.com/produkt/ringana-isi/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAisi.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_DRINKS_RINGANAisi.jpg",
-      text_de: "Der Körper ist längst müde. Nur der Kopf hat das noch nicht mitbekommen. Kennt vermutlich jede:r von uns: Du liegst im Bett, und plötzlich fällt dir ein, was du morgen alles erledigen musst, was du heute vielleicht falsch gesagt hast und dass du vergessen hast, zurückzurufen.<br><br>Der Gedanke hinter RINGANAisi ist ein anderer als bei klassischen Schlafhelfern: Es geht nicht darum, dich müde zu machen, sondern dir den Übergang zu erleichtern. Dein Körper kann das ohnehin, er braucht nur manchmal ein Signal, dass jetzt Feierabend ist.<br><br>Ein Fläschchen mit mindestens 150 ml Wasser aufgießen und trinken, warm oder kalt. Drin stecken: Ashwagandha, im Ayurveda seit Jahrhunderten als Adaptogen verwendet. Sauerkirschsaftkonzentrat, eine der wenigen natürlichen Melatoninquellen. Zitronenmelisse, Passionsblume und grüner Hafer aus der europäischen Naturheilkunde. L-Tryptophan, die Aminosäure, aus der dein Körper Serotonin und daraus Melatonin bildet.<br><br>Eine begleitende Studie zeigt bei den meisten Anwender:innen einen positiven Effekt auf die Schlafqualität. Was das im Alltag bringt: einen festen Punkt, an dem der Tag endet. Nicht erst dann, wenn du irgendwann einschläfst.",
-      text_en: "The body has been tired for a while. The head just hasn't got the message yet. Most people know this: you lie in bed and suddenly remember everything you need to do tomorrow, something you might have said wrong today, and that you forgot to call back.<br><br>The thinking behind RINGANAisi is different from classic sleep aids: it is not about making you tired, but about making the transition easier. Your body can do that on its own anyway, it just sometimes needs a signal that the day is over.<br><br>Pour one bottle over at least 150 ml of water and drink, warm or cold. Inside: ashwagandha, used as an adaptogen in Ayurveda for centuries. Sour cherry juice concentrate, one of the few natural melatonin sources. Lemon balm, passionflower and green oat from European herbal medicine. L-tryptophan, the amino acid from which your body produces serotonin and from that melatonin.<br><br>An accompanying study shows a positive effect on sleep quality in most users. What it provides in everyday life: a fixed point at which the day ends. Not just whenever you eventually fall asleep.",
+      name:        "FRESH scrub face & body",
+      emoji:       "✨",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-scrub-face-body/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-scrub-face-body/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-body-face-scrub.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-body-face-scrub.jpg",
+      text_de: "Manchmal liegt es gar nicht am Serum. Manchmal liegt es daran, was darüber liegt. Abgestorbene Hautzellen sammeln sich täglich an und legen sich wie ein feiner Grauschleier über die Haut. Das macht den Teint nicht nur stumpfer, es blockiert auch alles, was danach kommt. Wirkstoffe kommen dann schlicht nicht dort an, wo sie hinsollen.<br><br>Die Peelingkörper im FRESH scrub face & body stammen aus Himbeer-, Blaubeer-, Aprikosen- und Granatapfelkernen. Also aus Nebenprodukten der Saftherstellung, die sonst im Abfall landen würden. Upcycling im besten Sinn, und nebenbei rund und sanft genug fürs Gesicht. Blaubeer-Extrakt und Tonerde wirken antioxidativ und klärend. Orangenfruchtwasser spendet Feuchtigkeit schon während des Peelings. Mandelkern- und Sesamöl pflegen und machen weich.<br><br>1 bis 2 Mal pro Woche sanft einmassieren, 5 bis 10 Minuten einwirken lassen. Für Gesicht und Körper. Danach kommt der eigentliche Effekt: Alles, was du anschließend aufträgst, wirkt deutlich intensiver. Du holst also mehr aus den Produkten, die du ohnehin schon benutzt.",
+      text_en: "Sometimes it is not the serum at all. Sometimes it is what is sitting on top of it. Dead skin cells accumulate daily and settle like a fine grey veil over the skin. That makes the complexion not just duller, it also blocks everything that follows. Actives simply do not reach where they are meant to go.<br><br>The exfoliating particles in the FRESH scrub face & body come from raspberry, blueberry, apricot and pomegranate seeds. From by-products of juice production that would otherwise end up as waste. Upcycling at its best, and incidentally round and gentle enough for the face. Blueberry extract and clay have an antioxidant and clarifying effect. Orange fruit water provides moisture even during the exfoliation. Almond kernel and sesame oil nourish and soften.<br><br>Massage gently 1 to 2 times a week, leave on for 5 to 10 minutes. For face and body. The real effect comes afterwards: everything you apply next works noticeably more intensively. You get more out of the products you are already using.",
     },
     {
-      name:        "CAPS moodoo",
-      emoji:       "🧘‍♀️",
-      shop_url_de: "https://priller.ringana.com/produkt/caps-moodoo/",
-      shop_url_en: "https://priller.ringana.com/produkt/caps-moodoo/?lang=en",
-      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS_moodoo.jpg",
-      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_CAPS_moodoo.jpg",
-      text_de: "Manchmal zieht sich dieses Gefühl durch den ganzen Tag: nicht als Drama, sondern als das leise Empfinden, dass alles zäher läuft als sonst und Kleinigkeiten härter treffen. Genau dort setzen die CAPS moodoo an.<br><br>Iranischer Safranextrakt mit hohem Anteil an Safranal und Crocinen. Für ein Kilo Safran braucht es rund 150.000 Blüten, alle von Hand gepflückt. Ashwagandha, Schisandra aus der TCM und Orangenschalenextrakt. Niacin, das zur normalen psychischen Funktion und zur Verringerung von Müdigkeit beiträgt. Magnesium für Nervensystem und psychische Funktion. Riboflavin, B1, B6 und B12 aus Buchweizenkeimpulver für den Energiestoffwechsel.<br><br>Was das im Alltag bringt: nicht dass alles leicht wird, sondern dass du in fordernden Phasen mehr Reserve hast, bevor es kippt.<br><br>Ein ehrlicher Hinweis: Adaptogene brauchen Wochen, keine Tage. Moodoo also täglich nehmen und nicht erst dann, wenn schon alles zu viel ist.",
-      text_en: "Sometimes that feeling runs through the whole day: not as a crisis, but as the quiet sense that everything is moving more slowly than usual and small things are hitting harder. That is exactly where CAPS moodoo comes in.<br><br>Iranian saffron extract with a high content of safranal and crocins. To produce one kilo of saffron, around 150,000 flowers are needed, all picked by hand. Ashwagandha, schisandra from TCM and orange peel extract. Niacin, which contributes to normal psychological function and the reduction of tiredness. Magnesium for the nervous system and psychological function. Riboflavin, B1, B6 and B12 from buckwheat germ powder for energy metabolism.<br><br>What it provides in everyday life: not that everything becomes easy, but that in demanding phases you have more reserves before things tip.<br><br>An honest note: adaptogens need weeks, not days. Take moodoo daily and do not wait until everything is already too much.",
+      name:        "FRESH cream light",
+      emoji:       "🌱",
+      shop_url_de: "https://priller.ringana.com/produkt/fresh-cream-light/",
+      shop_url_en: "https://priller.ringana.com/produkt/fresh-cream-light/?lang=en",
+      image_de:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_DE_FRESH-cream-light.jpg",
+      image_en:    "assets/images/Summer-Sale_26_Partner-Templates-4x5_EN_FRESH-cream-light.jpg",
+      text_de: "Die leichteste der drei Cremes, gemacht für ölige Haut, Mischhaut und für Sommertage. Der Denkfehler bei öliger Haut ist übrigens, ihr Feuchtigkeit zu entziehen. Passiert das, produziert sie erst recht mehr Talg, um gegenzusteuern. Die cream light geht den anderen Weg: mattieren, ohne auszutrocknen.<br><br>1% verkapselter Ceramid-Komplex für Schutz und Widerstandskraft. 5% NMF, der hauteigene Feuchthaltefaktor. 2% Haferextrakt, der strafft und aufpolstert. Polyphenole, die überschüssigen Talg regulieren und beruhigen.<br><br>Zieht schnell ein, klebt nicht, hinterlässt keinen Glanz.<br><br>Zusammen ergibt das Sinn: Erst runter mit dem, was die Haut blockiert. Dann Pflege drauf, die tatsächlich ankommt.",
+      text_en: "The lightest of the three creams, made for oily skin, combination skin and summer days. The mistake with oily skin is thinking you should strip it of moisture. When that happens, it produces even more sebum to compensate. The cream light takes the other route: mattifying without drying out.<br><br>1% encapsulated ceramide complex for protection and resilience. 5% NMF, the skin's own moisturising factor. 2% oat extract that firms and plumps. Polyphenols that regulate excess sebum and soothe.<br><br>Absorbs quickly, does not stick, leaves no shine.<br><br>Together it makes sense: first remove what is blocking the skin. Then apply care that actually gets through.",
     },
   ],
 
