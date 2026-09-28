@@ -16,7 +16,12 @@
   --white:#fdfaf5;--text:#2a2a24;--muted:#7a7468;
 }
 html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text)}
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.25rem}
+.en-only{display:none}.de-only{display:block}
+body.en .en-only{display:block}body.en .de-only{display:none}
+.lang-sw{display:flex;gap:.12rem;background:var(--sand);border-radius:100px;padding:.15rem;position:absolute;top:1.25rem;right:1.25rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;color:var(--muted);padding:.28rem .75rem;border-radius:100px;transition:background .2s,color .2s}
+.lang-btn.active{background:var(--moss);color:var(--cream)}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.25rem;position:relative}
 .wrap{width:100%;max-width:400px;text-align:center}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--moss);letter-spacing:.05em;margin-bottom:.3rem}
 .logo em{font-style:italic;color:var(--terra)}
@@ -42,38 +47,60 @@ body{min-height:100vh;display:flex;flex-direction:column;align-items:center;just
 </style>
 </head>
 <body>
+<div class="lang-sw">
+  <button class="lang-btn active" onclick="setLang('de')">DE</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
 <div class="wrap">
   <p class="logo"><em>Noa</em> &amp; Ulli</p>
-  <p class="tagline">RINGANA Partners · ullinoa.at</p>
+  <p class="tagline de-only">Unabhängige RINGANA Partnerinnen · ullinoa.at</p>
+  <p class="tagline en-only">Independent RINGANA Partners · ullinoa.at</p>
 
-  <h1 class="greeting">Schön, dass du <em>hier bist.</em></h1>
-  <p class="sub">Wohin darf es für dich gehen?</p>
+  <h1 class="greeting de-only">Schön, dass du <em>hier bist.</em></h1>
+  <h1 class="greeting en-only">So glad you <em>found us.</em></h1>
+  <p class="sub de-only">Wohin darf es für dich gehen?</p>
+  <p class="sub en-only">Where would you like to go?</p>
 
   <div class="cards">
     <a class="card" href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener">
       <div class="card-icon shop">🌿</div>
       <div class="card-body">
-        <p class="card-label">Produkte entdecken</p>
-        <p class="card-title">Direkt zum Shop</p>
-        <p class="card-desc">Frische Naturkosmetik, Supplements &amp; mehr. Mit Code PRILLER20 sparst du €20 auf deine erste Bestellung.</p>
+        <p class="card-label de-only">Produkte entdecken</p>
+        <p class="card-label en-only">Discover the products</p>
+        <p class="card-title de-only">Direkt zum Shop</p>
+        <p class="card-title en-only">Go to the shop</p>
+        <p class="card-desc de-only">Frische Naturkosmetik, Supplements &amp; mehr. Mit Code PRILLER20 sparst du €20 auf deine erste Bestellung.</p>
+        <p class="card-desc en-only">Fresh natural skincare, supplements &amp; more. Use code PRILLER20 for €20 off your first order.</p>
       </div>
       <svg class="card-arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
     </a>
 
-    <div class="divider"><span>oder</span></div>
+    <div class="divider"><span class="de-only">oder</span><span class="en-only">or</span></div>
 
     <a class="card" href="https://ullinoa.at" target="_blank" rel="noopener">
-      <div class="card-icon about">💜</div>
+      <div class="card-icon about">🤍</div>
       <div class="card-body">
-        <p class="card-label">Über uns &amp; das Business</p>
-        <p class="card-title">Lern uns kennen</p>
-        <p class="card-desc">Wer wir sind, wie unser Team funktioniert und was RINGANA so besonders macht, nach 27 Jahren.</p>
+        <p class="card-label de-only">Unsere Geschichte</p>
+        <p class="card-label en-only">Our story</p>
+        <p class="card-title de-only">Wer wir wirklich sind</p>
+        <p class="card-title en-only">Who we really are</p>
+        <p class="card-desc de-only">Wir glauben daran, dass Frauen finanzielle Unabhängigkeit verdienen, ohne dafür ihr Leben aufzugeben. Was uns antreibt, warum wir das seit 27 Jahren machen, und wie wir dabei geblieben sind.</p>
+        <p class="card-desc en-only">We believe women deserve financial independence without giving up their lives to get it. What drives us, why we've been doing this for 27 years, and why we're still here.</p>
       </div>
       <svg class="card-arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
     </a>
   </div>
 
-  <p class="footer">Noa &amp; Ulli Priller · Unabhängige RINGANA Partner:innen</p>
+  <p class="footer de-only">Noa &amp; Ulli Priller · Unabhängige RINGANA Partnerinnen</p>
+  <p class="footer en-only">Noa &amp; Ulli Priller · Independent RINGANA Partners</p>
 </div>
+<script>
+function setLang(l){
+  document.body.className=l==='en'?'en':'';
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===l.toUpperCase()));
+  try{localStorage.setItem('hi_lang',l);}catch(e){}
+}
+try{var sl=localStorage.getItem('hi_lang');if(sl)setLang(sl);}catch(e){}
+</script>
 </body>
 </html>
