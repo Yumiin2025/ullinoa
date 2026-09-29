@@ -419,11 +419,11 @@ body.edit-mode #waFloat{display:none}
       <div class="sec-inline-cta">
         <span class="de-only">
           <span class="cta-hint">Noch Fragen zum Modell?</span>
-          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'how','type':'calendar'})">15 Min. Gespräch buchen</a>
+          <a href="https://scheduler.zoom.us/ullinoa/info-call" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'how','type':'calendar'})">15 Min. Gespräch buchen</a>
         </span>
         <span class="en-only">
           <span class="cta-hint">Still have questions?</span>
-          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener">Book a 15 min call</a>
+          <a href="https://scheduler.zoom.us/ullinoa/one-to-one" target="_blank" rel="noopener">Book a 15 min call</a>
         </span>
       </div>
     </div>
@@ -494,11 +494,11 @@ body.edit-mode #waFloat{display:none}
       <div class="sec-inline-cta">
         <span class="de-only">
           <span class="cta-hint">Klingt nach dem Team, das du dir wünschst?</span>
-          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'team','type':'calendar'})">Jetzt kennenlernen</a>
+          <a href="https://scheduler.zoom.us/ullinoa/info-call" target="_blank" rel="noopener" onclick="gtag('event','inline_cta_click',{'section':'team','type':'calendar'})">Jetzt kennenlernen</a>
         </span>
         <span class="en-only">
           <span class="cta-hint">Sound like the team you've been looking for?</span>
-          <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener">Let's meet</a>
+          <a href="https://scheduler.zoom.us/ullinoa/one-to-one" target="_blank" rel="noopener">Let's meet</a>
         </span>
       </div>
     </div>
@@ -756,7 +756,7 @@ body.edit-mode #waFloat{display:none}
         <span class="de-only">Keine Verpflichtung. Kein Druck. Nur 20 Minuten, um uns alles zu fragen, und herauszufinden, ob das wirklich zu deinem Leben passt.</span>
       </p>
       <div>
-        <a href="https://calendar.app.google/Joo4asPkTA32ZYut9" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','booking_click',{'button':'termin_buchen','page':'partner'})">
+        <a href="https://scheduler.zoom.us/ullinoa/info-call" data-href-de="https://scheduler.zoom.us/ullinoa/info-call" data-href-en="https://scheduler.zoom.us/ullinoa/one-to-one" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event','booking_click',{'button':'termin_buchen','page':'partner'})">
           💬 <span class="en-only">Book a free discovery call</span><span class="de-only">Kostenloses Kennenlerngespräch buchen</span>
         </a>
         <a href="/#contact" class="btn-outline">
@@ -1012,6 +1012,7 @@ body.edit-mode #waFloat{display:none}
 <script>
 let lang = 'de';
 function setLang(l) {
+  document.querySelectorAll('a[data-href-en]').forEach(a => a.href = l === 'en' ? a.dataset.hrefEn : a.dataset.hrefDe);
   lang = l;
   document.body.classList.remove('en','de');
   document.body.classList.add(l);
