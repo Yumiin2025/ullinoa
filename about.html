@@ -59,15 +59,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);
 .person-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .person-grid.reverse{direction:rtl}
 .person-grid.reverse>*{direction:ltr}
+.person-photo-inline{display:none}
 @media(max-width:720px){
-  .person-grid,.person-grid.reverse{grid-template-columns:1fr;direction:ltr}
-  .person-section{padding:3.5rem 1.25rem}
-  .person-photo-col{display:contents}
-  .person-photo.tall{order:1}
-  .person-text-col{order:2}
-  .person-photo.wide{order:3}
-  .hero{align-items:center}
-  .hero-content{padding:2rem 1.5rem}
+  .person-grid,.person-grid.reverse{grid-template-columns:1fr;direction:ltr;gap:1.5rem}
+  .person-section{padding:3rem 1.25rem}
+  .person-photo.wide{display:none}
+  .person-photo.tall{aspect-ratio:3/2}
+  .person-photo-inline{display:block;width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;margin:1.75rem 0}
+  .hero{height:55vh;min-height:320px;align-items:flex-end}
+  .hero-content{padding:1.75rem 1.25rem 2.5rem}
+  .together-grid{gap:2rem}
+  .together-photo{aspect-ratio:4/3}
 }
 .person-photo-col{display:flex;flex-direction:column;gap:1.25rem}
 .person-photo{width:100%;border-radius:20px;object-fit:cover;display:block}
@@ -198,6 +200,7 @@ body.en .de-only{display:none}
               <p class="u-label">Was mich nicht loslässt</p>
               <p>Dass Frauen und Mütter alles geben, für die Familie, für die Gesellschaft, für alle um sie herum. Und am Ende trotzdem die größte Altersarmutsgruppe sind. Dass Zeit gegen Geld tauschen per Definition begrenzt ist. Dass man von früh bis abends für den Erfolg anderer arbeitet und dabei bewusst klein gehalten wird. Dass Unternehmen massenhaft verdienen auf Kosten von Umwelt und Gesundheit. Dass es immer jemanden geben muss, der über einem steht.</p>
             </div>
+            <img class="person-photo-inline" src="assets/images/Family-Auswahl0410.jpg" alt="Noa Priller">
             <p>Das hat in meinem Kopf nie Sinn ergeben.</p>
             <p>Und dann ist Hope gestorben. Meine Hündin. Mein Baby. Mein ein und alles. Ich war dabei, bis zum Ende. Und in diesen Stunden habe ich mich gefragt: Was mache ich hier eigentlich? Für was? Für wen?</p>
             <p>Die Antwort kam klar: <em>It's me. It's always been me.</em></p>
@@ -210,6 +213,7 @@ body.en .de-only{display:none}
               <p class="u-label">What stays with me</p>
               <p>That women and mothers give everything. For family, for society, for everyone around them. And still end up as the largest group living in poverty in old age. That trading time for money is limited by definition. That you work from morning to evening for someone else's success, and are deliberately kept exactly where you are. That companies make fortunes at the cost of our environment and our health. That there always has to be someone standing above you.</p>
             </div>
+            <img class="person-photo-inline" src="assets/images/Family-Auswahl0410.jpg" alt="Noa Priller">
             <p>None of that has ever made sense to me.</p>
             <p>And then Hope died. My dog. My baby. My everything. I was there with her until the end. And in those hours I asked myself: what am I actually doing here? For what? For whom?</p>
             <p>The answer came clearly: <em>It's me. It's always been me.</em></p>
