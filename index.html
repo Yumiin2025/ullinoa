@@ -621,6 +621,7 @@ details.faq-item[open] .faq-ico{transform:rotate(45deg);background:var(--terra)}
 .contact-lbl em{font-style:italic;color:var(--terra)}
 .contact-split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
 @media(max-width:580px){.contact-split{grid-template-columns:1fr}}
+@media(max-width:480px){.intent-split{grid-template-columns:1fr!important}}
 .contact-pcards{display:flex;flex-direction:column;gap:.75rem}
 .cc{display:flex;align-items:center;gap:1.2rem;padding:1.3rem 1.6rem;border-radius:var(--radius);text-decoration:none;border:1.5px solid transparent;transition:transform .25s,box-shadow .25s;min-height:72px}
 .cc:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.12)}
@@ -930,16 +931,11 @@ body.edit-mode #waFloat{display:none}
 </div>
 <!-- CTA ROW -->
 <div class="cta-row">
-  <a href="#boards" class="cta cta-dark">
-    <span class="en-only">Explore our world</span><span class="de-only">Entdecke uns</span>
-    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 8l5 5 5-5"></path></svg>
+  <a href="quiz.html" class="cta cta-dark" onclick="gtag('event','hero_cta_click',{'label':'quiz'})">
+    🧴 <span class="en-only">Find my skincare routine</span><span class="de-only">Meine Routine finden</span>
   </a>
-  <a href="https://priller.ringana.com/alle-produkte" target="_blank" rel="noopener" class="cta cta-purple">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-    <span class="en-only">Shop RINGANA</span><span class="de-only">Zum Shop</span>
-  </a>
-  <a href="https://www.instagram.com/ulli.noa.so.we?igsh=dnVhZDJmN2lvYWpq&amp;utm_source=qr" target="_blank" rel="noopener" class="cta cta-outline">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"></circle></svg> @ulli.noa.so.we
+  <a href="partner.html" class="cta cta-purple" onclick="gtag('event','hero_cta_click',{'label':'partner'})">
+    🌱 <span class="en-only">The business opportunity</span><span class="de-only">Das Business kennenlernen</span>
   </a>
 </div>
 <!-- SOCIAL PROOF STATS -->
@@ -1054,34 +1050,34 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
     <p class="boards-lbl reveal anim in"><span class="en-only" data-pe-key=".boards-lbl .en-only_0" spellcheck="true">Our spaces</span><span class="de-only" data-pe-key=".boards-lbl .de-only_0" spellcheck="true">Unsere Seiten</span></p>
     <h2 class="boards-title reveal anim in"><span class="en-only" data-pe-key=".boards-title .en-only_0" spellcheck="true">Everything you need to <em data-pe-key=".boards-title em_0" spellcheck="true">know us</em></span><span class="de-only" data-pe-key=".boards-title .de-only_0" spellcheck="true">Alles, was du über uns <em data-pe-key=".boards-title em_1" spellcheck="true">wissen möchtest</em></span></h2>
     <div class="board-grid">
-      <a class="b-card b1 reveal d1 anim in" id="card-intro" href="https://boards.com/a/nAQGc.BM07dg" target="_blank" rel="noopener">
+      <a class="b-card reveal d1 anim in" id="card-quiz" href="quiz.html" style="background:linear-gradient(135deg,#dff2f0,#c8e8e4) no-repeat;--b-img-bg:linear-gradient(135deg,#dff2f0,#b8ddd8)">
+        <div class="b-img" style="background:linear-gradient(135deg,#dff2f0,#b8ddd8)"><span class="b-emoji">🧴</span></div>
+        <div class="b-body">
+          <p class="b-tag"><span class="en-only">Start here</span><span class="de-only">Hier starten</span></p>
+          <h3 class="b-title"><span class="en-only">Your Skin Routine Quiz</span><span class="de-only">Dein Routine-Quiz</span></h3>
+          <p class="b-desc"><span class="en-only">Find your perfect RINGANA skincare routine in 60 seconds. Personalised, free, no account needed.</span><span class="de-only">Finde in 60 Sekunden deine perfekte RINGANA Routine. Kostenlos, persönlich, ohne Anmeldung.</span></p>
+          <span class="b-arr"><span class="en-only">Start quiz</span><span class="de-only">Quiz starten</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span>
+        </div>
+      </a>
+      <a class="b-card b1 reveal d2 anim in" id="card-intro" href="https://boards.com/a/nAQGc.BM07dg" target="_blank" rel="noopener">
         <div class="b-img"><span class="b-emoji">👋</span></div>
         <div class="b-body"><p class="b-tag"><span class="en-only" data-pe-key=".b-tag .en-only_0" spellcheck="true">Start here</span><span class="de-only" data-pe-key=".b-tag .de-only_0" spellcheck="true">Hier starten</span></p><h3 class="b-title"><span class="en-only" data-pe-key=".b-title .en-only_0" spellcheck="true">Hi, this is us!</span><span class="de-only" data-pe-key=".b-title .de-only_0" spellcheck="true">Hi, das sind wir!</span></h3><p class="b-desc"><span class="en-only" data-pe-key=".b-desc .en-only_0" spellcheck="true">Get to know Noa &amp; Ulli, who we are, why we chose RINGANA, and what drives us every day.</span><span class="de-only" data-pe-key=".b-desc .de-only_0" spellcheck="true">Lern Noa &amp; Ulli kennen, wer wir sind, warum wir RINGANA lieben und was uns täglich antreibt.</span></p><span class="b-arr"><span class="en-only" data-pe-key=".b-arr .en-only_0" spellcheck="true">Explore</span><span class="de-only" data-pe-key=".b-arr .de-only_0" spellcheck="true">Entdecken</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span></div>
       </a>
-      <a class="b-card b2 reveal d2 anim in" id="card-hair" href="https://boards.com/a/nAQGc.iHAM3q" target="_blank" rel="noopener">
+      <a class="b-card b2 reveal d3 anim in" id="card-hair" href="https://boards.com/a/nAQGc.iHAM3q" target="_blank" rel="noopener">
         <div class="b-img"><span class="b-emoji">☀️</span></div>
         <div class="b-body"><p class="b-tag"><span class="en-only" data-pe-key=".b-tag .en-only_1" spellcheck="true">Product love</span><span class="de-only" data-pe-key=".b-tag .de-only_1" spellcheck="true">Produktliebe</span></p><h3 class="b-title"><span class="en-only" data-pe-key=".b-title .en-only_1" spellcheck="true">My Haircare Ride-or-Dies ☀️</span><span class="de-only" data-pe-key=".b-title .de-only_1" spellcheck="true">Meine Haarpflege Ride-or-Dies ❄️</span></h3><p class="b-desc"><span class="en-only" data-pe-key=".b-desc .en-only_1" spellcheck="true">The RINGANA hair products we genuinely swear by, tested, loved, recommended with our whole hearts.</span><span class="de-only" data-pe-key=".b-desc .de-only_1" spellcheck="true">Die RINGANA Haarpflegeprodukte, die wir wirklich lieben, getestet, geliebt und von Herzen empfohlen.</span></p><span class="b-arr"><span class="en-only" data-pe-key=".b-arr .en-only_1" spellcheck="true">Shop the picks</span><span class="de-only" data-pe-key=".b-arr .de-only_1" spellcheck="true">Zu den Produkten</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span></div>
       </a>
-      <a class="b-card b3 reveal d3 anim in" id="card-drinks" href="https://boards.com/a/nAQGc.D5l2k8" target="_blank" rel="noopener">
+      <a class="b-card b3 reveal d4 anim in" id="card-drinks" href="https://boards.com/a/nAQGc.D5l2k8" target="_blank" rel="noopener">
         <div class="b-img"><span class="b-emoji">🥤</span></div>
         <div class="b-body"><p class="b-tag"><span class="en-only" data-pe-key=".b-tag .en-only_2" spellcheck="true">Inner nutrition</span><span class="de-only" data-pe-key=".b-tag .de-only_2" spellcheck="true">Innere Pflege</span></p><h3 class="b-title"><span class="en-only" data-pe-key=".b-title .en-only_2" spellcheck="true">All my Drinks</span><span class="de-only" data-pe-key=".b-title .de-only_2" spellcheck="true">Alle meine Drinks</span></h3><p class="b-desc"><span class="en-only" data-pe-key=".b-desc .en-only_2" spellcheck="true">From supplements to boosters, the RINGANA drinks and CAPS we can't live without.</span><span class="de-only" data-pe-key=".b-desc .de-only_2" spellcheck="true">Von Supplements bis Boostern, die RINGANA Drinks und CAPS, die wir nicht missen möchten.</span></p><span class="b-arr"><span class="en-only" data-pe-key=".b-arr .en-only_2" spellcheck="true">See all drinks</span><span class="de-only" data-pe-key=".b-arr .de-only_2" spellcheck="true">Alle Drinks ansehen</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span></div>
       </a>
-      <a class="b-card b4 reveal d4 anim in" id="card-biz" href="https://boards.com/a/nAQGc.ZAkMai" target="_blank" rel="noopener">
+      <a class="b-card b4 reveal d5 anim in" id="card-biz" href="https://boards.com/a/nAQGc.ZAkMai" target="_blank" rel="noopener">
         <div class="b-img"><span class="b-emoji">💼</span></div>
         <div class="b-body"><p class="b-tag"><span class="en-only" data-pe-key=".b-tag .en-only_3" spellcheck="true">The opportunity</span><span class="de-only" data-pe-key=".b-tag .de-only_3" spellcheck="true">Die Chance</span></p><h3 class="b-title"><span class="en-only" data-pe-key=".b-title .en-only_3" spellcheck="true">The Business</span><span class="de-only" data-pe-key=".b-title .de-only_3" spellcheck="true">Das Business</span></h3><p class="b-desc"><span class="en-only" data-pe-key=".b-desc .en-only_3" spellcheck="true">Curious how the RINGANA partner business works? Clearly explained, no hype, just real.</span><span class="de-only" data-pe-key=".b-desc .de-only_3" spellcheck="true">Wie funktioniert das RINGANA Partner-Business? Klar erklärt, ohne Hype, einfach ehrlich.</span></p><span class="b-arr"><span class="en-only" data-pe-key=".b-arr .en-only_3" spellcheck="true">Learn more</span><span class="de-only" data-pe-key=".b-arr .de-only_3" spellcheck="true">Mehr erfahren</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span></div>
       </a>
-      <a class="b-card b5 reveal d5 anim in" id="card-why" href="https://boards.com/a/nAQGc.qaA7m9" target="_blank" rel="noopener">
+      <a class="b-card b5 reveal d6 anim in" id="card-why" href="https://boards.com/a/nAQGc.qaA7m9" target="_blank" rel="noopener">
         <div class="b-img"><span class="b-emoji">🌱</span></div>
         <div class="b-body"><p class="b-tag"><span class="en-only" data-pe-key=".b-tag .en-only_4" spellcheck="true">The brand</span><span class="de-only" data-pe-key=".b-tag .de-only_4" spellcheck="true">Die Marke</span></p><h3 class="b-title"><span class="en-only" data-pe-key=".b-title .en-only_4" spellcheck="true">Why RINGANA?</span><span class="de-only" data-pe-key=".b-title .de-only_4" spellcheck="true">Warum RINGANA?</span></h3><p class="b-desc"><span class="en-only" data-pe-key=".b-desc .en-only_4" spellcheck="true">Fresh, clean, science-backed, discover why this Austrian brand stands out and why we stand behind it 100%.</span><span class="de-only" data-pe-key=".b-desc .de-only_4" spellcheck="true">Frisch, sauber, wissenschaftlich fundiert, warum diese österreichische Marke einzigartig ist.</span></p><span class="b-arr"><span class="en-only" data-pe-key=".b-arr .en-only_4" spellcheck="true">Discover</span><span class="de-only" data-pe-key=".b-arr .de-only_4" spellcheck="true">Entdecken</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span></div>
-      </a>
-      <a class="b-card reveal d6 anim in" id="card-quiz" href="quiz.html" style="background:linear-gradient(135deg,#dff2f0,#c8e8e4) no-repeat;--b-img-bg:linear-gradient(135deg,#dff2f0,#b8ddd8)">
-        <div class="b-img" style="background:linear-gradient(135deg,#dff2f0,#b8ddd8)"><span class="b-emoji">🧴</span></div>
-        <div class="b-body">
-          <p class="b-tag"><span class="en-only">Skincare Quiz</span><span class="de-only">Hautpflege-Quiz</span></p>
-          <h3 class="b-title"><span class="en-only">Your Routine Quiz</span><span class="de-only">Dein Routine-Quiz</span></h3>
-          <p class="b-desc"><span class="en-only">Find your perfect RINGANA skincare routine in 60 seconds.</span><span class="de-only">Finde in 60 Sekunden deine perfekte RINGANA Hautpflege-Routine.</span></p>
-          <span class="b-arr"><span class="en-only">Start quiz</span><span class="de-only">Quiz starten</span> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M7 2l5 5-5 5"></path></svg></span>
-        </div>
       </a>
     </div>
 
@@ -1243,7 +1239,27 @@ Was ist der Business Booster?</p><div class="post-footer"><span class="post-more
   <div class="contact-inner">
     <p class="sec-lbl reveal anim in" style="text-align:center;margin-bottom:.5rem"><span class="en-only">Let's connect.</span><span class="de-only">Meld dich bei uns.</span></p>
     <h2 class="sec-title reveal anim in" style="text-align:center;margin-bottom:.8rem"><span class="en-only">We'd love to <em>hear from you</em></span><span class="de-only">Wir freuen uns von <em>dir zu hören</em></span></h2>
-    <p class="reveal anim in" style="text-align:center;font-size:.9rem;color:var(--muted);font-weight:300;max-width:460px;margin:0 auto;line-height:1.7"><span class="en-only">Just fill in the form below and we'll get your message as a WhatsApp, personal, direct, no bots.</span><span class="de-only">Füll das Formular aus und wir bekommen deine Nachricht als WhatsApp, persönlich, direkt, kein Bot.</span></p>
+    <p class="reveal anim in" style="text-align:center;font-size:.9rem;color:var(--muted);font-weight:300;max-width:460px;margin:0 auto;line-height:1.7"><span class="en-only">Tell us what you're here for — we'll make it easy.</span><span class="de-only">Sag uns, warum du hier bist — wir machen's einfach.</span></p>
+
+    <!-- INTENT SPLIT -->
+    <div class="intent-split reveal anim in" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:560px;margin:2rem auto 0">
+      <a href="quiz.html" style="display:flex;flex-direction:column;gap:.5rem;background:var(--white);border:1.5px solid var(--sage);border-radius:16px;padding:1.4rem 1.2rem;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(30,61,58,.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:1.5rem">🧴</span>
+        <span style="font-size:.82rem;font-weight:600;color:var(--moss)"><span class="en-only">I'm curious about the products</span><span class="de-only">Ich interessiere mich für die Produkte</span></span>
+        <span style="font-size:.78rem;color:var(--muted);font-weight:300"><span class="en-only">Start with the skin quiz →</span><span class="de-only">Zum Routine-Quiz →</span></span>
+      </a>
+      <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20RINGANA%20Partner-Business%20und%20w%C3%BCrde%20gerne%20mehr%20erfahren%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="en-only" style="display:flex;flex-direction:column;gap:.5rem;background:var(--white);border:1.5px solid var(--sage);border-radius:16px;padding:1.4rem 1.2rem;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(30,61,58,.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:1.5rem">🌱</span>
+        <span style="font-size:.82rem;font-weight:600;color:var(--moss)">I'm interested in the business</span>
+        <span style="font-size:.78rem;color:var(--muted);font-weight:300">WhatsApp Noa directly →</span>
+      </a>
+      <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20RINGANA%20Partner-Business%20und%20w%C3%BCrde%20gerne%20mehr%20erfahren%20%F0%9F%8C%BF" target="_blank" rel="noopener" class="de-only" style="display:flex;flex-direction:column;gap:.5rem;background:var(--white);border:1.5px solid var(--sage);border-radius:16px;padding:1.4rem 1.2rem;text-decoration:none;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(30,61,58,.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <span style="font-size:1.5rem">🌱</span>
+        <span style="font-size:.82rem;font-weight:600;color:var(--moss)">Ich interessiere mich fürs Business</span>
+        <span style="font-size:.78rem;color:var(--muted);font-weight:300">Noa direkt auf WhatsApp →</span>
+      </a>
+    </div>
+    <p class="reveal anim in" style="text-align:center;font-size:.78rem;color:var(--muted);margin:1.2rem auto 0;max-width:400px"><span class="en-only">Or use the form below for anything else:</span><span class="de-only">Oder das Formular unten für alles andere:</span></p>
 
     <!-- SMART WHATSAPP FORM -->
     <div class="reveal anim in" style="max-width:560px;margin:2.2rem auto 2.5rem">
