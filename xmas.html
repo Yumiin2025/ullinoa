@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Season of Freshness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#6c1430; --wine-2:#7b1a3a; --crimson:#8d2049;
+  --paper:#fbf6ef; --cream:#f3eadf; --blush:#f2dfe0;
+  --gold:#a8834a; --gold-l:#d9bf8c;
+  --ink:#3b1622; --ink-2:#6d4a52; --fir:#1e3d3a;
+  --serif:"Bodoni Moda", "Didot", Georgia, serif;
+  --sans:"Jost", "Futura", "Helvetica Neue", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#d9cfc6}
+body{font-family:var(--sans);color:var(--ink);font-weight:300;-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#d9cfc6}
+@page{size:A4;margin:0}
+
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--paper);margin:10mm auto;box-shadow:0 6px 30px rgba(60,20,30,.18);page-break-after:always;break-after:page}
+@media print{html,body{background:none}.page{margin:0;box-shadow:none}}
+@media screen and (max-width:820px){.page{zoom:calc(100vw / 820px * 1.02)}}
+
+/* ---- site nav & floating WA ---- */
+.xmas-back{position:sticky;top:0;z-index:200;background:var(--wine);display:flex;align-items:center;justify-content:space-between;padding:.55rem 1.25rem;gap:1rem}
+.xmas-back a.home{color:var(--gold-l);text-decoration:none;font-size:.76rem;font-weight:500;letter-spacing:.06em;display:flex;align-items:center;gap:.35rem}
+.xmas-back a.home:hover{color:var(--cream)}
+.xmas-back .title{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(243,234,223,.55);white-space:nowrap}
+.xmas-back a.wa-top{background:rgba(255,255,255,.15);color:var(--cream);border:1px solid rgba(255,255,255,.3);border-radius:100px;padding:.3rem .85rem;font-size:.72rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .18s}
+.xmas-back a.wa-top:hover{background:rgba(255,255,255,.28)}
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;display:flex;align-items:center;gap:.5rem;background:#25d366;color:#fff;border-radius:100px;padding:.65rem 1.2rem .65rem .9rem;font-size:.82rem;font-weight:700;text-decoration:none;box-shadow:0 4px 22px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.wa-float svg{width:18px;height:18px;flex-shrink:0}
+@media print{.xmas-back,.wa-float{display:none!important}}
+
+/* ---------- shared bits ---------- */
+.kicker{font-family:var(--sans);font-weight:500;font-size:7.6pt;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.h1{font-family:var(--serif);font-weight:400;font-size:40pt;line-height:1.02;letter-spacing:-.01em}
+.h2{font-family:var(--serif);font-weight:400;font-size:26pt;line-height:1.08}
+.h3{font-family:var(--serif);font-weight:500;font-size:14pt;line-height:1.15}
+em,.it{font-style:italic}
+p{font-size:9.6pt;line-height:1.6}
+.small{font-size:7.6pt;line-height:1.5;color:var(--ink-2)}
+.legal{position:absolute;left:18mm;right:18mm;bottom:9mm;display:flex;justify-content:space-between;font-size:6.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.dark .legal{color:rgba(243,234,223,.6)}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent);opacity:.7}
+.star{display:inline-block;width:10px;height:10px;vertical-align:middle}
+.orn{display:flex;align-items:center;gap:10px;color:var(--gold)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:currentColor;opacity:.55}
+
+.dark{background:var(--wine);color:var(--cream)}
+.dark::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='%23d9bf8c' fill-opacity='.10'%3E%3Cpath d='M45 39l1.6 4.4L51 45l-4.4 1.6L45 51l-1.6-4.4L39 45l4.4-1.6z'/%3E%3Ccircle cx='0' cy='0' r='1.2'/%3E%3Ccircle cx='90' cy='0' r='1.2'/%3E%3Ccircle cx='0' cy='90' r='1.2'/%3E%3Ccircle cx='90' cy='90' r='1.2'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.frame{position:absolute;inset:9mm;border:1px solid rgba(217,191,140,.55);pointer-events:none}
+.frame::after{content:"";position:absolute;inset:2.2mm;border:1px solid rgba(217,191,140,.28)}
+.frame.light{border-color:rgba(168,131,74,.45)}
+.frame.light::after{border-color:rgba(168,131,74,.22)}
+
+/* image windows: product shots sit on the template crimson */
+.win{background:var(--crimson);overflow:hidden;position:relative}
+.win img{display:block;width:100%;height:100%;object-fit:cover}
+.arch{border-radius:50% 50% 0 0 / 34% 34% 0 0}
+.date-seal{position:absolute;width:19mm;height:19mm;border-radius:50%;background:var(--paper);color:var(--wine);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 1.4mm rgba(251,246,239,.35);text-align:center}
+.date-seal span{font-size:5.6pt;letter-spacing:.28em;font-weight:500;color:var(--gold)}
+.date-seal b{font-family:var(--serif);font-weight:500;font-size:13pt;line-height:1}
+
+/* product card */
+.card .meta{font-size:6.8pt;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:3.2mm 0 1.4mm}
+.card .h3{color:var(--wine)}
+.card p{margin-top:1.8mm;font-size:8.8pt;line-height:1.55}
+.card .inhalt{margin-top:1.8mm;font-size:7.8pt;line-height:1.5;color:var(--ink-2)}
+.price{margin-top:2.6mm;display:flex;align-items:baseline;gap:4mm;flex-wrap:wrap}
+.price b{font-family:var(--serif);font-weight:500;font-size:15pt;color:var(--wine)}
+.price small{font-size:6.6pt;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);font-weight:400;margin-right:1.2mm}
+.tag{display:inline-block;margin-top:2.4mm;padding:1.1mm 2.8mm;border:1px solid var(--gold);color:var(--gold);font-size:6.2pt;letter-spacing:.24em;text-transform:uppercase;font-weight:500;border-radius:20px}
+
+/* chapter header for product pages */
+.chap{position:absolute;left:18mm;right:18mm;top:15mm;display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:4mm;border-bottom:1px solid rgba(168,131,74,.45)}
+.chap .num{font-family:var(--serif);font-style:italic;font-size:11pt;color:var(--gold)}
+.chap .h2{color:var(--wine)}
+.chap .when{text-align:right}
+.chap .when b{display:block;font-family:var(--serif);font-weight:400;font-size:24pt;color:var(--wine);line-height:1}
+
+/* ================= COVER ================= */
+.cover .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:24mm 22mm 0}
+.cover .h1{font-size:50pt;color:var(--cream);margin-top:7mm}
+.cover .h1 em{color:var(--gold-l)}
+.cover .sub{margin-top:5mm;font-family:var(--serif);font-style:italic;font-size:14pt;color:var(--gold-l)}
+.cover .hero{margin-top:11mm;width:128mm;height:122mm;border:1px solid rgba(217,191,140,.6);padding:2.5mm;border-radius:50% 50% 0 0 / 38% 38% 0 0}
+.cover .hero .win{width:100%;height:100%;border-radius:50% 50% 0 0 / 37% 37% 0 0}
+.cover .hero img{object-position:50% 60%}
+.cover .by{margin-top:10mm;font-size:8pt;letter-spacing:.34em;text-transform:uppercase;color:var(--cream)}
+.cover .by span{color:var(--gold-l)}
+
+/* ================= WHY ================= */
+.why .top{position:absolute;left:18mm;right:18mm;top:20mm}
+.why .h1{color:var(--wine);margin-top:4mm}
+.why .lead{margin-top:5mm;font-family:var(--serif);font-style:italic;font-size:13.5pt;line-height:1.4;color:var(--ink);max-width:150mm}
+.reasons{position:absolute;left:18mm;right:18mm;top:84mm;display:grid;grid-template-columns:1fr 1fr;column-gap:12mm}
+.reason{display:grid;grid-template-columns:12mm 1fr;padding:4.4mm 0;border-top:1px solid rgba(168,131,74,.35)}
+.reason .n{font-family:var(--serif);font-style:italic;font-size:15pt;color:var(--gold);line-height:1}
+.reason h4{font-family:var(--serif);font-weight:500;font-size:12pt;color:var(--wine);line-height:1.2}
+.reason p{font-size:8.6pt;line-height:1.5;margin-top:1.2mm}
+.gift{position:absolute;left:0;right:0;bottom:0;height:98mm;background:var(--wine);color:var(--cream);display:grid;grid-template-columns:78mm 1fr}
+.gift .win{height:100%}
+.gift .win img{object-position:50% 50%}
+.gift .txt{padding:11mm 18mm 18mm 11mm;position:relative}
+.gift .h2{color:var(--cream);font-size:22pt;margin-top:3mm}
+.gift .h2 em{color:var(--gold-l)}
+.gift ul{list-style:none;margin-top:5mm}
+.gift li{display:grid;grid-template-columns:7mm 1fr;font-size:8.8pt;line-height:1.5;padding:1.6mm 0}
+.gift li b{font-weight:500;color:var(--gold-l)}
+.gift .legal{left:11mm;right:18mm;bottom:7mm}
+
+/* ================= TIMELINE ================= */
+.plan .top{position:absolute;left:20mm;right:20mm;top:21mm;text-align:center}
+.plan .h1{color:var(--cream);margin-top:3mm;font-size:36pt}
+.plan .h1 em{color:var(--gold-l)}
+.plan .intro{margin:4mm auto 0;max-width:120mm;font-size:8.8pt;color:rgba(243,234,223,.82)}
+.tl{position:absolute;left:24mm;right:24mm;top:72mm}
+.tl::before{content:"";position:absolute;left:31mm;top:2mm;bottom:2mm;width:1px;background:rgba(217,191,140,.55)}
+.stop{display:grid;grid-template-columns:31mm 1fr;position:relative;padding:4.6mm 0 6mm}
+.stop::before{content:"";position:absolute;left:calc(31mm - 2.2mm);top:6.5mm;width:4.4mm;height:4.4mm;background:var(--wine);border:1px solid var(--gold-l);transform:rotate(45deg)}
+.stop .d{font-family:var(--serif);font-size:19pt;color:var(--gold-l);line-height:1}
+.stop .d small{display:block;font-family:var(--sans);font-size:6pt;letter-spacing:.3em;color:rgba(243,234,223,.6);margin-bottom:1mm}
+.stop ul{list-style:none;padding-left:8mm}
+.stop li{display:flex;justify-content:space-between;gap:6mm;font-size:8.5pt;line-height:1.75;color:var(--cream);border-bottom:1px dotted rgba(217,191,140,.22)}
+.stop li span:last-child{font-family:var(--serif);color:var(--gold-l);white-space:nowrap}
+.stop.final .d{color:var(--cream)}
+
+/* ================= grids ================= */
+.grid2{position:absolute;left:18mm;right:18mm;top:44mm;display:grid;grid-template-columns:1fr 1fr;gap:9mm 10mm}
+.grid2 .win{height:58mm}
+.row{position:absolute;left:18mm;right:18mm;display:grid;grid-template-columns:86mm 1fr;gap:10mm;align-items:center}
+.row .win{height:72mm}
+
+/* ================= SPA highlight ================= */
+.spa .head{position:absolute;left:0;right:0;top:0;height:92mm;background:var(--wine)}
+.spa .bigwin{position:absolute;left:18mm;right:18mm;top:52mm;height:116mm;box-shadow:0 10px 30px rgba(60,20,30,.25)}
+.spa .bigwin img{object-position:50% 52%}
+.spa .badge{position:absolute;left:18mm;top:18mm;color:var(--cream)}
+.spa .badge .h1{color:var(--cream);font-size:30pt;margin-top:2mm}
+.spa .badge .h1 em{color:var(--gold-l)}
+.spa .badge .kicker{color:var(--gold-l)}
+.spa .body{position:absolute;left:18mm;right:18mm;top:180mm;display:grid;grid-template-columns:1.05fr 1fr;gap:12mm}
+.spa .contents{list-style:none}
+.spa .contents li{padding:2.4mm 0;border-bottom:1px solid rgba(168,131,74,.3);font-size:8.6pt;line-height:1.45}
+.spa .contents li b{font-weight:500;color:var(--wine);display:block;font-size:9pt}
+
+/* ================= gift finder ================= */
+.finder .top{position:absolute;left:18mm;right:18mm;top:20mm}
+.finder .h1{color:var(--wine);margin-top:4mm}
+.finder .h1 em{color:var(--crimson)}
+.fgrid{position:absolute;left:18mm;right:18mm;top:70mm;bottom:30mm;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:8mm}
+.fbox{border:1px solid rgba(168,131,74,.45);padding:8mm 7mm 6mm;position:relative;background:#fffdf9}
+.fbox .h3{color:var(--wine);font-size:15pt}
+.fbox .for{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:10pt}
+.fbox ul{list-style:none;margin-top:3.4mm}
+.fbox li{display:flex;justify-content:space-between;gap:4mm;font-size:8.8pt;line-height:1.5;padding:2mm 0;border-top:1px dotted rgba(168,131,74,.35)}
+.fbox li span:last-child{font-family:var(--serif);color:var(--wine);white-space:nowrap}
+.fbox.feature{background:var(--wine);color:var(--cream);border-color:var(--wine)}
+.fbox.feature .h3{color:var(--cream)}
+.fbox.feature .for{color:var(--gold-l)}
+.fbox.feature li{border-top-color:rgba(217,191,140,.3)}
+.fbox.feature li span:last-child{color:var(--gold-l)}
+
+/* ================= back page ================= */
+.back .inner{position:absolute;inset:0;padding:26mm 24mm 0;text-align:center;display:flex;flex-direction:column;align-items:center}
+.back .h1{color:var(--cream);font-size:34pt;margin-top:4mm}
+.back .h1 em{color:var(--gold-l)}
+.back .note{margin-top:6mm;max-width:132mm;font-size:9.4pt;line-height:1.7;color:rgba(243,234,223,.88)}
+.code{margin-top:8mm;border:1px solid var(--gold-l);padding:7mm 12mm;position:relative;width:132mm}
+.code::before,.code::after{content:"";position:absolute;width:3mm;height:3mm;background:var(--wine);border:1px solid var(--gold-l);transform:rotate(45deg);top:50%;margin-top:-1.5mm}
+.code::before{left:-1.6mm}.code::after{right:-1.6mm}
+.code .k{font-size:6.8pt;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-l)}
+.code b{display:block;font-family:var(--serif);font-weight:500;font-size:28pt;letter-spacing:.01em;color:var(--cream);margin:2mm 0 1mm}
+.code p{font-size:8.6pt;color:rgba(243,234,223,.8)}
+.contact{margin-top:8mm;width:150mm;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(217,191,140,.4);border-bottom:1px solid rgba(217,191,140,.4)}
+.contact div{padding:5mm 2mm}
+.contact div+div{border-left:1px solid rgba(217,191,140,.25)}
+.contact span{display:block;font-size:6.2pt;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);margin-bottom:1.6mm}
+.contact a{color:var(--cream);text-decoration:none;font-family:var(--serif);font-size:10.5pt}
+.back .good{margin-top:7mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;width:150mm;font-size:8pt;line-height:1.5;color:rgba(243,234,223,.8)}
+.back .good b{display:block;font-family:var(--serif);font-weight:400;font-style:italic;font-size:11pt;color:var(--gold-l);margin-bottom:1mm}
+.wrap{margin-top:7mm;padding:3mm 6mm;border-top:1px solid rgba(217,191,140,.35);border-bottom:1px solid rgba(217,191,140,.35);font-size:8.4pt;letter-spacing:.02em;color:var(--gold-l)}
+.partner{margin-top:6mm;max-width:130mm;font-family:var(--serif);font-style:italic;font-size:10pt;line-height:1.5;color:rgba(243,234,223,.85)}
+.sign{margin-top:6mm;font-family:var(--serif);font-style:italic;font-size:19pt;color:var(--gold-l)}
+.fine{position:absolute;left:24mm;right:24mm;bottom:17mm;font-size:6.4pt;line-height:1.5;color:rgba(243,234,223,.5);text-align:center}
+</style>
+</head>
+<body>
+
+<div class="xmas-back">
+  <a class="home" href="/">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 7H2M7 2L2 7l5 5"/></svg>
+    ullinoa.at
+  </a>
+  <span class="title">X-Mas 2026</span>
+  <a class="wa-top" href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20habe%20den%20Weihnachtskatalog%20gesehen%20und%20m%C3%B6chte%20gerne%20bestellen%20%F0%9F%8E%84" target="_blank" rel="noopener">Jetzt bestellen</a>
+</div>
+
+<a class="wa-float" href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20habe%20den%20Weihnachtskatalog%20gesehen%20und%20m%C3%B6chte%20gerne%20bestellen%20%F0%9F%8E%84" target="_blank" rel="noopener" aria-label="WhatsApp – Jetzt bestellen">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Jetzt bestellen
+</a>
+
+<!-- ============ 01 COVER ============ -->
+<section class="page dark cover">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="kicker" style="color:var(--gold-l)">Weihnachten 2026 &nbsp;✦&nbsp; Limited X-Mas Editions</div>
+    <h1 class="h1">The Season<br><em>of</em> Freshness</h1>
+    <div class="sub">Der Geschenke-Katalog</div>
+    <div class="hero"><div class="win"><img src="assets/images/spa-night-mood.jpg" alt="FRESH spa night x-mas set"></div></div>
+    <div class="by">Persönlich ausgewählt von <span>Noa</span></div>
+  </div>
+  <div class="legal" style="bottom:14mm;left:22mm;right:22mm"><span>Werbung | RINGANA Partnerin</span><span>Noa Priller</span></div>
+</section>
+
+<!-- ============ 02 WARUM RINGANA ============ -->
+<section class="page why">
+  <div class="top">
+    <div class="kicker">Kurz &amp; ehrlich</div>
+    <h2 class="h1">Warum <em>RINGANA?</em></h2>
+    <p class="lead">Weil Schenken leicht sein darf und sich trotzdem besonders anfühlen soll. Gut für die Haut, die es bekommt, und für die Welt, in der wir alle leben.</p>
+  </div>
+  <div class="reasons">
+    <div class="reason"><div class="n">I</div><div><h4>Wirklich frisch</h4><p>In kleinen Chargen frisch hergestellt in der Steiermark. Deshalb gibt es ein Frischedatum statt jahrelanger Lagerzeit.</p></div></div>
+    <div class="reason"><div class="n">II</div><div><h4>Hightech aus der Natur</h4><p>Eigene Forschung im Haus, wissenschaftlich fundiert und am Puls der neuesten Studien. Die Wirkstoffe sind so kombiniert, dass sie sich gegenseitig verstärken, für maximale Wirkung.</p></div></div>
+    <div class="reason"><div class="n">III</div><div><h4>Rein &amp; fair</h4><p>Ohne künstliche Konservierungsstoffe, ohne Tierversuche. Mit Rohstoffen von Lieferanten, die umweltfreundlich und ethisch korrekt arbeiten.</p></div></div>
+    <div class="reason"><div class="n">IV</div><div><h4>Nachhaltig gedacht</h4><p>Mit der Reuse-Aktion gibst du die leeren Glasflakons der Gesichtspflege zurück. Für 10 Flakons bekommst du ein Produkt deiner Wahl gratis.</p></div></div>
+    <div class="reason"><div class="n">V</div><div><h4>Nur in dieser Saison</h4><p>Die X-Mas Editions gibt es nur jetzt. Etwas Besonderes für eine besondere Zeit, liebevoll gestaltet bis ins Detail.</p></div></div>
+    <div class="reason"><div class="n">VI</div><div><h4>Persönlich beraten</h4><p>Du bestellst nicht anonym, sondern bei mir. Ich helfe dir gern, für jeden Menschen genau das Passende zu finden.</p></div></div>
+  </div>
+  <div class="gift">
+    <div class="win"><img src="assets/images/bath-oil-mood.jpg" alt="FRESH bath &amp; shower oil zest"></div>
+    <div class="txt">
+      <div class="kicker" style="color:var(--gold-l)">Liebe zu verschenken</div>
+      <h3 class="h2">Das perfekte Geschenk? <em>Eines, das benutzt wird.</em></h3>
+      <ul>
+        <li><b>✦</b><span>Schenken heißt: Ich denk an dich. Mit RINGANA wird daraus ein Moment, der ankommt und jeden Tag Freude macht.</span></li>
+        <li><b>✦</b><span>Edel verpackt, sofort bereit zum Verschenken. Vom kleinen Wichtel bis zum großen Wow.</span></li>
+        <li><b>✦</b><span>Meine Familie ist von Anfang an dabei: meine Oma, meine Mama und ich. Drei Generationen, eine gemeinsame Liebe.</span></li>
+      </ul>
+      <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>02</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 FAHRPLAN ============ -->
+<section class="page dark plan">
+  <div class="frame"></div>
+  <div class="top">
+    <div class="kicker" style="color:var(--gold-l)">Dein Überblick</div>
+    <h2 class="h1">Der X-Mas <em>Fahrplan</em></h2>
+    <p class="intro">Alle Weihnachts-Highlights in der Reihenfolge, in der sie verfügbar werden. Alles limitiert. Sag mir einfach, was dir gefällt, ich reserviere es dir gern.</p>
+  </div>
+  <div class="tl">
+    <div class="stop"><div class="d"><small>AB</small>19.10.</div><ul>
+      <li><span>FRESH soap mandarine &amp; orange · einzeln / 5er-Set</span><span>11,50 € / 46,00 €</span></li>
+      <li><span>FRESH soap lemon &amp; elderberry · einzeln / 5er-Set</span><span>11,50 € / 46,00 €</span></li>
+      <li><span>FRESH soap · 5er-Set (4 + 1 gratis)</span><span>43,60 €</span></li></ul></div>
+    <div class="stop"><div class="d"><small>AB</small>29.10.</div><ul>
+      <li><span>FRESH soap liquid pumpkin spice</span><span>20,90 €</span></li>
+      <li><span>RINGANAchi pumpkin spice · einzeln / Set of 2</span><span>50,90 € / 91,60 €</span></li>
+      <li><span>FRESH kiss &amp; care x-mas set</span><span>39,80 €</span></li></ul></div>
+    <div class="stop"><div class="d"><small>AB</small>02.11.</div><ul>
+      <li><span>FRESH body care x-mas set</span><span>54,80 €</span></li>
+      <li><span>FRESH bright eyes x-mas set</span><span>59,80 €</span></li></ul></div>
+    <div class="stop"><div class="d"><small>AB</small>09.11.</div><ul>
+      <li><span>FRESH brush on x-mas set · exfoliating</span><span>58,20 €</span></li>
+      <li><span>FRESH brush on x-mas set · peptide performance</span><span>62,70 €</span></li>
+      <li><span>FRESH brush on x-mas set · purifying</span><span>56,40 €</span></li>
+      <li><span>FRESH hair care x-mas set</span><span>66,80 €</span></li></ul></div>
+    <div class="stop"><div class="d"><small>AB</small>16.11.</div><ul>
+      <li><span>RINGANA scented candle mandarine &amp; tonka</span><span>29,90 €</span></li>
+      <li><span>FRESH bath &amp; shower oil zest · limited edition</span><span>39,60 €</span></li>
+      <li><span>FRESH timeless beauty set</span><span>196,80 €</span></li></ul></div>
+    <div class="stop"><div class="d"><small>AB</small>23.11.</div><ul>
+      <li><span>FRESH spa night x-mas set</span><span>154,80 €</span></li>
+      <li><span>FRESH body milk light shimmer</span><span>37,70 €</span></li>
+      <li><span>FRESH liquid blush poppy</span><span>15,60 €</span></li>
+      <li><span>FRESH lip balm glazed orange</span><span>15,30 €</span></li>
+      <li><span>FRESH lip balm plump</span><span>15,30 €</span></li></ul></div>
+  </div>
+  <div class="legal" style="bottom:14mm;left:22mm;right:22mm"><span>Werbung | RINGANA Partnerin</span><span>03</span></div>
+</section>
+
+<!-- ============ 04 SEIFEN & PUMPKIN SPICE ============ -->
+<section class="page">
+  <div class="chap"><div><div class="num">Kapitel I</div><h2 class="h2">Handgemacht &amp; <em>herbstlich</em></h2></div><div class="when"><div class="kicker">ab</div><b>19.10.</b></div></div>
+  <div class="grid2">
+    <div class="card">
+      <div class="win arch"><img src="assets/images/FRESH-soap-mandarine-orange.jpg" alt=""></div>
+      <div class="meta">Naturseife · Limited Edition</div>
+      <h3 class="h3">FRESH soap mandarine &amp; orange</h3>
+      <p>Sonnengereifte Mandarine, saftige Orange und ein Hauch Ingwer. Wie ein Sonnenstrahl an einem grauen Wintermorgen.</p>
+      <div class="price"><span><small>Einzeln</small><b>11,50 €</b></span><span><small>5er-Set</small><b>46,00 €</b></span></div>
+      <span class="tag">4 + 1 gratis</span>
+    </div>
+    <div class="card">
+      <div class="win arch"><img src="assets/images/FRESH-soap-lemon-elderberry.jpg" alt=""></div>
+      <div class="meta">Naturseife mit Reis-Peeling · Limited Edition</div>
+      <h3 class="h3">FRESH soap lemon &amp; elderberry</h3>
+      <p>Belebend zitronig mit sanftem Peeling-Effekt. Handgeschöpft, handgestempelt und in ein Bio-Baumwollhandtuch verpackt.</p>
+      <div class="price"><span><small>Einzeln</small><b>11,50 €</b></span><span><small>5er-Set</small><b>46,00 €</b></span></div>
+      <span class="tag">4 + 1 gratis</span>
+    </div>
+    <div class="card">
+      <div class="win arch"><img src="assets/images/FRESH-soap-liquid-pumpkin-spice.jpg" alt=""></div>
+      <div class="meta">Flüssigseife · ab 29.10.</div>
+      <h3 class="h3">FRESH soap liquid pumpkin spice</h3>
+      <p>Der Duft von Kürbis und warmen Gewürzen am Waschbecken. Macht jedes Händewaschen ein bisschen gemütlicher.</p>
+      <div class="price"><b>20,90 €</b></div>
+    </div>
+    <div class="card">
+      <div class="win arch"><img src="assets/images/RINGANAchi-pumpkin-spice.jpg" alt=""></div>
+      <div class="meta">Wachmacher · 360 ml · ab 29.10.</div>
+      <h3 class="h3">RINGANAchi pumpkin spice</h3>
+      <p>Neuer Schwung für graue Wintertage: Koffein und Pflanzenstoffe aus Guarana, Ginseng und Ingwer, weihnachtlich gewürzt und ohne Zuckerzusatz.</p>
+      <div class="price"><span><small>Einzeln</small><b>50,90 €</b></span><span><small>Set of 2</small><b>91,60 €</b></span></div>
+    </div>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin · Auch der Klassiker FRESH soap im 5er-Set: 43,60 €</span><span>04</span></div>
+</section>
+
+<!-- ============ 05 02.11. ============ -->
+<section class="page">
+  <div class="chap"><div><div class="num">Kapitel II</div><h2 class="h2">Verwöhnt <em>von Kopf bis Fuß</em></h2></div><div class="when"><div class="kicker">ab</div><b>02.11.</b></div></div>
+  <div class="row" style="top:48mm">
+    <div class="win arch"><img src="assets/images/FRESH-body-care-set.jpg" alt=""></div>
+    <div class="card">
+      <div class="meta">Limitiertes Weihnachts-Set</div>
+      <h3 class="h3" style="font-size:19pt">FRESH body care <span style="white-space:nowrap">x-mas set</span></h3>
+      <p>Alles für samtweiche Haut, von Kopf bis Fuß. Vier Pflege-Highlights in einer Kosmetiktasche aus recyceltem, dunkelrotem Samt, die bleibt, lange nachdem die Pflege aufgebraucht ist.</p>
+      <p class="inhalt">Inhalt: FRESH body milk rich (50 ml) · FRESH hand balm (50 ml) · FRESH foot balm (50 ml) · FRESH lip balm classic (10 ml) · RINGANA velvet cosmetic bag</p>
+      <div class="price"><b>54,80 €</b></div>
+      <span class="tag">Mein Tipp für Schwester, Mama, beste Freundin</span>
+    </div>
+  </div>
+  <div class="orn" style="position:absolute;left:18mm;right:18mm;top:136mm"><span class="it" style="font-family:var(--serif)">✦</span></div>
+  <div class="row" style="top:146mm;grid-template-columns:1fr 86mm">
+    <div class="card" style="text-align:right">
+      <div class="meta">Limitiertes Augen-Pflegeset</div>
+      <h3 class="h3" style="font-size:19pt">FRESH bright eyes <span style="white-space:nowrap">x-mas set</span></h3>
+      <p>Iconic Eye Care für einen wachen, frischen Look. Das FRESH eye serum erfrischt müde Augen und mildert Augenringe und Schwellungen. Die wiederverwendbaren Augenpads verstärken den Sofort-Effekt.</p>
+      <p class="inhalt">Inhalt: FRESH eye serum (15 ml) · RINGANA reusable eye patches (2 Stk.)</p>
+      <div class="price" style="justify-content:flex-end"><b>59,80 €</b></div>
+      <span class="tag">Schön verpackt, sofort verschenkbar</span>
+    </div>
+    <div class="win arch"><img src="assets/images/FRESH-bright-eyes-xmas-set.jpg" alt=""></div>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>05</span></div>
+</section>
+
+<!-- ============ 06 BRUSH ON + HAIR ============ -->
+<section class="page">
+  <div class="chap"><div><div class="num">Kapitel III</div><h2 class="h2">Maske auf, <em>Alltag aus</em></h2></div><div class="when"><div class="kicker">ab</div><b>09.11.</b></div></div>
+  <p style="position:absolute;left:18mm;right:70mm;top:37mm;font-size:8.6pt;color:var(--ink-2)">Jede FRESH Maske kommt mit der RINGANA mask brush. Die weiche Silikonfläche trägt präzise auf, perfekt auch für Multi-Masking auf einzelnen Gesichtszonen.</p>
+  <div class="grid2" style="top:52mm;gap:7mm 10mm">
+    <div class="card">
+      <div class="win arch" style="height:50mm"><img src="assets/images/FRESH-brush-on-xmas-set-exfoliating.jpg" alt=""></div>
+      <div class="meta">Für samtweiche, ebenmäßige Haut</div>
+      <h3 class="h3">Brush on <span style="white-space:nowrap">x-mas set</span> · exfoliating</h3>
+      <p class="inhalt">FRESH exfoliating mask (50 ml) + RINGANA mask brush. Fruchtenzyme und milde PHA für ein verfeinertes Hautbild, ganz ohne Peeling-Partikel.</p>
+      <div class="price"><b>58,20 €</b></div><span class="tag">Du sparst 6,50 €</span>
+    </div>
+    <div class="card">
+      <div class="win arch" style="height:50mm"><img src="assets/images/FRESH-brush-on-xmas-set-performance.jpg" alt=""></div>
+      <div class="meta">Für glatte, straffe Haut</div>
+      <h3 class="h3">Brush on <span style="white-space:nowrap">x-mas set</span> · peptide performance</h3>
+      <p class="inhalt">FRESH peptide performance mask (50 ml) + RINGANA mask brush. Samtig-cremig, mit sofortigem Firming-Effekt und langanhaltender Feuchtigkeit.</p>
+      <div class="price"><b>62,70 €</b></div><span class="tag">Du sparst 7,00 €</span>
+    </div>
+    <div class="card">
+      <div class="win arch" style="height:50mm"><img src="assets/images/FRESH-brush-on-xmas-set-purifying.jpg" alt=""></div>
+      <div class="meta">Für klare, mattierte Haut</div>
+      <h3 class="h3">Brush on <span style="white-space:nowrap">x-mas set</span> · purifying</h3>
+      <p class="inhalt">FRESH purifying mask (50 ml) + RINGANA mask brush. Klärend und beruhigend für ölige Haut, Mischhaut und zu Unreinheiten neigende Haut.</p>
+      <div class="price"><b>56,40 €</b></div><span class="tag">Du sparst 6,30 €</span>
+    </div>
+    <div class="card">
+      <div class="win arch" style="height:50mm"><img src="assets/images/FRESH-hair-care-xmas-set.jpg" alt=""></div>
+      <div class="meta">Limitiertes Weihnachts-Set</div>
+      <h3 class="h3">FRESH hair care <span style="white-space:nowrap">x-mas set</span></h3>
+      <p class="inhalt">Glanz trifft Entspannung: FRESH repair shampoo (200 ml), FRESH hair treatment (125 ml) und der RINGANA scalp massage comb für eine wohltuende Kopfhautmassage.</p>
+      <div class="price"><b>66,80 €</b></div><span class="tag">Auch für ihn</span>
+    </div>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>06</span></div>
+</section>
+
+<!-- ============ 07 16.11. ============ -->
+<section class="page">
+  <div class="chap"><div><div class="num">Kapitel IV</div><h2 class="h2">Zeit für <em>Rituale</em></h2></div><div class="when"><div class="kicker">ab</div><b>16.11.</b></div></div>
+  <div class="row" style="top:46mm;grid-template-columns:100mm 1fr">
+    <div class="win arch" style="height:82mm;position:relative"><img src="assets/images/FRESH-timeless-beauty-xmas-set.jpg" alt=""></div>
+    <div class="card">
+      <div class="meta">Skin Longevity-Trio</div>
+      <h3 class="h3" style="font-size:20pt">FRESH timeless beauty set</h3>
+      <p>Zeitlos schön: Ausstrahlung, die von innen kommt. Drei der wirkungsvollsten RINGANA Produkte vereinen Pflege von innen und außen. Für Menschen, denen du etwas wirklich Besonderes schenken möchtest. Oder für dich selbst.</p>
+      <p class="inhalt">Inhalt: FRESH skin perfection, Recovery Creme mit Soforteffekt (30 ml) · CAPS beauty &amp; hair (90 Kapseln) · RINGANAbty mit veganem Kollagen und pflanzlicher Hyaluronsäure (12 Fläschchen)</p>
+      <div class="price"><b>196,80 €</b></div>
+      <span class="tag">Limited Edition</span>
+    </div>
+  </div>
+  <div class="grid2" style="top:144mm">
+    <div class="card">
+      <div class="win arch" style="height:68mm"><img src="assets/images/RINGANA-scented-candle-mandarine-tonka.jpg" alt="" style="transform:scale(1.25)"></div>
+      <div class="meta">Vegane Duftkerze aus Sojawachs</div>
+      <h3 class="h3">RINGANA scented candle mandarine &amp; tonka</h3>
+      <p>Fruchtige Mandarine trifft cremige Tonkabohne. Im dunkelroten, satinierten Glas mit der RINGANA Blume, bis zu 60 Stunden Brenndauer.</p>
+      <div class="price"><b>29,90 €</b></div>
+    </div>
+    <div class="card">
+      <div class="win arch" style="height:68mm"><img src="assets/images/FRESH-bath-shower-oil-zest.jpg" alt="" style="transform:scale(1.2)"></div>
+      <div class="meta">Limited Edition · 200 ml</div>
+      <h3 class="h3">FRESH bath &amp; shower oil zest</h3>
+      <p>Ätherische Öle aus Zitrone, Litsea und Ho-Blättern für ein frisches Dufterlebnis. Hinterlässt einen zarten Pflegefilm für seidig-geschmeidige Haut.</p>
+      <div class="price"><b>39,60 €</b></div>
+    </div>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>07</span></div>
+</section>
+
+<!-- ============ 08 SPA NIGHT HIGHLIGHT ============ -->
+<section class="page spa">
+  <div class="head"></div>
+  <div class="win bigwin"><img src="assets/images/FRESH-spa-night-xmas-set.jpg" alt=""></div>
+  <div class="badge"><div class="kicker">Das Highlight · Kapitel V</div><h2 class="h1">Dein Spa-Abend <em>zu Hause</em></h2></div>
+  <div class="date-seal" style="right:22mm;top:44mm;z-index:2"><span>AB</span><b>23.11.</b></div>
+  <div class="body">
+    <div class="card">
+      <div class="meta" style="margin-top:0">Limitiertes Weihnachts-Set</div>
+      <h3 class="h3" style="font-size:20pt">FRESH spa night <span style="white-space:nowrap">x-mas set</span></h3>
+      <p style="font-size:9.4pt">Me-Time für alle, die sich eine kleine Auszeit verdient haben. Drei Pflege-Highlights für glatte Haut und ein Haarband, das den Abend komplett macht. Das Gefühl wie im Spa, ohne das Haus zu verlassen.</p>
+      <div class="price" style="margin-top:6mm"><b style="font-size:22pt">154,80 €</b></div>
+      <span class="tag">Mein Lieblingsgeschenk 2026</span>
+    </div>
+    <ul class="contents">
+      <li><b>FRESH cleanser</b>Reinigungsmilch · 125 ml</li>
+      <li><b>FRESH peptide performance mask</b>Glättende Gesichtsmaske · 50 ml</li>
+      <li><b>FRESH overnight face treatment</b>Intensive Better-Aging-Creme · 30 ml</li>
+      <li><b>RINGANA hair band</b>Haarband mit gesticktem Blumen-Emblem</li>
+    </ul>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>08</span></div>
+</section>
+
+<!-- ============ 09 GLOW ============ -->
+<section class="page">
+  <div class="chap"><div><div class="num">Kapitel VI</div><h2 class="h2">Holiday <em>Glow</em></h2></div><div class="when"><div class="kicker">ab</div><b>23.11.</b></div></div>
+  <div class="row" style="top:42mm;grid-template-columns:80mm 1fr">
+    <div class="win arch" style="height:66mm"><img src="assets/images/FRESH-body-milk-light-shimmer.jpg" alt="" style="transform:scale(1.15)"></div>
+    <div class="card">
+      <div class="meta">Schimmernde Körpermilch · 200 ml</div>
+      <h3 class="h3" style="font-size:18pt">FRESH body milk light shimmer</h3>
+      <p>Pflege mit funkelndem Finish. Leicht, schnell einziehend und intensiv feuchtigkeitsspendend. Lichtreflektierende Pigmente lassen die Haut ebenmäßiger und sichtbar strahlender erscheinen. Parfumfrei und alkoholfrei.</p>
+      <div class="price"><b>37,70 €</b></div>
+    </div>
+  </div>
+  <div style="position:absolute;left:18mm;right:18mm;top:118mm;display:grid;grid-template-columns:repeat(3,1fr);gap:8mm">
+    <div class="card"><div class="win arch" style="height:42mm"><img src="assets/images/FRESH-liquid-blush-poppy.jpg" alt="" style="transform:scale(1.3)"></div><div class="meta">Flüssiges Rouge</div><h3 class="h3" style="font-size:12pt">FRESH liquid blush poppy</h3><div class="price"><b>15,60 €</b></div></div>
+    <div class="card"><div class="win arch" style="height:42mm"><img src="assets/images/FRESH-lip-balm-glazed-orange.jpg" alt="" style="transform:scale(1.3)"></div><div class="meta">Lippenpflege</div><h3 class="h3" style="font-size:12pt">FRESH lip balm glazed orange</h3><div class="price"><b>15,30 €</b></div></div>
+    <div class="card"><div class="win arch" style="height:42mm"><img src="assets/images/FRESH-lip-balm-plump.jpg" alt="" style="transform:scale(1.3)"></div><div class="meta">Lippenpflege</div><h3 class="h3" style="font-size:12pt">FRESH lip balm plump</h3><div class="price"><b>15,30 €</b></div></div>
+  </div>
+  <div style="position:absolute;left:18mm;right:18mm;top:205mm;height:66mm;background:var(--wine);color:var(--cream);display:grid;grid-template-columns:1fr 88mm">
+    <div style="padding:8mm 9mm">
+      <div class="kicker" style="color:var(--gold-l)">Das Glow-Trio · ab 29.10.</div>
+      <h3 class="h3" style="color:var(--cream);font-size:19pt;margin-top:3mm">FRESH kiss &amp; care <span style="white-space:nowrap">x-mas set</span></h3>
+      <p style="font-size:8.6pt;margin-top:2.5mm;color:rgba(243,234,223,.85)">Das Dreamteam für volle Lippen und leuchtende Wangen: lip balm plump, lip balm glazed orange und liquid blush poppy (je 10 ml). Als Set schon ab 29.10., einzeln ab 23.11.</p>
+      <div class="price"><b style="color:var(--gold-l)">39,80 €</b></div>
+    </div>
+    <div class="win"><img src="assets/images/kiss-care-mood.jpg" alt="FRESH kiss &amp; care x-mas set" style="object-position:50% 52%"></div>
+  </div>
+  <div class="legal"><span>Werbung | RINGANA Partnerin</span><span>09</span></div>
+</section>
+
+<!-- ============ 10 GESCHENKEFINDER ============ -->
+<section class="page finder">
+  <div class="frame light"></div>
+  <div class="top">
+    <div class="kicker">Geschenkefinder</div>
+    <h2 class="h1">Für wen <em>suchst du?</em></h2>
+    <p style="margin-top:4mm;max-width:140mm;color:var(--ink-2)">Damit du nicht lange überlegen musst: meine Empfehlungen, sortiert nach Mensch und Budget.</p>
+  </div>
+  <div class="fgrid">
+    <div class="fbox"><div class="for">Wichteln &amp; Kleinigkeiten</div><h3 class="h3">Unter 25 €</h3><ul>
+      <li><span>FRESH soap (Seife im Bio-Baumwolltuch)</span><span>11,50 €</span></li>
+      <li><span>FRESH lip balm plump / glazed orange</span><span>15,30 €</span></li>
+      <li><span>FRESH liquid blush poppy</span><span>15,60 €</span></li>
+      <li><span>FRESH soap liquid pumpkin spice</span><span>20,90 €</span></li></ul></div>
+    <div class="fbox"><div class="for">Für Genießer:innen</div><h3 class="h3">Gemütlich &amp; duftend</h3><ul>
+      <li><span>RINGANA scented candle mandarine &amp; tonka</span><span>29,90 €</span></li>
+      <li><span>FRESH bath &amp; shower oil zest</span><span>39,60 €</span></li>
+      <li><span>RINGANAchi pumpkin spice</span><span>50,90 €</span></li></ul></div>
+    <div class="fbox"><div class="for">Für Glow-Lover</div><h3 class="h3">Strahlen zu den Feiertagen</h3><ul>
+      <li><span>FRESH body milk light shimmer</span><span>37,70 €</span></li>
+      <li><span>FRESH kiss &amp; care x-mas set</span><span>39,80 €</span></li>
+      <li><span>FRESH bright eyes x-mas set</span><span>59,80 €</span></li></ul></div>
+    <div class="fbox"><div class="for">Für Skincare-Fans</div><h3 class="h3">Masken-Moment</h3><ul>
+      <li><span>Brush on x-mas set · purifying</span><span>56,40 €</span></li>
+      <li><span>Brush on x-mas set · exfoliating</span><span>58,20 €</span></li>
+      <li><span>Brush on x-mas set · peptide performance</span><span>62,70 €</span></li></ul></div>
+    <div class="fbox"><div class="for">Für ihn &amp; alle mit Haaren</div><h3 class="h3">Unkompliziert gut</h3><ul>
+      <li><span>FRESH soap · 5er-Set (4 + 1 gratis)</span><span>43,60 €</span></li>
+      <li><span>FRESH body care x-mas set</span><span>54,80 €</span></li>
+      <li><span>FRESH hair care x-mas set</span><span>66,80 €</span></li></ul></div>
+    <div class="fbox feature"><div class="for">Für die Lieblingsmenschen</div><h3 class="h3">Das große Wow</h3><ul>
+      <li><span>FRESH spa night x-mas set</span><span>154,80 €</span></li>
+      <li><span>FRESH timeless beauty set</span><span>196,80 €</span></li></ul>
+      <p style="font-size:8pt;margin-top:3mm;color:rgba(243,234,223,.8)">Für die Menschen, die dir am meisten bedeuten. Oder einfach für dich selbst.</p></div>
+  </div>
+  <div class="legal" style="bottom:15mm;left:22mm;right:22mm"><span>Werbung | RINGANA Partnerin</span><span>10</span></div>
+</section>
+
+<!-- ============ 11 BACK ============ -->
+<section class="page dark back">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="kicker" style="color:var(--gold-l)">Von Herzen</div>
+    <h2 class="h1">Ich wünsche dir eine<br><em>wunderschöne Vorweihnachtszeit</em></h2>
+    <p class="note">Schenken ist eine der schönsten Arten, für andere da zu sein. Erzähl mir, für wen du etwas suchst, und wir finden gemeinsam das Passende. Ganz leicht, ohne Stress und rechtzeitig unter dem Baum.</p>
+    <div class="code">
+      <div class="k">Mein Geschenk an dich</div>
+      <b>20 € Gutschein</b>
+      <p>Als Dankeschön von mir zu deiner Weihnachtsbestellung</p>
+    </div>
+    <div class="contact">
+      <div><span>Persönliche Beratung</span><a href="tel:+436769261706">+43 676 9261706</a></div>
+      <div><span>Instagram</span><a href="https://instagram.com/ulli.noa.so.we">@ulli.noa.so.we</a></div>
+      <div><span>Shop</span><a href="https://priller.ringana.com">priller.ringana.com</a></div>
+    </div>
+    <div class="good">
+      <div><b>1 · Aussuchen</b>Blättere in Ruhe und markier dir deine Lieblinge.</div>
+      <div><b>2 · Melden</b>Ruf mich an oder schreib mir eine Nachricht.</div>
+      <div><b>3 · Genießen</b>Ich kümmere mich um den Rest.</div>
+    </div>
+    <div class="wrap">✦&nbsp;&nbsp;Auf Wunsch verpacke ich deine Geschenke in der RINGANA X-Mas Geschenktasche&nbsp;&nbsp;✦</div>
+    <p class="partner">Und wenn du spürst, dass du diese Freude selbst weitergeben möchtest: Lass uns reden. Ich zeig dir gern, wie das Partnerin-Sein bei RINGANA aussieht.</p>
+    <div class="sign">Alles Liebe, Noa</div>
+  </div>
+  <p class="fine">Alle Preise in Euro inkl. MwSt., Stand Oktober 2026. Limitierte Produkte nur solange der Vorrat reicht. Verfügbarkeitstermine laut RINGANA, Änderungen vorbehalten.<br>Werbung | RINGANA Partnerin · ullinoa.at</p>
+</section>
+
+<script>
+/* ?p=N zeigt nur Seite N (für Bild-Export einzelner Seiten) */
+(function(){var m=location.search.match(/p=(\d+)/);if(!m)return;var n=+m[1];
+document.documentElement.style.background='none';document.body.style.background='none';
+document.querySelectorAll('.page').forEach(function(p,i){if(i+1!==n)p.style.display='none';else{p.style.margin='0';p.style.boxShadow='none';}});})();
+</script>
+</body>
+</html>
