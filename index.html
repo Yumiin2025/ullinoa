@@ -408,6 +408,10 @@ body.de .en-only{display:none}
 .nav-dot{display:none}
 .nav-menu a.cta-nav{background:var(--moss);color:var(--cream) !important;margin-left:.75rem;padding:.4rem 1.3rem;border-radius:100px}.nav-menu a.cta-nav::after{display:none}
 .nav-menu a.cta-nav:hover{background:var(--sage-dk)}
+.nav-menu a.cta-shop{background:transparent;color:var(--moss) !important;border:1.5px solid var(--moss);margin-left:.75rem;padding:.38rem 1.15rem;border-radius:100px}
+.nav-menu a.cta-shop::after{display:none}
+.nav-menu a.cta-shop:hover{background:var(--moss);color:var(--cream) !important}
+@media(max-width:680px){.nav-menu a.cta-shop{display:none}}
 /* HERO */
 .hero{margin-top:var(--nav-h);position:relative;overflow:hidden;background:var(--cream)}
 .hero-img{width:100%;height:calc(100svh - var(--nav-h));object-fit:cover;object-position:center 35%;display:block}
@@ -873,7 +877,8 @@ body.edit-mode #waFloat{display:none}
       <strong class="ss-product en-only">X-Mas Catalogue is live · limited editions from 19.10.</strong>
     </div>
     <div class="ss-right">
-      <a href="/xmas.html" class="ss-btn" onclick="gtag('event','xmas_strip_click',{'label':'katalog'})">Zum Katalog →</a>
+      <a href="/xmas.html" class="ss-btn de-only" onclick="gtag('event','xmas_strip_click',{'label':'katalog_de'})">Zum Katalog →</a>
+      <a href="/xmas-en.html" class="ss-btn en-only" onclick="gtag('event','xmas_strip_click',{'label':'katalog_en'})">See Catalogue →</a>
       <a href="https://wa.me/436769261706?text=Hallo%20Noa%2C%20ich%20habe%20den%20Weihnachtskatalog%20gesehen%20und%20m%C3%B6chte%20gerne%20bestellen%20%F0%9F%8E%84" target="_blank" rel="noopener" class="ss-wa de-only">Bestellen? WhatsApp</a>
       <a href="https://wa.me/436769261706?text=Hi%20Noa%2C%20I%20just%20saw%20the%20X-Mas%20catalogue%20and%20I%27d%20love%20to%20order%20%F0%9F%8E%84" target="_blank" rel="noopener" class="ss-wa en-only">Order? WhatsApp</a>
       <span class="ss-code de-only"><strong>PRILLER20</strong></span>
@@ -922,7 +927,8 @@ body.edit-mode #waFloat{display:none}
     <a href="quiz.html"><span class="en-only">Skin Quiz</span><span class="de-only">Routine-Quiz</span></a>
     <a href="about.html"><span class="en-only">About us</span><span class="de-only">Ulli &amp; Noa</span></a>
     <a href="story.html"><span class="en-only">Our Story</span><span class="de-only">Unsere Geschichte</span></a>
-    <a href="partner" class="cta-nav"><span class="en-only">Das Business</span><span class="de-only">Das Business</span></a>
+    <a href="https://priller.ringana.com" target="_blank" rel="noopener" class="cta-shop"><span class="en-only">Shop now</span><span class="de-only">Kundin werden</span></a>
+    <a href="partner.html" class="cta-nav"><span class="en-only">Become a partner</span><span class="de-only">Partner:in werden</span></a>
   </div>
 </nav>
 
